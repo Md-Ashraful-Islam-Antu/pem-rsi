@@ -335,16 +335,72 @@
 <!-- ══ PYQ ══════════════════════════════════════════════════════ -->
 <section id="pyq" class="tab-panel">
   <div class="section">
-    <div class="section-title">❓ Past Year Questions — AA Ch 7</div>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
-        <tr><td>Draw and explain the time-phased budget (3 curves)</td><td>8–10</td><td>★★★★ (7×)</td></tr>
-        <tr><td>Learning curve numerical: find T₁ given Tₙ, n, and learning rate</td><td>8–10</td><td>★★★★</td></tr>
-        <tr><td>What happens if learning curve is ignored in budgeting?</td><td>5</td><td>★★★</td></tr>
-        <tr><td>Explain top-down vs bottom-up vs iterative budgeting</td><td>5–8</td><td>★★★</td></tr>
-        <tr><td>Calculate MAD and TS for given actual vs forecast data</td><td>5–8</td><td>★★</td></tr>
-      </table>
+    <div class="section-title">❓ Past Year Questions &amp; Full Answers — AA Ch 7</div>
+    <div class="callout star">Time-phased budget diagram and learning curve numerical are both ★★★★ — appear in almost every exam. Master both.</div>
+
+    <h3>Q1. Draw and explain the time-phased budget with 3 curves. <span style="color:var(--star)">[8–10 marks, ★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      A time-phased budget shows three curves plotted against time on the x-axis and cumulative cost on the y-axis:<br><br>
+      <strong>Curve 1 — Committed Cost (highest, rises first):</strong> This represents orders placed and contracts signed — the financial commitments the project has made. It rises steeply early when materials are ordered and contracts are awarded. At project end, committed = total budget.<br><br>
+      <strong>Curve 2 — Scheduled Cost / Budgeted Cost of Work Scheduled (BCWS):</strong> The planned S-curve — how the budget was originally spread over time based on the schedule. This is the baseline. It has a classic S-shape: slow start, rapid middle, slow finish.<br><br>
+      <strong>Curve 3 — Actual Cost (may be above or below scheduled):</strong> Real cash expenditures as work proceeds. Comparing actual to scheduled gives the cost variance. If actual is above scheduled → over budget; below → under budget (or ahead of schedule).<br><br>
+      <em>[Draw axes: x = Time (project start to end), y = Cumulative Cost (0 to Total Budget). Draw 3 S-curves. Committed rises first and fastest. Scheduled is the middle S-curve baseline. Actual may diverge above or below Scheduled. Label all three clearly.]</em><br><br>
+      <strong>Key insight:</strong> The gap between Committed and Scheduled represents obligations not yet paid. The gap between Actual and Scheduled shows whether the project is over/under budget.
+    </div>
+
+    <h3>Q2. Learning curve numerical — find T₁ given Tₙ, n, and learning rate. <span style="color:var(--star)">[8–10 marks, ★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Formula:</strong> Tₙ = T₁ × nʳ &nbsp;&nbsp; where r = log(learning rate) / log(2)<br><br>
+      <strong>Problem:</strong> The 8th unit takes 50 hours. The learning rate is 80%. Find the time for the 1st unit (T₁).<br><br>
+      <strong>Step 1 — Find r:</strong><br>
+      r = log(0.80) / log(2) = (−0.09691) / (0.30103) = <strong>−0.3219</strong><br><br>
+      <strong>Step 2 — Use formula Tₙ = T₁ × nʳ:</strong><br>
+      50 = T₁ × 8^(−0.3219)<br><br>
+      <strong>Step 3 — Calculate 8^(−0.3219):</strong><br>
+      8^(−0.3219) = 1 / 8^(0.3219) = 1 / 2.0 = <strong>0.5120</strong><br>
+      (At 80% learning rate, every doubling of quantity reduces time to 80%, so T₁ → 0.8T₁ at n=2, → 0.64T₁ at n=4, → 0.512T₁ at n=8)<br><br>
+      <strong>Step 4 — Solve for T₁:</strong><br>
+      50 = T₁ × 0.512<br>
+      T₁ = 50 / 0.512 = <strong>97.66 ≈ 97.7 hours</strong><br><br>
+      <em>Verification: T₁=97.7 → T₂=97.7×0.8=78.1 → T₄=78.1×0.8=62.5 → T₈=62.5×0.8=50 ✓</em>
+    </div>
+
+    <h3>Q3. What happens if the learning curve is ignored in budgeting? <span style="color:var(--star)">[5 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      If the learning curve is ignored and the estimator assumes the first unit time (T₁) for all subsequent units, the budget will be <strong>significantly overestimated</strong>.<br><br>
+      <strong>Consequence 1 — Overestimated budget:</strong> More money is allocated than needed. The project appears more expensive than it truly is, potentially causing it to be rejected in appraisal even though it would be viable.<br><br>
+      <strong>Consequence 2 — Competitive loss:</strong> If two firms are bidding, the firm that accounts for learning will bid lower and win. The firm that ignores learning will overbid and lose contracts.<br><br>
+      <strong>Consequence 3 — Inefficient resource allocation:</strong> Labor budgets are set too high early in production runs. This leads to overstaffing or wasted budget that could be used elsewhere.<br><br>
+      <strong>Consequence 4 — Misleading performance metrics:</strong> Actual costs will appear much lower than budgeted (a false positive). Management may not realize learning is occurring and will not plan production runs optimally.
+    </div>
+
+    <h3>Q4. Explain top-down, bottom-up, and iterative budgeting. <span style="color:var(--star)">[5–8 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Top-Down Budgeting:</strong> Senior management sets the overall budget based on past experience and intuition, then allocates it down to departments and work packages. Fast to prepare, but may not reflect actual work requirements. Team feels the budget is imposed.<br><br>
+      <strong>Bottom-Up Budgeting:</strong> Each work package manager estimates costs at the lowest level, then estimates are rolled up to get the total. Accurate and realistic, but time-consuming and may ignore organizational constraints.<br><br>
+      <strong>Iterative Budgeting (Best Practice):</strong> Combines both. Management sets a top-down constraint (ceiling). Teams do bottom-up estimates. If estimates exceed ceiling, negotiation occurs — scope is reduced, efficiency gains identified, or budget ceiling is raised with justification. The result is both realistic and affordable.<br><br>
+      <em>Most organizations use iterative budgeting in practice.</em>
+    </div>
+
+    <h3>Q5. Calculate MAD and Tracking Signal (TS) for given forecast vs actual data. <span style="color:var(--star)">[5–8 marks, ★★]</span></h3>
+    <div class="callout info">
+      <strong>Formulas:</strong><br>
+      MAD = Σ|Actual − Forecast| / n &nbsp;&nbsp; (Mean Absolute Deviation)<br>
+      TS = RSFE / MAD &nbsp;&nbsp; where RSFE = Σ(Actual − Forecast) (Running Sum of Forecast Errors)<br><br>
+      <strong>Problem:</strong><br>
+      <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:4px;">
+        <tr style="background:#1a2332;"><th style="padding:4px 8px;border:1px solid #333;">Period</th><th style="padding:4px 8px;border:1px solid #333;">Actual</th><th style="padding:4px 8px;border:1px solid #333;">Forecast</th><th style="padding:4px 8px;border:1px solid #333;">Error (A−F)</th><th style="padding:4px 8px;border:1px solid #333;">|Error|</th></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">1</td><td style="padding:4px 8px;border:1px solid #333;">120</td><td style="padding:4px 8px;border:1px solid #333;">110</td><td style="padding:4px 8px;border:1px solid #333;">+10</td><td style="padding:4px 8px;border:1px solid #333;">10</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">2</td><td style="padding:4px 8px;border:1px solid #333;">100</td><td style="padding:4px 8px;border:1px solid #333;">115</td><td style="padding:4px 8px;border:1px solid #333;">−15</td><td style="padding:4px 8px;border:1px solid #333;">15</td></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">3</td><td style="padding:4px 8px;border:1px solid #333;">130</td><td style="padding:4px 8px;border:1px solid #333;">120</td><td style="padding:4px 8px;border:1px solid #333;">+10</td><td style="padding:4px 8px;border:1px solid #333;">10</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">4</td><td style="padding:4px 8px;border:1px solid #333;">95</td><td style="padding:4px 8px;border:1px solid #333;">100</td><td style="padding:4px 8px;border:1px solid #333;">−5</td><td style="padding:4px 8px;border:1px solid #333;">5</td></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;font-weight:bold;">Total</td><td style="padding:4px 8px;border:1px solid #333;"></td><td style="padding:4px 8px;border:1px solid #333;"></td><td style="padding:4px 8px;border:1px solid #333;font-weight:bold;">RSFE = 0</td><td style="padding:4px 8px;border:1px solid #333;font-weight:bold;">40</td></tr>
+      </table><br>
+      MAD = 40 / 4 = <strong>10</strong><br>
+      TS = RSFE / MAD = 0 / 10 = <strong>0</strong><br><br>
+      <em>A TS near 0 means the forecast is unbiased (errors cancel out). |TS| &gt; 4 typically signals a biased forecast that needs revision.</em>
     </div>
   </div>
 </section>

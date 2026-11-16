@@ -321,16 +321,84 @@
 <!-- ══ PYQ ══════════════════════════════════════════════════════ -->
 <section id="pyq" class="tab-panel">
   <div class="section">
-    <div class="section-title">❓ Past Year Questions — AA Ch 4</div>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Question</th><th>Type</th><th>Marks</th><th>Frequency</th></tr>
-        <tr><td>Calculate NPV and BCR for given cash flows; decide accept/reject</td><td>Numerical</td><td>10–15</td><td>★★★★</td></tr>
-        <tr><td>Find IRR by interpolation</td><td>Numerical</td><td>10–12</td><td>★★★★</td></tr>
-        <tr><td>Calculate Payback Period (simple and discounted)</td><td>Numerical</td><td>5–10</td><td>★★★</td></tr>
-        <tr><td>List and explain 7 measures of ARR</td><td>Short answer</td><td>5–8</td><td>★★★</td></tr>
-        <tr><td>Compare NPV vs IRR — when to prefer which</td><td>Short</td><td>4–5</td><td>★★</td></tr>
+    <div class="section-title">❓ Past Year Questions &amp; Full Answers — AA Ch 4</div>
+    <div class="callout star">NPV, BCR, and IRR numericals carry 10–15 marks and appear in almost every exam. Practice the full worked-example format.</div>
+
+    <h3>Q1. Worked Example — Calculate NPV and BCR; decide accept/reject. <span style="color:var(--star)">[10–15 marks, ★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Problem:</strong> A project costs Tk. 1,00,000 today. Cash inflows: Yr 1 = 30,000; Yr 2 = 40,000; Yr 3 = 50,000; Yr 4 = 20,000. Discount rate = 10%. Find NPV and BCR.<br><br>
+      <strong>Step 1 — Discount each cash flow:</strong><br>
+      PV(Yr 1) = 30,000 / (1.10)¹ = 30,000 / 1.100 = <strong>27,273</strong><br>
+      PV(Yr 2) = 40,000 / (1.10)² = 40,000 / 1.210 = <strong>33,058</strong><br>
+      PV(Yr 3) = 50,000 / (1.10)³ = 50,000 / 1.331 = <strong>37,566</strong><br>
+      PV(Yr 4) = 20,000 / (1.10)⁴ = 20,000 / 1.464 = <strong>13,660</strong><br><br>
+      <strong>Step 2 — Sum of PVs:</strong> 27,273 + 33,058 + 37,566 + 13,660 = <strong>1,11,557</strong><br><br>
+      <strong>Step 3 — NPV:</strong> NPV = Σ PV − I₀ = 1,11,557 − 1,00,000 = <strong>Tk. 11,557</strong><br>
+      Since NPV &gt; 0 → <strong>Accept the project</strong><br><br>
+      <strong>Step 4 — BCR:</strong> BCR = Σ PV / I₀ = 1,11,557 / 1,00,000 = <strong>1.116</strong><br>
+      Since BCR &gt; 1 → <strong>Accept the project</strong>
+    </div>
+
+    <h3>Q2. Worked Example — Find IRR by interpolation. <span style="color:var(--star)">[10–12 marks, ★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Method:</strong> IRR is found by trying two discount rates — one that gives +ve NPV (r₁) and one that gives −ve NPV (r₂) — then interpolating.<br><br>
+      <strong>Formula:</strong><br>
+      <code>IRR = r₁ + [NPV₁ / (NPV₁ − NPV₂)] × (r₂ − r₁)</code><br><br>
+      <strong>Using the same project above:</strong><br>
+      At r = 10%: NPV = +11,557 (computed above)<br>
+      Try r = 20%:<br>
+      PV(Yr 1) = 30,000/1.20 = 25,000<br>
+      PV(Yr 2) = 40,000/1.44 = 27,778<br>
+      PV(Yr 3) = 50,000/1.728 = 28,935<br>
+      PV(Yr 4) = 20,000/2.074 = 9,642<br>
+      Σ PV = 91,355 → NPV = 91,355 − 1,00,000 = <strong>−8,645</strong><br><br>
+      <strong>IRR = 10 + [11,557 / (11,557 + 8,645)] × (20 − 10)</strong><br>
+      IRR = 10 + [11,557 / 20,202] × 10 = 10 + 5.72 = <strong>≈ 15.72%</strong><br><br>
+      <em>If IRR &gt; cost of capital (say 10%) → Accept. IRR = 15.72% &gt; 10% → Accept.</em>
+    </div>
+
+    <h3>Q3. Calculate Simple and Discounted Payback Period. <span style="color:var(--star)">[5–10 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Simple Payback Period (undiscounted):</strong><br>
+      Cumulate inflows until they equal initial investment (Tk. 1,00,000):<br>
+      After Yr 1: 30,000 | After Yr 2: 70,000 | After Yr 3: 1,20,000 → payback occurs in Year 3<br>
+      Fraction = (1,00,000 − 70,000) / 50,000 = 30,000/50,000 = 0.6<br>
+      <strong>Simple PBP = 2 + 0.6 = 2.6 years</strong><br><br>
+      <strong>Discounted Payback Period (using PV values from Q1):</strong><br>
+      After Yr 1: 27,273 | After Yr 2: 60,331 | After Yr 3: 97,897 | After Yr 4: 1,11,557<br>
+      Payback between Yr 3 and Yr 4.<br>
+      Fraction = (1,00,000 − 97,897) / 13,660 = 2,103 / 13,660 = 0.154<br>
+      <strong>Discounted PBP = 3 + 0.154 ≈ 3.15 years</strong>
+    </div>
+
+    <h3>Q4. List and explain the 7 measures of Accounting Rate of Return (ARR). <span style="color:var(--star)">[5–8 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      ARR (also called Accounting Rate of Return) can be computed in several ways depending on what "investment" and "profit" mean:<br><br>
+      1. <strong>Net Profit (after tax) / Original Investment × 100</strong><br>
+      2. <strong>Net Profit (after tax) / Average Investment × 100</strong><br>
+      3. <strong>Net Profit (before tax) / Original Investment × 100</strong><br>
+      4. <strong>Net Profit (before tax) / Average Investment × 100</strong><br>
+      5. <strong>Net Cash Inflow / Original Investment × 100</strong><br>
+      6. <strong>Net Cash Inflow / Average Investment × 100</strong><br>
+      7. <strong>Incremental Profit / Incremental Investment × 100</strong> (used for comparing alternatives)<br><br>
+      <em>Average Investment = (Original Investment + Salvage Value) / 2</em><br>
+      <em>Net Profit = Net Cash Inflow − Depreciation</em><br><br>
+      <strong>Limitation:</strong> ARR ignores the time value of money. It is easy to calculate but not as theoretically sound as NPV or IRR.
+    </div>
+
+    <h3>Q5. Compare NPV vs IRR — when to prefer which? <span style="color:var(--star)">[4–5 marks, ★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong>
+      <table style="width:100%;border-collapse:collapse;margin-top:8px;font-size:12px;">
+        <tr style="background:#1a2332;"><th style="padding:4px 8px;border:1px solid #333;">Criterion</th><th style="padding:4px 8px;border:1px solid #333;">NPV</th><th style="padding:4px 8px;border:1px solid #333;">IRR</th></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Tells you</td><td style="padding:4px 8px;border:1px solid #333;">Absolute value created (in Tk.)</td><td style="padding:4px 8px;border:1px solid #333;">Rate of return (as % per year)</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">Multiple projects</td><td style="padding:4px 8px;border:1px solid #333;">Can add NPVs (additivity)</td><td style="padding:4px 8px;border:1px solid #333;">Cannot add IRRs</td></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Reinvestment assumption</td><td style="padding:4px 8px;border:1px solid #333;">Reinvests at cost of capital (realistic)</td><td style="padding:4px 8px;border:1px solid #333;">Reinvests at IRR (often unrealistic)</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">Non-conventional flows</td><td style="padding:4px 8px;border:1px solid #333;">Works fine</td><td style="padding:4px 8px;border:1px solid #333;">May give multiple IRRs</td></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Prefer when</td><td style="padding:4px 8px;border:1px solid #333;">Scale matters; maximizing total value</td><td style="padding:4px 8px;border:1px solid #333;">Rate of return matters to management</td></tr>
       </table>
+      <br><em>When NPV and IRR conflict, prefer NPV — it always gives the wealth-maximizing decision.</em>
     </div>
   </div>
 </section>

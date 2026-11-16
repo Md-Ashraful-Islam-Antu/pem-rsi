@@ -221,15 +221,56 @@
 <!-- ══ PYQ ══════════════════════════════════════════════════════ -->
 <section id="pyq" class="tab-panel">
   <div class="section">
-    <div class="section-title">❓ Past Year Questions — AA Ch 10</div>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
-        <tr><td>Resource leveling problem: given network, draw histogram, level it, draw new histogram</td><td>15–17</td><td>★★★★★</td></tr>
-        <tr><td>Difference between resource leveling and resource allocation</td><td>5</td><td>★★★</td></tr>
-        <tr><td>Explain 5 priority rules for constrained resource scheduling</td><td>5–8</td><td>★★★★</td></tr>
-        <tr><td>What is MSF rule? Why is it preferred?</td><td>3–5</td><td>★★★</td></tr>
+    <div class="section-title">❓ Past Year Questions &amp; Full Answers — AA Ch 10</div>
+    <div class="callout star">Resource leveling (★★★★★) is the highest-marks question here. Know how to draw both histograms and explain the leveling decisions.</div>
+
+    <h3>Q1. Resource leveling — Procedure with example. <span style="color:var(--star)">[15–17 marks, ★★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Concept:</strong> Resource leveling smooths out resource usage peaks by delaying non-critical activities within their available slack. The <strong>project deadline is NOT changed</strong>.<br><br>
+      <strong>Procedure:</strong><br>
+      <strong>Step 1:</strong> Perform CPM analysis — identify critical path, ES, EF, LS, LF, and slack for all activities.<br>
+      <strong>Step 2:</strong> Draw the ASAP (As Soon As Possible) resource histogram — bar chart of resource demand vs time.<br>
+      <strong>Step 3:</strong> Identify peaks — periods where demand exceeds the desired limit.<br>
+      <strong>Step 4:</strong> Move non-critical activities (those with slack) to later times within their slack window to reduce peaks and fill valleys.<br>
+      <strong>Step 5:</strong> Draw the new leveled histogram and verify that: (a) the project deadline is unchanged, (b) all activity precedences are respected, (c) no activity exceeds its Latest Finish time.<br><br>
+      <strong>Key rule:</strong> Critical path activities CANNOT be moved. Only non-critical activities can be delayed.<br><br>
+      <em>[In the exam: draw the original histogram using ASAP schedule → identify which non-critical activity to move → draw the leveled histogram. Label resource units on y-axis and time periods on x-axis. Show before and after clearly.]</em>
+    </div>
+
+    <h3>Q2. Difference between resource leveling and resource allocation (constrained). <span style="color:var(--star)">[5 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong>
+      <table style="width:100%;border-collapse:collapse;margin-top:8px;font-size:12px;">
+        <tr style="background:#1a2332;"><th style="padding:4px 8px;border:1px solid #333;">Dimension</th><th style="padding:4px 8px;border:1px solid #333;">Resource Leveling</th><th style="padding:4px 8px;border:1px solid #333;">Resource Allocation (Constrained)</th></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Fixed constraint</td><td style="padding:4px 8px;border:1px solid #333;">Project deadline is fixed</td><td style="padding:4px 8px;border:1px solid #333;">Resource limit is fixed</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">What changes</td><td style="padding:4px 8px;border:1px solid #333;">Resource demand profile (peaks smoothed)</td><td style="padding:4px 8px;border:1px solid #333;">Project duration may extend</td></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Critical path</td><td style="padding:4px 8px;border:1px solid #333;">Not changed</td><td style="padding:4px 8px;border:1px solid #333;">May change as activities are delayed</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">Use when</td><td style="padding:4px 8px;border:1px solid #333;">Resources can be hired/fired; want smooth usage</td><td style="padding:4px 8px;border:1px solid #333;">Resource pool is limited and fixed</td></tr>
       </table>
+    </div>
+
+    <h3>Q3. Explain 5 priority rules for constrained resource scheduling. <span style="color:var(--star)">[5–8 marks, ★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      When resources are limited and multiple activities compete, these rules decide which activity gets the resource first:<br><br>
+      <strong>1. ASAP (As Soon As Possible):</strong> Schedule each activity as early as its predecessors allow. Builds in maximum float — does not consider resource limits.<br><br>
+      <strong>2. ALAP (As Late As Possible):</strong> Delay each activity to its Latest Start. Frees resources early but risky — no float left for critical activities.<br><br>
+      <strong>3. LST (Least Slack Time / Minimum Slack First — MSF):</strong> Give priority to the activity with the least slack (closest to critical). Prevents critical activities from being starved of resources. Most widely used rule.<br><br>
+      <strong>4. SDF (Shortest Duration First):</strong> Do the quickest job first. Frees resources rapidly, but may delay long-duration critical activities.<br><br>
+      <strong>5. LDF (Longest Duration First):</strong> Schedule long jobs first to prevent them from being pushed to the end. Useful when long activities are hard to interrupt.<br><br>
+      <em>MSF (Minimum Slack First) is generally preferred because it prevents critical path delay by prioritizing near-critical activities.</em>
+    </div>
+
+    <h3>Q4. What is the MSF rule? Why is it preferred? <span style="color:var(--star)">[3–5 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      The <strong>Minimum Slack First (MSF)</strong> rule — also called Least Slack Time (LST) — assigns resources first to the activity with the smallest amount of remaining slack (LS − ES).<br><br>
+      <strong>Why it is preferred:</strong><br>
+      1. It directly prevents project delays — activities closest to the critical path (least slack) get resources first<br>
+      2. It is intuitive — the most "at-risk" activity from a schedule perspective gets priority<br>
+      3. It naturally protects the critical path even as the schedule evolves<br>
+      4. Empirical studies show it produces better (shorter) project durations than most other rules under resource constraints<br><br>
+      <em>Compare: SDF (Shortest Duration First) is fast to implement but can starve long-duration critical activities. MSF is smarter because it uses schedule information, not just activity size.</em>
     </div>
   </div>
 </section>

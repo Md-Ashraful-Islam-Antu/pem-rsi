@@ -220,16 +220,57 @@
 <!-- ══ PYQ ══════════════════════════════════════════════════════ -->
 <section id="pyq" class="tab-panel">
   <div class="section">
-    <div class="section-title">❓ Past Year Questions — AA Ch 11</div>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
-        <tr><td>Full crashing problem: reduce to target duration, show all stages, total cost</td><td>15–22</td><td>★★★★★</td></tr>
-        <tr><td>Calculate cost slopes for given activities</td><td>5</td><td>★★★★</td></tr>
-        <tr><td>What is project crashing? State 2 principles</td><td>5</td><td>★★★</td></tr>
-        <tr><td>When must you crash two paths simultaneously?</td><td>3–5</td><td>★★★</td></tr>
-        <tr><td>What is the difference between partial and full crashing?</td><td>3–5</td><td>★★</td></tr>
-      </table>
+    <div class="section-title">❓ Past Year Questions &amp; Full Answers — AA Ch 11</div>
+    <div class="callout star">The full crashing numerical (★★★★★) is the highest-marks question in the course. Master the stage-by-stage procedure completely.</div>
+
+    <h3>Q1. Full crashing procedure — Step-by-step method. <span style="color:var(--star)">[15–22 marks, ★★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Setup:</strong> Given a network with Normal Time (NT), Normal Cost (NC), Crash Time (CT), Crash Cost (CC) for each activity. Find the schedule at target duration with minimum total cost.<br><br>
+      <strong>Step 1 — Calculate Cost Slope for each activity:</strong><br>
+      Cost Slope = (CC − NC) / (NT − CT) [cost per day of time reduction]<br><br>
+      <strong>Step 2 — Perform CPM to find the critical path at normal durations.</strong><br><br>
+      <strong>Step 3 — Identify the cheapest activity on the critical path (lowest cost slope that still has crash days available).</strong><br><br>
+      <strong>Step 4 — Crash that activity by 1 day (or as many days as needed until: (a) the target duration is reached, or (b) another path becomes critical, or (c) the activity is fully crashed).</strong><br><br>
+      <strong>Step 5 — Update total cost: add (days crashed × cost slope). Update the schedule. Re-draw the network if needed.</strong><br><br>
+      <strong>Step 6 — Re-identify the critical path(s). If two paths are now critical, must crash one activity on EACH path, or one activity common to both paths.</strong><br><br>
+      <strong>Step 7 — Repeat Steps 3–6 until the target duration is reached.</strong><br><br>
+      <strong>Important rules:</strong><br>
+      • Never crash a non-critical activity (wastes money, doesn't reduce project duration)<br>
+      • When two paths are critical, choose the cheapest combination that reduces BOTH paths<br>
+      • A single activity that lies on both paths reduces both simultaneously (most efficient)
+    </div>
+
+    <h3>Q2. Calculate cost slopes for given activities. <span style="color:var(--star)">[5 marks, ★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Formula:</strong> Cost Slope = (Crash Cost − Normal Cost) / (Normal Time − Crash Time)<br><br>
+      <strong>Example:</strong>
+      <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:4px;">
+        <tr style="background:#1a2332;"><th style="padding:3px 6px;border:1px solid #333;">Activity</th><th style="padding:3px 6px;border:1px solid #333;">NT</th><th style="padding:3px 6px;border:1px solid #333;">CT</th><th style="padding:3px 6px;border:1px solid #333;">NC (Tk.)</th><th style="padding:3px 6px;border:1px solid #333;">CC (Tk.)</th><th style="padding:3px 6px;border:1px solid #333;">Cost Slope (Tk./day)</th></tr>
+        <tr><td style="padding:3px 6px;border:1px solid #333;">A</td><td style="padding:3px 6px;border:1px solid #333;">6</td><td style="padding:3px 6px;border:1px solid #333;">4</td><td style="padding:3px 6px;border:1px solid #333;">8,000</td><td style="padding:3px 6px;border:1px solid #333;">12,000</td><td style="padding:3px 6px;border:1px solid #333;">(12,000−8,000)/(6−4) = <strong>2,000</strong></td></tr>
+        <tr style="background:#1a2332;"><td style="padding:3px 6px;border:1px solid #333;">B</td><td style="padding:3px 6px;border:1px solid #333;">8</td><td style="padding:3px 6px;border:1px solid #333;">5</td><td style="padding:3px 6px;border:1px solid #333;">10,000</td><td style="padding:3px 6px;border:1px solid #333;">16,000</td><td style="padding:3px 6px;border:1px solid #333;">(16,000−10,000)/(8−5) = <strong>2,000</strong></td></tr>
+        <tr><td style="padding:3px 6px;border:1px solid #333;">C</td><td style="padding:3px 6px;border:1px solid #333;">5</td><td style="padding:3px 6px;border:1px solid #333;">3</td><td style="padding:3px 6px;border:1px solid #333;">6,000</td><td style="padding:3px 6px;border:1px solid #333;">10,000</td><td style="padding:3px 6px;border:1px solid #333;">(10,000−6,000)/(5−3) = <strong>2,000</strong></td></tr>
+        <tr style="background:#1a2332;"><td style="padding:3px 6px;border:1px solid #333;">D</td><td style="padding:3px 6px;border:1px solid #333;">4</td><td style="padding:3px 6px;border:1px solid #333;">2</td><td style="padding:3px 6px;border:1px solid #333;">5,000</td><td style="padding:3px 6px;border:1px solid #333;">9,000</td><td style="padding:3px 6px;border:1px solid #333;">(9,000−5,000)/(4−2) = <strong>2,000</strong></td></tr>
+      </table><br>
+      <em>Lower cost slope = cheaper to crash = crash first when it is on the critical path.</em>
+    </div>
+
+    <h3>Q3. What is project crashing? State the 2 principles. <span style="color:var(--star)">[5 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      <strong>Project Crashing</strong> is the deliberate reduction of project duration by adding extra resources (overtime, additional workers, faster equipment) to critical activities — at additional cost. It is a time-cost trade-off decision.<br><br>
+      <strong>Principle 1 — Crash only critical path activities:</strong> Only activities on the critical path control project duration. Spending money to shorten a non-critical activity is wasted — it won't reduce project duration until that path also becomes critical.<br><br>
+      <strong>Principle 2 — Crash the cheapest critical activity first:</strong> Among all crashable critical activities, start with the one with the lowest cost slope (cost per day saved). This minimizes total crashing cost for a given time reduction.
+    </div>
+
+    <h3>Q4. When must you crash two paths simultaneously? <span style="color:var(--star)">[3–5 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      You must crash two paths simultaneously when <strong>two paths become critical at the same time</strong> during the crashing process.<br><br>
+      This happens when a non-critical path, after the critical path has been shortened in earlier stages, catches up and also has zero slack — both paths now have the same duration.<br><br>
+      At that point, crashing only one path will shorten IT, but the other (now equally long) path will still determine the project duration. So you must reduce BOTH paths together.<br><br>
+      <strong>Options for crashing two critical paths:</strong><br>
+      1. Find an activity that lies on BOTH paths (crashes both with one decision — most efficient)<br>
+      2. Crash one activity on each path (two separate crashes)
     </div>
   </div>
 </section>

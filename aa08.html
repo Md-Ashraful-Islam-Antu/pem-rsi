@@ -360,15 +360,93 @@
 <!-- ══ PYQ ══════════════════════════════════════════════════════ -->
 <section id="pyq" class="tab-panel">
   <div class="section">
-    <div class="section-title">❓ Past Year Questions — AA Ch 8</div>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
-        <tr><td>CPM network: draw, forward/backward pass, critical path, all slacks</td><td>15–20</td><td>★★★★★</td></tr>
-        <tr><td>Difference between PERT and CPM (at least 5 points)</td><td>5–8</td><td>★★★★</td></tr>
-        <tr><td>PERT: calculate expected time and variance for given O, M, P values</td><td>8–10</td><td>★★★</td></tr>
-        <tr><td>What is the critical path? Why is it important for PM?</td><td>5</td><td>★★★</td></tr>
-        <tr><td>Compare Gantt chart vs network diagram</td><td>5</td><td>★★</td></tr>
+    <div class="section-title">❓ Past Year Questions &amp; Full Answers — AA Ch 8</div>
+    <div class="callout star">CPM network analysis is the highest-marks question in this course (15–20 marks). Master the full worked example format.</div>
+
+    <h3>Q1. CPM: Worked Example — Draw network, find critical path and all slacks. <span style="color:var(--star)">[15–20 marks, ★★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Problem:</strong> Activities with durations: A(3), B(4), C(5), D(2), E(3), F(4), G(2). Precedences: B after A; C after A; D after B; E after C; F after D and E; G after F.<br><br>
+      <strong>Step 1 — Draw the Network (AON):</strong><br>
+      <em>Start → A → B → D →</em><br>
+      <em>Start → A → C → E → F → G → End</em><br><br>
+      <strong>Step 2 — Forward Pass (find ES and EF):</strong><br>
+      Rule: ES = maximum EF of all predecessors<br>
+      <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:4px;">
+        <tr style="background:#1a2332;"><th style="padding:3px 6px;border:1px solid #333;">Activity</th><th style="padding:3px 6px;border:1px solid #333;">Duration</th><th style="padding:3px 6px;border:1px solid #333;">ES</th><th style="padding:3px 6px;border:1px solid #333;">EF = ES+Dur</th></tr>
+        <tr><td style="padding:3px 6px;border:1px solid #333;">A</td><td style="padding:3px 6px;border:1px solid #333;">3</td><td style="padding:3px 6px;border:1px solid #333;">0</td><td style="padding:3px 6px;border:1px solid #333;">3</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:3px 6px;border:1px solid #333;">B</td><td style="padding:3px 6px;border:1px solid #333;">4</td><td style="padding:3px 6px;border:1px solid #333;">3</td><td style="padding:3px 6px;border:1px solid #333;">7</td></tr>
+        <tr><td style="padding:3px 6px;border:1px solid #333;">C</td><td style="padding:3px 6px;border:1px solid #333;">5</td><td style="padding:3px 6px;border:1px solid #333;">3</td><td style="padding:3px 6px;border:1px solid #333;">8</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:3px 6px;border:1px solid #333;">D</td><td style="padding:3px 6px;border:1px solid #333;">2</td><td style="padding:3px 6px;border:1px solid #333;">7</td><td style="padding:3px 6px;border:1px solid #333;">9</td></tr>
+        <tr><td style="padding:3px 6px;border:1px solid #333;">E</td><td style="padding:3px 6px;border:1px solid #333;">3</td><td style="padding:3px 6px;border:1px solid #333;">8</td><td style="padding:3px 6px;border:1px solid #333;">11</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:3px 6px;border:1px solid #333;">F</td><td style="padding:3px 6px;border:1px solid #333;">4</td><td style="padding:3px 6px;border:1px solid #333;">max(9,11)=11</td><td style="padding:3px 6px;border:1px solid #333;">15</td></tr>
+        <tr><td style="padding:3px 6px;border:1px solid #333;">G</td><td style="padding:3px 6px;border:1px solid #333;">2</td><td style="padding:3px 6px;border:1px solid #333;">15</td><td style="padding:3px 6px;border:1px solid #333;">17</td></tr>
+      </table><br>
+      <strong>Project Duration = 17 days</strong><br><br>
+      <strong>Step 3 — Backward Pass (find LS and LF):</strong><br>
+      Rule: LF = minimum LS of all successors; LS = LF − Duration<br>
+      <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:4px;">
+        <tr style="background:#1a2332;"><th style="padding:3px 6px;border:1px solid #333;">Activity</th><th style="padding:3px 6px;border:1px solid #333;">LF</th><th style="padding:3px 6px;border:1px solid #333;">LS = LF−Dur</th><th style="padding:3px 6px;border:1px solid #333;">Slack = LS−ES</th><th style="padding:3px 6px;border:1px solid #333;">Critical?</th></tr>
+        <tr><td style="padding:3px 6px;border:1px solid #333;">G</td><td style="padding:3px 6px;border:1px solid #333;">17</td><td style="padding:3px 6px;border:1px solid #333;">15</td><td style="padding:3px 6px;border:1px solid #333;">0</td><td style="padding:3px 6px;border:1px solid #333;color:#3fb950;font-weight:bold;">Yes ★</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:3px 6px;border:1px solid #333;">F</td><td style="padding:3px 6px;border:1px solid #333;">15</td><td style="padding:3px 6px;border:1px solid #333;">11</td><td style="padding:3px 6px;border:1px solid #333;">0</td><td style="padding:3px 6px;border:1px solid #333;color:#3fb950;font-weight:bold;">Yes ★</td></tr>
+        <tr><td style="padding:3px 6px;border:1px solid #333;">E</td><td style="padding:3px 6px;border:1px solid #333;">11</td><td style="padding:3px 6px;border:1px solid #333;">8</td><td style="padding:3px 6px;border:1px solid #333;">0</td><td style="padding:3px 6px;border:1px solid #333;color:#3fb950;font-weight:bold;">Yes ★</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:3px 6px;border:1px solid #333;">D</td><td style="padding:3px 6px;border:1px solid #333;">11</td><td style="padding:3px 6px;border:1px solid #333;">9</td><td style="padding:3px 6px;border:1px solid #333;">2</td><td style="padding:3px 6px;border:1px solid #333;">No</td></tr>
+        <tr><td style="padding:3px 6px;border:1px solid #333;">C</td><td style="padding:3px 6px;border:1px solid #333;">8</td><td style="padding:3px 6px;border:1px solid #333;">3</td><td style="padding:3px 6px;border:1px solid #333;">0</td><td style="padding:3px 6px;border:1px solid #333;color:#3fb950;font-weight:bold;">Yes ★</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:3px 6px;border:1px solid #333;">B</td><td style="padding:3px 6px;border:1px solid #333;">9</td><td style="padding:3px 6px;border:1px solid #333;">5</td><td style="padding:3px 6px;border:1px solid #333;">2</td><td style="padding:3px 6px;border:1px solid #333;">No</td></tr>
+        <tr><td style="padding:3px 6px;border:1px solid #333;">A</td><td style="padding:3px 6px;border:1px solid #333;">3</td><td style="padding:3px 6px;border:1px solid #333;">0</td><td style="padding:3px 6px;border:1px solid #333;">0</td><td style="padding:3px 6px;border:1px solid #333;color:#3fb950;font-weight:bold;">Yes ★</td></tr>
+      </table><br>
+      <strong>Critical Path: A → C → E → F → G (Duration = 3+5+3+4+2 = 17 days)</strong><br>
+      Activities B and D have 2 days of slack — they can be delayed up to 2 days without delaying the project.
+    </div>
+
+    <h3>Q2. Difference between PERT and CPM. <span style="color:var(--star)">[5–8 marks, ★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong>
+      <table style="width:100%;border-collapse:collapse;margin-top:8px;font-size:12px;">
+        <tr style="background:#1a2332;"><th style="padding:4px 8px;border:1px solid #333;">Dimension</th><th style="padding:4px 8px;border:1px solid #333;">PERT</th><th style="padding:4px 8px;border:1px solid #333;">CPM</th></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Full form</td><td style="padding:4px 8px;border:1px solid #333;">Program Evaluation and Review Technique</td><td style="padding:4px 8px;border:1px solid #333;">Critical Path Method</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">Duration estimate</td><td style="padding:4px 8px;border:1px solid #333;">3 estimates: Optimistic (O), Most Likely (M), Pessimistic (P)</td><td style="padding:4px 8px;border:1px solid #333;">1 deterministic estimate</td></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Nature</td><td style="padding:4px 8px;border:1px solid #333;">Probabilistic — accounts for uncertainty</td><td style="padding:4px 8px;border:1px solid #333;">Deterministic — assumes known durations</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">Best for</td><td style="padding:4px 8px;border:1px solid #333;">R&amp;D, new/unique projects with high uncertainty</td><td style="padding:4px 8px;border:1px solid #333;">Construction, repetitive projects with known data</td></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Key formula</td><td style="padding:4px 8px;border:1px solid #333;">tₑ = (O + 4M + P) / 6</td><td style="padding:4px 8px;border:1px solid #333;">ES, EF, LS, LF, Slack</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">Can crash?</td><td style="padding:4px 8px;border:1px solid #333;">Not designed for crashing</td><td style="padding:4px 8px;border:1px solid #333;">Yes — cost/time trade-off built in</td></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Network type</td><td style="padding:4px 8px;border:1px solid #333;">Typically AOA (Activity on Arrow)</td><td style="padding:4px 8px;border:1px solid #333;">AON or AOA</td></tr>
+      </table>
+    </div>
+
+    <h3>Q3. PERT — Calculate expected time and variance. <span style="color:var(--star)">[8–10 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Formulas:</strong><br>
+      Expected time: tₑ = (O + 4M + P) / 6<br>
+      Variance: σ² = [(P − O) / 6]²<br><br>
+      <strong>Problem:</strong> Activity: O=4, M=7, P=16 days. Find tₑ and σ².<br><br>
+      tₑ = (4 + 4×7 + 16) / 6 = (4 + 28 + 16) / 6 = 48 / 6 = <strong>8 days</strong><br>
+      σ² = [(16 − 4) / 6]² = [12/6]² = 2² = <strong>4 days²</strong><br>
+      σ (standard deviation) = √4 = <strong>2 days</strong><br><br>
+      <em>For the full project path, project variance = Σ variances of critical path activities. Project σ = √(project variance). Then use Z = (Target Date − Expected Date) / σ to find probability of meeting deadline.</em>
+    </div>
+
+    <h3>Q4. What is the critical path? Why is it important? <span style="color:var(--star)">[5 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      The <strong>critical path</strong> is the longest sequence of activities from project start to project end. Activities on the critical path have <strong>zero slack</strong> (Slack = LS − ES = 0).<br><br>
+      <strong>Why it is important for the PM:</strong><br>
+      1. <strong>Project Duration:</strong> The critical path determines the minimum time to complete the project. Any delay on the critical path delays the entire project.<br>
+      2. <strong>Focus for monitoring:</strong> PM must closely watch critical activities — no float to absorb delays.<br>
+      3. <strong>Resource allocation:</strong> Critical activities must be fully resourced. Non-critical activities with slack can tolerate resource reallocation.<br>
+      4. <strong>Crashing decisions:</strong> To shorten project duration, only crash critical path activities. Crashing non-critical activities wastes money.<br>
+      5. <strong>Risk management:</strong> Critical activities carry the highest schedule risk.
+    </div>
+
+    <h3>Q5. Compare Gantt chart vs network diagram. <span style="color:var(--star)">[5 marks, ★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong>
+      <table style="width:100%;border-collapse:collapse;margin-top:8px;font-size:12px;">
+        <tr style="background:#1a2332;"><th style="padding:4px 8px;border:1px solid #333;">Aspect</th><th style="padding:4px 8px;border:1px solid #333;">Gantt Chart</th><th style="padding:4px 8px;border:1px solid #333;">Network Diagram (CPM/PERT)</th></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Shows</td><td style="padding:4px 8px;border:1px solid #333;">Activities vs time (bar chart)</td><td style="padding:4px 8px;border:1px solid #333;">Activities and their dependencies (arrows/nodes)</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">Dependencies</td><td style="padding:4px 8px;border:1px solid #333;">Not clearly shown</td><td style="padding:4px 8px;border:1px solid #333;">Explicitly shown by arrows</td></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Critical path</td><td style="padding:4px 8px;border:1px solid #333;">Not identifiable</td><td style="padding:4px 8px;border:1px solid #333;">Clearly identified</td></tr>
+        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">Best for</td><td style="padding:4px 8px;border:1px solid #333;">Simple projects; communication with clients</td><td style="padding:4px 8px;border:1px solid #333;">Complex projects; scheduling &amp; risk analysis</td></tr>
+        <tr><td style="padding:4px 8px;border:1px solid #333;">Complexity</td><td style="padding:4px 8px;border:1px solid #333;">Simple to read</td><td style="padding:4px 8px;border:1px solid #333;">Complex but more powerful</td></tr>
       </table>
     </div>
   </div>

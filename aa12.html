@@ -330,17 +330,62 @@
 <!-- ══ PYQ ══════════════════════════════════════════════════════ -->
 <section id="pyq" class="tab-panel">
   <div class="section">
-    <div class="section-title">❓ Past Year Questions — AA Ch 12</div>
-    <div class="table-wrap">
-      <table>
-        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
-        <tr><td>Explain the 4 monitoring policies with timing diagrams</td><td>8–10</td><td>★★★★★ (6×)</td></tr>
-        <tr><td>Explain 3 types of control mechanisms (Cybernetic 1st/2nd/3rd order, Go/No-Go, Post)</td><td>8–10</td><td>★★★★★ (6×)</td></tr>
-        <tr><td>What are the 5 data collection methods? Give examples</td><td>5–8</td><td>★★★★</td></tr>
-        <tr><td>What are the 4 sections of a post-control report?</td><td>5</td><td>★★★</td></tr>
-        <tr><td>Explain 1st, 2nd, 3rd order cybernetic control with examples</td><td>8</td><td>★★★★</td></tr>
-        <tr><td>What is Go/No-Go control? When is it used?</td><td>5</td><td>★★★</td></tr>
-      </table>
+    <div class="section-title">❓ Past Year Questions &amp; Full Answers — AA Ch 12</div>
+    <div class="callout star">Monitoring policies (★★★★★) and control mechanisms (★★★★★) are the most-repeated questions in the entire course. Write both in full, with timing diagrams.</div>
+
+    <h3>Q1. Explain the 4 monitoring policies with timing diagrams. <span style="color:var(--star)">[8–10 marks, ★★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      Monitoring policies define <em>when</em> progress data is collected during a project. The four policies are:<br><br>
+      <strong>Policy 1 — Random Monitoring:</strong> Progress checks are made at unpredictable, random times. The project team cannot prepare in advance for the check. Prevents "gaming" the monitoring system where teams clean up only before scheduled inspections.<br>
+      <em>[Diagram: timeline with randomly-spaced vertical check marks — no pattern]</em><br><br>
+      <strong>Policy 2 — Equal Interval (Regular) Monitoring:</strong> Checks are made at equally-spaced intervals — daily, weekly, monthly. Simple to administer and creates a routine. Good for stable, routine projects. Easy to plan for but predictable — teams may work hard just before each check.<br>
+      <em>[Diagram: timeline with equally-spaced vertical marks — 1 wk, 2 wk, 3 wk...]</em><br><br>
+      <strong>Policy 3 — More Frequent at the Start:</strong> Monitoring is intensive at project launch and taper off over time. Best for R&amp;D projects or projects using new technology — problems are most likely early when the work is least understood. Early detection prevents cascading problems.<br>
+      <em>[Diagram: marks are closely-spaced early in the project, then spread out toward the end]</em><br><br>
+      <strong>Policy 4 — More Frequent at the End:</strong> Monitoring intensifies as the deadline approaches. Best for projects where the final integration and delivery phase is the most risk-intensive. Allows the PM to catch and fix problems before they affect the deadline.<br>
+      <em>[Diagram: marks are sparse early, then cluster densely near the end of the timeline]</em>
+    </div>
+
+    <h3>Q2. Explain the 3 types of control mechanisms. <span style="color:var(--star)">[8–10 marks, ★★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      There are three main types of project control mechanisms:<br><br>
+      <strong>Type 1 — Cybernetic Control:</strong> A continuous feedback loop that compares actual performance to the plan and triggers corrective action. Named after the Greek word for "steersman." Has three orders:<br>
+      • <strong>1st Order:</strong> Adjust actions to meet the existing goal (e.g., add overtime to meet deadline)<br>
+      • <strong>2nd Order:</strong> Adjust the goal itself when it is unachievable (e.g., revise the deadline, re-baseline)<br>
+      • <strong>3rd Order:</strong> Redesign the entire control system (e.g., change the PM methodology, restructure the team)<br><br>
+      <strong>Type 2 — Go/No-Go Control (Milestone Control):</strong> At key milestones (gates), the project is evaluated with a binary decision — Go (continue) or No-Go (stop/modify). Very different from cybernetic control because no fine-tuning occurs: the question is simply whether standards are met. Used at phase-gates, funding decisions, or formal review points.<br><br>
+      <strong>Type 3 — Post Control (Post-Project Review):</strong> Occurs after the project is complete. The purpose is not to control the finished project (too late!) but to learn for future projects. Documents what went right, what went wrong, and what should be done differently. Forms the basis of organizational memory.
+    </div>
+
+    <h3>Q3. What are the 5 data collection methods? Give examples. <span style="color:var(--star)">[5–8 marks, ★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      <strong>1. Frequency Count:</strong> Count how many times something occurs. Example: number of defects found in a week, number of change requests submitted, number of safety incidents. Good for discrete events.<br><br>
+      <strong>2. Raw Numbers:</strong> Collect actual values — costs in Tk., days elapsed, units produced, man-hours worked. Example: "Budget spent to date = Tk. 45,000." Directly comparable to plan.<br><br>
+      <strong>3. Subjective Numeric Ratings:</strong> Ask team members to rate progress on a scale (e.g., 1–10 for "% complete"). Useful when objective measurement is impossible. Example: "Rate how well the design phase is going on a scale of 1–10." Prone to bias but quick.<br><br>
+      <strong>4. Indicators (Surrogate Measures):</strong> Use an observable proxy when the real measure is hard to collect. Example: use number of customer complaints as an indicator of product quality, or use the number of approved drawings as an indicator of design completion.<br><br>
+      <strong>5. Verbal Measures (Qualitative):</strong> Use categorical ratings — "Good / Satisfactory / Poor" or "On Track / At Risk / In Trouble." Useful for early warning and management dashboard reporting. Example: a project status report uses traffic lights: Green / Amber / Red.
+    </div>
+
+    <h3>Q4. What are the 4 sections of a post-control report? <span style="color:var(--star)">[5 marks, ★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      A post-project control report (also called a lessons-learned report) contains four sections:<br><br>
+      <strong>Section 1 — Project Description:</strong> Brief summary of what the project was, its objectives, scope, and original targets for cost, time, and performance.<br><br>
+      <strong>Section 2 — Comparison of Planned vs Actual:</strong> Side-by-side comparison of original plan vs actual outcomes for schedule (planned completion vs actual), cost (budget vs actual), and technical performance (specifications vs delivered). Variance analysis.<br><br>
+      <strong>Section 3 — Reasons for Variance:</strong> Explanation of why deviations occurred — technical problems, scope changes, resource issues, planning errors, external factors. This is the most important section for learning.<br><br>
+      <strong>Section 4 — Recommendations:</strong> What should be done differently next time. Specific recommendations for future projects of similar type — improvements to estimating methods, planning processes, risk management, team structure, etc.
+    </div>
+
+    <h3>Q5. Explain 1st, 2nd, and 3rd order Cybernetic Control with examples. <span style="color:var(--star)">[8 marks, ★★★★]</span></h3>
+    <div class="callout info">
+      <strong>Answer:</strong><br>
+      Cybernetic control is a feedback-based control system. It has three orders, each representing increasingly fundamental levels of intervention:<br><br>
+      <strong>1st Order — Adjust Actions (most common):</strong> The system detects a deviation between actual and planned performance and adjusts the action to bring performance back in line. The goal remains unchanged. Example: Schedule is 2 weeks behind → add overtime to catch up. The deadline (goal) stays the same; the action (working hours) is adjusted.<br><br>
+      <strong>2nd Order — Adjust the Goal:</strong> When first-order adjustments are insufficient or impossible, the goal itself is revised. The system is working correctly, but the original goal was unrealistic. Example: After 6 months it is clear the project cannot finish in 12 months → revised project plan resets deadline to 15 months. The system (project structure) stays the same; the goal changes.<br><br>
+      <strong>3rd Order — Redesign the Control System:</strong> When neither adjusting actions nor adjusting goals solves the problem, the entire control system is redesigned — new PM approach, new organizational structure, new tools, change of PM. Example: A project has repeatedly failed to deliver because the matrix structure creates too much conflict → switch to a dedicated project structure with a full-time PM and team.
     </div>
   </div>
 </section>
