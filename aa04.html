@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Ch 4: Project Appraisal — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>AA Ch 4: Project Appraisal</h1>
+  <span class="chapter-badge">AA-04</span>
+  <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="technical" data-stars="2">🔧 Technical Analysis</button>
+  <button class="tab-btn" data-tab="npv" data-stars="4">💰 NPV</button>
+  <button class="tab-btn" data-tab="bcr" data-stars="4">📊 BCR</button>
+  <button class="tab-btn" data-tab="irr" data-stars="4">📈 IRR</button>
+  <button class="tab-btn" data-tab="pbp" data-stars="3">⏱️ Payback Period</button>
+  <button class="tab-btn" data-tab="arr" data-stars="3">🏦 ARR</button>
+  <button class="tab-btn" data-tab="math" data-stars="4">🔢 Math Problems</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<div class="reading-progress">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-label" id="progressLabel">0 / 7 topics read</span>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Exam Weight</div><div class="card-value">★★★★</div><div class="card-sub">High frequency</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">NPV/BCR/IRR</div><div class="card-sub">Numerical &amp; conceptual</div></div>
+      <div class="summary-card"><div class="card-title">Math Heavy</div><div class="card-value">Yes</div><div class="card-sub">Discounting, PBP, IRR</div></div>
+    </div>
+    <p>Chapter 4 covers Project Appraisal — how to evaluate whether a project is worth pursuing. It has two parts: Technical Analysis (market, technical, financial feasibility) and Financial Evaluation (NPV, BCR, IRR, Payback Period, ARR). Financial evaluation is heavily tested with numericals.</p>
+    <div class="callout star"><strong>Exam focus:</strong> NPV, BCR, and IRR are the highest-value topics. Know formulas, solve numericals, and understand decision rules (NPV&gt;0 → accept; BCR&gt;1 → accept; IRR&gt;cost of capital → accept). ARR is also asked.</div>
+  </div>
+</section>
+
+<!-- ══ TECHNICAL ANALYSIS ══════════════════════════════════════ -->
+<section id="technical" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔧 Technical Analysis <span style="color:var(--star)">★★☆☆</span></div>
+    <p>Before financial evaluation, a project must pass a <strong>technical analysis</strong> examining feasibility from multiple angles.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Analysis Type</th><th>Key Questions</th></tr>
+        <tr><td><strong>Market Analysis</strong></td><td>Is there demand for the product/service? What is the market size? Who are competitors?</td></tr>
+        <tr><td><strong>Technical Analysis</strong></td><td>Is the technology available and proven? Can we build/operate it? Do we have the expertise?</td></tr>
+        <tr><td><strong>Financial Analysis</strong></td><td>Will revenues exceed costs? What is the ROI? Can we fund it?</td></tr>
+        <tr><td><strong>Economic Analysis</strong></td><td>What is the broader impact on the economy, employment, GDP?</td></tr>
+        <tr><td><strong>Environmental Analysis</strong></td><td>What are the environmental impacts? Regulatory compliance?</td></tr>
+        <tr><td><strong>Social/Political Analysis</strong></td><td>Community impact, political risk, government support</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NPV ══════════════════════════════════════════════════════ -->
+<section id="npv" class="tab-panel">
+  <div class="section">
+    <div class="section-title">💰 Net Present Value (NPV) <span style="color:var(--star)">★★★★</span></div>
+
+    <div class="callout info">NPV converts all future cash flows to their <strong>present value</strong> using a discount rate, then subtracts the initial investment. It represents the wealth created (or destroyed) by the project in today's money.</div>
+
+    <div class="math-block">
+      <div class="math-title">NPV Formula</div>
+      <div class="math-formula">
+        NPV = Σ [ C<sub>t</sub> / (1+r)<sup>t</sup> ] − I<sub>0</sub>
+      </div>
+      <div class="math-desc">
+        Where: C<sub>t</sub> = cash inflow at time t &nbsp;|&nbsp; r = discount rate (cost of capital) &nbsp;|&nbsp; t = time period &nbsp;|&nbsp; I<sub>0</sub> = initial investment (at t=0)
+      </div>
+    </div>
+
+    <h3>Decision Rule</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>NPV Value</th><th>Decision</th><th>Meaning</th></tr>
+        <tr><td>NPV &gt; 0</td><td>✅ <strong>Accept</strong></td><td>Project creates value; returns exceed cost of capital</td></tr>
+        <tr><td>NPV = 0</td><td>🤔 Indifferent</td><td>Project just covers cost of capital — break even on value</td></tr>
+        <tr><td>NPV &lt; 0</td><td>❌ <strong>Reject</strong></td><td>Project destroys value; better to invest elsewhere</td></tr>
+      </table>
+    </div>
+
+    <h3>NPV Profile</h3>
+    <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;display:block;margin:12px auto;">
+      <line x1="40" y1="180" x2="380" y2="180" stroke="#444" stroke-width="1.5"/>
+      <line x1="40" y1="20" x2="40" y2="180" stroke="#444" stroke-width="1.5"/>
+      <text x="210" y="200" text-anchor="middle" fill="#8b949e" font-size="11">Discount Rate r →</text>
+      <text x="20" y="100" text-anchor="middle" fill="#8b949e" font-size="11" transform="rotate(-90,20,100)">NPV</text>
+      <!-- NPV curve -->
+      <path d="M60,30 C120,35 180,80 240,120 C280,145 320,165 370,180" fill="none" stroke="#3fb950" stroke-width="2.5"/>
+      <!-- IRR point -->
+      <circle cx="310" cy="180" r="5" fill="#f0883e"/>
+      <text x="315" y="175" fill="#f0883e" font-size="10" font-weight="bold">IRR</text>
+      <!-- NPV=0 line already at x-axis -->
+      <!-- Accept/Reject zones -->
+      <text x="150" y="100" text-anchor="middle" fill="#3fb950" font-size="11">Accept Zone</text>
+      <text x="150" y="115" text-anchor="middle" fill="#3fb950" font-size="11">(NPV &gt; 0)</text>
+      <text x="350" y="175" text-anchor="middle" fill="#f0883e" font-size="11">Reject</text>
+      <!-- Cost of capital marker -->
+      <line x1="200" y1="100" x2="200" y2="180" stroke="#58a6ff" stroke-width="1" stroke-dasharray="4"/>
+      <text x="200" y="95" text-anchor="middle" fill="#58a6ff" font-size="9">r* (cost of capital)</text>
+      <line x1="200" y1="130" x2="40" y2="130" stroke="#58a6ff" stroke-width="1" stroke-dasharray="3"/>
+      <text x="22" y="130" text-anchor="middle" fill="#58a6ff" font-size="8">NPV*</text>
+    </svg>
+
+    <div class="callout warn"><strong>Remember:</strong> NPV uses all cash flows over the project life. It is the <em>most preferred</em> method because it directly measures value created. Its weakness is sensitivity to the discount rate assumption.</div>
+  </div>
+</section>
+
+<!-- ══ BCR ══════════════════════════════════════════════════════ -->
+<section id="bcr" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📊 Benefit-Cost Ratio (BCR) <span style="color:var(--star)">★★★★</span></div>
+
+    <div class="callout info">BCR (also called Profitability Index) is the ratio of the present value of all benefits to the initial investment. It tells you how much value you get per unit of investment.</div>
+
+    <div class="math-block">
+      <div class="math-title">BCR Formula</div>
+      <div class="math-formula">
+        BCR = Σ [ C<sub>t</sub> / (1+r)<sup>t</sup> ] ÷ I<sub>0</sub>
+      </div>
+      <div class="math-desc">
+        BCR = PV of Benefits / Initial Investment &nbsp;|&nbsp; Note: BCR = 1 + NPV/I<sub>0</sub>
+      </div>
+    </div>
+
+    <h3>Decision Rule</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>BCR Value</th><th>Decision</th><th>Meaning</th></tr>
+        <tr><td>BCR &gt; 1</td><td>✅ <strong>Accept</strong></td><td>Benefits exceed cost — project creates value</td></tr>
+        <tr><td>BCR = 1</td><td>🤔 Indifferent</td><td>Exactly break even on investment</td></tr>
+        <tr><td>BCR &lt; 1</td><td>❌ <strong>Reject</strong></td><td>Benefits don't cover investment</td></tr>
+      </table>
+    </div>
+
+    <div class="callout info"><strong>BCR vs NPV:</strong> BCR is useful when comparing projects of <em>different sizes</em> (e.g., BCR=1.5 vs BCR=1.2 tells you which is more efficient per dollar invested). NPV tells you absolute value; BCR tells you relative efficiency.</div>
+  </div>
+</section>
+
+<!-- ══ IRR ══════════════════════════════════════════════════════ -->
+<section id="irr" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📈 Internal Rate of Return (IRR) <span style="color:var(--star)">★★★★</span></div>
+
+    <div class="callout info">IRR is the discount rate at which NPV = 0. It is the project's own <strong>internal</strong> rate of return — the return generated by the project's cash flows alone.</div>
+
+    <div class="math-block">
+      <div class="math-title">IRR Definition</div>
+      <div class="math-formula">
+        Find r such that: Σ [ C<sub>t</sub> / (1+IRR)<sup>t</sup> ] = I<sub>0</sub>
+      </div>
+      <div class="math-desc">
+        i.e., NPV = 0 when r = IRR &nbsp;|&nbsp; IRR has no closed-form solution — must be found by trial &amp; error or interpolation
+      </div>
+    </div>
+
+    <h3>Decision Rule</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Comparison</th><th>Decision</th><th>Meaning</th></tr>
+        <tr><td>IRR &gt; Cost of Capital (r*)</td><td>✅ <strong>Accept</strong></td><td>Project earns more than it costs to finance</td></tr>
+        <tr><td>IRR = Cost of Capital</td><td>🤔 Indifferent</td><td>Exactly covers financing cost</td></tr>
+        <tr><td>IRR &lt; Cost of Capital</td><td>❌ <strong>Reject</strong></td><td>Cheaper to invest elsewhere</td></tr>
+      </table>
+    </div>
+
+    <h3>Interpolation Method to Find IRR</h3>
+    <div class="math-block">
+      <div class="math-title">Linear Interpolation Formula</div>
+      <div class="math-formula">
+        IRR = r₁ + [ NPV₁ / (NPV₁ − NPV₂) ] × (r₂ − r₁)
+      </div>
+      <div class="math-desc">
+        Where r₁ gives positive NPV₁ and r₂ gives negative NPV₂ &nbsp;|&nbsp; Choose r₁ and r₂ close to each other
+      </div>
+    </div>
+
+    <div class="callout warn"><strong>Weakness of IRR:</strong> Multiple IRRs can exist if cash flows change sign more than once. For mutually exclusive projects, NPV is preferred over IRR.</div>
+  </div>
+</section>
+
+<!-- ══ PAYBACK PERIOD ══════════════════════════════════════════ -->
+<section id="pbp" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⏱️ Payback Period (PBP) <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout info">Payback Period is the length of time required to recover the initial investment from the project's cash inflows. Simple (undiscounted) PBP ignores time value; Discounted PBP accounts for it.</div>
+
+    <div class="math-block">
+      <div class="math-title">Simple Payback Period</div>
+      <div class="math-formula">PBP = I<sub>0</sub> / Annual Cash Inflow (if uniform)</div>
+      <div class="math-desc">For non-uniform flows: cumulate inflows year by year until they equal I₀</div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Discounted Payback Period</div>
+      <div class="math-formula">Cumulate [ C<sub>t</sub> / (1+r)<sup>t</sup> ] until sum = I<sub>0</sub></div>
+      <div class="math-desc">Same idea but using present values of each year's cash flow</div>
+    </div>
+
+    <h3>PBP Example</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Year</th><th>Cash Inflow</th><th>Cumulative</th><th>Discounted (r=10%)</th><th>Cum. Discounted</th></tr>
+        <tr><td>0</td><td>−$10,000 (invest)</td><td>−$10,000</td><td>−$10,000</td><td>−$10,000</td></tr>
+        <tr><td>1</td><td>$3,000</td><td>−$7,000</td><td>$3,000/1.1 = $2,727</td><td>−$7,273</td></tr>
+        <tr><td>2</td><td>$3,000</td><td>−$4,000</td><td>$3,000/1.21 = $2,479</td><td>−$4,794</td></tr>
+        <tr><td>3</td><td>$3,000</td><td>−$1,000</td><td>$3,000/1.331 = $2,254</td><td>−$2,540</td></tr>
+        <tr><td>4</td><td>$3,000</td><td>+$2,000 ✅</td><td>$3,000/1.464 = $2,049</td><td>−$491</td></tr>
+        <tr><td>5</td><td>$3,000</td><td>+$5,000</td><td>$3,000/1.611 = $1,863</td><td>+$1,372 ✅</td></tr>
+      </table>
+    </div>
+    <p>Simple PBP ≈ 3.33 years &nbsp;|&nbsp; Discounted PBP ≈ 4.26 years</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>✅ Advantages</th><th>❌ Disadvantages</th></tr>
+        <tr><td>Simple to calculate and understand</td><td>Ignores cash flows after payback</td></tr>
+        <tr><td>Useful liquidity/risk measure</td><td>Simple PBP ignores time value of money</td></tr>
+        <tr><td>Good for high-risk environments</td><td>Does not measure profitability or NPV</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ARR ══════════════════════════════════════════════════════ -->
+<section id="arr" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🏦 Average Rate of Return (ARR) <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout info">ARR measures the average annual profit as a percentage of the investment. There are <strong>7 different measures</strong> depending on what "investment" and "profit" you use — Azeem sir lists all 7.</div>
+
+    <div class="math-block">
+      <div class="math-title">General ARR Formula</div>
+      <div class="math-formula">ARR = (Average Annual Profit / Investment) × 100%</div>
+    </div>
+
+    <h3>7 Measures of ARR</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Measure</th><th>Numerator</th><th>Denominator</th></tr>
+        <tr><td>1</td><td>ARR on Initial Investment</td><td>Average annual profit after tax</td><td>Initial investment</td></tr>
+        <tr><td>2</td><td>ARR on Average Investment</td><td>Average annual profit after tax</td><td>Average investment = (Initial + Salvage)/2</td></tr>
+        <tr><td>3</td><td>ARR (before tax, initial)</td><td>Average annual profit before tax</td><td>Initial investment</td></tr>
+        <tr><td>4</td><td>ARR (before tax, average)</td><td>Average annual profit before tax</td><td>Average investment</td></tr>
+        <tr><td>5</td><td>ARR on Total Capital</td><td>Average annual profit</td><td>Total capital employed</td></tr>
+        <tr><td>6</td><td>ARR on Net Worth</td><td>Average annual profit</td><td>Net worth (equity)</td></tr>
+        <tr><td>7</td><td>ARR (cash flow basis)</td><td>Average annual cash flow</td><td>Initial investment</td></tr>
+      </table>
+    </div>
+
+    <div class="callout warn"><strong>Key weakness of ARR:</strong> Does NOT account for the time value of money. Cash flows received later are treated the same as those received earlier.</div>
+
+    <div class="callout info"><strong>Decision rule:</strong> Accept if ARR &gt; a predetermined hurdle rate (minimum acceptable return set by management).</div>
+  </div>
+</section>
+
+<!-- ══ MATH PROBLEMS ══════════════════════════════════════════ -->
+<section id="math" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔢 Worked Math Problems <span style="color:var(--star)">★★★★</span></div>
+
+    <h3>Problem 1: NPV Calculation</h3>
+    <div class="callout info">
+      A project requires an initial investment of $50,000. It generates cash inflows of $15,000 per year for 5 years. The discount rate is 12%. Should the project be accepted?
+    </div>
+    <div class="math-block">
+      <div class="math-title">Solution</div>
+      <div class="math-formula">
+        NPV = Σ [15,000/(1.12)<sup>t</sup>] − 50,000 for t=1 to 5
+      </div>
+      <table style="font-size:0.9rem;margin:8px 0;">
+        <tr><th>Year</th><th>Cash Flow</th><th>Discount Factor (12%)</th><th>PV</th></tr>
+        <tr><td>1</td><td>$15,000</td><td>1/1.12 = 0.893</td><td>$13,395</td></tr>
+        <tr><td>2</td><td>$15,000</td><td>1/1.254 = 0.797</td><td>$11,955</td></tr>
+        <tr><td>3</td><td>$15,000</td><td>1/1.405 = 0.712</td><td>$10,680</td></tr>
+        <tr><td>4</td><td>$15,000</td><td>1/1.574 = 0.636</td><td>$9,540</td></tr>
+        <tr><td>5</td><td>$15,000</td><td>1/1.762 = 0.567</td><td>$8,505</td></tr>
+        <tr><td colspan="3"><strong>Sum of PVs</strong></td><td><strong>$54,075</strong></td></tr>
+      </table>
+      <div class="math-formula">NPV = $54,075 − $50,000 = <span style="color:#3fb950">+$4,075</span></div>
+      <div class="math-desc">NPV &gt; 0 → ✅ Accept the project</div>
+    </div>
+
+    <h3>Problem 2: BCR Calculation (same project)</h3>
+    <div class="math-block">
+      <div class="math-formula">BCR = $54,075 / $50,000 = <span style="color:#3fb950">1.08</span></div>
+      <div class="math-desc">BCR &gt; 1 → ✅ Accept — for every $1 invested, we get $1.08 in PV returns</div>
+    </div>
+
+    <h3>Problem 3: Payback Period (non-uniform)</h3>
+    <div class="callout info">
+      Investment = $20,000. Cash flows: Year 1 = $5,000, Year 2 = $7,000, Year 3 = $8,000, Year 4 = $6,000. Find PBP.
+    </div>
+    <div class="math-block">
+      <div class="math-title">Solution</div>
+      <table style="font-size:0.9rem;margin:8px 0;">
+        <tr><th>Year</th><th>Cash Flow</th><th>Cumulative</th></tr>
+        <tr><td>1</td><td>$5,000</td><td>$5,000</td></tr>
+        <tr><td>2</td><td>$7,000</td><td>$12,000</td></tr>
+        <tr><td>3</td><td>$8,000</td><td>$20,000 ✅</td></tr>
+      </table>
+      <div class="math-formula">PBP = 3 years exactly (cumulative reaches $20,000 at end of Year 3)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PYQ ══════════════════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ Past Year Questions — AA Ch 4</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Question</th><th>Type</th><th>Marks</th><th>Frequency</th></tr>
+        <tr><td>Calculate NPV and BCR for given cash flows; decide accept/reject</td><td>Numerical</td><td>10–15</td><td>★★★★</td></tr>
+        <tr><td>Find IRR by interpolation</td><td>Numerical</td><td>10–12</td><td>★★★★</td></tr>
+        <tr><td>Calculate Payback Period (simple and discounted)</td><td>Numerical</td><td>5–10</td><td>★★★</td></tr>
+        <tr><td>List and explain 7 measures of ARR</td><td>Short answer</td><td>5–8</td><td>★★★</td></tr>
+        <tr><td>Compare NPV vs IRR — when to prefer which</td><td>Short</td><td>4–5</td><td>★★</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ══════════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — AA Ch 4</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Method</th><th>Formula</th><th>Accept Rule</th><th>Weakness</th></tr>
+        <tr><td>NPV</td><td>Σ Cₜ/(1+r)ᵗ − I₀</td><td>NPV &gt; 0</td><td>Sensitive to discount rate</td></tr>
+        <tr><td>BCR</td><td>Σ Cₜ/(1+r)ᵗ / I₀</td><td>BCR &gt; 1</td><td>Doesn't show absolute value</td></tr>
+        <tr><td>IRR</td><td>r where NPV = 0</td><td>IRR &gt; cost of capital</td><td>Multiple IRRs possible</td></tr>
+        <tr><td>Simple PBP</td><td>I₀ / Annual inflow</td><td>PBP &lt; target years</td><td>Ignores time value &amp; flows after payback</td></tr>
+        <tr><td>Discounted PBP</td><td>Cumulate PV until = I₀</td><td>PBP &lt; target years</td><td>Still ignores flows after payback</td></tr>
+        <tr><td>ARR</td><td>Avg profit / Investment × 100</td><td>ARR &gt; hurdle rate</td><td>Ignores time value</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="js/tabs.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Ch 10: Resource Management — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>AA Ch 10: Resource Management</h1>
+  <span class="chapter-badge">AA-10</span>
+  <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="concepts" data-stars="3">📚 Leveling vs Allocation</button>
+  <button class="tab-btn" data-tab="heuristic" data-stars="4">🧮 Heuristic Approach</button>
+  <button class="tab-btn" data-tab="math" data-stars="4">🔢 Math Problems</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<div class="reading-progress">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-label" id="progressLabel">0 / 3 topics read</span>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Exam Weight</div><div class="card-value">★★★★★</div><div class="card-sub">15–17 marks numericals</div></div>
+      <div class="summary-card"><div class="card-title">Top Topic</div><div class="card-value">Manpower Leveling</div><div class="card-sub">Draw manpower histogram</div></div>
+      <div class="summary-card"><div class="card-title">Key Constraint</div><div class="card-value">Time vs Resources</div><div class="card-sub">Two types of scheduling</div></div>
+    </div>
+    <p>Resource management determines how labor and equipment are assigned to project activities. The two primary problems are <strong>resource leveling</strong> (minimize peak while keeping deadline) and <strong>resource allocation</strong> (extend deadline to meet resource constraints).</p>
+    <div class="callout star"><strong>Exam focus:</strong> Given a network with resource requirements per activity, draw the manpower histogram, perform leveling (move non-critical activities to reduce peak), and report the new histogram. Numerical is worth 15–17 marks.</div>
+  </div>
+</section>
+
+<!-- ══ CONCEPTS ══════════════════════════════════════════════ -->
+<section id="concepts" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📚 Resource Leveling vs Resource Allocation <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Dimension</th><th>Resource Leveling</th><th>Resource Allocation</th></tr>
+        <tr><td><strong>Objective</strong></td><td>Minimize peak resource demand</td><td>Stay within resource limits</td></tr>
+        <tr><td><strong>Project duration</strong></td><td>Unchanged (fixed deadline)</td><td>May be extended</td></tr>
+        <tr><td><strong>What you move</strong></td><td>Non-critical activities within their slack</td><td>Activities shifted beyond deadline if needed</td></tr>
+        <tr><td><strong>Constraint</strong></td><td>Time-constrained (deadline fixed)</td><td>Resource-constrained</td></tr>
+        <tr><td><strong>Also called</strong></td><td>Manpower smoothing</td><td>Constrained resource scheduling</td></tr>
+        <tr><td><strong>Result</strong></td><td>Smoother resource histogram</td><td>Feasible schedule within resource limits</td></tr>
+      </table>
+    </div>
+
+    <svg viewBox="0 0 540 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:540px;display:block;margin:14px auto;">
+      <!-- Before leveling histogram -->
+      <text x="130" y="15" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">Before Leveling</text>
+      <line x1="30" y1="180" x2="250" y2="180" stroke="#444" stroke-width="1"/>
+      <line x1="30" y1="30" x2="30" y2="180" stroke="#444" stroke-width="1"/>
+      <!-- Bars - jagged -->
+      <rect x="40" y="100" width="30" height="80" fill="#f0883e" opacity="0.7"/>
+      <rect x="75" y="60" width="30" height="120" fill="#f0883e" opacity="0.7"/>
+      <rect x="110" y="40" width="30" height="140" fill="#f0883e" opacity="0.9"/>
+      <rect x="145" y="80" width="30" height="100" fill="#f0883e" opacity="0.7"/>
+      <rect x="180" y="120" width="30" height="60" fill="#f0883e" opacity="0.7"/>
+      <!-- Peak line -->
+      <line x1="30" y1="40" x2="250" y2="40" stroke="#f0883e" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="255" y="44" fill="#f0883e" font-size="9">Peak</text>
+      <!-- Y axis label -->
+      <text x="20" y="105" fill="#8b949e" font-size="9" transform="rotate(-90,20,105)">People</text>
+      <text x="130" y="198" text-anchor="middle" fill="#8b949e" font-size="9">Time →</text>
+      <!-- Arrow -->
+      <text x="285" y="105" text-anchor="middle" fill="#3fb950" font-size="20" font-weight="bold">→</text>
+      <!-- After leveling histogram -->
+      <text x="420" y="15" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">After Leveling</text>
+      <line x1="310" y1="180" x2="530" y2="180" stroke="#444" stroke-width="1"/>
+      <line x1="310" y1="30" x2="310" y2="180" stroke="#444" stroke-width="1"/>
+      <!-- Smoother bars -->
+      <rect x="320" y="80" width="30" height="100" fill="#3fb950" opacity="0.7"/>
+      <rect x="355" y="70" width="30" height="110" fill="#3fb950" opacity="0.7"/>
+      <rect x="390" y="70" width="30" height="110" fill="#3fb950" opacity="0.7"/>
+      <rect x="425" y="75" width="30" height="105" fill="#3fb950" opacity="0.7"/>
+      <rect x="460" y="80" width="30" height="100" fill="#3fb950" opacity="0.7"/>
+      <!-- Peak line (lower now) -->
+      <line x1="310" y1="70" x2="530" y2="70" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="535" y="74" fill="#3fb950" font-size="9">New peak</text>
+      <text x="420" y="198" text-anchor="middle" fill="#8b949e" font-size="9">Time →</text>
+    </svg>
+
+    <div class="callout info"><strong>Key rule for leveling:</strong> Only move activities that have slack (non-critical activities). Never move a critical activity — that would extend the project deadline.</div>
+  </div>
+</section>
+
+<!-- ══ HEURISTIC ══════════════════════════════════════════════ -->
+<section id="heuristic" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🧮 Heuristic Approach — Priority Rules <span style="color:var(--star)">★★★★</span></div>
+    <div class="callout info">When resources are limited and you can't optimize perfectly, <strong>heuristic rules</strong> (rules of thumb) determine which activity to schedule first. These are for resource-constrained scheduling.</div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Rule</th><th>Full Name</th><th>Priority Given To</th><th>When Useful</th></tr>
+        <tr>
+          <td><strong>ASAP</strong></td>
+          <td>As Soon As Possible</td>
+          <td>Schedule each activity at its earliest start</td>
+          <td>Maximize early completion; default starting point</td>
+        </tr>
+        <tr>
+          <td><strong>ALAP</strong></td>
+          <td>As Late As Possible</td>
+          <td>Schedule each activity at its latest start</td>
+          <td>Delay resource use; maintain maximum flexibility</td>
+        </tr>
+        <tr>
+          <td><strong>STF</strong></td>
+          <td>Shortest Task First</td>
+          <td>Shortest duration activity gets resources first</td>
+          <td>Maximize number of activities completed early</td>
+        </tr>
+        <tr>
+          <td><strong>MRF</strong></td>
+          <td>Minimum Resources First</td>
+          <td>Activity needing fewest resources goes first</td>
+          <td>Preserve resources for larger tasks</td>
+        </tr>
+        <tr>
+          <td><strong>MSF</strong></td>
+          <td>Minimum Slack First</td>
+          <td>Activity with least slack (closest to critical) goes first</td>
+          <td>Protect critical/near-critical activities; most common</td>
+        </tr>
+        <tr>
+          <td><strong>Arbitrary</strong></td>
+          <td>Random / First-come</td>
+          <td>No formal priority; first in list goes first</td>
+          <td>When other rules don't apply or for benchmarking</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout star"><strong>MSF (Minimum Slack First) is the most commonly recommended heuristic</strong> because it protects the critical path — activities closest to critical should get resources before activities with lots of float.</div>
+
+    <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
+      <text x="250" y="20" text-anchor="middle" fill="#c9d1d9" font-size="12" font-weight="bold">MSF Rule Example: Schedule activity with least slack first</text>
+      <!-- Activities -->
+      <rect x="20" y="40" width="100" height="40" rx="4" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="70" y="58" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Activity A</text>
+      <text x="70" y="72" text-anchor="middle" fill="#8b949e" font-size="9">Slack = 0 → 1st</text>
+      <rect x="145" y="40" width="100" height="40" rx="4" fill="#1a2332" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="195" y="58" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Activity B</text>
+      <text x="195" y="72" text-anchor="middle" fill="#8b949e" font-size="9">Slack = 2 → 2nd</text>
+      <rect x="270" y="40" width="100" height="40" rx="4" fill="#1a2332" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="320" y="58" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">Activity C</text>
+      <text x="320" y="72" text-anchor="middle" fill="#8b949e" font-size="9">Slack = 5 → 3rd</text>
+      <rect x="395" y="40" width="100" height="40" rx="4" fill="#1a2332" stroke="#8b949e" stroke-width="1.5"/>
+      <text x="445" y="58" text-anchor="middle" fill="#8b949e" font-size="10" font-weight="bold">Activity D</text>
+      <text x="445" y="72" text-anchor="middle" fill="#8b949e" font-size="9">Slack = 8 → Last</text>
+      <!-- Arrow showing order -->
+      <text x="250" y="130" text-anchor="middle" fill="#3fb950" font-size="10">Priority: A → B → C → D (ascending slack order)</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ MATH PROBLEMS ══════════════════════════════════════════ -->
+<section id="math" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔢 Resource Leveling — Worked Example <span style="color:var(--star)">★★★★</span></div>
+
+    <div class="callout info">
+      <strong>Problem:</strong> Activities with durations, predecessors, and resource requirements. Find the manpower histogram and level it.
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Activity</th><th>Duration</th><th>Predecessors</th><th>People Required</th><th>ES</th><th>EF</th><th>LS</th><th>LF</th><th>Slack</th></tr>
+        <tr><td>A</td><td>2</td><td>—</td><td>3</td><td>0</td><td>2</td><td>0</td><td>2</td><td>0 ★</td></tr>
+        <tr><td>B</td><td>3</td><td>—</td><td>2</td><td>0</td><td>3</td><td>2</td><td>5</td><td>2</td></tr>
+        <tr><td>C</td><td>4</td><td>A</td><td>4</td><td>2</td><td>6</td><td>2</td><td>6</td><td>0 ★</td></tr>
+        <tr><td>D</td><td>2</td><td>A</td><td>3</td><td>2</td><td>4</td><td>4</td><td>6</td><td>2</td></tr>
+        <tr><td>E</td><td>2</td><td>B,C,D</td><td>2</td><td>6</td><td>8</td><td>6</td><td>8</td><td>0 ★</td></tr>
+      </table>
+    </div>
+
+    <div class="callout info">Critical path: A → C → E (Duration = 8). Non-critical activities: B (slack=2), D (slack=2).</div>
+
+    <div class="math-block">
+      <div class="math-title">Step 1: Initial Manpower Histogram (ASAP schedule)</div>
+      <div class="math-desc">
+        Day 1–2: A(3) + B(2) = 5 people<br>
+        Day 3: B(2) + C(4) + D(3) = 9 people ← PEAK<br>
+        Day 4: C(4) + D(3) = 7 people<br>
+        Day 5: C(4) = 4 people<br>
+        Day 6: C(4) = 4 people ... (but C ends at 6)<br>
+        Day 6: E starts<br>
+        Day 7–8: E(2) = 2 people
+      </div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Step 2: Level — Move B from days 1–3 to days 3–5 (using slack=2)</div>
+      <div class="math-desc">
+        Day 1–2: A(3) = 3 people<br>
+        Day 3–4: B(2) + C(4) + D(3) = 9 people ← still need to separate<br>
+        Move D from days 3–4 to days 4–6: B(2) + C(4) starts day 3... still optimizing<br>
+        <strong>Principle:</strong> Shift B and D to avoid overlapping peaks. Keep critical path (A, C, E) fixed.
+      </div>
+    </div>
+
+    <div class="callout warn"><strong>Key rule:</strong> When leveling, only delay non-critical activities within their slack window. Never delay a critical activity. After moving, redraw the histogram and report the new peak.</div>
+  </div>
+</section>
+
+<!-- ══ PYQ ══════════════════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ Past Year Questions — AA Ch 10</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
+        <tr><td>Resource leveling problem: given network, draw histogram, level it, draw new histogram</td><td>15–17</td><td>★★★★★</td></tr>
+        <tr><td>Difference between resource leveling and resource allocation</td><td>5</td><td>★★★</td></tr>
+        <tr><td>Explain 5 priority rules for constrained resource scheduling</td><td>5–8</td><td>★★★★</td></tr>
+        <tr><td>What is MSF rule? Why is it preferred?</td><td>3–5</td><td>★★★</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ══════════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — AA Ch 10</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Topic</th><th>Key Point</th></tr>
+        <tr><td>Resource Leveling</td><td>Fixed deadline; minimize peak by moving non-critical activities within slack</td></tr>
+        <tr><td>Resource Allocation</td><td>Fixed resources; may extend deadline; constrained-resource scheduling</td></tr>
+        <tr><td>ASAP</td><td>As Soon As Possible — baseline schedule</td></tr>
+        <tr><td>ALAP</td><td>As Late As Possible — delay resource use</td></tr>
+        <tr><td>STF</td><td>Shortest Task First — maximize completed count</td></tr>
+        <tr><td>MRF</td><td>Minimum Resources First — preserve resources</td></tr>
+        <tr><td>MSF ★</td><td>Minimum Slack First — protect critical path; most recommended</td></tr>
+        <tr><td>Leveling rule</td><td>Only move non-critical (slack&gt;0) activities. Critical path stays fixed.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="js/tabs.js"></script>
+</body>
+</html>

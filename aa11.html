@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Ch 11: Project Crashing — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>AA Ch 11: Project Crashing</h1>
+  <span class="chapter-badge">AA-11</span>
+  <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="concepts" data-stars="3">📚 Crashing Concepts</button>
+  <button class="tab-btn" data-tab="procedure" data-stars="4">🔧 Crashing Procedure</button>
+  <button class="tab-btn" data-tab="math" data-stars="4">🔢 Math Problems</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<div class="reading-progress">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-label" id="progressLabel">0 / 3 topics read</span>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Exam Weight</div><div class="card-value">★★★★★</div><div class="card-sub">15–22 marks</div></div>
+      <div class="summary-card"><div class="card-title">Key Formula</div><div class="card-value">Cost Slope</div><div class="card-sub">(CC−NC)/(CT−NT)</div></div>
+      <div class="summary-card"><div class="card-title">Core Rule</div><div class="card-value">Crash Critical Path</div><div class="card-sub">Cheapest first</div></div>
+    </div>
+    <p>Crashing is the process of compressing a project's schedule by adding resources (at extra cost) to critical path activities. The goal is to find the cheapest way to meet an earlier deadline.</p>
+    <div class="callout star"><strong>Exam focus:</strong> Given a network with normal and crash time/cost, reduce duration step by step (always crash the cheapest critical activity). Show each stage's total project cost. This carries the most marks (15–22).</div>
+  </div>
+</section>
+
+<!-- ══ CONCEPTS ══════════════════════════════════════════════ -->
+<section id="concepts" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📚 Crashing Concepts <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout info"><strong>Crashing</strong> means reducing a project's duration by adding resources (more workers, overtime, better equipment) to activities on the critical path. This always increases direct costs but may reduce indirect costs (overhead, penalties).</div>
+
+    <div class="math-block">
+      <div class="math-title">Cost Slope Formula</div>
+      <div class="math-formula">Cost Slope = (CC − NC) / (NT − CT)</div>
+      <div class="math-desc">
+        CC = Crash Cost (cost at maximum compression)<br>
+        NC = Normal Cost (cost at normal duration)<br>
+        NT = Normal Time (baseline duration)<br>
+        CT = Crash Time (minimum possible duration)<br>
+        <strong>Cost Slope = extra cost per day of reduction</strong><br>
+        Note: denominator is (NT − CT) because you're REDUCING time (NT &gt; CT)
+      </div>
+    </div>
+
+    <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
+      <!-- Direct cost curve (rising with compression) -->
+      <line x1="60" y1="190" x2="460" y2="190" stroke="#444" stroke-width="1.5"/>
+      <line x1="60" y1="20" x2="60" y2="190" stroke="#444" stroke-width="1.5"/>
+      <text x="260" y="210" text-anchor="middle" fill="#8b949e" font-size="11">Project Duration →</text>
+      <text x="20" y="105" text-anchor="middle" fill="#8b949e" font-size="11" transform="rotate(-90,20,105)">Cost →</text>
+      <!-- Direct cost (decreasing as duration increases = rising as duration decreases) -->
+      <path d="M120,30 Q200,70 300,120 L420,160" fill="none" stroke="#f0883e" stroke-width="2.5"/>
+      <text x="430" y="158" fill="#f0883e" font-size="9">Direct Cost</text>
+      <!-- Indirect cost (rising as duration increases) -->
+      <path d="M120,160 Q230,140 300,120 L420,70" fill="none" stroke="#58a6ff" stroke-width="2.5"/>
+      <text x="430" y="68" fill="#58a6ff" font-size="9">Indirect Cost</text>
+      <!-- Total cost (U-shape) -->
+      <path d="M120,120 Q200,80 300,70 Q370,80 420,120" fill="none" stroke="#3fb950" stroke-width="3"/>
+      <text x="430" y="118" fill="#3fb950" font-size="9">Total Cost</text>
+      <!-- Optimal point -->
+      <circle cx="295" cy="68" r="6" fill="#3fb950"/>
+      <line x1="295" y1="68" x2="295" y2="190" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="4"/>
+      <text x="295" y="205" text-anchor="middle" fill="#3fb950" font-size="9">Optimal Duration</text>
+      <!-- Crash point -->
+      <circle cx="120" cy="30" r="4" fill="#f0883e"/>
+      <text x="120" y="22" text-anchor="middle" fill="#f0883e" font-size="8">Crash pt</text>
+      <!-- Normal point -->
+      <circle cx="420" cy="160" r="4" fill="#f0883e"/>
+      <text x="435" y="175" fill="#f0883e" font-size="8">Normal pt</text>
+    </svg>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Concept</th><th>Explanation</th></tr>
+        <tr><td><strong>Normal point</strong></td><td>Normal time and cost — baseline conditions</td></tr>
+        <tr><td><strong>Crash point</strong></td><td>Minimum possible time and maximum direct cost</td></tr>
+        <tr><td><strong>Direct costs</strong></td><td>Labor, materials — rise when you crash (overtime, extra workers)</td></tr>
+        <tr><td><strong>Indirect costs</strong></td><td>Overhead, penalties — fall when you shorten the project</td></tr>
+        <tr><td><strong>Optimal duration</strong></td><td>Where total cost (direct + indirect) is minimized</td></tr>
+        <tr><td><strong>Partial crashing</strong></td><td>Reducing by less than the full crash amount (staying between normal and crash point)</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCEDURE ══════════════════════════════════════════════ -->
+<section id="procedure" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔧 Step-by-Step Crashing Procedure <span style="color:var(--star)">★★★★</span></div>
+
+    <div class="callout star"><strong>Always follow this procedure for crashing numericals.</strong></div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Step</th><th>Action</th></tr>
+        <tr><td><strong>1</strong></td><td>Draw the network, find the critical path, calculate project duration</td></tr>
+        <tr><td><strong>2</strong></td><td>Calculate cost slope for each activity = (CC−NC)/(NT−CT)</td></tr>
+        <tr><td><strong>3</strong></td><td>Identify all activities on the critical path</td></tr>
+        <tr><td><strong>4</strong></td><td>Among critical path activities, choose the one with the <strong>lowest cost slope</strong></td></tr>
+        <tr><td><strong>5</strong></td><td>Crash that activity by 1 day (or as many days as possible within its crash limit)</td></tr>
+        <tr><td><strong>6</strong></td><td>Recalculate the network — the critical path may change!</td></tr>
+        <tr><td><strong>7</strong></td><td>Record the new project duration and total cost</td></tr>
+        <tr><td><strong>8</strong></td><td>Repeat from Step 3 until desired duration is reached</td></tr>
+      </table>
+    </div>
+
+    <div class="callout warn">
+      <strong>Critical: When you crash, the critical path may change.</strong><br>
+      • A new critical path may emerge (a previously non-critical path may become critical)<br>
+      • When two paths become critical simultaneously, you must crash BOTH paths together<br>
+      • Crashing stops when: (a) desired duration reached, or (b) no more crashing is cost-effective (direct cost gain &lt; indirect cost saved)
+    </div>
+
+    <div class="callout info">
+      <strong>Two Principles of Crashing:</strong><br>
+      1. Always crash on the critical path — crashing non-critical activities wastes money without reducing project duration<br>
+      2. Among critical path activities, always crash the cheapest (lowest cost slope) first
+    </div>
+  </div>
+</section>
+
+<!-- ══ MATH PROBLEMS ══════════════════════════════════════════ -->
+<section id="math" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔢 Crashing Numerical — Full Worked Example <span style="color:var(--star)">★★★★</span></div>
+
+    <div class="callout info">
+      <strong>Problem:</strong> Find the cheapest way to reduce the project from 15 days to 12 days. Indirect cost = $50/day.
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Activity</th><th>Pred.</th><th>NT</th><th>NC ($)</th><th>CT</th><th>CC ($)</th><th>Cost Slope ($/day)</th></tr>
+        <tr><td>A</td><td>—</td><td>5</td><td>500</td><td>3</td><td>700</td><td>(700−500)/(5−3) = <strong>$100</strong></td></tr>
+        <tr><td>B</td><td>—</td><td>8</td><td>800</td><td>6</td><td>1100</td><td>(1100−800)/(8−6) = <strong>$150</strong></td></tr>
+        <tr><td>C</td><td>A</td><td>6</td><td>600</td><td>4</td><td>900</td><td>(900−600)/(6−4) = <strong>$150</strong></td></tr>
+        <tr><td>D</td><td>A,B</td><td>4</td><td>400</td><td>2</td><td>600</td><td>(600−400)/(4−2) = <strong>$100</strong></td></tr>
+        <tr><td>E</td><td>C,D</td><td>3</td><td>300</td><td>2</td><td>420</td><td>(420−300)/(3−2) = <strong>$120</strong></td></tr>
+      </table>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Network Paths (normal durations)</div>
+      <div class="math-desc">
+        Path 1: A→C→E = 5+6+3 = <strong>14 days</strong><br>
+        Path 2: A→D→E = 5+4+3 = <strong>12 days</strong><br>
+        Path 3: B→D→E = 8+4+3 = <strong>15 days ← CRITICAL PATH</strong><br>
+        Initial project duration = 15 days. Normal total direct cost = 500+800+600+400+300 = $2,600
+      </div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Stage 1: Reduce from 15 to 14 days</div>
+      <div class="math-desc">
+        Critical path: B→D→E. Cost slopes: B=$150, D=$100, E=$120.<br>
+        Cheapest: <strong>D ($100/day)</strong>. Crash D by 1 day (D: 4→3).<br>
+        New cost = $2,600 + $100 = $2,700<br>
+        New paths: B→D→E = 8+3+3 = 14 days. A→C→E = 14 days. <strong>Both are now critical!</strong>
+      </div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Stage 2: Reduce from 14 to 13 days</div>
+      <div class="math-desc">
+        TWO critical paths: B→D→E and A→C→E.<br>
+        Must reduce BOTH paths simultaneously.<br>
+        Option 1: Crash E (on both paths) for $120 → reduces both by 1 day ✓<br>
+        Option 2: Crash A+B ($100+$150=$250) or A+D ($100+$100=$200)...<br>
+        <strong>Cheapest: Crash E ($120)</strong>. E: 3→2.<br>
+        New cost = $2,700 + $120 = $2,820<br>
+        Duration = 13 days.
+      </div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Stage 3: Reduce from 13 to 12 days</div>
+      <div class="math-desc">
+        TWO critical paths: B→D→E and A→C→E.<br>
+        E is fully crashed (CT=2, now at 2). Can't crash E more.<br>
+        Must crash one activity on each path separately:<br>
+        Path 1 (B→D→E): Options: B=$150, D=$100 (D already at 3, min is 2 so still can crash 1 more)<br>
+        Path 2 (A→C→E): Options: A=$100, C=$150<br>
+        Cheapest combination: Crash D (from path 1, $100) + Crash A (from path 2, $100) = $200 total<br>
+        New cost = $2,820 + $200 = <strong>$3,020</strong>. Duration = 12 days. ✓
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Stage</th><th>Activity Crashed</th><th>Duration</th><th>Direct Cost</th><th>Indirect Cost</th><th>Total</th></tr>
+        <tr><td>Normal</td><td>—</td><td>15 days</td><td>$2,600</td><td>$750</td><td>$3,350</td></tr>
+        <tr><td>1</td><td>D (1 day)</td><td>14 days</td><td>$2,700</td><td>$700</td><td>$3,400</td></tr>
+        <tr><td>2</td><td>E (1 day)</td><td>13 days</td><td>$2,820</td><td>$650</td><td>$3,470</td></tr>
+        <tr><td>3</td><td>D + A (1 day each)</td><td>12 days</td><td>$3,020</td><td>$600</td><td>$3,620</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PYQ ══════════════════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ Past Year Questions — AA Ch 11</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
+        <tr><td>Full crashing problem: reduce to target duration, show all stages, total cost</td><td>15–22</td><td>★★★★★</td></tr>
+        <tr><td>Calculate cost slopes for given activities</td><td>5</td><td>★★★★</td></tr>
+        <tr><td>What is project crashing? State 2 principles</td><td>5</td><td>★★★</td></tr>
+        <tr><td>When must you crash two paths simultaneously?</td><td>3–5</td><td>★★★</td></tr>
+        <tr><td>What is the difference between partial and full crashing?</td><td>3–5</td><td>★★</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ══════════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — AA Ch 11</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Topic</th><th>Key Formula / Point</th></tr>
+        <tr><td>Cost Slope</td><td>(CC − NC) / (NT − CT) = $/day of time reduction</td></tr>
+        <tr><td>Crash principle 1</td><td>Only crash critical path activities</td></tr>
+        <tr><td>Crash principle 2</td><td>Always crash cheapest (lowest cost slope) first</td></tr>
+        <tr><td>When critical path changes</td><td>Must crash all critical paths simultaneously</td></tr>
+        <tr><td>When to stop crashing</td><td>When all activities on critical path are fully crashed, or cost of crashing &gt; benefit</td></tr>
+        <tr><td>Partial crashing</td><td>Reduce by &lt; (NT − CT); stays between normal and crash point</td></tr>
+        <tr><td>Full crashing</td><td>Reduce to CT; maximum compression</td></tr>
+        <tr><td>Total project cost</td><td>All direct costs (normal + extra crash cost) + indirect cost</td></tr>
+        <tr><td>Indirect cost</td><td>Falls with shorter duration (less overhead, fewer penalty days)</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="js/tabs.js"></script>
+</body>
+</html>

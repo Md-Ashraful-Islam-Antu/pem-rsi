@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Ch 1: Introduction to Project Management — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>AA Ch 1: Introduction to Project Management</h1>
+  <span class="chapter-badge">AA-01</span>
+  <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="project" data-stars="3">📌 What is a Project?</button>
+  <button class="tab-btn" data-tab="lifecycle" data-stars="3">🔄 Project Life Cycle</button>
+  <button class="tab-btn" data-tab="types" data-stars="2">🗂️ Types of Projects</button>
+  <button class="tab-btn" data-tab="triangle" data-stars="3">🔺 PM Triangle</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<div class="reading-progress">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-label" id="progressLabel">0 / 4 topics read</span>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Exam Weight</div><div class="card-value">★★★☆</div><div class="card-sub">Moderate frequency</div></div>
+      <div class="summary-card"><div class="card-title">Key Topics</div><div class="card-value">4</div><div class="card-sub">Project, Life Cycle, Types, Triangle</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">Life Cycle</div><div class="card-sub">4-stage diagram asked 3×</div></div>
+    </div>
+    <p>Chapter 1 introduces the foundation of Project Management — what a project is, how it differs from routine operations, the four-stage life cycle, common types of projects, and the PM triangle (Time–Cost–Performance). Azeem sir's part begins with this conceptual framework.</p>
+    <div class="callout star"><strong>Exam focus:</strong> Know the 4-stage project life cycle with characteristics of each phase. The PM triangle (scope/quality vs time vs cost) is a popular definition question.</div>
+    <h3>Chapter Roadmap</h3>
+    <svg viewBox="0 0 700 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:12px auto;">
+      <defs><marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#3fb950"/></marker></defs>
+      <rect x="10" y="25" width="130" height="40" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="75" y="41" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">What is a</text>
+      <text x="75" y="57" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">Project?</text>
+      <line x1="140" y1="45" x2="168" y2="45" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr1)"/>
+      <rect x="170" y="25" width="130" height="40" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="235" y="41" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">4-Stage</text>
+      <text x="235" y="57" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">Life Cycle</text>
+      <line x1="300" y1="45" x2="328" y2="45" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr1)"/>
+      <rect x="330" y="25" width="130" height="40" rx="8" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="395" y="41" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">Types of</text>
+      <text x="395" y="57" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">Projects</text>
+      <line x1="460" y1="45" x2="488" y2="45" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr1)"/>
+      <rect x="490" y="25" width="130" height="40" rx="8" fill="#161b22" stroke="#bc8cff" stroke-width="1.5"/>
+      <text x="555" y="41" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="bold">PM Triangle</text>
+      <text x="555" y="57" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="bold">T–C–P</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ WHAT IS A PROJECT ══════════════════════════════════════ -->
+<section id="project" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📌 What is a Project? <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout info">A <strong>project</strong> is a specific, finite task to be accomplished — with a defined beginning and end — that is important enough to be managed separately. It involves commitment of resources over a defined time to achieve specific goals.</div>
+
+    <h3>Project vs Routine Operations</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Project</th><th>Routine Operations</th></tr>
+        <tr><td>Has a definite start and end</td><td>Ongoing, repetitive</td></tr>
+        <tr><td>Unique output or deliverable</td><td>Standardized output</td></tr>
+        <tr><td>Temporary team assembled</td><td>Permanent organization</td></tr>
+        <tr><td>High uncertainty and risk</td><td>Lower uncertainty</td></tr>
+        <tr><td>Examples: building a bridge, launching software</td><td>Examples: payroll, manufacturing</td></tr>
+      </table>
+    </div>
+
+    <h3>Key Characteristics of a Project</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Characteristic</th><th>Meaning</th></tr>
+        <tr><td>1</td><td><strong>Unique</strong></td><td>Every project produces a different result</td></tr>
+        <tr><td>2</td><td><strong>Finite</strong></td><td>Has a defined start and end date</td></tr>
+        <tr><td>3</td><td><strong>Goal-oriented</strong></td><td>Created to meet a specific objective</td></tr>
+        <tr><td>4</td><td><strong>Resource-constrained</strong></td><td>Limited by budget, time, manpower</td></tr>
+        <tr><td>5</td><td><strong>Progressive elaboration</strong></td><td>Details develop as the project moves forward</td></tr>
+      </table>
+    </div>
+
+    <h3>Who are the Stakeholders?</h3>
+    <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:12px auto;">
+      <ellipse cx="250" cy="110" rx="70" ry="40" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="250" y="106" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="bold">PROJECT</text>
+      <text x="250" y="122" text-anchor="middle" fill="#3fb950" font-size="10">Manager + Team</text>
+      <!-- Stakeholders around -->
+      <rect x="10" y="10" width="100" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
+      <text x="60" y="30" text-anchor="middle" fill="#58a6ff" font-size="10">Client/Owner</text>
+      <line x1="110" y1="25" x2="185" y2="80" stroke="#58a6ff" stroke-width="1" stroke-dasharray="4"/>
+      <rect x="390" y="10" width="100" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
+      <text x="440" y="30" text-anchor="middle" fill="#58a6ff" font-size="10">Sponsor</text>
+      <line x1="390" y1="25" x2="315" y2="80" stroke="#58a6ff" stroke-width="1" stroke-dasharray="4"/>
+      <rect x="10" y="180" width="110" height="30" rx="5" fill="#161b22" stroke="#f0883e"/>
+      <text x="65" y="200" text-anchor="middle" fill="#f0883e" font-size="10">Parent Organization</text>
+      <line x1="120" y1="195" x2="185" y2="140" stroke="#f0883e" stroke-width="1" stroke-dasharray="4"/>
+      <rect x="385" y="180" width="110" height="30" rx="5" fill="#161b22" stroke="#f0883e"/>
+      <text x="440" y="200" text-anchor="middle" fill="#f0883e" font-size="10">End Users</text>
+      <line x1="385" y1="195" x2="315" y2="140" stroke="#f0883e" stroke-width="1" stroke-dasharray="4"/>
+      <rect x="195" y="175" width="110" height="30" rx="5" fill="#161b22" stroke="#bc8cff"/>
+      <text x="250" y="195" text-anchor="middle" fill="#bc8cff" font-size="10">Public / Regulators</text>
+      <line x1="250" y1="175" x2="250" y2="150" stroke="#bc8cff" stroke-width="1" stroke-dasharray="4"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ PROJECT LIFE CYCLE ══════════════════════════════════════ -->
+<section id="lifecycle" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔄 Project Life Cycle <span style="color:var(--star)">★★★☆ — 3× in PYQ</span></div>
+    <div class="callout star"><strong>High exam topic.</strong> Draw and explain the 4 stages with their characteristics. Know what happens at each stage and when resources peak.</div>
+
+    <p>All projects go through four distinct stages. Each stage has different levels of resource use, risk, and stakeholder involvement.</p>
+
+    <!-- Life cycle curve diagram -->
+    <svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:620px;display:block;margin:16px auto;">
+      <!-- Axes -->
+      <line x1="60" y1="230" x2="590" y2="230" stroke="#444" stroke-width="1.5"/>
+      <line x1="60" y1="20" x2="60" y2="230" stroke="#444" stroke-width="1.5"/>
+      <!-- Axis labels -->
+      <text x="325" y="260" text-anchor="middle" fill="#8b949e" font-size="12">Time (Project Duration)</text>
+      <text x="20" y="125" text-anchor="middle" fill="#8b949e" font-size="12" transform="rotate(-90,20,125)">Resource Use / Effort</text>
+      <!-- S-curve for resource usage -->
+      <path d="M60,220 C100,215 140,200 180,170 C220,140 260,100 300,70 C340,45 380,38 420,38 C460,38 500,55 530,80 C550,100 570,130 580,160 L580,230"
+            fill="none" stroke="#3fb950" stroke-width="2.5"/>
+      <!-- Stage dividers -->
+      <line x1="175" y1="20" x2="175" y2="230" stroke="#333" stroke-width="1" stroke-dasharray="5"/>
+      <line x1="360" y1="20" x2="360" y2="230" stroke="#333" stroke-width="1" stroke-dasharray="5"/>
+      <line x1="490" y1="20" x2="490" y2="230" stroke="#333" stroke-width="1" stroke-dasharray="5"/>
+      <!-- Stage labels -->
+      <text x="117" y="15" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">I. Concept</text>
+      <text x="267" y="15" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">II. Development</text>
+      <text x="425" y="15" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">III. Execution</text>
+      <text x="537" y="15" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="bold">IV. Finish</text>
+      <!-- Characteristics boxes -->
+      <rect x="65" y="50" width="100" height="80" rx="4" fill="#161b22" stroke="#58a6ff" stroke-width="1"/>
+      <text x="115" y="70" text-anchor="middle" fill="#58a6ff" font-size="9">Low cost</text>
+      <text x="115" y="84" text-anchor="middle" fill="#8b949e" font-size="9">High uncertainty</text>
+      <text x="115" y="98" text-anchor="middle" fill="#8b949e" font-size="9">Feasibility study</text>
+      <text x="115" y="112" text-anchor="middle" fill="#8b949e" font-size="9">Scope defined</text>
+      <text x="115" y="126" text-anchor="middle" fill="#8b949e" font-size="9">Go/No-go decision</text>
+      <rect x="185" y="50" width="110" height="80" rx="4" fill="#161b22" stroke="#f0883e" stroke-width="1"/>
+      <text x="240" y="70" text-anchor="middle" fill="#f0883e" font-size="9">Cost rising fast</text>
+      <text x="240" y="84" text-anchor="middle" fill="#8b949e" font-size="9">Planning & design</text>
+      <text x="240" y="98" text-anchor="middle" fill="#8b949e" font-size="9">Budget established</text>
+      <text x="240" y="112" text-anchor="middle" fill="#8b949e" font-size="9">Team assembled</text>
+      <text x="240" y="126" text-anchor="middle" fill="#8b949e" font-size="9">WBS created</text>
+      <rect x="368" y="50" width="110" height="80" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+      <text x="423" y="70" text-anchor="middle" fill="#3fb950" font-size="9">Peak resources</text>
+      <text x="423" y="84" text-anchor="middle" fill="#8b949e" font-size="9">Most work done</text>
+      <text x="423" y="98" text-anchor="middle" fill="#8b949e" font-size="9">Monitor & control</text>
+      <text x="423" y="112" text-anchor="middle" fill="#8b949e" font-size="9">Highest risk of</text>
+      <text x="423" y="126" text-anchor="middle" fill="#8b949e" font-size="9">scope change</text>
+      <rect x="498" y="50" width="85" height="80" rx="4" fill="#161b22" stroke="#bc8cff" stroke-width="1"/>
+      <text x="540" y="70" text-anchor="middle" fill="#bc8cff" font-size="9">Ramp-down</text>
+      <text x="540" y="84" text-anchor="middle" fill="#8b949e" font-size="9">Handover</text>
+      <text x="540" y="98" text-anchor="middle" fill="#8b949e" font-size="9">Post evaluation</text>
+      <text x="540" y="112" text-anchor="middle" fill="#8b949e" font-size="9">Team released</text>
+      <text x="540" y="126" text-anchor="middle" fill="#8b949e" font-size="9">Lessons learned</text>
+      <!-- Legend -->
+      <line x1="80" y1="250" x2="110" y2="250" stroke="#3fb950" stroke-width="2.5"/>
+      <text x="115" y="254" fill="#3fb950" font-size="10">Resource/Effort Curve</text>
+    </svg>
+
+    <h3>The Four Stages in Detail</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Stage</th><th>Name</th><th>Activities</th><th>Key Output</th></tr>
+        <tr><td><strong>I</strong></td><td>Concept / Initiation</td><td>Need identification, feasibility study, rough scope, go/no-go decision</td><td>Project charter / Feasibility report</td></tr>
+        <tr><td><strong>II</strong></td><td>Development / Planning</td><td>Detailed planning, WBS, budget, schedule, resource planning, risk analysis</td><td>Project plan, baseline schedule</td></tr>
+        <tr><td><strong>III</strong></td><td>Execution / Implementation</td><td>Actual work performed, monitoring, controlling, managing changes</td><td>Project deliverables</td></tr>
+        <tr><td><strong>IV</strong></td><td>Finish / Closeout</td><td>Testing, handover, final reporting, team release, lessons learned</td><td>Final report, closed contract</td></tr>
+      </table>
+    </div>
+
+    <div class="callout warn"><strong>Common exam trap:</strong> Risk is <em>highest</em> at Stage I (high uncertainty, little known) but cost impact of changes is <em>lowest</em> then. At Stage III, risk events are most likely to occur.</div>
+  </div>
+</section>
+
+<!-- ══ TYPES OF PROJECTS ══════════════════════════════════════ -->
+<section id="types" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🗂️ Types of Projects <span style="color:var(--star)">★★☆☆</span></div>
+
+    <p>Meredith &amp; Mantel classify projects into several types based on their nature, objective, and technology involved.</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Type</th><th>Description</th><th>Examples</th></tr>
+        <tr><td><strong>Derivative</strong></td><td>Improvements to existing products/processes; low uncertainty</td><td>Upgrading a machine, minor product modifications</td></tr>
+        <tr><td><strong>Platform</strong></td><td>New generation of a core product; moderate uncertainty</td><td>New car model, new OS version</td></tr>
+        <tr><td><strong>Breakthrough</strong></td><td>Entirely new technology or market; high uncertainty</td><td>First hybrid car, space exploration</td></tr>
+        <tr><td><strong>R&amp;D</strong></td><td>Research and Development; maximum uncertainty, probabilistic</td><td>Drug discovery, new materials research</td></tr>
+      </table>
+    </div>
+
+    <h3>Classification by Objectives</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Category</th><th>Projects</th></tr>
+        <tr><td>Construction</td><td>Buildings, roads, bridges, dams</td></tr>
+        <tr><td>Manufacturing</td><td>New product development, plant setup</td></tr>
+        <tr><td>IT/Software</td><td>ERP implementation, app development</td></tr>
+        <tr><td>Research</td><td>Scientific studies, surveys</td></tr>
+        <tr><td>Organizational</td><td>Restructuring, change management</td></tr>
+      </table>
+    </div>
+
+    <div class="callout info"><strong>Remember:</strong> PERT (probabilistic) is used for R&amp;D/uncertain projects; CPM (deterministic) is used for construction/well-defined projects.</div>
+  </div>
+</section>
+
+<!-- ══ PM TRIANGLE ══════════════════════════════════════════════ -->
+<section id="triangle" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔺 The PM Triangle <span style="color:var(--star)">★★★☆</span></div>
+    <div class="callout star"><strong>Fundamental concept.</strong> Every project must balance three competing constraints. Improving one typically worsens at least one other.</div>
+
+    <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;display:block;margin:16px auto;">
+      <!-- Triangle -->
+      <polygon points="200,30 50,270 350,270" fill="#0d1117" stroke="#3fb950" stroke-width="2.5"/>
+      <!-- Vertices labels -->
+      <circle cx="200" cy="30" r="30" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="200" y="26" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">SCOPE /</text>
+      <text x="200" y="40" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">QUALITY</text>
+      <circle cx="50" cy="270" r="30" fill="#1a2332" stroke="#58a6ff" stroke-width="2"/>
+      <text x="50" y="266" text-anchor="middle" fill="#58a6ff" font-size="12" font-weight="bold">TIME</text>
+      <text x="50" y="280" text-anchor="middle" fill="#58a6ff" font-size="10">(Schedule)</text>
+      <circle cx="350" cy="270" r="30" fill="#1a2332" stroke="#f0883e" stroke-width="2"/>
+      <text x="350" y="266" text-anchor="middle" fill="#f0883e" font-size="12" font-weight="bold">COST</text>
+      <text x="350" y="280" text-anchor="middle" fill="#f0883e" font-size="10">(Budget)</text>
+      <!-- Center -->
+      <text x="200" y="175" text-anchor="middle" fill="#8b949e" font-size="13">TRADE-OFFS</text>
+      <!-- Edge labels -->
+      <text x="115" y="185" text-anchor="middle" fill="#8b949e" font-size="10" transform="rotate(-58,115,185)">If more scope → more time</text>
+      <text x="288" y="185" text-anchor="middle" fill="#8b949e" font-size="10" transform="rotate(58,288,185)">If more scope → more cost</text>
+      <text x="200" y="260" text-anchor="middle" fill="#8b949e" font-size="10">If less time → more cost (crashing)</text>
+    </svg>
+
+    <h3>The Constraints Explained</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Constraint</th><th>Definition</th><th>Tools to Manage</th></tr>
+        <tr><td><strong>Scope / Performance</strong></td><td>The work to be done; quality and technical specifications of the deliverable</td><td>WBS, scope statement, change control</td></tr>
+        <tr><td><strong>Time (Schedule)</strong></td><td>When the project must be completed; milestones and deadlines</td><td>CPM/PERT, Gantt chart, crashing</td></tr>
+        <tr><td><strong>Cost (Budget)</strong></td><td>The financial resources available to complete the project</td><td>Budget, earned value, cost control</td></tr>
+      </table>
+    </div>
+
+    <div class="callout warn"><strong>Key insight:</strong> PM's job is to balance all three. Crashing (shortening time) increases cost. Increasing scope increases both time and cost. Good PM prevents uncontrolled changes (<em>scope creep</em>).</div>
+
+    <h3>Three Skills of a Successful PM</h3>
+    <ul>
+      <li>Skill to <strong>trade-off</strong> performance, time, and cost</li>
+      <li>Skill in <strong>continuous cost-benefit analysis</strong></li>
+      <li>Ability to <strong>handle uncertainty</strong> in projects</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══ PYQ ══════════════════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ Past Year Questions — AA Ch 1</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Question Type</th><th>Topic</th><th>Marks</th><th>Frequency</th></tr>
+        <tr><td>Define and explain with diagram</td><td>Project Life Cycle (4 stages)</td><td>5–8</td><td>★★★</td></tr>
+        <tr><td>Differentiate</td><td>Project vs Routine Operations</td><td>3–5</td><td>★★</td></tr>
+        <tr><td>Short note</td><td>PM Triangle / Iron Triangle</td><td>3–5</td><td>★★★</td></tr>
+        <tr><td>Short note</td><td>Types of projects</td><td>3–5</td><td>★★</td></tr>
+        <tr><td>Short answer</td><td>Characteristics of a project</td><td>3</td><td>★★</td></tr>
+      </table>
+    </div>
+    <div class="callout info">The 4-stage life cycle with S-curve diagram is the most valuable answer to practise drawing and explaining.</div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ══════════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — AA Ch 1</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Concept</th><th>Key Points</th></tr>
+        <tr><td>Project definition</td><td>Specific, finite task; defined start/end; unique output; resource-constrained</td></tr>
+        <tr><td>Life Cycle Stage I</td><td>Concept — feasibility, low cost, high uncertainty, go/no-go</td></tr>
+        <tr><td>Life Cycle Stage II</td><td>Development — planning, WBS, budget, schedule, rising cost</td></tr>
+        <tr><td>Life Cycle Stage III</td><td>Execution — peak resources, most work, monitor/control</td></tr>
+        <tr><td>Life Cycle Stage IV</td><td>Finish — handover, lessons learned, team release</td></tr>
+        <tr><td>PM Triangle</td><td>Scope ↔ Time ↔ Cost — improving one affects others</td></tr>
+        <tr><td>PERT vs CPM</td><td>PERT = R&amp;D/probabilistic; CPM = construction/deterministic</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="js/tabs.js"></script>
+</body>
+</html>

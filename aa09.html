@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Ch 9: Conflict Management — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>AA Ch 9: Conflict Management</h1>
+  <span class="chapter-badge">AA-09</span>
+  <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="sources" data-stars="2">⚡ Sources of Conflict</button>
+  <button class="tab-btn" data-tab="pareto" data-stars="4">⚖️ Pareto-Optimal</button>
+  <button class="tab-btn" data-tab="partnering" data-stars="3">🤝 Partnering</button>
+  <button class="tab-btn" data-tab="chartering" data-stars="4">📄 Chartering</button>
+  <button class="tab-btn" data-tab="negotiation" data-stars="3">🗣️ Negotiation</button>
+  <button class="tab-btn" data-tab="scope" data-stars="3">🔄 Scope Change</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<div class="reading-progress">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-label" id="progressLabel">0 / 6 topics read</span>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">Pareto-Optimal</div><div class="card-sub">★5× in exams</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ #2</div><div class="card-value">Chartering</div><div class="card-sub">★4× in exams</div></div>
+      <div class="summary-card"><div class="card-title">Key Principle</div><div class="card-value">Win-Win</div><div class="card-sub">Not zero-sum</td></div>
+    </div>
+    <p>This chapter covers how conflicts arise on projects and how to resolve them constructively. The key insight is that project conflicts should aim for <strong>Pareto-optimal</strong> (win-win) solutions rather than win-lose or compromise outcomes.</p>
+    <div class="callout star"><strong>Exam focus:</strong> Define and explain Pareto-optimal with example. Know the 3 steps of Partnering and what Chartering is. Know the 4 principles of negotiation. Know 3 reasons for scope change.</div>
+  </div>
+</section>
+
+<!-- ══ SOURCES OF CONFLICT ══════════════════════════════════ -->
+<section id="sources" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Sources of Conflict in Projects <span style="color:var(--star)">★★☆☆</span></div>
+    <div class="callout info">Conflicts in projects arise from several structural and interpersonal factors. Understanding the source helps choose the right resolution strategy.</div>
+
+    <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
+      <circle cx="250" cy="110" r="45" fill="#1a2332" stroke="#f0883e" stroke-width="2"/>
+      <text x="250" y="106" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">Project</text>
+      <text x="250" y="120" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">Conflict</text>
+      <!-- Sources -->
+      <rect x="10" y="10" width="120" height="30" rx="4" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="70" y="30" text-anchor="middle" fill="#58a6ff" font-size="9">Schedules &amp; Priorities</text>
+      <line x1="130" y1="25" x2="215" y2="80" stroke="#58a6ff" stroke-width="1"/>
+      <rect x="370" y="10" width="120" height="30" rx="4" fill="#1a2332" stroke="#3fb950"/>
+      <text x="430" y="30" text-anchor="middle" fill="#3fb950" font-size="9">Resource Allocation</text>
+      <line x1="370" y1="25" x2="285" y2="80" stroke="#3fb950" stroke-width="1"/>
+      <rect x="10" y="95" width="120" height="30" rx="4" fill="#1a2332" stroke="#bc8cff"/>
+      <text x="70" y="115" text-anchor="middle" fill="#bc8cff" font-size="9">Cost / Budget</text>
+      <line x1="130" y1="110" x2="205" y2="110" stroke="#bc8cff" stroke-width="1"/>
+      <rect x="370" y="95" width="120" height="30" rx="4" fill="#1a2332" stroke="#f78166"/>
+      <text x="430" y="115" text-anchor="middle" fill="#f78166" font-size="9">Technical Opinions</text>
+      <line x1="370" y1="110" x2="295" y2="110" stroke="#f78166" stroke-width="1"/>
+      <rect x="10" y="180" width="120" height="30" rx="4" fill="#1a2332" stroke="#ffd700"/>
+      <text x="70" y="200" text-anchor="middle" fill="#ffd700" font-size="9">Administrative Procedures</text>
+      <line x1="130" y1="195" x2="215" y2="140" stroke="#ffd700" stroke-width="1"/>
+      <rect x="370" y="180" width="120" height="30" rx="4" fill="#1a2332" stroke="#8b949e"/>
+      <text x="430" y="200" text-anchor="middle" fill="#8b949e" font-size="9">Personality Clashes</text>
+      <line x1="370" y1="195" x2="285" y2="140" stroke="#8b949e" stroke-width="1"/>
+    </svg>
+
+    <div class="callout info">The two most common sources in project management are <strong>resource allocation</strong> (who gets which resources) and <strong>schedules and priorities</strong> (which task comes first). These arise from the matrix organizational structure where multiple projects compete for the same resources.</div>
+  </div>
+</section>
+
+<!-- ══ PARETO-OPTIMAL ══════════════════════════════════════════ -->
+<section id="pareto" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚖️ Pareto-Optimal Solutions <span style="color:var(--star)">★★★★ — 5× in PYQ</span></div>
+    <div class="callout star"><strong>Most frequently asked conflict topic.</strong> Be able to define, draw the Pareto frontier, and explain with an example.</div>
+
+    <div class="callout info">A solution is <strong>Pareto-optimal</strong> (also called Pareto-efficient) if you cannot make one party better off without making the other party worse off. It represents a set of solutions that are not dominated by any other solution.</div>
+
+    <svg viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
+      <!-- Axes -->
+      <line x1="60" y1="250" x2="480" y2="250" stroke="#444" stroke-width="1.5"/>
+      <line x1="60" y1="250" x2="60" y2="20" stroke="#444" stroke-width="1.5"/>
+      <text x="270" y="270" text-anchor="middle" fill="#8b949e" font-size="11">Party A's Payoff →</text>
+      <text x="20" y="135" text-anchor="middle" fill="#8b949e" font-size="11" transform="rotate(-90,20,135)">Party B's Payoff →</text>
+      <!-- Feasible region -->
+      <path d="M60,250 L60,80 Q180,20 400,80 L480,250 Z" fill="#1a2332" opacity="0.6"/>
+      <!-- Pareto frontier curve -->
+      <path d="M80,80 Q200,30 420,100" fill="none" stroke="#3fb950" stroke-width="3"/>
+      <text x="260" y="38" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">Pareto Frontier</text>
+      <!-- Points on frontier -->
+      <circle cx="130" cy="60" r="6" fill="#3fb950"/>
+      <circle cx="230" cy="38" r="6" fill="#3fb950"/>
+      <circle cx="330" cy="52" r="6" fill="#3fb950"/>
+      <circle cx="400" cy="90" r="6" fill="#3fb950"/>
+      <!-- Non-Pareto points (dominated) -->
+      <circle cx="200" cy="150" r="6" fill="#f0883e"/>
+      <circle cx="300" cy="170" r="6" fill="#f0883e"/>
+      <text x="310" y="168" fill="#f0883e" font-size="9">Dominated</text>
+      <text x="310" y="180" fill="#8b949e" font-size="9">(can improve both)</text>
+      <!-- Current (compromise) point -->
+      <circle cx="240" cy="130" r="8" fill="#bc8cff"/>
+      <text x="250" y="128" fill="#bc8cff" font-size="9">Current</text>
+      <!-- Arrow to frontier -->
+      <line x1="240" y1="124" x2="230" y2="50" stroke="#bc8cff" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="210" y="95" fill="#bc8cff" font-size="9">Move to</text>
+      <text x="210" y="107" fill="#bc8cff" font-size="9">Pareto frontier</text>
+      <!-- Example labels on frontier points -->
+      <text x="90" y="52" fill="#8b949e" font-size="8">B gains most</text>
+      <text x="400" y="82" fill="#8b949e" font-size="8">A gains most</text>
+    </svg>
+
+    <h3>Key Properties of Pareto-Optimal Solutions</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Property</th><th>Explanation</th></tr>
+        <tr><td><strong>No waste</strong></td><td>All gains are exhausted; no mutual improvements are left untaken</td></tr>
+        <tr><td><strong>Multiple solutions exist</strong></td><td>The entire Pareto frontier is optimal; there is no single "best" Pareto solution</td></tr>
+        <tr><td><strong>Trade-off required</strong></td><td>Moving along the frontier means one party gains at the other's expense</td></tr>
+        <tr><td><strong>Better than compromise</strong></td><td>A simple 50-50 split may not be on the frontier; Pareto solutions leave no value on the table</td></tr>
+      </table>
+    </div>
+
+    <div class="callout info"><strong>Example:</strong> Two departments are negotiating office space. A compromise might give each 60% of what they want. A Pareto-optimal solution might give one dept 100% space and compensate with dedicated equipment, achieving a better outcome for both than the arbitrary 60/60 split.</div>
+  </div>
+</section>
+
+<!-- ══ PARTNERING ══════════════════════════════════════════════ -->
+<section id="partnering" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🤝 Partnering <span style="color:var(--star)">★★★☆</span></div>
+    <div class="callout info"><strong>Partnering</strong> is a formal process to build commitment, cooperation, and trust between owner, contractor, and subcontractors before the project begins — to prevent conflicts before they arise.</div>
+
+    <h3>Three Steps of Partnering</h3>
+    <svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
+      <rect x="20" y="20" width="130" height="80" rx="6" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="85" y="50" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">Step 1</text>
+      <text x="85" y="68" text-anchor="middle" fill="#c9d1d9" font-size="9">Stakeholder</text>
+      <text x="85" y="80" text-anchor="middle" fill="#c9d1d9" font-size="9">Workshop</text>
+      <text x="85" y="92" text-anchor="middle" fill="#8b949e" font-size="8">(All key parties)</text>
+      <line x1="150" y1="60" x2="185" y2="60" stroke="#444" stroke-width="2" marker-end="url(#arrP)"/>
+      <defs><marker id="arrP" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#888"/></marker></defs>
+      <rect x="185" y="20" width="130" height="80" rx="6" fill="#1a2332" stroke="#58a6ff" stroke-width="2"/>
+      <text x="250" y="50" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">Step 2</text>
+      <text x="250" y="68" text-anchor="middle" fill="#c9d1d9" font-size="9">Develop Common</text>
+      <text x="250" y="80" text-anchor="middle" fill="#c9d1d9" font-size="9">Goals/Objectives</text>
+      <text x="250" y="92" text-anchor="middle" fill="#8b949e" font-size="8">(Shared vision)</text>
+      <line x1="315" y1="60" x2="350" y2="60" stroke="#444" stroke-width="2" marker-end="url(#arrP)"/>
+      <rect x="350" y="20" width="130" height="80" rx="6" fill="#1a2332" stroke="#f0883e" stroke-width="2"/>
+      <text x="415" y="50" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">Step 3</text>
+      <text x="415" y="68" text-anchor="middle" fill="#c9d1d9" font-size="9">Regular Follow-up</text>
+      <text x="415" y="80" text-anchor="middle" fill="#c9d1d9" font-size="9">Meetings</text>
+      <text x="415" y="92" text-anchor="middle" fill="#8b949e" font-size="8">(Sustain partnership)</text>
+    </svg>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Step</th><th>Who</th><th>Purpose</th><th>Output</th></tr>
+        <tr><td>1. Workshop</td><td>All key stakeholders (owner, PM, contractors, subs)</td><td>Build relationships and trust before work begins</td><td>Shared understanding of goals</td></tr>
+        <tr><td>2. Common Goals</td><td>All parties together</td><td>Align on what success looks like</td><td>Joint mission statement / charter</td></tr>
+        <tr><td>3. Follow-up</td><td>Ongoing throughout project</td><td>Monitor partnership health, resolve issues early</td><td>Regular meetings, issue log</td></tr>
+      </table>
+    </div>
+    <div class="callout info">Partnering is especially common in construction and government contracts where adversarial relationships between owner and contractor have historically caused disputes and cost overruns.</div>
+  </div>
+</section>
+
+<!-- ══ CHARTERING ══════════════════════════════════════════════ -->
+<section id="chartering" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📄 Project Chartering <span style="color:var(--star)">★★★★ — 4× in PYQ</span></div>
+    <div class="callout star"><strong>Frequently asked.</strong> Know what a project charter is, what it contains, and how it differs from partnering.</div>
+
+    <div class="callout info">A <strong>project charter</strong> is a formal, written document that authorizes the project, defines its scope, objectives, stakeholders, and PM authority. It is the written agreement that establishes project existence and PM's power.</div>
+
+    <h3>What a Project Charter Contains</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Section</th><th>What It Defines</th></tr>
+        <tr><td>1</td><td><strong>Project Purpose / Goal</strong></td><td>Why the project exists and what it must achieve</td></tr>
+        <tr><td>2</td><td><strong>Scope Statement</strong></td><td>What is included and explicitly excluded</td></tr>
+        <tr><td>3</td><td><strong>Project Manager Authority</strong></td><td>What decisions the PM can make; budget authority</td></tr>
+        <tr><td>4</td><td><strong>Stakeholder Identification</strong></td><td>Who the key stakeholders are</td></tr>
+        <tr><td>5</td><td><strong>Key Deliverables</strong></td><td>Outputs the project must produce</td></tr>
+        <tr><td>6</td><td><strong>Milestones / Timeline</strong></td><td>High-level schedule checkpoints</td></tr>
+        <tr><td>7</td><td><strong>Budget Summary</strong></td><td>Approved funding level</td></tr>
+        <tr><td>8</td><td><strong>Signatures</strong></td><td>Formal approval from sponsor/management</td></tr>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Partnering</th><th>Chartering</th></tr>
+        <tr><td>Informal relationship-building process</td><td>Formal written document</td></tr>
+        <tr><td>Between owner, contractor, subs</td><td>Between sponsor, PM, organization</td></tr>
+        <tr><td>Aimed at conflict prevention</td><td>Aimed at project authorization &amp; scope definition</td></tr>
+        <tr><td>No legal standing</td><td>Official organizational document</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NEGOTIATION ══════════════════════════════════════════════ -->
+<section id="negotiation" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🗣️ Principles of Principled Negotiation <span style="color:var(--star)">★★★☆</span></div>
+    <div class="callout info">From Fisher &amp; Ury's <em>Getting to Yes</em> — the standard PM reference for conflict resolution through negotiation. These 4 principles distinguish principled negotiation from positional bargaining.</div>
+
+    <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
+      <rect x="10" y="10" width="220" height="80" rx="6" fill="#1a2332" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="120" y="32" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">1. Separate People from Problem</text>
+      <text x="120" y="50" text-anchor="middle" fill="#c9d1d9" font-size="9">Attack the problem, not the person.</text>
+      <text x="120" y="64" text-anchor="middle" fill="#c9d1d9" font-size="9">Build relationships while resolving</text>
+      <text x="120" y="78" text-anchor="middle" fill="#8b949e" font-size="9">the substantive issue.</text>
+      <rect x="270" y="10" width="220" height="80" rx="6" fill="#1a2332" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="380" y="32" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">2. Focus on Interests, Not Positions</text>
+      <text x="380" y="50" text-anchor="middle" fill="#c9d1d9" font-size="9">Ask WHY, not WHAT. Underlying</text>
+      <text x="380" y="64" text-anchor="middle" fill="#c9d1d9" font-size="9">interests often reveal compatible</text>
+      <text x="380" y="78" text-anchor="middle" fill="#8b949e" font-size="9">solutions both sides can accept.</text>
+      <rect x="10" y="110" width="220" height="80" rx="6" fill="#1a2332" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="120" y="132" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">3. Invent Options for Mutual Gain</text>
+      <text x="120" y="150" text-anchor="middle" fill="#c9d1d9" font-size="9">Brainstorm multiple solutions</text>
+      <text x="120" y="164" text-anchor="middle" fill="#c9d1d9" font-size="9">before deciding. Seek Pareto-</text>
+      <text x="120" y="178" text-anchor="middle" fill="#8b949e" font-size="9">optimal outcomes.</text>
+      <rect x="270" y="110" width="220" height="80" rx="6" fill="#1a2332" stroke="#bc8cff" stroke-width="1.5"/>
+      <text x="380" y="132" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="bold">4. Objective Criteria</text>
+      <text x="380" y="150" text-anchor="middle" fill="#c9d1d9" font-size="9">Use fair external standards</text>
+      <text x="380" y="164" text-anchor="middle" fill="#c9d1d9" font-size="9">(market price, legal precedent,</text>
+      <text x="380" y="178" text-anchor="middle" fill="#8b949e" font-size="9">expert opinion) to decide.</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ SCOPE CHANGE ══════════════════════════════════════════════ -->
+<section id="scope" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔄 Scope Change — 3 Reasons <span style="color:var(--star)">★★★☆</span></div>
+    <div class="callout info">Scope changes are a major source of conflict. The PM must manage them through a formal change control process.</div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Reason</th><th>Explanation</th><th>Example</th></tr>
+        <tr>
+          <td>1</td>
+          <td><strong>Technical Uncertainty</strong></td>
+          <td>Project starts before all technical aspects are fully understood. As work progresses, new information reveals additional requirements.</td>
+          <td>A software project discovers a new API requirement mid-development</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>Increased Knowledge / Sophistication</strong></td>
+          <td>Client or user learns more about what is possible and raises their expectations or requests additional features.</td>
+          <td>A client sees a prototype and requests new features not in the original spec</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>Mandate</strong></td>
+          <td>External regulatory, legislative, or governmental requirement changes the project scope, often unavoidably.</td>
+          <td>A new safety regulation requires redesign of an already-approved component</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout warn"><strong>Impact of uncontrolled scope change:</strong> Schedule delays, cost overruns, reduced quality, team demoralization. The PM must have a formal change control process — written requests, impact assessment, approval before work begins.</div>
+  </div>
+</section>
+
+<!-- ══ PYQ ══════════════════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ Past Year Questions — AA Ch 9</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
+        <tr><td>What is Pareto-optimal? Draw Pareto frontier and explain</td><td>5–8</td><td>★★★★★ (5×)</td></tr>
+        <tr><td>What is project chartering? What does it contain?</td><td>5–8</td><td>★★★★ (4×)</td></tr>
+        <tr><td>Explain the 3 steps of partnering in conflict resolution</td><td>5</td><td>★★★</td></tr>
+        <tr><td>What are the 4 principles of principled negotiation?</td><td>5</td><td>★★★</td></tr>
+        <tr><td>What are the 3 reasons for scope change?</td><td>5</td><td>★★★</td></tr>
+        <tr><td>Difference between partnering and chartering</td><td>5</td><td>★★</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ══════════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — AA Ch 9</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Topic</th><th>Key Formula / Point</th></tr>
+        <tr><td>Pareto-optimal</td><td>Can't improve one party without harming the other; win-win; on Pareto frontier</td></tr>
+        <tr><td>Partnering Step 1</td><td>Stakeholder workshop — build trust BEFORE project starts</td></tr>
+        <tr><td>Partnering Step 2</td><td>Develop common goals — shared vision and mission</td></tr>
+        <tr><td>Partnering Step 3</td><td>Regular follow-up meetings — sustain throughout project</td></tr>
+        <tr><td>Chartering</td><td>Written formal document; defines scope, PM authority, stakeholders, deliverables</td></tr>
+        <tr><td>Negotiation Principle 1</td><td>Separate people from problem</td></tr>
+        <tr><td>Negotiation Principle 2</td><td>Focus on interests, not positions</td></tr>
+        <tr><td>Negotiation Principle 3</td><td>Invent options for mutual gain (Pareto)</td></tr>
+        <tr><td>Negotiation Principle 4</td><td>Use objective criteria</td></tr>
+        <tr><td>Scope change reason 1</td><td>Technical uncertainty</td></tr>
+        <tr><td>Scope change reason 2</td><td>Increased knowledge/sophistication of client</td></tr>
+        <tr><td>Scope change reason 3</td><td>Mandate (regulatory/legal change)</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="js/tabs.js"></script>
+</body>
+</html>

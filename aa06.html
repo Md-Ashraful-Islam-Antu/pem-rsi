@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Ch 6: Project Planning — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>AA Ch 6: Project Planning</h1>
+  <span class="chapter-badge">AA-06</span>
+  <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="elements" data-stars="4">📋 5 Elements of Plan</button>
+  <button class="tab-btn" data-tab="wbs" data-stars="4">🏗️ WBS</button>
+  <button class="tab-btn" data-tab="wbsreq" data-stars="3">✅ WBS Requirements</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<div class="reading-progress">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-label" id="progressLabel">0 / 3 topics read</span>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Exam Weight</div><div class="card-value">★★★★</div><div class="card-sub">Highest frequency</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ #1</div><div class="card-value">5 Elements</div><div class="card-sub">★8× — most asked in AA part</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ #2</div><div class="card-value">WBS</div><div class="card-sub">★7× — structure &amp; requirements</div></div>
+    </div>
+    <p>Chapter 6 is the <strong>highest-frequency chapter</strong> in Azeem sir's portion. The 5 elements of a project plan have been asked 8 times and WBS 7 times in past exams. Know both deeply.</p>
+    <div class="callout star"><strong>Exam focus:</strong> Memorize and explain the 5 Elements of a Project Plan. Draw the 6-level WBS hierarchy. Know the 4 requirements that define a good WBS.</div>
+  </div>
+</section>
+
+<!-- ══ 5 ELEMENTS ══════════════════════════════════════════════ -->
+<section id="elements" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📋 5 Elements of a Project Plan <span style="color:var(--star)">★★★★ — MOST ASKED (8×)</span></div>
+    <div class="callout star"><strong>The single most asked question in Azeem sir's part.</strong> Write all 5 with clear explanations. At least 8 marks minimum.</div>
+
+    <svg viewBox="0 0 540 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:540px;display:block;margin:14px auto;">
+      <!-- Center -->
+      <rect x="185" y="128" width="170" height="60" rx="10" fill="#1a2332" stroke="#3fb950" stroke-width="2.5"/>
+      <text x="270" y="153" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="bold">PROJECT</text>
+      <text x="270" y="171" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="bold">PLAN</text>
+      <!-- Element 1: Overview -->
+      <rect x="20" y="10" width="140" height="50" rx="6" fill="#161b22" stroke="#58a6ff"/>
+      <text x="90" y="30" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">1. Overview</text>
+      <text x="90" y="48" text-anchor="middle" fill="#8b949e" font-size="9">Goals, scope, strategy</text>
+      <line x1="160" y1="35" x2="188" y2="145" stroke="#333" stroke-dasharray="4"/>
+      <!-- Element 2: Objectives -->
+      <rect x="380" y="10" width="150" height="50" rx="6" fill="#161b22" stroke="#f0883e"/>
+      <text x="455" y="30" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">2. Objectives</text>
+      <text x="455" y="48" text-anchor="middle" fill="#8b949e" font-size="9">SMART, measurable, specific</text>
+      <line x1="380" y1="35" x2="352" y2="145" stroke="#333" stroke-dasharray="4"/>
+      <!-- Element 3: Schedule -->
+      <rect x="380" y="210" width="150" height="50" rx="6" fill="#161b22" stroke="#bc8cff"/>
+      <text x="455" y="230" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="bold">3. Schedules</text>
+      <text x="455" y="248" text-anchor="middle" fill="#8b949e" font-size="9">WBS, milestones, Gantt, CPM</text>
+      <line x1="380" y1="235" x2="352" y2="175" stroke="#333" stroke-dasharray="4"/>
+      <!-- Element 4: Budgets -->
+      <rect x="20" y="210" width="140" height="50" rx="6" fill="#161b22" stroke="#3fb950"/>
+      <text x="90" y="230" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">4. Budgets</text>
+      <text x="90" y="248" text-anchor="middle" fill="#8b949e" font-size="9">Cost estimates, cash flows</text>
+      <line x1="160" y1="235" x2="188" y2="175" stroke="#333" stroke-dasharray="4"/>
+      <!-- Element 5: Staffing -->
+      <rect x="185" y="275" width="170" height="38" rx="6" fill="#161b22" stroke="#58a6ff"/>
+      <text x="270" y="293" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">5. Staffing Plan</text>
+      <text x="270" y="308" text-anchor="middle" fill="#8b949e" font-size="9">Roles, responsibilities, teams</text>
+      <line x1="270" y1="275" x2="270" y2="188" stroke="#333" stroke-dasharray="4"/>
+    </svg>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Element</th><th>Content</th><th>Key Tools</th></tr>
+        <tr>
+          <td><strong>1</strong></td>
+          <td><strong>Overview</strong></td>
+          <td>High-level summary of the project — goals, scope, strategy, deliverables. Written for senior management and stakeholders. Answers: What is this project? Why are we doing it? What will we deliver?</td>
+          <td>Project charter, scope statement</td>
+        </tr>
+        <tr>
+          <td><strong>2</strong></td>
+          <td><strong>Objectives</strong></td>
+          <td>Specific, measurable targets the project must achieve. Must be SMART (Specific, Measurable, Achievable, Relevant, Time-bound). Includes technical performance targets, cost targets, and schedule milestones.</td>
+          <td>Objective matrix, KPIs</td>
+        </tr>
+        <tr>
+          <td><strong>3</strong></td>
+          <td><strong>Schedules</strong></td>
+          <td>Time-based plan showing when each task will be done, by whom, and in what sequence. Includes milestones, dependencies, and critical path identification.</td>
+          <td>WBS, Gantt chart, CPM/PERT network</td>
+        </tr>
+        <tr>
+          <td><strong>4</strong></td>
+          <td><strong>Budgets / Resource Plans</strong></td>
+          <td>Detailed cost estimates for each work package. Includes direct costs (labor, materials) and indirect costs (overhead). Also covers non-financial resources (equipment, facilities). Time-phased budgets show spending patterns over time.</td>
+          <td>Time-phased budget, cost baseline</td>
+        </tr>
+        <tr>
+          <td><strong>5</strong></td>
+          <td><strong>Staffing Plan</strong></td>
+          <td>Identifies who will do what — roles, responsibilities, skill requirements, and reporting relationships. Defines the project team structure and resolves the question of who is accountable for each deliverable.</td>
+          <td>Responsibility Assignment Matrix (RAM), org chart</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout info">The five elements together answer: <strong>What?</strong> (Overview) → <strong>Why &amp; How well?</strong> (Objectives) → <strong>When?</strong> (Schedules) → <strong>How much?</strong> (Budgets) → <strong>Who?</strong> (Staffing)</div>
+  </div>
+</section>
+
+<!-- ══ WBS ══════════════════════════════════════════════════════ -->
+<section id="wbs" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🏗️ Work Breakdown Structure (WBS) <span style="color:var(--star)">★★★★ — 7× in PYQ</span></div>
+    <div class="callout star"><strong>Second most asked topic in Azeem sir's part.</strong> Draw the 6-level hierarchy and explain each level. Know what a "work package" is.</div>
+
+    <div class="callout info">A <strong>WBS</strong> is a hierarchical decomposition of the total project scope into smaller, manageable components. It defines and organizes the entire project work.</div>
+
+    <h3>6-Level WBS Hierarchy</h3>
+    <svg viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:620px;display:block;margin:14px auto;">
+      <!-- Level 1 -->
+      <rect x="210" y="10" width="200" height="38" rx="6" fill="#1a2332" stroke="#3fb950" stroke-width="2.5"/>
+      <text x="310" y="27" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">Level 1: Total Program</text>
+      <text x="310" y="43" text-anchor="middle" fill="#8b949e" font-size="9">The entire project/program</text>
+      <!-- L1→L2 -->
+      <line x1="310" y1="48" x2="310" y2="65" stroke="#444"/>
+      <line x1="130" y1="65" x2="490" y2="65" stroke="#444"/>
+      <line x1="130" y1="65" x2="130" y2="78" stroke="#444"/>
+      <line x1="310" y1="65" x2="310" y2="78" stroke="#444"/>
+      <line x1="490" y1="65" x2="490" y2="78" stroke="#444"/>
+      <!-- Level 2 -->
+      <rect x="50" y="78" width="160" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
+      <text x="130" y="90" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Level 2: Project</text>
+      <text x="130" y="103" text-anchor="middle" fill="#8b949e" font-size="8">Major deliverable/phase</text>
+      <rect x="230" y="78" width="160" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
+      <text x="310" y="90" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Level 2: Project</text>
+      <text x="310" y="103" text-anchor="middle" fill="#8b949e" font-size="8">Major deliverable/phase</text>
+      <rect x="410" y="78" width="160" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
+      <text x="490" y="90" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Level 2: Project</text>
+      <text x="490" y="103" text-anchor="middle" fill="#8b949e" font-size="8">Major deliverable/phase</text>
+      <!-- L2→L3 (only show middle branch for clarity) -->
+      <line x1="310" y1="108" x2="310" y2="125" stroke="#444"/>
+      <!-- Level 3 -->
+      <rect x="210" y="125" width="200" height="30" rx="5" fill="#161b22" stroke="#f0883e"/>
+      <text x="310" y="137" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">Level 3: Task</text>
+      <text x="310" y="150" text-anchor="middle" fill="#8b949e" font-size="8">Major work element</text>
+      <!-- L3→L4 -->
+      <line x1="310" y1="155" x2="310" y2="172" stroke="#444"/>
+      <!-- Level 4 -->
+      <rect x="210" y="172" width="200" height="30" rx="5" fill="#161b22" stroke="#bc8cff"/>
+      <text x="310" y="184" text-anchor="middle" fill="#bc8cff" font-size="10" font-weight="bold">Level 4: Subtask</text>
+      <text x="310" y="197" text-anchor="middle" fill="#8b949e" font-size="8">Subset of a task</text>
+      <!-- L4→L5 -->
+      <line x1="310" y1="202" x2="310" y2="219" stroke="#444"/>
+      <!-- Level 5 -->
+      <rect x="185" y="219" width="250" height="30" rx="5" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="310" y="231" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Level 5: Work Package</text>
+      <text x="310" y="244" text-anchor="middle" fill="#8b949e" font-size="8">Smallest schedulable unit — assigned to one person</text>
+      <!-- L5→L6 -->
+      <line x1="310" y1="249" x2="310" y2="266" stroke="#444"/>
+      <!-- Level 6 -->
+      <rect x="185" y="266" width="250" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
+      <text x="310" y="278" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Level 6: Level of Effort</text>
+      <text x="310" y="291" text-anchor="middle" fill="#8b949e" font-size="8">Specific labor hours / effort estimate</text>
+      <!-- Level numbers -->
+      <text x="20" y="97" fill="#8b949e" font-size="9">L2</text>
+      <text x="20" y="145" fill="#8b949e" font-size="9">L3</text>
+      <text x="20" y="192" fill="#8b949e" font-size="9">L4</text>
+      <text x="20" y="239" fill="#8b949e" font-size="9">L5</text>
+      <text x="20" y="285" fill="#8b949e" font-size="9">L6</text>
+      <text x="20" y="30" fill="#8b949e" font-size="9">L1</text>
+    </svg>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Level</th><th>Name</th><th>Description</th></tr>
+        <tr><td>1</td><td><strong>Total Program</strong></td><td>The entire project; top of the tree</td></tr>
+        <tr><td>2</td><td><strong>Project</strong></td><td>Major components or phases of the program</td></tr>
+        <tr><td>3</td><td><strong>Task</strong></td><td>Major work elements within a project</td></tr>
+        <tr><td>4</td><td><strong>Subtask</strong></td><td>Finer breakdown of a task</td></tr>
+        <tr><td>5</td><td><strong>Work Package</strong></td><td>Smallest schedulable unit; assigned to one person or team; has clear deliverable, duration, and budget</td></tr>
+        <tr><td>6</td><td><strong>Level of Effort</strong></td><td>Specific hours or effort required to complete a work package</td></tr>
+      </table>
+    </div>
+
+    <div class="callout info"><strong>Work Package</strong> is the most important level — it is the basic unit of project planning. Each work package should have: one clear owner, defined deliverable, time estimate, and cost estimate.</div>
+  </div>
+</section>
+
+<!-- ══ WBS REQUIREMENTS ══════════════════════════════════════ -->
+<section id="wbsreq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">✅ 4 Requirements for a Good WBS <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout star">Meredith &amp; Mantel state that work packages in a WBS must meet 4 key requirements. Know all 4.</div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Requirement</th><th>Meaning</th><th>Why Important?</th></tr>
+        <tr>
+          <td><strong>1</strong></td>
+          <td><strong>Manageable</strong></td>
+          <td>Each work package must be small enough that one person can manage it effectively. Neither too large (uncontrollable) nor too small (over-bureaucratic).</td>
+          <td>Ensures accountability; someone can be held responsible</td>
+        </tr>
+        <tr>
+          <td><strong>2</strong></td>
+          <td><strong>Independent</strong></td>
+          <td>Work packages should be as independent of each other as possible. Minimal coupling between packages reduces coordination overhead and risk of one delay cascading.</td>
+          <td>Enables parallel work; reduces scheduling complexity</td>
+        </tr>
+        <tr>
+          <td><strong>3</strong></td>
+          <td><strong>Integratable</strong></td>
+          <td>All work packages must fit together to form the complete project. When all packages are assembled, the full scope is delivered — no gaps, no overlaps.</td>
+          <td>Ensures 100% scope coverage; no work is missed</td>
+        </tr>
+        <tr>
+          <td><strong>4</strong></td>
+          <td><strong>Measurable</strong></td>
+          <td>Progress on each work package must be measurable objectively. Clear deliverables, milestones, and completion criteria must be defined. Avoid vague packages where "done" is subjective.</td>
+          <td>Enables monitoring and control; can tell if on track</td>
+        </tr>
+      </table>
+    </div>
+
+    <svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
+      <rect x="10" y="30" width="110" height="60" rx="6" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="65" y="55" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">Manageable</text>
+      <text x="65" y="72" text-anchor="middle" fill="#8b949e" font-size="9">Size right for</text>
+      <text x="65" y="84" text-anchor="middle" fill="#8b949e" font-size="9">one person</text>
+      <rect x="130" y="30" width="110" height="60" rx="6" fill="#1a2332" stroke="#f0883e"/>
+      <text x="185" y="55" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">Independent</text>
+      <text x="185" y="72" text-anchor="middle" fill="#8b949e" font-size="9">Minimal links</text>
+      <text x="185" y="84" text-anchor="middle" fill="#8b949e" font-size="9">to others</text>
+      <rect x="250" y="30" width="110" height="60" rx="6" fill="#1a2332" stroke="#3fb950"/>
+      <text x="305" y="55" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">Integratable</text>
+      <text x="305" y="72" text-anchor="middle" fill="#8b949e" font-size="9">All fit together</text>
+      <text x="305" y="84" text-anchor="middle" fill="#8b949e" font-size="9">= whole project</text>
+      <rect x="370" y="30" width="120" height="60" rx="6" fill="#1a2332" stroke="#bc8cff"/>
+      <text x="430" y="55" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="bold">Measurable</text>
+      <text x="430" y="72" text-anchor="middle" fill="#8b949e" font-size="9">Clear done/not</text>
+      <text x="430" y="84" text-anchor="middle" fill="#8b949e" font-size="9">done criteria</text>
+      <text x="250" y="15" text-anchor="middle" fill="#8b949e" font-size="10">4 Requirements for WBS Work Packages</text>
+    </svg>
+
+    <h3>Benefits of WBS</h3>
+    <ul>
+      <li>Forces complete thinking about all project work — nothing gets missed</li>
+      <li>Provides basis for scheduling, budgeting, and resource allocation</li>
+      <li>Establishes clear accountability — each work package has an owner</li>
+      <li>Enables progress monitoring at the right level of detail</li>
+      <li>Helps estimate costs and durations bottom-up</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══ PYQ ══════════════════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ Past Year Questions — AA Ch 6</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
+        <tr><td>Write down the 5 elements of a project plan. Briefly explain each.</td><td>8–10</td><td>★★★★ (8×)</td></tr>
+        <tr><td>What is WBS? Explain its structure with a diagram showing all 6 levels.</td><td>8–10</td><td>★★★★ (7×)</td></tr>
+        <tr><td>What are the 4 requirements a work package must satisfy?</td><td>5</td><td>★★★</td></tr>
+        <tr><td>Why is the work package the basic unit of project planning?</td><td>4–5</td><td>★★</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ══════════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — AA Ch 6</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Topic</th><th>Memory Hook</th></tr>
+        <tr><td>5 Elements of Project Plan</td><td><strong>O-O-S-B-S</strong>: Overview → Objectives → Schedules → Budgets → Staffing</td></tr>
+        <tr><td>WBS 6 Levels</td><td>Total Program → Project → Task → Subtask → <strong>Work Package</strong> → Level of Effort</td></tr>
+        <tr><td>Work Package 4 Requirements</td><td><strong>MIIM</strong>: Manageable, Independent, Integratable, Measurable</td></tr>
+        <tr><td>WBS purpose</td><td>Hierarchical decomposition; forces 100% scope coverage; basis for all planning</td></tr>
+        <tr><td>Overview element</td><td>High-level for senior management; goals + scope + strategy</td></tr>
+        <tr><td>Objectives element</td><td>SMART targets; measurable success criteria</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="js/tabs.js"></script>
+</body>
+</html>

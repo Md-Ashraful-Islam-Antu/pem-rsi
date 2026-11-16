@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Ch 7: Project Budgeting — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>AA Ch 7: Project Budgeting</h1>
+  <span class="chapter-badge">AA-07</span>
+  <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="methods" data-stars="3">💰 Budgeting Methods</button>
+  <button class="tab-btn" data-tab="timephased" data-stars="4">📊 Time-Phased Budget</button>
+  <button class="tab-btn" data-tab="learning" data-stars="4">📉 Learning Curve</button>
+  <button class="tab-btn" data-tab="errors" data-stars="3">⚠️ Estimating Errors</button>
+  <button class="tab-btn" data-tab="math" data-stars="4">🔢 Math Problems</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<div class="reading-progress">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-label" id="progressLabel">0 / 5 topics read</span>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Exam Weight</div><div class="card-value">★★★★</div><div class="card-sub">High frequency</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ #1</div><div class="card-value">Time-Phased Budget</div><div class="card-sub">★7× — 3-curve diagram</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ #2</div><div class="card-value">Learning Curve</div><div class="card-sub">Numerical problems</div></div>
+    </div>
+    <p>Chapter 7 is about how project costs are planned and tracked. The time-phased budget (3 curves) is asked very frequently. The learning curve introduces a mathematical model for how labor productivity improves with repetition — common numerical question.</p>
+    <div class="callout star"><strong>Exam focus:</strong> Draw and explain the 3-curve time-phased budget. Know the learning curve formula Tₙ = T₁nʳ and solve numericals. Know the three budgeting methods (top-down, bottom-up, iterative).</div>
+  </div>
+</section>
+
+<!-- ══ BUDGETING METHODS ══════════════════════════════════════ -->
+<section id="methods" class="tab-panel">
+  <div class="section">
+    <div class="section-title">💰 Budgeting Methods <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout info">There are three main approaches to setting a project budget. Each has different accuracy levels and organizational requirements.</div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Method</th><th>Direction</th><th>How It Works</th><th>Pros</th><th>Cons</th></tr>
+        <tr>
+          <td><strong>Top-Down</strong></td>
+          <td>Senior mgmt → Team</td>
+          <td>Senior management sets the total budget based on past projects, analogies, or affordability. Teams are given their allocations.</td>
+          <td>Fast; strategic alignment; overall budget known early</td>
+          <td>May be unrealistic; ignores actual work details; demotivates team</td>
+        </tr>
+        <tr>
+          <td><strong>Bottom-Up</strong></td>
+          <td>Team → Senior mgmt</td>
+          <td>Teams estimate each work package individually; estimates are rolled up to get the total project budget.</td>
+          <td>Accurate; team buy-in; based on real work</td>
+          <td>Slow; teams may pad estimates; may exceed affordability</td>
+        </tr>
+        <tr>
+          <td><strong>Iterative</strong></td>
+          <td>Negotiation</td>
+          <td>Combines both: initial top-down constraint, then bottom-up detailing, followed by negotiation until agreed.</td>
+          <td>Realistic and practical; best compromise</td>
+          <td>Time-consuming; requires skilled negotiators</td>
+        </tr>
+      </table>
+    </div>
+
+    <svg viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:12px auto;">
+      <!-- Top-down arrow -->
+      <text x="80" y="20" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">Top-Down</text>
+      <rect x="30" y="30" width="100" height="25" rx="4" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="80" y="47" text-anchor="middle" fill="#58a6ff" font-size="9">Senior Management</text>
+      <line x1="80" y1="55" x2="80" y2="75" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr1)"/>
+      <defs><marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#58a6ff"/></marker></defs>
+      <rect x="30" y="75" width="100" height="25" rx="4" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="80" y="93" text-anchor="middle" fill="#58a6ff" font-size="9">Teams allocated $</text>
+      <!-- Bottom-up arrow -->
+      <text x="260" y="20" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">Bottom-Up</text>
+      <rect x="210" y="75" width="100" height="25" rx="4" fill="#1a2332" stroke="#f0883e"/>
+      <text x="260" y="93" text-anchor="middle" fill="#f0883e" font-size="9">Teams estimate WPs</text>
+      <defs><marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#f0883e"/></marker></defs>
+      <line x1="260" y1="75" x2="260" y2="55" stroke="#f0883e" stroke-width="2" marker-end="url(#arr2)"/>
+      <rect x="210" y="30" width="100" height="25" rx="4" fill="#1a2332" stroke="#f0883e"/>
+      <text x="260" y="47" text-anchor="middle" fill="#f0883e" font-size="9">Roll up to total</text>
+      <!-- Iterative arrows -->
+      <text x="430" y="20" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">Iterative</text>
+      <rect x="380" y="30" width="100" height="25" rx="4" fill="#1a2332" stroke="#3fb950"/>
+      <text x="430" y="47" text-anchor="middle" fill="#3fb950" font-size="9">Management</text>
+      <line x1="430" y1="55" x2="430" y2="68" stroke="#3fb950" stroke-width="1.5"/>
+      <line x1="430" y1="82" x2="430" y2="68" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="430" y="77" text-anchor="middle" fill="#3fb950" font-size="9">↕ Negotiate</text>
+      <rect x="380" y="82" width="100" height="25" rx="4" fill="#1a2332" stroke="#3fb950"/>
+      <text x="430" y="99" text-anchor="middle" fill="#3fb950" font-size="9">Teams</text>
+      <text x="430" y="140" text-anchor="middle" fill="#8b949e" font-size="9">Best practice approach</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ TIME-PHASED BUDGET ══════════════════════════════════════ -->
+<section id="timephased" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📊 Time-Phased Budget (3 Curves) <span style="color:var(--star)">★★★★ — 7× in PYQ</span></div>
+    <div class="callout star"><strong>Most asked budgeting topic.</strong> Draw the 3 curves accurately on a single graph. Know what each curve represents and what their relationships tell the PM.</div>
+
+    <div class="callout info">A <strong>time-phased budget</strong> shows how costs accumulate over the project timeline. Three curves are plotted: <strong>Committed</strong>, <strong>Scheduled</strong>, and <strong>Actual</strong> costs.</div>
+
+    <svg viewBox="0 0 580 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;display:block;margin:14px auto;">
+      <!-- Axes -->
+      <line x1="60" y1="250" x2="550" y2="250" stroke="#444" stroke-width="1.5"/>
+      <line x1="60" y1="20" x2="60" y2="250" stroke="#444" stroke-width="1.5"/>
+      <text x="305" y="275" text-anchor="middle" fill="#8b949e" font-size="11">Time →</text>
+      <text x="20" y="135" text-anchor="middle" fill="#8b949e" font-size="11" transform="rotate(-90,20,135)">Cumulative Cost →</text>
+      <!-- Committed curve (steepest / earliest) -->
+      <path d="M60,245 C120,220 180,180 230,140 C280,105 330,70 390,45 C430,30 470,25 540,22"
+            fill="none" stroke="#f0883e" stroke-width="2.5" stroke-dasharray="8,4"/>
+      <!-- Scheduled curve (middle) -->
+      <path d="M60,248 C130,230 200,200 260,165 C310,135 360,95 420,65 C460,48 500,38 540,33"
+            fill="none" stroke="#58a6ff" stroke-width="2.5"/>
+      <!-- Actual curve (may be above or below) -->
+      <path d="M60,249 C130,238 200,215 265,185 C315,158 360,120 405,90 C440,70 480,58 530,52"
+            fill="none" stroke="#3fb950" stroke-width="2.5" stroke-dasharray="4,3"/>
+      <!-- Labels -->
+      <text x="560" y="25" fill="#f0883e" font-size="10" font-weight="bold">Committed</text>
+      <text x="560" y="36" fill="#8b949e" font-size="9">(earliest)</text>
+      <text x="560" y="36" fill="#58a6ff" font-size="10" font-weight="bold" y="50">Scheduled</text>
+      <text x="560" y="50" fill="#58a6ff" font-size="10" font-weight="bold">Scheduled</text>
+      <text x="560" y="62" fill="#8b949e" font-size="9">(planned)</text>
+      <text x="560" y="75" fill="#3fb950" font-size="10" font-weight="bold">Actual</text>
+      <text x="560" y="87" fill="#8b949e" font-size="9">(monitored)</text>
+      <!-- Legend lines -->
+      <line x1="490" y1="22" x2="555" y2="22" stroke="#f0883e" stroke-width="2" stroke-dasharray="8,4"/>
+      <line x1="490" y1="47" x2="555" y2="47" stroke="#58a6ff" stroke-width="2"/>
+      <line x1="490" y1="72" x2="555" y2="72" stroke="#3fb950" stroke-width="2" stroke-dasharray="4,3"/>
+      <!-- Arrows showing relationships -->
+      <line x1="250" y1="143" x2="250" y2="168" stroke="#fff" stroke-width="1" stroke-dasharray="3"/>
+      <text x="258" y="160" fill="#8b949e" font-size="9">Gap = planned</text>
+      <text x="258" y="172" fill="#8b949e" font-size="9">savings vs accrual</text>
+    </svg>
+
+    <h3>The Three Curves Explained</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Curve</th><th>What It Tracks</th><th>When Recorded</th><th>Significance</th></tr>
+        <tr>
+          <td><strong>Committed Cost</strong></td>
+          <td>Costs committed (orders placed, contracts signed) — obligations made even if not yet paid</td>
+          <td>When purchase orders or contracts are signed</td>
+          <td>Shows financial obligations; rises earliest; "point of no return" for spending</td>
+        </tr>
+        <tr>
+          <td><strong>Scheduled Cost</strong></td>
+          <td>Costs planned to be spent per the schedule (Budgeted Cost of Work Scheduled — BCWS)</td>
+          <td>Created during planning; baseline</td>
+          <td>Baseline for comparison; also called the "cost baseline" or S-curve</td>
+        </tr>
+        <tr>
+          <td><strong>Actual Cost</strong></td>
+          <td>Actual cash outflows — money actually spent on work completed</td>
+          <td>As work is done and invoices paid</td>
+          <td>Compared with scheduled to identify cost variances; below scheduled = under budget</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout info">
+      <strong>Reading the chart:</strong><br>
+      • If Actual &lt; Scheduled → Under budget (good)<br>
+      • If Actual &gt; Scheduled → Over budget (bad — take corrective action)<br>
+      • Committed always rises first (you commit before you spend)<br>
+      • The gap between Committed and Actual represents liabilities not yet paid
+    </div>
+  </div>
+</section>
+
+<!-- ══ LEARNING CURVE ══════════════════════════════════════════ -->
+<section id="learning" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📉 Learning Curve <span style="color:var(--star)">★★★★</span></div>
+    <div class="callout star"><strong>Important numerical topic.</strong> Know the formula, what learning rate means, and how to calculate initial time given expert time and learning rate.</div>
+
+    <div class="callout info">The <strong>learning curve</strong> (also called experience curve) states that as workers gain experience doing a repetitive task, the time to complete it decreases at a predictable rate. Each time cumulative production doubles, the unit time decreases by a fixed percentage.</div>
+
+    <div class="math-block">
+      <div class="math-title">Learning Curve Formula</div>
+      <div class="math-formula">T<sub>n</sub> = T<sub>1</sub> · n<sup>r</sup></div>
+      <div class="math-desc">
+        Where: T<sub>n</sub> = time for the n-th unit &nbsp;|&nbsp; T<sub>1</sub> = time for the 1st unit<br>
+        n = unit number &nbsp;|&nbsp; r = learning exponent = log(learning rate) / log(2)
+      </div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Learning Exponent r</div>
+      <div class="math-formula">r = log(learning rate) / log(2)</div>
+      <div class="math-desc">
+        For 80% learning rate: r = log(0.80) / log(2) = −0.0969 / 0.3010 = −0.322<br>
+        Note: r is negative (time decreases as n increases)
+      </div>
+    </div>
+
+    <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
+      <line x1="50" y1="190" x2="480" y2="190" stroke="#444" stroke-width="1.5"/>
+      <line x1="50" y1="20" x2="50" y2="190" stroke="#444" stroke-width="1.5"/>
+      <text x="265" y="210" text-anchor="middle" fill="#8b949e" font-size="11">Cumulative Production (units) →</text>
+      <text x="20" y="105" text-anchor="middle" fill="#8b949e" font-size="11" transform="rotate(-90,20,105)">Unit Time →</text>
+      <!-- 80% learning curve (exponential decay) -->
+      <path d="M60,20 C80,25 110,45 150,70 C200,100 270,130 350,153 C400,165 440,172 475,177"
+            fill="none" stroke="#3fb950" stroke-width="2.5"/>
+      <!-- 90% learning curve (less steep) -->
+      <path d="M60,20 C85,22 120,35 165,52 C220,72 300,100 380,127 C420,138 455,146 475,151"
+            fill="none" stroke="#58a6ff" stroke-width="2" stroke-dasharray="6,3"/>
+      <!-- Double markers -->
+      <line x1="130" y1="190" x2="130" y2="80" stroke="#444" stroke-dasharray="3"/>
+      <line x1="265" y1="190" x2="265" y2="104" stroke="#444" stroke-dasharray="3"/>
+      <text x="130" y="200" text-anchor="middle" fill="#8b949e" font-size="9">n</text>
+      <text x="265" y="200" text-anchor="middle" fill="#8b949e" font-size="9">2n (double)</text>
+      <!-- Arrow showing 80% drop -->
+      <line x1="130" y1="80" x2="265" y2="104" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="200" y="78" text-anchor="middle" fill="#f0883e" font-size="10">80% of T at n</text>
+      <!-- Legend -->
+      <line x1="300" y1="30" x2="340" y2="30" stroke="#3fb950" stroke-width="2.5"/>
+      <text x="345" y="34" fill="#3fb950" font-size="10">80% learning rate</text>
+      <line x1="300" y1="48" x2="340" y2="48" stroke="#58a6ff" stroke-width="2" stroke-dasharray="6,3"/>
+      <text x="345" y="52" fill="#58a6ff" font-size="10">90% learning rate</text>
+    </svg>
+
+    <h3>Why Learning Curve Matters for PM</h3>
+    <div class="callout warn"><strong>Critical insight:</strong> If the PM ignores the learning curve and assumes all units take the same time (T₁), the budget for later units will be <em>overestimated</em>. But if the PM doesn't account for the initial slow period (high T₁), the early-project budget will be <em>underestimated</em>. Proper learning curve use prevents both errors.</div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Learning Rate</th><th>Meaning</th><th>Exponent r</th></tr>
+        <tr><td>80%</td><td>Every doubling of production → 20% reduction in unit time</td><td>r = −0.322</td></tr>
+        <tr><td>90%</td><td>Every doubling → 10% reduction in unit time</td><td>r = −0.152</td></tr>
+        <tr><td>100%</td><td>No learning; time stays constant</td><td>r = 0</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ESTIMATING ERRORS ══════════════════════════════════════ -->
+<section id="errors" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚠️ Estimating Errors (MAD, MAR, TS) <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout info">These statistical measures help evaluate the quality of budget estimates by comparing actual values to forecasted values over time.</div>
+
+    <div class="math-block">
+      <div class="math-title">Mean Absolute Deviation (MAD)</div>
+      <div class="math-formula">MAD = Σ|A(t) − F(t)| / n</div>
+      <div class="math-desc">Average of the absolute differences between actual A(t) and forecast F(t). Measures average magnitude of error regardless of direction.</div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Mean Absolute Rate (MAR)</div>
+      <div class="math-formula">MAR = Σ|A(t)/F(t) − 1| / n × 100%</div>
+      <div class="math-desc">Average relative error as a percentage. Useful for comparing across projects of different scales.</div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Tracking Signal (TS)</div>
+      <div class="math-formula">TS = RSFE / MAD</div>
+      <div class="math-desc">
+        RSFE = Running Sum of Forecast Errors = Σ[A(t) − F(t)]<br>
+        TS tells you if errors are biased in one direction. A TS consistently positive means estimates are systematically too low.<br>
+        Rule of thumb: |TS| &gt; 4 indicates a biased forecast — revise the model.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MATH PROBLEMS ══════════════════════════════════════════ -->
+<section id="math" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔢 Learning Curve Numericals <span style="color:var(--star)">★★★★</span></div>
+
+    <h3>Problem 1: Find Initial Time Given Expert Time</h3>
+    <div class="callout info">
+      An expert worker can complete a job in 50 hours after doing it 20 times. The learning rate is 80%. What was the time for the very first unit?
+    </div>
+    <div class="math-block">
+      <div class="math-title">Solution</div>
+      <div class="math-formula">T<sub>n</sub> = T<sub>1</sub> · n<sup>r</sup></div>
+      <div class="math-desc">
+        r = log(0.80)/log(2) = −0.322<br>
+        50 = T₁ × (20)^(−0.322)<br>
+        (20)^(−0.322) = e^(−0.322 × ln20) = e^(−0.322 × 2.996) = e^(−0.965) = 0.381<br>
+        50 = T₁ × 0.381<br>
+        <strong>T₁ = 50 / 0.381 = 131.2 hours</strong>
+      </div>
+    </div>
+
+    <h3>Problem 2: Time for nth Unit</h3>
+    <div class="callout info">
+      T₁ = 100 hours, learning rate = 80%. What is the time for the 8th unit?
+    </div>
+    <div class="math-block">
+      <div class="math-title">Solution</div>
+      <div class="math-desc">
+        r = log(0.80)/log(2) = −0.322<br>
+        T₈ = 100 × (8)^(−0.322)<br>
+        (8)^(−0.322) = e^(−0.322 × ln8) = e^(−0.322 × 2.079) = e^(−0.670) = 0.512<br>
+        <strong>T₈ = 100 × 0.512 = 51.2 hours</strong>
+      </div>
+      <div class="math-desc"><em>Verification: At n=1, time=100. At n=2, time=80 (80% of 100). At n=4, time=64 (80% of 80). At n=8, time=51.2 (80% of 64). ✓</em></div>
+    </div>
+
+    <h3>Quick Reference: 80% Learning Curve</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Unit #</th><th>Time (if T₁=100)</th><th>Reduction from T₁</th></tr>
+        <tr><td>1</td><td>100.0 hrs</td><td>—</td></tr>
+        <tr><td>2</td><td>80.0 hrs</td><td>80% × 100</td></tr>
+        <tr><td>4</td><td>64.0 hrs</td><td>80% × 80</td></tr>
+        <tr><td>8</td><td>51.2 hrs</td><td>80% × 64</td></tr>
+        <tr><td>16</td><td>40.96 hrs</td><td>80% × 51.2</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PYQ ══════════════════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ Past Year Questions — AA Ch 7</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
+        <tr><td>Draw and explain the time-phased budget (3 curves)</td><td>8–10</td><td>★★★★ (7×)</td></tr>
+        <tr><td>Learning curve numerical: find T₁ given Tₙ, n, and learning rate</td><td>8–10</td><td>★★★★</td></tr>
+        <tr><td>What happens if learning curve is ignored in budgeting?</td><td>5</td><td>★★★</td></tr>
+        <tr><td>Explain top-down vs bottom-up vs iterative budgeting</td><td>5–8</td><td>★★★</td></tr>
+        <tr><td>Calculate MAD and TS for given actual vs forecast data</td><td>5–8</td><td>★★</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ══════════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — AA Ch 7</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Topic</th><th>Key Formula / Point</th></tr>
+        <tr><td>Top-Down budgeting</td><td>Mgmt sets total → allocate down; fast but may be inaccurate</td></tr>
+        <tr><td>Bottom-Up budgeting</td><td>Estimate each WP → roll up; accurate but slow</td></tr>
+        <tr><td>Iterative budgeting</td><td>Top-down constraint + bottom-up detail + negotiation; best practice</td></tr>
+        <tr><td>Time-phased: Committed</td><td>Orders placed/contracts signed; rises first; financial obligation</td></tr>
+        <tr><td>Time-phased: Scheduled</td><td>Planned spend (baseline); S-curve; also called BCWS</td></tr>
+        <tr><td>Time-phased: Actual</td><td>Real cash out; compare to scheduled for variance</td></tr>
+        <tr><td>Learning curve formula</td><td>Tₙ = T₁ × nʳ &nbsp;|&nbsp; r = log(rate)/log(2)</td></tr>
+        <tr><td>80% learning rate</td><td>r = −0.322; each doubling → 80% of previous unit time</td></tr>
+        <tr><td>MAD</td><td>Σ|A−F|/n — average absolute error</td></tr>
+        <tr><td>TS</td><td>RSFE/MAD — bias indicator; |TS|&gt;4 → biased estimate</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="js/tabs.js"></script>
+</body>
+</html>

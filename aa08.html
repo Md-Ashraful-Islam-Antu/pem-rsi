@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Ch 8: Project Scheduling — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>AA Ch 8: Project Scheduling</h1>
+  <span class="chapter-badge">AA-08</span>
+  <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="gantt" data-stars="2">📅 Gantt Chart</button>
+  <button class="tab-btn" data-tab="network" data-stars="4">🕸️ Network Techniques</button>
+  <button class="tab-btn" data-tab="cpm" data-stars="4">🔑 Critical Path (CPM)</button>
+  <button class="tab-btn" data-tab="pert" data-stars="3">🎲 PERT</button>
+  <button class="tab-btn" data-tab="math" data-stars="4">🔢 Math Problems</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<div class="reading-progress">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-label" id="progressLabel">0 / 5 topics read</span>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Exam Weight</div><div class="card-value">★★★★★</div><div class="card-sub">Highest marks (20)</div></div>
+      <div class="summary-card"><div class="card-title">Top Topic</div><div class="card-value">CPM / Critical Path</div><div class="card-sub">Network numericals</div></div>
+      <div class="summary-card"><div class="card-title">Key Formula</div><div class="card-value">te = (O+4M+P)/6</div><div class="card-sub">PERT expected time</div></div>
+    </div>
+    <p>Chapter 8 is the highest-marks chapter in the exam — network diagrams and critical path method carry up to 20 marks. You must be able to draw AON or AOA networks, perform forward/backward pass, identify the critical path, and calculate activity slack.</p>
+    <div class="callout star"><strong>Exam focus:</strong> Network numerical with critical path, ES/EF/LS/LF table, Gantt chart comparison. PERT vs CPM conceptual difference. PERT formula for expected time.</div>
+  </div>
+</section>
+
+<!-- ══ GANTT CHART ══════════════════════════════════════════ -->
+<section id="gantt" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📅 Gantt Chart <span style="color:var(--star)">★★☆☆</span></div>
+    <div class="callout info">A <strong>Gantt chart</strong> is a bar chart showing project activities plotted against time. Each activity is a horizontal bar; the bar's length = activity duration.</div>
+
+    <svg viewBox="0 0 540 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:540px;display:block;margin:14px auto;">
+      <!-- Time axis -->
+      <line x1="100" y1="30" x2="530" y2="30" stroke="#444" stroke-width="1"/>
+      <text x="80" y="34" text-anchor="end" fill="#8b949e" font-size="10">Activity</text>
+      <text x="315" y="22" text-anchor="middle" fill="#8b949e" font-size="10">Week →</text>
+      <!-- Week labels -->
+      <text x="140" y="22" text-anchor="middle" fill="#8b949e" font-size="9">1</text>
+      <text x="200" y="22" text-anchor="middle" fill="#8b949e" font-size="9">2</text>
+      <text x="260" y="22" text-anchor="middle" fill="#8b949e" font-size="9">3</text>
+      <text x="320" y="22" text-anchor="middle" fill="#8b949e" font-size="9">4</text>
+      <text x="380" y="22" text-anchor="middle" fill="#8b949e" font-size="9">5</text>
+      <text x="440" y="22" text-anchor="middle" fill="#8b949e" font-size="9">6</text>
+      <text x="500" y="22" text-anchor="middle" fill="#8b949e" font-size="9">7</text>
+      <!-- Grid lines -->
+      <line x1="140" y1="30" x2="140" y2="210" stroke="#2a2a2a" stroke-width="0.5"/>
+      <line x1="200" y1="30" x2="200" y2="210" stroke="#2a2a2a" stroke-width="0.5"/>
+      <line x1="260" y1="30" x2="260" y2="210" stroke="#2a2a2a" stroke-width="0.5"/>
+      <line x1="320" y1="30" x2="320" y2="210" stroke="#2a2a2a" stroke-width="0.5"/>
+      <line x1="380" y1="30" x2="380" y2="210" stroke="#2a2a2a" stroke-width="0.5"/>
+      <line x1="440" y1="30" x2="440" y2="210" stroke="#2a2a2a" stroke-width="0.5"/>
+      <line x1="500" y1="30" x2="500" y2="210" stroke="#2a2a2a" stroke-width="0.5"/>
+      <!-- Activity rows -->
+      <text x="90" y="52" text-anchor="end" fill="#c9d1d9" font-size="10">Activity A</text>
+      <rect x="110" y="40" width="120" height="16" rx="2" fill="#3fb950"/>
+      <text x="90" y="82" text-anchor="end" fill="#c9d1d9" font-size="10">Activity B</text>
+      <rect x="110" y="70" width="60" height="16" rx="2" fill="#58a6ff"/>
+      <text x="90" y="112" text-anchor="end" fill="#c9d1d9" font-size="10">Activity C</text>
+      <rect x="230" y="100" width="120" height="16" rx="2" fill="#f0883e"/>
+      <text x="90" y="142" text-anchor="end" fill="#c9d1d9" font-size="10">Activity D</text>
+      <rect x="170" y="130" width="180" height="16" rx="2" fill="#bc8cff"/>
+      <text x="90" y="172" text-anchor="end" fill="#c9d1d9" font-size="10">Activity E</text>
+      <rect x="350" y="160" width="120" height="16" rx="2" fill="#f78166"/>
+      <!-- Milestone diamond -->
+      <polygon points="470,185 480,195 470,205 460,195" fill="#ffd700"/>
+      <text x="490" y="200" fill="#ffd700" font-size="9">Milestone</text>
+    </svg>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Advantage</th><th>Limitation</th></tr>
+        <tr><td>Easy to understand visually</td><td>Doesn't show dependencies clearly</td></tr>
+        <tr><td>Shows schedule at a glance</td><td>Not suitable for complex projects (many activities)</td></tr>
+        <tr><td>Good for communication</td><td>No slack/float calculation</td></tr>
+        <tr><td>Tracks progress by shading bars</td><td>Doesn't identify critical activities</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NETWORK TECHNIQUES ══════════════════════════════════ -->
+<section id="network" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🕸️ Network Techniques — PERT vs CPM <span style="color:var(--star)">★★★★</span></div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Dimension</th><th>PERT</th><th>CPM</th></tr>
+        <tr><td>Full name</td><td>Program Evaluation &amp; Review Technique</td><td>Critical Path Method</td></tr>
+        <tr><td>Nature</td><td>Probabilistic (3 time estimates)</td><td>Deterministic (1 time estimate)</td></tr>
+        <tr><td>Application</td><td>R&amp;D, defense, new product development</td><td>Construction, manufacturing, known work</td></tr>
+        <tr><td>Focus</td><td>Time uncertainty</td><td>Cost-time trade-off (crashing)</td></tr>
+        <tr><td>Diagram type</td><td>AOA (Activity-On-Arrow)</td><td>AON (Activity-On-Node) or AOA</td></tr>
+        <tr><td>Critical path</td><td>Identified by statistical analysis</td><td>Identified by longest path</td></tr>
+      </table>
+    </div>
+
+    <h3>AON vs AOA Network Representation</h3>
+    <svg viewBox="0 0 540 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:540px;display:block;margin:14px auto;">
+      <!-- AON label -->
+      <text x="130" y="15" text-anchor="middle" fill="#58a6ff" font-size="12" font-weight="bold">AON (Activity-On-Node)</text>
+      <!-- AON circles -->
+      <circle cx="40" cy="85" r="20" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="40" y="89" text-anchor="middle" fill="#58a6ff" font-size="9">START</text>
+      <circle cx="110" cy="65" r="18" fill="#1a2332" stroke="#3fb950"/>
+      <text x="110" y="69" text-anchor="middle" fill="#3fb950" font-size="10">A</text>
+      <circle cx="110" cy="105" r="18" fill="#1a2332" stroke="#3fb950"/>
+      <text x="110" y="109" text-anchor="middle" fill="#3fb950" font-size="10">B</text>
+      <circle cx="190" cy="85" r="18" fill="#1a2332" stroke="#f0883e"/>
+      <text x="190" y="89" text-anchor="middle" fill="#f0883e" font-size="10">C</text>
+      <circle cx="260" cy="85" r="20" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="260" y="89" text-anchor="middle" fill="#58a6ff" font-size="9">END</text>
+      <!-- AON arrows -->
+      <line x1="60" y1="80" x2="92" y2="68" stroke="#444" stroke-width="1.5" marker-end="url(#arrN)"/>
+      <line x1="60" y1="90" x2="92" y2="102" stroke="#444" stroke-width="1.5" marker-end="url(#arrN)"/>
+      <line x1="128" y1="68" x2="172" y2="80" stroke="#444" stroke-width="1.5" marker-end="url(#arrN)"/>
+      <line x1="128" y1="102" x2="172" y2="90" stroke="#444" stroke-width="1.5" marker-end="url(#arrN)"/>
+      <line x1="208" y1="85" x2="240" y2="85" stroke="#444" stroke-width="1.5" marker-end="url(#arrN)"/>
+      <defs><marker id="arrN" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#888"/></marker></defs>
+      <!-- Activity labels on arrows -->
+      <text x="82" y="58" fill="#8b949e" font-size="8">d=3</text>
+      <text x="82" y="115" fill="#8b949e" font-size="8">d=4</text>
+      <!-- AOA label -->
+      <text x="420" y="15" text-anchor="middle" fill="#f0883e" font-size="12" font-weight="bold">AOA (Activity-On-Arrow)</text>
+      <!-- AOA circles -->
+      <circle cx="330" cy="85" r="18" fill="#1a2332" stroke="#f0883e"/>
+      <text x="330" y="89" text-anchor="middle" fill="#f0883e" font-size="9">1</text>
+      <circle cx="400" cy="55" r="18" fill="#1a2332" stroke="#f0883e"/>
+      <text x="400" y="59" text-anchor="middle" fill="#f0883e" font-size="9">2</text>
+      <circle cx="400" cy="115" r="18" fill="#1a2332" stroke="#f0883e"/>
+      <text x="400" y="119" text-anchor="middle" fill="#f0883e" font-size="9">3</text>
+      <circle cx="470" cy="85" r="18" fill="#1a2332" stroke="#f0883e"/>
+      <text x="470" y="89" text-anchor="middle" fill="#f0883e" font-size="9">4</text>
+      <!-- AOA arrows (activity ON the arrow) -->
+      <line x1="348" y1="78" x2="382" y2="62" stroke="#f0883e" stroke-width="2" marker-end="url(#arrA)"/>
+      <text x="362" y="62" text-anchor="middle" fill="#c9d1d9" font-size="9">A(3)</text>
+      <line x1="348" y1="93" x2="382" y2="108" stroke="#f0883e" stroke-width="2" marker-end="url(#arrA)"/>
+      <text x="362" y="108" text-anchor="middle" fill="#c9d1d9" font-size="9">B(4)</text>
+      <line x1="418" y1="62" x2="452" y2="78" stroke="#f0883e" stroke-width="2" marker-end="url(#arrA)"/>
+      <line x1="418" y1="108" x2="452" y2="92" stroke="#f0883e" stroke-width="2" marker-end="url(#arrA)"/>
+      <text x="438" y="62" text-anchor="middle" fill="#c9d1d9" font-size="9">C(2)</text>
+      <defs><marker id="arrA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#f0883e"/></marker></defs>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ CRITICAL PATH ══════════════════════════════════════════ -->
+<section id="cpm" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔑 Critical Path Method <span style="color:var(--star)">★★★★ — 20 marks numerical</span></div>
+    <div class="callout star"><strong>Most important numerical topic in this course.</strong> Master the forward pass, backward pass, and critical path identification.</div>
+
+    <h3>Key Terms</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Term</th><th>Meaning</th><th>Formula</th></tr>
+        <tr><td><strong>ES</strong></td><td>Earliest Start time</td><td>Max(EF of all predecessors)</td></tr>
+        <tr><td><strong>EF</strong></td><td>Earliest Finish time</td><td>ES + Duration</td></tr>
+        <tr><td><strong>LS</strong></td><td>Latest Start time</td><td>LF − Duration</td></tr>
+        <tr><td><strong>LF</strong></td><td>Latest Finish time</td><td>Min(LS of all successors)</td></tr>
+        <tr><td><strong>Slack/Float</strong></td><td>Allowable delay without delaying project</td><td>LS − ES or LF − EF</td></tr>
+        <tr><td><strong>Critical Path</strong></td><td>Longest path; activities with Slack = 0</td><td>Longest path through network</td></tr>
+      </table>
+    </div>
+
+    <svg viewBox="0 0 580 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;display:block;margin:14px auto;">
+      <!-- Node layout: Start → A, B → C, D → E → End -->
+      <!-- Node boxes: [ES | EF / LS | LF] label -->
+      <!-- Start -->
+      <rect x="10" y="95" width="60" height="40" rx="4" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="40" y="113" text-anchor="middle" fill="#3fb950" font-size="9" font-weight="bold">START</text>
+      <text x="40" y="128" text-anchor="middle" fill="#8b949e" font-size="8">0 | 0</text>
+      <!-- A (d=3) -->
+      <rect x="120" y="55" width="70" height="45" rx="4" fill="#1a2332" stroke="#58a6ff" stroke-width="2"/>
+      <text x="155" y="70" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">A (d=3)</text>
+      <text x="155" y="82" text-anchor="middle" fill="#c9d1d9" font-size="8">ES=0  EF=3</text>
+      <text x="155" y="93" text-anchor="middle" fill="#f0883e" font-size="8">LS=0  LF=3</text>
+      <!-- B (d=4) -->
+      <rect x="120" y="130" width="70" height="45" rx="4" fill="#1a2332" stroke="#58a6ff" stroke-width="2"/>
+      <text x="155" y="145" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">B (d=4)</text>
+      <text x="155" y="157" text-anchor="middle" fill="#c9d1d9" font-size="8">ES=0  EF=4</text>
+      <text x="155" y="168" text-anchor="middle" fill="#8b949e" font-size="8">LS=1  LF=5</text>
+      <!-- C (d=5) -->
+      <rect x="250" y="55" width="70" height="45" rx="4" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="285" y="70" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">C (d=5)</text>
+      <text x="285" y="82" text-anchor="middle" fill="#c9d1d9" font-size="8">ES=3  EF=8</text>
+      <text x="285" y="93" text-anchor="middle" fill="#f0883e" font-size="8">LS=3  LF=8</text>
+      <!-- D (d=2) -->
+      <rect x="250" y="130" width="70" height="45" rx="4" fill="#1a2332" stroke="#58a6ff" stroke-width="2"/>
+      <text x="285" y="145" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">D (d=2)</text>
+      <text x="285" y="157" text-anchor="middle" fill="#c9d1d9" font-size="8">ES=4  EF=6</text>
+      <text x="285" y="168" text-anchor="middle" fill="#8b949e" font-size="8">LS=6  LF=8</text>
+      <!-- E (d=4) -->
+      <rect x="380" y="95" width="70" height="45" rx="4" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="415" y="110" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">E (d=4)</text>
+      <text x="415" y="122" text-anchor="middle" fill="#c9d1d9" font-size="8">ES=8  EF=12</text>
+      <text x="415" y="133" text-anchor="middle" fill="#f0883e" font-size="8">LS=8  LF=12</text>
+      <!-- End -->
+      <rect x="510" y="95" width="60" height="40" rx="4" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="540" y="113" text-anchor="middle" fill="#3fb950" font-size="9" font-weight="bold">END</text>
+      <text x="540" y="128" text-anchor="middle" fill="#8b949e" font-size="8">12</text>
+      <!-- Arrows -->
+      <defs><marker id="arrCP" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#888"/></marker>
+      <marker id="arrCrit" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#3fb950"/></marker></defs>
+      <!-- Start→A (critical) -->
+      <line x1="70" y1="105" x2="120" y2="80" stroke="#3fb950" stroke-width="2" marker-end="url(#arrCrit)"/>
+      <!-- Start→B -->
+      <line x1="70" y1="120" x2="120" y2="150" stroke="#8b949e" stroke-width="1.5" marker-end="url(#arrCP)"/>
+      <!-- A→C (critical) -->
+      <line x1="190" y1="78" x2="250" y2="78" stroke="#3fb950" stroke-width="2" marker-end="url(#arrCrit)"/>
+      <!-- B→D -->
+      <line x1="190" y1="152" x2="250" y2="152" stroke="#8b949e" stroke-width="1.5" marker-end="url(#arrCP)"/>
+      <!-- C→E (critical) -->
+      <line x1="320" y1="90" x2="380" y2="110" stroke="#3fb950" stroke-width="2" marker-end="url(#arrCrit)"/>
+      <!-- D→E -->
+      <line x1="320" y1="152" x2="380" y2="130" stroke="#8b949e" stroke-width="1.5" marker-end="url(#arrCP)"/>
+      <!-- E→End (critical) -->
+      <line x1="450" y1="118" x2="510" y2="118" stroke="#3fb950" stroke-width="2" marker-end="url(#arrCrit)"/>
+      <!-- Critical path legend -->
+      <line x1="130" y1="225" x2="170" y2="225" stroke="#3fb950" stroke-width="2.5"/>
+      <text x="175" y="229" fill="#3fb950" font-size="10">Critical Path: Start→A→C→E→End (Slack=0, Duration=12)</text>
+    </svg>
+
+    <h3>Forward Pass (Calculate ES/EF)</h3>
+    <p>Start from the left. For each activity: <strong>ES = max(EF of all predecessors)</strong>. EF = ES + Duration. For the starting node, ES = 0.</p>
+
+    <h3>Backward Pass (Calculate LS/LF)</h3>
+    <p>Start from the right. For the last activity: <strong>LF = Project Duration</strong>. LS = LF − Duration. For each other activity: LF = min(LS of all successors).</p>
+
+    <h3>Slack Calculation</h3>
+    <div class="math-block">
+      <div class="math-title">Slack / Total Float</div>
+      <div class="math-formula">Slack = LS − ES = LF − EF</div>
+      <div class="math-desc">Critical activities: Slack = 0. Non-critical: Slack &gt; 0 (can be delayed without delaying project).</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PERT ══════════════════════════════════════════════════ -->
+<section id="pert" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🎲 PERT — Probabilistic Scheduling <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout info">PERT uses <strong>three time estimates</strong> for each activity to account for uncertainty. This is essential for R&D and new product development where exact durations are unknown.</div>
+
+    <div class="math-block">
+      <div class="math-title">PERT Expected Time Formula</div>
+      <div class="math-formula">t<sub>e</sub> = (O + 4M + P) / 6</div>
+      <div class="math-desc">
+        O = Optimistic time (best case) <br>
+        M = Most likely time (mode) <br>
+        P = Pessimistic time (worst case) <br>
+        The factor 4 on M reflects that the most likely estimate is the most probable outcome (beta distribution approximation).
+      </div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Variance of Activity Duration</div>
+      <div class="math-formula">σ² = [(P − O) / 6]²</div>
+      <div class="math-desc">The larger the range (P−O), the more uncertain the activity. Variance is used to calculate overall project risk.</div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Activity</th><th>O</th><th>M</th><th>P</th><th>t<sub>e</sub></th><th>σ²</th></tr>
+        <tr><td>A</td><td>2</td><td>4</td><td>6</td><td>(2+16+6)/6 = <strong>4.0</strong></td><td>[(6−2)/6]² = 0.44</td></tr>
+        <tr><td>B</td><td>1</td><td>3</td><td>8</td><td>(1+12+8)/6 = <strong>3.5</strong></td><td>[(8−1)/6]² = 1.36</td></tr>
+        <tr><td>C</td><td>3</td><td>5</td><td>7</td><td>(3+20+7)/6 = <strong>5.0</strong></td><td>[(7−3)/6]² = 0.44</td></tr>
+      </table>
+    </div>
+
+    <div class="callout info">The critical path expected duration = Σ t<sub>e</sub> along critical path. The variance of the project = Σ σ² of critical path activities. These allow probability calculations about meeting a deadline.</div>
+  </div>
+</section>
+
+<!-- ══ MATH PROBLEMS ══════════════════════════════════════════ -->
+<section id="math" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔢 CPM Numerical — Full Worked Example <span style="color:var(--star)">★★★★</span></div>
+
+    <div class="callout info">
+      <strong>Problem:</strong> Given activities with the following dependencies and durations, find the critical path and all slacks.
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Activity</th><th>Duration</th><th>Predecessors</th></tr>
+        <tr><td>A</td><td>3</td><td>—</td></tr>
+        <tr><td>B</td><td>2</td><td>—</td></tr>
+        <tr><td>C</td><td>4</td><td>A</td></tr>
+        <tr><td>D</td><td>5</td><td>A, B</td></tr>
+        <tr><td>E</td><td>3</td><td>C</td></tr>
+        <tr><td>F</td><td>2</td><td>D, E</td></tr>
+      </table>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Step 1: Forward Pass (ES, EF)</div>
+      <div class="math-desc">
+        A: ES=0, EF=3 &nbsp;|&nbsp; B: ES=0, EF=2<br>
+        C: ES=max(EF_A)=3, EF=7 &nbsp;|&nbsp; D: ES=max(EF_A,EF_B)=max(3,2)=3, EF=8<br>
+        E: ES=max(EF_C)=7, EF=10<br>
+        F: ES=max(EF_D,EF_E)=max(8,10)=10, EF=12<br>
+        <strong>Project Duration = 12</strong>
+      </div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Step 2: Backward Pass (LF, LS)</div>
+      <div class="math-desc">
+        F: LF=12, LS=10<br>
+        E: LF=min(LS_F)=10, LS=7<br>
+        D: LF=min(LS_F)=10, LS=5<br>
+        C: LF=min(LS_E)=7, LS=3<br>
+        B: LF=min(LS_D)=5, LS=3<br>
+        A: LF=min(LS_C,LS_D)=min(3,5)=3, LS=0
+      </div>
+    </div>
+
+    <div class="math-block">
+      <div class="math-title">Step 3: Slack Table</div>
+      <div class="math-desc">
+        <table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:8px;">
+          <tr style="background:#1a2332;"><th style="padding:4px 8px;border:1px solid #333;">Activity</th><th style="padding:4px 8px;border:1px solid #333;">ES</th><th style="padding:4px 8px;border:1px solid #333;">EF</th><th style="padding:4px 8px;border:1px solid #333;">LS</th><th style="padding:4px 8px;border:1px solid #333;">LF</th><th style="padding:4px 8px;border:1px solid #333;">Slack</th><th style="padding:4px 8px;border:1px solid #333;">Critical?</th></tr>
+          <tr style="background:#0f2a1a;"><td style="padding:4px 8px;border:1px solid #333;">A</td><td style="padding:4px 8px;border:1px solid #333;">0</td><td style="padding:4px 8px;border:1px solid #333;">3</td><td style="padding:4px 8px;border:1px solid #333;">0</td><td style="padding:4px 8px;border:1px solid #333;">3</td><td style="padding:4px 8px;border:1px solid #333;">0</td><td style="padding:4px 8px;border:1px solid #333;color:#3fb950;font-weight:bold;">YES ★</td></tr>
+          <tr><td style="padding:4px 8px;border:1px solid #333;">B</td><td style="padding:4px 8px;border:1px solid #333;">0</td><td style="padding:4px 8px;border:1px solid #333;">2</td><td style="padding:4px 8px;border:1px solid #333;">3</td><td style="padding:4px 8px;border:1px solid #333;">5</td><td style="padding:4px 8px;border:1px solid #333;">3</td><td style="padding:4px 8px;border:1px solid #333;">No</td></tr>
+          <tr style="background:#0f2a1a;"><td style="padding:4px 8px;border:1px solid #333;">C</td><td style="padding:4px 8px;border:1px solid #333;">3</td><td style="padding:4px 8px;border:1px solid #333;">7</td><td style="padding:4px 8px;border:1px solid #333;">3</td><td style="padding:4px 8px;border:1px solid #333;">7</td><td style="padding:4px 8px;border:1px solid #333;">0</td><td style="padding:4px 8px;border:1px solid #333;color:#3fb950;font-weight:bold;">YES ★</td></tr>
+          <tr><td style="padding:4px 8px;border:1px solid #333;">D</td><td style="padding:4px 8px;border:1px solid #333;">3</td><td style="padding:4px 8px;border:1px solid #333;">8</td><td style="padding:4px 8px;border:1px solid #333;">5</td><td style="padding:4px 8px;border:1px solid #333;">10</td><td style="padding:4px 8px;border:1px solid #333;">2</td><td style="padding:4px 8px;border:1px solid #333;">No</td></tr>
+          <tr style="background:#0f2a1a;"><td style="padding:4px 8px;border:1px solid #333;">E</td><td style="padding:4px 8px;border:1px solid #333;">7</td><td style="padding:4px 8px;border:1px solid #333;">10</td><td style="padding:4px 8px;border:1px solid #333;">7</td><td style="padding:4px 8px;border:1px solid #333;">10</td><td style="padding:4px 8px;border:1px solid #333;">0</td><td style="padding:4px 8px;border:1px solid #333;color:#3fb950;font-weight:bold;">YES ★</td></tr>
+          <tr style="background:#0f2a1a;"><td style="padding:4px 8px;border:1px solid #333;">F</td><td style="padding:4px 8px;border:1px solid #333;">10</td><td style="padding:4px 8px;border:1px solid #333;">12</td><td style="padding:4px 8px;border:1px solid #333;">10</td><td style="padding:4px 8px;border:1px solid #333;">12</td><td style="padding:4px 8px;border:1px solid #333;">0</td><td style="padding:4px 8px;border:1px solid #333;color:#3fb950;font-weight:bold;">YES ★</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout star"><strong>Critical Path: A → C → E → F</strong> &nbsp;|&nbsp; Duration = 12 days</div>
+  </div>
+</section>
+
+<!-- ══ PYQ ══════════════════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ Past Year Questions — AA Ch 8</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
+        <tr><td>CPM network: draw, forward/backward pass, critical path, all slacks</td><td>15–20</td><td>★★★★★</td></tr>
+        <tr><td>Difference between PERT and CPM (at least 5 points)</td><td>5–8</td><td>★★★★</td></tr>
+        <tr><td>PERT: calculate expected time and variance for given O, M, P values</td><td>8–10</td><td>★★★</td></tr>
+        <tr><td>What is the critical path? Why is it important for PM?</td><td>5</td><td>★★★</td></tr>
+        <tr><td>Compare Gantt chart vs network diagram</td><td>5</td><td>★★</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ══════════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — AA Ch 8</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Topic</th><th>Key Formula / Point</th></tr>
+        <tr><td>PERT</td><td>Probabilistic, 3 estimates (O,M,P), R&amp;D projects, AOA</td></tr>
+        <tr><td>CPM</td><td>Deterministic, 1 estimate, construction, AON or AOA, can crash</td></tr>
+        <tr><td>PERT expected time</td><td>t<sub>e</sub> = (O + 4M + P) / 6</td></tr>
+        <tr><td>PERT variance</td><td>σ² = [(P − O) / 6]²</td></tr>
+        <tr><td>Forward pass</td><td>ES = max(EF predecessors); EF = ES + d</td></tr>
+        <tr><td>Backward pass</td><td>LF = min(LS successors); LS = LF − d</td></tr>
+        <tr><td>Slack</td><td>LS − ES = LF − EF</td></tr>
+        <tr><td>Critical path</td><td>Longest path; all activities with Slack = 0</td></tr>
+        <tr><td>Gantt chart pros</td><td>Simple visual; Gantt cons: no dependencies, no slack</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="js/tabs.js"></script>
+</body>
+</html>

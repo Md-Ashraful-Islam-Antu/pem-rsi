@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Ch 12: Project Control — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>AA Ch 12: Project Control</h1>
+  <span class="chapter-badge">AA-12</span>
+  <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="monitoring" data-stars="4">👁️ Monitoring Policies</button>
+  <button class="tab-btn" data-tab="datacollect" data-stars="4">📊 Data Collection</button>
+  <button class="tab-btn" data-tab="mechanisms" data-stars="4">⚙️ Control Mechanisms</button>
+  <button class="tab-btn" data-tab="postcontrol" data-stars="3">📋 Post Control</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<div class="reading-progress">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-label" id="progressLabel">0 / 4 topics read</span>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">4 Monitoring Policies</div><div class="card-sub">★6× — most asked</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ #2</div><div class="card-value">3 Control Mechanisms</div><div class="card-sub">★6× — Cybernetic types</div></div>
+      <div class="summary-card"><div class="card-title">Also Asked</div><div class="card-value">5 Data Collection Methods</div><div class="card-sub">★★★</div></div>
+    </div>
+    <p>Chapter 12 covers how the PM monitors and controls project progress. The focus is on designing a monitoring system (what to track, when to measure, how to collect data) and responding to deviations with the right control mechanism.</p>
+    <div class="callout star"><strong>Exam focus:</strong> Name and explain the 4 monitoring policies with diagrams. Know the 3 types of cybernetic control. Know the 5 data collection methods. Know the 4 sections of a post-control report.</div>
+  </div>
+</section>
+
+<!-- ══ MONITORING POLICIES ══════════════════════════════════ -->
+<section id="monitoring" class="tab-panel">
+  <div class="section">
+    <div class="section-title">👁️ 4 Monitoring Policies <span style="color:var(--star)">★★★★ — 6× in PYQ</span></div>
+    <div class="callout star"><strong>Most frequently asked topic in this chapter.</strong> You must know all 4 types, draw the interval diagrams, and explain when each is appropriate.</div>
+
+    <div class="callout info">A <strong>monitoring policy</strong> defines when and how often to check on project progress. The choice depends on how much risk exists at different phases of the project.</div>
+
+    <svg viewBox="0 0 580 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;display:block;margin:14px auto;">
+      <!-- Policy 1: At random times -->
+      <text x="70" y="20" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">1. At Random Times</text>
+      <line x1="10" y1="35" x2="130" y2="35" stroke="#444" stroke-width="1"/>
+      <!-- Random marks -->
+      <line x1="25" y1="30" x2="25" y2="40" stroke="#58a6ff" stroke-width="2"/>
+      <line x1="55" y1="30" x2="55" y2="40" stroke="#58a6ff" stroke-width="2"/>
+      <line x1="70" y1="30" x2="70" y2="40" stroke="#58a6ff" stroke-width="2"/>
+      <line x1="100" y1="30" x2="100" y2="40" stroke="#58a6ff" stroke-width="2"/>
+      <line x1="118" y1="30" x2="118" y2="40" stroke="#58a6ff" stroke-width="2"/>
+      <!-- Policy 2: Equal intervals -->
+      <text x="210" y="20" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">2. Equal Intervals</text>
+      <line x1="150" y1="35" x2="270" y2="35" stroke="#444" stroke-width="1"/>
+      <line x1="174" y1="30" x2="174" y2="40" stroke="#3fb950" stroke-width="2"/>
+      <line x1="198" y1="30" x2="198" y2="40" stroke="#3fb950" stroke-width="2"/>
+      <line x1="222" y1="30" x2="222" y2="40" stroke="#3fb950" stroke-width="2"/>
+      <line x1="246" y1="30" x2="246" y2="40" stroke="#3fb950" stroke-width="2"/>
+      <line x1="270" y1="30" x2="270" y2="40" stroke="#3fb950" stroke-width="2"/>
+      <!-- Policy 3: More frequent at start -->
+      <text x="360" y="20" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">3. Denser at Start</text>
+      <line x1="295" y1="35" x2="430" y2="35" stroke="#444" stroke-width="1"/>
+      <line x1="308" y1="30" x2="308" y2="40" stroke="#f0883e" stroke-width="2"/>
+      <line x1="318" y1="30" x2="318" y2="40" stroke="#f0883e" stroke-width="2"/>
+      <line x1="330" y1="30" x2="330" y2="40" stroke="#f0883e" stroke-width="2"/>
+      <line x1="348" y1="30" x2="348" y2="40" stroke="#f0883e" stroke-width="2"/>
+      <line x1="380" y1="30" x2="380" y2="40" stroke="#f0883e" stroke-width="2"/>
+      <line x1="420" y1="30" x2="420" y2="40" stroke="#f0883e" stroke-width="2"/>
+      <!-- Policy 4: More frequent at end -->
+      <text x="510" y="20" text-anchor="middle" fill="#bc8cff" font-size="10" font-weight="bold">4. Denser at End</text>
+      <line x1="450" y1="35" x2="570" y2="35" stroke="#444" stroke-width="1"/>
+      <line x1="460" y1="30" x2="460" y2="40" stroke="#bc8cff" stroke-width="2"/>
+      <line x1="490" y1="30" x2="490" y2="40" stroke="#bc8cff" stroke-width="2"/>
+      <line x1="510" y1="30" x2="510" y2="40" stroke="#bc8cff" stroke-width="2"/>
+      <line x1="525" y1="30" x2="525" y2="40" stroke="#bc8cff" stroke-width="2"/>
+      <line x1="537" y1="30" x2="537" y2="40" stroke="#bc8cff" stroke-width="2"/>
+      <line x1="547" y1="30" x2="547" y2="40" stroke="#bc8cff" stroke-width="2"/>
+    </svg>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Policy</th><th>When to Monitor</th><th>Best Used When</th><th>Drawback</th></tr>
+        <tr>
+          <td>1</td>
+          <td><strong>At Random Times</strong></td>
+          <td>Unannounced, irregular check-ins</td>
+          <td>Preventing complacency; keeps team alert (they can't prepare only for scheduled checks)</td>
+          <td>Unpredictable; hard to plan corrective action; may miss critical periods</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>Equal Interval</strong></td>
+          <td>Fixed schedule: weekly, monthly</td>
+          <td>Routine projects with uniform risk throughout lifecycle; easy to plan</td>
+          <td>Doesn't adapt to risk — a weekly check may be too frequent early, too sparse near deadline</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>More Frequent at Start</strong></td>
+          <td>Denser early, sparse later</td>
+          <td>Projects with high front-end risk (new technology, first-time team, complex requirements); early problems compound if uncaught</td>
+          <td>Relaxes oversight near end when deadline pressure is highest</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><strong>More Frequent at End</strong></td>
+          <td>Sparse early, denser later</td>
+          <td>Projects where end-phase has highest risk (integration, testing, commissioning); final deliverables need tight control</td>
+          <td>Early-phase problems may go undetected</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout info"><strong>Most common in practice:</strong> Policy 2 (equal interval) for routine projects. Policy 3 (denser at start) for innovative/R&D projects. Policy 4 (denser at end) for deadline-critical projects.</div>
+  </div>
+</section>
+
+<!-- ══ DATA COLLECTION ══════════════════════════════════════ -->
+<section id="datacollect" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📊 5 Data Collection Methods <span style="color:var(--star)">★★★★</span></div>
+    <div class="callout info">These are the methods used to measure project performance during monitoring. Each method suits different types of project metrics.</div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Method</th><th>How It Works</th><th>Best For</th><th>Example</th></tr>
+        <tr>
+          <td>1</td>
+          <td><strong>Frequency Count</strong></td>
+          <td>Count how many times an event occurs</td>
+          <td>Discrete events, defects, occurrences</td>
+          <td>Number of defects per batch; number of change requests per week</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>Raw Numbers</strong></td>
+          <td>Measure the actual numeric value</td>
+          <td>Quantifiable continuous data</td>
+          <td>Actual cost spent ($12,500); days elapsed; lines of code written</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>Subjective Numeric Ratings</strong></td>
+          <td>Rate on a numeric scale based on judgment</td>
+          <td>Qualitative factors that need quantification</td>
+          <td>Team morale rated 7/10; customer satisfaction 8/10; risk level 4/5</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><strong>Indicators</strong></td>
+          <td>Measure a proxy variable that signals status</td>
+          <td>When direct measurement is costly or impractical</td>
+          <td>% milestones completed on time (indicator of schedule health); staff turnover rate (indicator of team health)</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><strong>Verbal Measures</strong></td>
+          <td>Descriptive assessment (Good/Fair/Poor, Red/Yellow/Green)</td>
+          <td>Quick status summaries, executive reporting</td>
+          <td>Project status: "On track" / "At risk" / "Critical"; stoplight reports</td>
+        </tr>
+      </table>
+    </div>
+
+    <svg viewBox="0 0 500 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:12px auto;">
+      <text x="250" y="20" text-anchor="middle" fill="#c9d1d9" font-size="11" font-weight="bold">Data Collection Spectrum</text>
+      <text x="30" y="50" text-anchor="middle" fill="#3fb950" font-size="9">Most Objective</text>
+      <text x="470" y="50" text-anchor="middle" fill="#f0883e" font-size="9">Most Subjective</text>
+      <line x1="80" y1="60" x2="420" y2="60" stroke="#444" stroke-width="2"/>
+      <!-- Points on spectrum -->
+      <circle cx="110" cy="60" r="8" fill="#3fb950"/><text x="110" y="80" text-anchor="middle" fill="#3fb950" font-size="8">Count</text>
+      <circle cx="195" cy="60" r="8" fill="#58a6ff"/><text x="195" y="80" text-anchor="middle" fill="#58a6ff" font-size="8">Raw #</text>
+      <circle cx="270" cy="60" r="8" fill="#bc8cff"/><text x="270" y="80" text-anchor="middle" fill="#bc8cff" font-size="8">Indicator</text>
+      <circle cx="345" cy="60" r="8" fill="#f0883e"/><text x="345" y="80" text-anchor="middle" fill="#f0883e" font-size="8">Subj Rating</text>
+      <circle cx="400" cy="60" r="8" fill="#f78166"/><text x="400" y="80" text-anchor="middle" fill="#f78166" font-size="8">Verbal</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ CONTROL MECHANISMS ══════════════════════════════════ -->
+<section id="mechanisms" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚙️ 3 Control Mechanisms <span style="color:var(--star)">★★★★ — 6× in PYQ</span></div>
+    <div class="callout star"><strong>Equally high-frequency with monitoring policies.</strong> Know the 3 types (Cybernetic with its 3 orders, Go/No-Go, Post Control) and their differences.</div>
+
+    <h3>1. Cybernetic Control (3 Orders)</h3>
+    <div class="callout info"><strong>Cybernetic control</strong> uses a feedback loop — the system measures actual performance, compares it to the plan, and self-corrects. It has three escalating orders based on what changes in response.</div>
+
+    <svg viewBox="0 0 540 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:540px;display:block;margin:14px auto;">
+      <!-- Feedback loop diagram -->
+      <rect x="20" y="60" width="80" height="40" rx="4" fill="#1a2332" stroke="#3fb950"/>
+      <text x="60" y="78" text-anchor="middle" fill="#3fb950" font-size="9">Plan /</text>
+      <text x="60" y="92" text-anchor="middle" fill="#3fb950" font-size="9">Standard</text>
+      <line x1="100" y1="80" x2="150" y2="80" stroke="#444" stroke-width="1.5" marker-end="url(#arrC)"/>
+      <defs><marker id="arrC" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#888"/></marker></defs>
+      <rect x="150" y="60" width="80" height="40" rx="4" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="190" y="78" text-anchor="middle" fill="#58a6ff" font-size="9">Compare:</text>
+      <text x="190" y="92" text-anchor="middle" fill="#58a6ff" font-size="9">Plan vs Actual</text>
+      <line x1="230" y1="80" x2="280" y2="80" stroke="#444" stroke-width="1.5" marker-end="url(#arrC)"/>
+      <rect x="280" y="60" width="80" height="40" rx="4" fill="#1a2332" stroke="#f0883e"/>
+      <text x="320" y="78" text-anchor="middle" fill="#f0883e" font-size="9">Corrective</text>
+      <text x="320" y="92" text-anchor="middle" fill="#f0883e" font-size="9">Action</text>
+      <line x1="360" y1="80" x2="410" y2="80" stroke="#444" stroke-width="1.5" marker-end="url(#arrC)"/>
+      <rect x="410" y="60" width="80" height="40" rx="4" fill="#1a2332" stroke="#bc8cff"/>
+      <text x="450" y="78" text-anchor="middle" fill="#bc8cff" font-size="9">Actual</text>
+      <text x="450" y="92" text-anchor="middle" fill="#bc8cff" font-size="9">Output</text>
+      <!-- Feedback arrow -->
+      <path d="M450,100 Q450,145 60,145 L60,100" fill="none" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrC)"/>
+      <text x="250" y="155" text-anchor="middle" fill="#3fb950" font-size="9">Feedback loop</text>
+    </svg>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Order</th><th>What Changes</th><th>What Stays Fixed</th><th>Example</th></tr>
+        <tr>
+          <td><strong>1st Order</strong><br>(Basic feedback)</td>
+          <td>Actions/outputs are adjusted to bring performance back to target</td>
+          <td>Goal and structure are fixed</td>
+          <td>Spending is over budget → cut discretionary costs to get back on track</td>
+        </tr>
+        <tr>
+          <td><strong>2nd Order</strong><br>(Adaptive control)</td>
+          <td>Goal or standard itself is adjusted when it's clear the original target was wrong</td>
+          <td>Structure/organization is fixed</td>
+          <td>Original budget estimate was unrealistic → revise budget baseline to reflect new reality</td>
+        </tr>
+        <tr>
+          <td><strong>3rd Order</strong><br>(Meta-control)</td>
+          <td>The control process itself is restructured; changing the system of control</td>
+          <td>Nothing — entire system is redesigned</td>
+          <td>Monitoring system itself is not catching problems early → redesign the entire project reporting and control process</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>2. Go/No-Go Control</h3>
+    <div class="callout info"><strong>Go/No-Go control</strong> is a milestone-based binary check. At predefined checkpoints, the project is evaluated against specific criteria. If criteria are met → continue (Go). If not → stop or redesign (No-Go). This is used for high-risk decisions with large resource commitments.</div>
+
+    <svg viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:10px auto;">
+      <line x1="20" y1="40" x2="480" y2="40" stroke="#444" stroke-width="2"/>
+      <!-- Milestones -->
+      <circle cx="100" cy="40" r="12" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="100" y="44" text-anchor="middle" fill="#3fb950" font-size="8">GO</text>
+      <text x="100" y="62" text-anchor="middle" fill="#8b949e" font-size="8">Month 2</text>
+      <circle cx="230" cy="40" r="12" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="230" y="44" text-anchor="middle" fill="#3fb950" font-size="8">GO</text>
+      <text x="230" y="62" text-anchor="middle" fill="#8b949e" font-size="8">Month 5</text>
+      <circle cx="360" cy="40" r="12" fill="#1a2332" stroke="#f0883e" stroke-width="2"/>
+      <text x="360" y="44" text-anchor="middle" fill="#f0883e" font-size="8">NO-GO</text>
+      <text x="360" y="62" text-anchor="middle" fill="#8b949e" font-size="8">Month 8</text>
+      <!-- Stop arrow -->
+      <line x1="372" y1="35" x2="430" y2="10" stroke="#f0883e" stroke-width="1.5" marker-end="url(#arrC)"/>
+      <text x="435" y="10" fill="#f0883e" font-size="9">STOP / Redesign</text>
+    </svg>
+
+    <h3>3. Post Control</h3>
+    <div class="callout info"><strong>Post control</strong> (also called postmortem control) happens after the project is complete. It evaluates what went right and wrong to improve future projects. It is NOT used to control the current project (which is already done) but to build organizational learning.</div>
+  </div>
+</section>
+
+<!-- ══ POST CONTROL ══════════════════════════════════════════ -->
+<section id="postcontrol" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📋 Post Control Report — 4 Sections <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout info">A <strong>Post Control (Postmortem) Report</strong> is written after project completion to capture lessons learned. It has four standard sections.</div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Section</th><th>Content</th><th>Purpose</th></tr>
+        <tr>
+          <td>1</td>
+          <td><strong>Objectives</strong></td>
+          <td>What were the original goals? Were they achieved? If not, why not?</td>
+          <td>Evaluate overall project success against initial intent</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>Milestones / Checkpoints / Budget</strong></td>
+          <td>Detailed review of schedule adherence, checkpoint status, budget vs actual</td>
+          <td>Understand where and why deviations occurred throughout the project</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>Final Report</strong></td>
+          <td>Summary of outcomes, deliverables status, stakeholder satisfaction</td>
+          <td>Document the project's final state for organizational records</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><strong>Recommendations</strong></td>
+          <td>What should be done differently on future projects? What practices should be retained?</td>
+          <td>Transfer knowledge to future PMs; improve organizational capability</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout info"><strong>Key distinction:</strong> Post control is not "control" in the traditional sense — the project is over and you can't change its outcome. It is <em>organizational learning control</em> — controlling the quality of the organization's future projects by codifying what was learned.</div>
+
+    <svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:12px auto;">
+      <!-- Timeline: project ends → postmortem → future project improves -->
+      <rect x="10" y="40" width="100" height="40" rx="4" fill="#1a2332" stroke="#8b949e"/>
+      <text x="60" y="58" text-anchor="middle" fill="#8b949e" font-size="9">Project</text>
+      <text x="60" y="72" text-anchor="middle" fill="#8b949e" font-size="9">Complete</text>
+      <line x1="110" y1="60" x2="160" y2="60" stroke="#444" stroke-width="2" marker-end="url(#arrC)"/>
+      <rect x="160" y="30" width="140" height="60" rx="4" fill="#1a2332" stroke="#f0883e" stroke-width="2"/>
+      <text x="230" y="52" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">Postmortem Report</text>
+      <text x="230" y="66" text-anchor="middle" fill="#c9d1d9" font-size="8">Objectives • Budget Review</text>
+      <text x="230" y="78" text-anchor="middle" fill="#c9d1d9" font-size="8">Final Report • Recommendations</text>
+      <line x1="300" y1="60" x2="350" y2="60" stroke="#444" stroke-width="2" marker-end="url(#arrC)"/>
+      <rect x="350" y="40" width="130" height="40" rx="4" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="415" y="58" text-anchor="middle" fill="#3fb950" font-size="9">Future Projects</text>
+      <text x="415" y="72" text-anchor="middle" fill="#3fb950" font-size="9">Improved ↑</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ PYQ ══════════════════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ Past Year Questions — AA Ch 12</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Question</th><th>Marks</th><th>Frequency</th></tr>
+        <tr><td>Explain the 4 monitoring policies with timing diagrams</td><td>8–10</td><td>★★★★★ (6×)</td></tr>
+        <tr><td>Explain 3 types of control mechanisms (Cybernetic 1st/2nd/3rd order, Go/No-Go, Post)</td><td>8–10</td><td>★★★★★ (6×)</td></tr>
+        <tr><td>What are the 5 data collection methods? Give examples</td><td>5–8</td><td>★★★★</td></tr>
+        <tr><td>What are the 4 sections of a post-control report?</td><td>5</td><td>★★★</td></tr>
+        <tr><td>Explain 1st, 2nd, 3rd order cybernetic control with examples</td><td>8</td><td>★★★★</td></tr>
+        <tr><td>What is Go/No-Go control? When is it used?</td><td>5</td><td>★★★</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ══════════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — AA Ch 12</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Topic</th><th>Key Points</th></tr>
+        <tr><td>Monitor Policy 1</td><td>Random times — prevents complacency, unpredictable</td></tr>
+        <tr><td>Monitor Policy 2</td><td>Equal intervals — routine projects, weekly/monthly check</td></tr>
+        <tr><td>Monitor Policy 3</td><td>More frequent at start — R&D, new tech, early-risk projects</td></tr>
+        <tr><td>Monitor Policy 4</td><td>More frequent at end — deadline-critical, integration phase</td></tr>
+        <tr><td>Data: Frequency Count</td><td>Count events (defects, change requests)</td></tr>
+        <tr><td>Data: Raw Numbers</td><td>Actual values ($, days, units)</td></tr>
+        <tr><td>Data: Subj. Numeric</td><td>Rating on scale (morale 7/10)</td></tr>
+        <tr><td>Data: Indicators</td><td>Proxy measures (% milestones on time)</td></tr>
+        <tr><td>Data: Verbal Measures</td><td>Descriptive (Good/At risk/Critical, traffic light)</td></tr>
+        <tr><td>Cybernetic 1st order</td><td>Adjust actions; goal fixed (cut costs to meet budget)</td></tr>
+        <tr><td>Cybernetic 2nd order</td><td>Adjust goal; structure fixed (revise budget baseline)</td></tr>
+        <tr><td>Cybernetic 3rd order</td><td>Redesign control system itself</td></tr>
+        <tr><td>Go/No-Go</td><td>Binary milestone decision: continue or stop</td></tr>
+        <tr><td>Post Control</td><td>After project; 4 sections: Objectives, Milestones/Budget, Final Report, Recommendations</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="js/tabs.js"></script>
+</body>
+</html>

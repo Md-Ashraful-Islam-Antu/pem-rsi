@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA Ch 2: Project Organization — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>AA Ch 2: Project Organization</h1>
+  <span class="chapter-badge">AA-02</span>
+  <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="functional" data-stars="3">🏛️ Functional Org</button>
+  <button class="tab-btn" data-tab="dedicated" data-stars="3">🚀 Dedicated/Pure Proj</button>
+  <button class="tab-btn" data-tab="matrix" data-stars="4">⚙️ Matrix Org</button>
+  <button class="tab-btn" data-tab="comparison" data-stars="3">⚖️ Comparison</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<div class="reading-progress">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-label" id="progressLabel">0 / 4 topics read</span>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Exam Weight</div><div class="card-value">★★★☆</div><div class="card-sub">Appears regularly</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">Matrix Org</div><div class="card-sub">★4× — advantages/disadvantages</div></div>
+      <div class="summary-card"><div class="card-title">Key Types</div><div class="card-value">3</div><div class="card-sub">Functional, Dedicated, Matrix</div></div>
+    </div>
+    <p>Chapter 2 covers the three main ways organizations can be structured for project management. The key debate is between keeping projects inside functional departments vs. creating dedicated project teams vs. using a matrix arrangement that blends both.</p>
+    <div class="callout star"><strong>Exam focus:</strong> Matrix organization is the most asked topic. Know advantages, disadvantages, and the three sub-types (weak/balanced/strong). The comparison table between all three structures is essential.</div>
+  </div>
+</section>
+
+<!-- ══ FUNCTIONAL ══════════════════════════════════════════════ -->
+<section id="functional" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🏛️ Functional Organization <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout info">In a <strong>functional organization</strong>, projects are run within existing functional departments (Engineering, Marketing, Finance, etc.). The functional manager has authority over the project within their department.</div>
+
+    <!-- Org Chart SVG -->
+    <svg viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
+      <rect x="175" y="10" width="150" height="35" rx="5" fill="#1a2332" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="250" y="33" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="bold">Top Management</text>
+      <line x1="250" y1="45" x2="250" y2="65" stroke="#444"/>
+      <line x1="80" y1="65" x2="420" y2="65" stroke="#444"/>
+      <line x1="80" y1="65" x2="80" y2="80" stroke="#444"/>
+      <line x1="250" y1="65" x2="250" y2="80" stroke="#444"/>
+      <line x1="420" y1="65" x2="420" y2="80" stroke="#444"/>
+      <rect x="30" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
+      <text x="80" y="99" text-anchor="middle" fill="#58a6ff" font-size="10">Engineering</text>
+      <rect x="200" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
+      <text x="250" y="99" text-anchor="middle" fill="#58a6ff" font-size="10">Finance</text>
+      <rect x="370" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
+      <text x="420" y="99" text-anchor="middle" fill="#58a6ff" font-size="10">Marketing</text>
+      <!-- Sub-units -->
+      <line x1="80" y1="110" x2="80" y2="130" stroke="#444"/>
+      <rect x="30" y="130" width="100" height="25" rx="4" fill="#0d1117" stroke="#444"/>
+      <text x="80" y="147" text-anchor="middle" fill="#8b949e" font-size="9">Sub-unit A</text>
+      <line x1="250" y1="110" x2="250" y2="130" stroke="#444"/>
+      <rect x="200" y="130" width="100" height="25" rx="4" fill="#0d1117" stroke="#444"/>
+      <text x="250" y="147" text-anchor="middle" fill="#f0883e" font-size="9">★ Project here</text>
+      <line x1="420" y1="110" x2="420" y2="130" stroke="#444"/>
+      <rect x="370" y="130" width="100" height="25" rx="4" fill="#0d1117" stroke="#444"/>
+      <text x="420" y="147" text-anchor="middle" fill="#8b949e" font-size="9">Sub-unit C</text>
+      <text x="250" y="195" text-anchor="middle" fill="#8b949e" font-size="10">Project housed within Finance department</text>
+      <text x="250" y="210" text-anchor="middle" fill="#8b949e" font-size="10">Finance manager has full authority over it</text>
+    </svg>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>✅ Advantages</th><th>❌ Disadvantages</th></tr>
+        <tr><td>No duplication — experts shared across projects</td><td>Client not the focus; customer is secondary</td></tr>
+        <tr><td>Strong technical depth in each function</td><td>No single owner accountable for whole project</td></tr>
+        <tr><td>Career path clear for specialists</td><td>Slow response to changes (bureaucratic)</td></tr>
+        <tr><td>Easy knowledge sharing within department</td><td>Motivation of project staff is low</td></tr>
+        <tr><td>Flexible use of human resources</td><td>Cross-functional coordination is poor</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DEDICATED ══════════════════════════════════════════════ -->
+<section id="dedicated" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🚀 Dedicated / Pure Project Organization <span style="color:var(--star)">★★★☆</span></div>
+
+    <div class="callout info">In a <strong>dedicated (pure) project</strong> structure, a self-contained project team is created. The Project Manager has full authority and all needed staff are assigned exclusively to the project.</div>
+
+    <svg viewBox="0 0 500 230" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
+      <rect x="175" y="10" width="150" height="35" rx="5" fill="#1a2332" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="250" y="33" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="bold">Top Management</text>
+      <line x1="250" y1="45" x2="250" y2="65" stroke="#444"/>
+      <line x1="100" y1="65" x2="400" y2="65" stroke="#444"/>
+      <line x1="100" y1="65" x2="100" y2="80" stroke="#444"/>
+      <line x1="250" y1="65" x2="250" y2="80" stroke="#444"/>
+      <line x1="400" y1="65" x2="400" y2="80" stroke="#444"/>
+      <rect x="50" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#444"/>
+      <text x="100" y="99" text-anchor="middle" fill="#8b949e" font-size="10">Other Ops</text>
+      <rect x="200" y="80" width="100" height="30" rx="5" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
+      <text x="250" y="94" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Project</text>
+      <text x="250" y="107" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Manager</text>
+      <rect x="350" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#444"/>
+      <text x="400" y="99" text-anchor="middle" fill="#8b949e" font-size="10">Other Ops</text>
+      <!-- Team members under PM -->
+      <line x1="250" y1="110" x2="250" y2="125" stroke="#3fb950"/>
+      <line x1="140" y1="125" x2="360" y2="125" stroke="#3fb950"/>
+      <line x1="140" y1="125" x2="140" y2="140" stroke="#3fb950"/>
+      <line x1="250" y1="125" x2="250" y2="140" stroke="#3fb950"/>
+      <line x1="360" y1="125" x2="360" y2="140" stroke="#3fb950"/>
+      <rect x="90" y="140" width="100" height="25" rx="4" fill="#0d1117" stroke="#f0883e"/>
+      <text x="140" y="157" text-anchor="middle" fill="#f0883e" font-size="9">Engineer (dedicated)</text>
+      <rect x="200" y="140" width="100" height="25" rx="4" fill="#0d1117" stroke="#f0883e"/>
+      <text x="250" y="157" text-anchor="middle" fill="#f0883e" font-size="9">Finance (dedicated)</text>
+      <rect x="310" y="140" width="100" height="25" rx="4" fill="#0d1117" stroke="#f0883e"/>
+      <text x="360" y="157" text-anchor="middle" fill="#f0883e" font-size="9">Design (dedicated)</text>
+      <text x="250" y="200" text-anchor="middle" fill="#8b949e" font-size="10">All team members report exclusively to Project Manager</text>
+    </svg>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>✅ Advantages</th><th>❌ Disadvantages</th></tr>
+        <tr><td>PM has full authority — fast decisions</td><td>Duplication of resources (costly)</td></tr>
+        <tr><td>Clear accountability for project success</td><td>Experts isolated — miss functional expertise</td></tr>
+        <tr><td>Team loyalty to project is strong</td><td>What happens to team after project ends?</td></tr>
+        <tr><td>Fast response to problems and changes</td><td>Inconsistency in technical approaches</td></tr>
+        <tr><td>Client has one point of contact</td><td>May conflict with parent organization policies</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MATRIX ══════════════════════════════════════════════════ -->
+<section id="matrix" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚙️ Matrix Organization <span style="color:var(--star)">★★★★ — Most Frequent</span></div>
+    <div class="callout star"><strong>Highest exam frequency for this chapter.</strong> Know the structure, all advantages and disadvantages, and the three types of matrix.</div>
+
+    <div class="callout info">A <strong>matrix organization</strong> overlays project management on top of a functional structure. Staff report to both their functional manager AND the project manager simultaneously — a "two-boss" system.</div>
+
+    <!-- Matrix Grid SVG -->
+    <svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:14px auto;">
+      <!-- Column headers (Functional) -->
+      <rect x="130" y="10" width="90" height="30" rx="4" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="175" y="30" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Engineering</text>
+      <rect x="230" y="10" width="90" height="30" rx="4" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="275" y="30" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Finance</text>
+      <rect x="330" y="10" width="90" height="30" rx="4" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="375" y="30" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Operations</text>
+      <rect x="430" y="10" width="90" height="30" rx="4" fill="#1a2332" stroke="#58a6ff"/>
+      <text x="475" y="30" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Marketing</text>
+      <!-- Row headers (Projects) -->
+      <rect x="20" y="60" width="100" height="30" rx="4" fill="#1a2332" stroke="#3fb950"/>
+      <text x="70" y="80" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Project A PM</text>
+      <rect x="20" y="110" width="100" height="30" rx="4" fill="#1a2332" stroke="#3fb950"/>
+      <text x="70" y="130" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Project B PM</text>
+      <rect x="20" y="160" width="100" height="30" rx="4" fill="#1a2332" stroke="#3fb950"/>
+      <text x="70" y="180" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Project C PM</text>
+      <!-- Grid cells (staff) -->
+      <rect x="130" y="60" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
+      <text x="175" y="80" text-anchor="middle" fill="#f0883e" font-size="9">eng A ★</text>
+      <rect x="230" y="60" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
+      <text x="275" y="80" text-anchor="middle" fill="#f0883e" font-size="9">fin A ★</text>
+      <rect x="330" y="60" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
+      <text x="375" y="80" text-anchor="middle" fill="#f0883e" font-size="9">ops A ★</text>
+      <rect x="430" y="60" width="90" height="30" rx="3" fill="#0d1117" stroke="#444"/>
+      <rect x="130" y="110" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
+      <text x="175" y="130" text-anchor="middle" fill="#f0883e" font-size="9">eng B ★</text>
+      <rect x="230" y="110" width="90" height="30" rx="3" fill="#0d1117" stroke="#444"/>
+      <rect x="330" y="110" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
+      <text x="375" y="130" text-anchor="middle" fill="#f0883e" font-size="9">ops B ★</text>
+      <rect x="430" y="110" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
+      <text x="475" y="130" text-anchor="middle" fill="#f0883e" font-size="9">mkt B ★</text>
+      <rect x="130" y="160" width="90" height="30" rx="3" fill="#0d1117" stroke="#444"/>
+      <rect x="230" y="160" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
+      <text x="275" y="180" text-anchor="middle" fill="#f0883e" font-size="9">fin C ★</text>
+      <rect x="330" y="160" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
+      <text x="375" y="180" text-anchor="middle" fill="#f0883e" font-size="9">ops C ★</text>
+      <rect x="430" y="160" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
+      <text x="475" y="180" text-anchor="middle" fill="#f0883e" font-size="9">mkt C ★</text>
+      <!-- Legend -->
+      <circle cx="140" cy="225" r="6" fill="#f0883e"/>
+      <text x="152" y="229" fill="#8b949e" font-size="10">★ = Staff reporting to BOTH functional manager AND project manager</text>
+      <text x="30" y="255" fill="#58a6ff" font-size="10">↓ Functional authority (vertical)</text>
+      <text x="300" y="255" fill="#3fb950" font-size="10">→ Project authority (horizontal)</text>
+    </svg>
+
+    <h3>Three Types of Matrix</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Type</th><th>Who Has More Power?</th><th>PM Role</th><th>Best For</th></tr>
+        <tr><td><strong>Weak Matrix</strong></td><td>Functional Manager</td><td>Coordinator only; no direct authority</td><td>Short projects, minor changes</td></tr>
+        <tr><td><strong>Balanced Matrix</strong></td><td>Shared equally</td><td>Shares authority with functional manager</td><td>Moderate projects</td></tr>
+        <tr><td><strong>Strong Matrix</strong></td><td>Project Manager</td><td>Full authority over team and schedule</td><td>Large, complex projects</td></tr>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>✅ Advantages of Matrix</th><th>❌ Disadvantages of Matrix</th></tr>
+        <tr><td>Project manager is focused on project goals</td><td>Two bosses → conflict and confusion</td></tr>
+        <tr><td>No duplication — resources shared</td><td>Power struggles between PM and functional mgr</td></tr>
+        <tr><td>Technical expertise maintained in functions</td><td>Difficult to monitor and control</td></tr>
+        <tr><td>Flexible — staff can move between projects</td><td>High administrative cost</td></tr>
+        <tr><td>Balance between project and functional needs</td><td>Requires extra management skills</td></tr>
+        <tr><td>Organization learns from projects</td><td>Stress on employees reporting to two bosses</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COMPARISON ══════════════════════════════════════════════ -->
+<section id="comparison" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚖️ Comparison of All Three Structures <span style="color:var(--star)">★★★☆</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Criterion</th><th>Functional</th><th>Dedicated/Pure</th><th>Matrix</th></tr>
+        <tr><td>PM authority</td><td>None / indirect</td><td>Full / complete</td><td>Shared (depends on type)</td></tr>
+        <tr><td>Resource use</td><td>Efficient (shared)</td><td>Duplicated (wasteful)</td><td>Efficient (shared)</td></tr>
+        <tr><td>Client focus</td><td>Low</td><td>High</td><td>High</td></tr>
+        <tr><td>Communication</td><td>Through functional mgr</td><td>Direct within team</td><td>Complex (dual reporting)</td></tr>
+        <tr><td>Response speed</td><td>Slow</td><td>Fast</td><td>Medium</td></tr>
+        <tr><td>Team motivation</td><td>Low for project</td><td>High</td><td>Medium-High</td></tr>
+        <tr><td>Best when</td><td>Project is routine, in one function</td><td>Large, long, independent project</td><td>Need expertise + project focus</td></tr>
+        <tr><td>Examples</td><td>IT upgrade in IT dept</td><td>Building a dam, large defense</td><td>Aerospace, R&amp;D programs</td></tr>
+      </table>
+    </div>
+    <div class="callout info"><strong>Rule of thumb:</strong> As project size, duration, and strategic importance increase → move from Functional → Matrix → Dedicated.</div>
+  </div>
+</section>
+
+<!-- ══ PYQ ══════════════════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ Past Year Questions — AA Ch 2</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Question</th><th>Type</th><th>Marks</th><th>Frequency</th></tr>
+        <tr><td>Explain matrix organization with diagram; advantages &amp; disadvantages</td><td>Long answer</td><td>8–10</td><td>★★★★</td></tr>
+        <tr><td>Compare functional vs dedicated vs matrix organization</td><td>Table/Essay</td><td>8–10</td><td>★★★</td></tr>
+        <tr><td>When is a dedicated project structure preferred?</td><td>Short</td><td>4–5</td><td>★★</td></tr>
+        <tr><td>Explain weak, balanced, strong matrix</td><td>Short</td><td>5</td><td>★★</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ══════════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — AA Ch 2</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Structure</th><th>Key Feature</th><th>Main Weakness</th></tr>
+        <tr><td>Functional</td><td>Project inside a dept; functional mgr has authority</td><td>No single PM; slow; client ignored</td></tr>
+        <tr><td>Dedicated</td><td>Self-contained project team; PM has full control</td><td>Resource duplication; isolates experts</td></tr>
+        <tr><td>Matrix</td><td>Overlay of project on functions; dual authority</td><td>Two-boss conflict; power struggles</td></tr>
+        <tr><td>Weak Matrix</td><td>Functional mgr stronger</td><td>PM is just a coordinator</td></tr>
+        <tr><td>Strong Matrix</td><td>PM stronger</td><td>Approaches dedicated project org</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script src="js/tabs.js"></script>
+</body>
+</html>
