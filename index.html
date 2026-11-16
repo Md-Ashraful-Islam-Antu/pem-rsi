@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPE 403 — Pollution &amp; Environment Management Study Guide</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Index-specific extras */
+  body { max-width: none; }
+
+  .index-hero {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d2818 100%);
+    padding: 60px 32px 48px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .index-hero h1 { font-size: 2.4rem; color: var(--accent); margin: 0 0 8px; }
+  .index-hero .subtitle { font-size: 1.1rem; color: #8b949e; }
+  .index-hero .meta { font-size: 0.85rem; color: #6e7681; margin-top: 12px; }
+
+  .syllabus-block {
+    max-width: 900px; margin: 32px auto; padding: 0 24px;
+  }
+  .syllabus-block .section-title { text-align: left; }
+
+  .index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+  }
+
+  .chapter-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 20px 20px 24px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    overflow: hidden;
+  }
+  .chapter-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--accent);
+    border-radius: 10px 0 0 10px;
+  }
+  .chapter-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 20px rgba(63,185,80,0.15);
+    transform: translateY(-2px);
+  }
+  .chapter-card .ch-num {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .chapter-card h2 {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+  .chapter-card .ch-desc {
+    font-size: 0.85rem;
+    color: #8b949e;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .chapter-card .ch-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .ch-tag {
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  .ch-tag.slides { background: rgba(88,166,255,0.15); color: #58a6ff; border: 1px solid rgba(88,166,255,0.3); }
+  .ch-tag.pages { background: rgba(63,185,80,0.12); color: var(--accent); border: 1px solid rgba(63,185,80,0.25); }
+  .ch-tag.pyq { background: rgba(240,192,0,0.12); color: var(--star); border: 1px solid rgba(240,192,0,0.25); }
+  .ch-tag.syllabus { background: rgba(255,123,114,0.12); color: #ff7b72; border: 1px solid rgba(255,123,114,0.25); }
+
+  .index-footer {
+    text-align: center;
+    padding: 24px;
+    color: #6e7681;
+    font-size: 0.82rem;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="index-hero">
+  <h1>🌿 IPE 403 — PEM Study Guide</h1>
+  <p class="subtitle">Pollution &amp; Environment Management — RSI Sir's Portions</p>
+  <p class="meta">Industrial &amp; Production Engineering · BUET · Dr. M. Ahsan Akhtar Hasin (Book) · RSI Sir (Slides &amp; Lectures)</p>
+</div>
+
+<!-- Syllabus Note -->
+<div class="syllabus-block">
+  <div class="section">
+    <div class="section-title">📚 RSI Sir's Syllabus</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Chapters</th><th>What to Study</th></tr>
+        <tr><td>Ch 1, 2, 3, 5, 9</td><td>Whole chapter from book + slides + lecture notes</td></tr>
+        <tr><td>Ch 4, 6</td><td>Slides + lecture notes + book topics covered in slides</td></tr>
+        <tr><td>Ch 7</td><td>§7.3 Kyoto Protocol: slides only; rest: book + slides + lecture notes</td></tr>
+        <tr><td>Ch 10</td><td>Slides + lecture notes + book topics covered in slides (verify dropped topics with classmates)</td></tr>
+      </table>
+    </div>
+    <div class="callout star">Focus on ★ starred topics — these appear most frequently in PYQs. Each chapter page shows the star rating for each topic.</div>
+  </div>
+</div>
+
+<!-- Chapter Grid -->
+<div class="index-grid">
+
+  <a href="ch01.html" class="chapter-card">
+    <div class="ch-num">Chapter 1</div>
+    <h2>Environment &amp; Its Pollution</h2>
+    <p class="ch-desc">Environment definition, ecosystem vs habitat, types of pollution (air, water, soil, noise), conservation methods, EM objectives.</p>
+    <div class="ch-tags">
+      <span class="ch-tag slides">19 slides</span>
+      <span class="ch-tag pages">pp 1–8</span>
+      <span class="ch-tag pyq">★4× ecosystem vs habitat</span>
+      <span class="ch-tag syllabus">Whole chapter</span>
+    </div>
+  </a>
+
+  <a href="ch02.html" class="chapter-card">
+    <div class="ch-num">Chapter 2</div>
+    <h2>The Earth's Environment</h2>
+    <p class="ch-desc">5 levels of environmental analysis, atmospheric layers (troposphere to exosphere), ozone layer chemistry.</p>
+    <div class="ch-tags">
+      <span class="ch-tag slides">26 slides</span>
+      <span class="ch-tag pages">pp 9–16</span>
+      <span class="ch-tag pyq">★3× "region of mixing"</span>
+      <span class="ch-tag syllabus">Whole chapter</span>
+    </div>
+  </a>
+
+  <a href="ch03.html" class="chapter-card">
+    <div class="ch-num">Chapter 3</div>
+    <h2>Air Pollution</h2>
+    <p class="ch-desc">Sources of air pollution, primary vs secondary pollutants, criteria pollutants, health effects, control technologies (ESP, cyclone, FGD).</p>
+    <div class="ch-tags">
+      <span class="ch-tag slides">28 slides</span>
+      <span class="ch-tag pages">pp 17–26</span>
+      <span class="ch-tag pyq">★3× primary vs secondary</span>
+      <span class="ch-tag syllabus">Whole chapter</span>
+    </div>
+  </a>
+
+  <a href="ch04.html" class="chapter-card">
+    <div class="ch-num">Chapter 4</div>
+    <h2>Global Warming &amp; Climate Change</h2>
+    <p class="ch-desc">Greenhouse effect mechanism, 6 Kyoto GHGs with GWP, effects of global warming, mitigation strategies.</p>
+    <div class="ch-tags">
+      <span class="ch-tag slides">20 slides</span>
+      <span class="ch-tag pages">pp 27–34</span>
+      <span class="ch-tag pyq">★3× greenhouse mechanism</span>
+      <span class="ch-tag syllabus">Slides + book topics</span>
+    </div>
+  </a>
+
+  <a href="ch05.html" class="chapter-card">
+    <div class="ch-num">Chapter 5</div>
+    <h2>Acid Rain</h2>
+    <p class="ch-desc">Formation from SO₂ and NOₓ, wet vs dry deposition, effects on ecosystems and buildings, control (FGD, liming), pH calculations.</p>
+    <div class="ch-tags">
+      <span class="ch-tag slides">23 slides</span>
+      <span class="ch-tag pages">pp 35–40</span>
+      <span class="ch-tag pyq">★3× wet vs dry deposition</span>
+      <span class="ch-tag syllabus">Whole chapter</span>
+    </div>
+  </a>
+
+  <a href="ch06.html" class="chapter-card" style="--accent:#58a6ff">
+    <div class="ch-num">Chapter 6</div>
+    <h2>Water Pollution &amp; ETP</h2>
+    <p class="ch-desc">Water pollution types, ETP basics, textile ETP (8 stages ★★★), lead battery ETP (4 stages), BOD, COD formulas and comparisons.</p>
+    <div class="ch-tags">
+      <span class="ch-tag slides">19 slides</span>
+      <span class="ch-tag pages">pp 41–56</span>
+      <span class="ch-tag pyq">★7× — highest in course</span>
+      <span class="ch-tag syllabus">Slides + book topics</span>
+    </div>
+  </a>
+
+  <a href="ch07.html" class="chapter-card">
+    <div class="ch-num">Chapter 7</div>
+    <h2>Major Environmental Protocols</h2>
+    <p class="ch-desc">Montreal Protocol, Kyoto Protocol, Ramsar Convention, Paris Agreement — dates, parties, binding targets.</p>
+    <div class="ch-tags">
+      <span class="ch-tag slides">31 slides</span>
+      <span class="ch-tag pages">pp 57–66</span>
+      <span class="ch-tag pyq">★4× Ramsar/Kyoto</span>
+      <span class="ch-tag syllabus">§7.3 slides only; rest: whole</span>
+    </div>
+  </a>
+
+  <a href="ch09.html" class="chapter-card">
+    <div class="ch-num">Chapter 9</div>
+    <h2>ISO 14000 EMS</h2>
+    <p class="ch-desc">ISO 14000 standards family, ISO 14001 (certifiable), PDCA cycle, environmental aspects &amp; impacts, certification process.</p>
+    <div class="ch-tags">
+      <span class="ch-tag slides">22 slides</span>
+      <span class="ch-tag pages">pp 67–72</span>
+      <span class="ch-tag pyq">★3× ISO 14001 &amp; PDCA</span>
+      <span class="ch-tag syllabus">Whole chapter</span>
+    </div>
+  </a>
+
+  <a href="ch10.html" class="chapter-card">
+    <div class="ch-num">Chapter 10</div>
+    <h2>Environmental Rules in Bangladesh</h2>
+    <p class="ch-desc">History of environmental law, ECA 1995, ECR 1997, 4 industry categories (Green/Orange A/Orange B/Red), ECC process.</p>
+    <div class="ch-tags">
+      <span class="ch-tag slides">17 slides</span>
+      <span class="ch-tag pages">pp 73–85</span>
+      <span class="ch-tag pyq">★3× 4 categories</span>
+      <span class="ch-tag syllabus">Slides + book topics</span>
+    </div>
+  </a>
+
+</div>
+
+<div class="index-footer">
+  <p>IPE 403 PEM Study Guide · Based on Dr. M. A. A. Hasin's book &amp; RSI Sir's slides · BUET 2024</p>
+  <p>All slides and book pages are actual images from course materials. Static HTML — works offline and on GitHub Pages.</p>
+</div>
+
+<script>
+// Optional: add a small keyboard shortcut hint
+document.addEventListener('keydown', function(e) {
+  if (e.key === '1') window.location.href = 'ch01.html';
+  if (e.key === '2') window.location.href = 'ch02.html';
+  if (e.key === '3') window.location.href = 'ch03.html';
+  if (e.key === '4') window.location.href = 'ch04.html';
+  if (e.key === '5') window.location.href = 'ch05.html';
+  if (e.key === '6') window.location.href = 'ch06.html';
+  if (e.key === '7') window.location.href = 'ch07.html';
+  if (e.key === '9') window.location.href = 'ch09.html';
+  if (e.key === '0') window.location.href = 'ch10.html';
+});
+</script>
+</body>
+</html>

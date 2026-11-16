@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 9: ISO 14000 EMS — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>Chapter 9: ISO 14000 Environmental Management System</h1>
+  <span class="chapter-badge">Ch 9</span>
+  <span class="syllabus-rule">★ Whole chapter from book + slides + lecture notes</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="iso14000" data-stars="3">🏅 ISO 14000 Series</button>
+  <button class="tab-btn" data-tab="pdca" data-stars="3">🔄 PDCA Cycle</button>
+  <button class="tab-btn" data-tab="iso14001" data-stars="2">📋 ISO 14001 Requirements</button>
+  <button class="tab-btn" data-tab="aspects" data-stars="2">🌿 Aspects &amp; Impacts</button>
+  <button class="tab-btn" data-tab="benefits" data-stars="1">✅ Benefits</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid"><div class="card-sub">slides (Ch 09)</div></div>
+      <div class="summary-card"><div class="card-title">Book Pages</div><div class="card-value">67–72</div><div class="card-sub">pages in Hasin sir book</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">★3×</div><div class="card-sub">ISO 14000 structure &amp; PDCA</div></div>
+      <div class="summary-card"><div class="card-title">Key Standard</div><div class="card-value">ISO 14001</div><div class="card-sub">certifiable EMS standard</div></div>
+    </div>
+    <p>Chapter 9 covers the ISO 14000 family of environmental management standards — particularly ISO 14001 (EMS), the PDCA improvement cycle, and how organizations identify and control their environmental aspects and impacts.</p>
+    <div class="callout star"><strong>Exam focus:</strong> ISO 14000 series (what each standard covers), PDCA cycle (Plan-Do-Check-Act), ISO 14001 requirements, environmental aspects vs. impacts.</div>
+  </div>
+</section>
+
+<!-- ══ ISO 14000 SERIES ══════════════════════════════════════ -->
+<section id="iso14000" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🏅 ISO 14000 Series <span style="color:var(--star)">★★★ 3×</span></div>
+    <p>The ISO 14000 family of standards was developed by the International Organization for Standardization (ISO) to help organizations manage their environmental responsibilities in a systematic manner.</p>
+
+    <div class="callout info"><strong>ISO:</strong> International Organization for Standardization — Geneva, Switzerland. Founded 1947. Develops international standards across industries.</div>
+
+    <h3>ISO 14000 Series — Standards Overview</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Standard</th><th>Title</th><th>Focus</th></tr>
+        <tr>
+          <td><strong>ISO 14001</strong></td>
+          <td>Environmental Management Systems — Requirements</td>
+          <td>The <em>certifiable</em> EMS standard; specifies requirements organizations must meet</td>
+        </tr>
+        <tr>
+          <td>ISO 14004</td>
+          <td>EMS — General Guidelines</td>
+          <td>Implementation guidance for ISO 14001 (not certifiable)</td>
+        </tr>
+        <tr>
+          <td>ISO 14010</td>
+          <td>Guidelines for Environmental Auditing</td>
+          <td>Principles of environmental auditing</td>
+        </tr>
+        <tr>
+          <td>ISO 14011</td>
+          <td>Audit Procedures — Auditing of EMS</td>
+          <td>How to audit an EMS</td>
+        </tr>
+        <tr>
+          <td>ISO 14012</td>
+          <td>Qualification Criteria for Environmental Auditors</td>
+          <td>Auditor competence requirements</td>
+        </tr>
+        <tr>
+          <td>ISO 14020</td>
+          <td>Environmental Labels and Declarations</td>
+          <td>Framework for eco-labeling</td>
+        </tr>
+        <tr>
+          <td>ISO 14031</td>
+          <td>Environmental Performance Evaluation</td>
+          <td>How to measure environmental performance</td>
+        </tr>
+        <tr>
+          <td>ISO 14040</td>
+          <td>Life Cycle Assessment (LCA) — Principles</td>
+          <td>Framework for LCA studies</td>
+        </tr>
+        <tr>
+          <td>ISO 14044</td>
+          <td>LCA — Requirements and Guidelines</td>
+          <td>Detailed LCA methodology</td>
+        </tr>
+        <tr>
+          <td>ISO 14064</td>
+          <td>Greenhouse Gas Accounting</td>
+          <td>GHG quantification and reporting</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout star"><strong>Key exam point:</strong> ISO 14001 is the ONLY certifiable standard in the ISO 14000 series. Organizations get certified to ISO 14001, not to the other standards.</div>
+
+    <h3>ISO 14001 vs ISO 9001 Comparison</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Aspect</th><th>ISO 9001 (Quality)</th><th>ISO 14001 (Environment)</th></tr>
+        <tr><td>Focus</td><td>Customer satisfaction, product quality</td><td>Environmental performance, legal compliance</td></tr>
+        <tr><td>Framework</td><td>PDCA, risk-based thinking</td><td>PDCA, Plan-Do-Check-Act</td></tr>
+        <tr><td>Certification</td><td>Third-party certifiable</td><td>Third-party certifiable</td></tr>
+        <tr><td>Integrates with</td><td>ISO 14001, ISO 45001</td><td>ISO 9001, ISO 50001</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PDCA CYCLE ═════════════════════════════════════════════ -->
+<section id="pdca" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔄 The PDCA Cycle <span style="color:var(--star)">★★★ 3×</span></div>
+    <div class="callout star">The PDCA (Plan-Do-Check-Act) cycle is the backbone of ISO 14001. Know all four stages and what each involves.</div>
+
+    <div class="flowchart">
+      <div class="flow-node start" style="border-color:#4ade80">📋 PLAN<br><small>Establish EMS; identify env aspects &amp; impacts;<br>set objectives &amp; targets; legal compliance</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step" style="border-color:#58a6ff">🔧 DO<br><small>Implement programs; training; operational control;<br>emergency preparedness; communicate</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step" style="border-color:#f0c000">📊 CHECK<br><small>Monitor &amp; measure; evaluate compliance;<br>internal audit; nonconformity &amp; corrective action</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node end" style="border-color:#ff7b72">🔁 ACT<br><small>Management review; continual improvement;<br>revise objectives; loop back to Plan</small></div>
+    </div>
+
+    <h3>Detailed PDCA in ISO 14001 Context</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Stage</th><th>ISO 14001 Activities</th><th>Key Outputs</th></tr>
+        <tr>
+          <td><strong>PLAN</strong></td>
+          <td>
+            <ul>
+              <li>Determine context of organization</li>
+              <li>Identify interested parties</li>
+              <li>Define scope of EMS</li>
+              <li>Identify environmental aspects &amp; significant impacts</li>
+              <li>Identify legal/regulatory requirements</li>
+              <li>Set environmental objectives &amp; targets</li>
+            </ul>
+          </td>
+          <td>Environmental Policy; Register of Aspects &amp; Impacts; Objectives &amp; Targets; Legal Register</td>
+        </tr>
+        <tr>
+          <td><strong>DO</strong></td>
+          <td>
+            <ul>
+              <li>Assign roles &amp; responsibilities</li>
+              <li>Competence, training, awareness programs</li>
+              <li>Internal &amp; external communication</li>
+              <li>Operational controls for significant aspects</li>
+              <li>Emergency preparedness &amp; response plans</li>
+            </ul>
+          </td>
+          <td>Training records; Operational procedures; Emergency response plans</td>
+        </tr>
+        <tr>
+          <td><strong>CHECK</strong></td>
+          <td>
+            <ul>
+              <li>Monitor &amp; measure key environmental parameters</li>
+              <li>Evaluate legal compliance</li>
+              <li>Internal EMS audits</li>
+              <li>Identify nonconformities &amp; take corrective action</li>
+              <li>Maintain documented information (records)</li>
+            </ul>
+          </td>
+          <td>Monitoring reports; Audit reports; Corrective action records</td>
+        </tr>
+        <tr>
+          <td><strong>ACT</strong></td>
+          <td>
+            <ul>
+              <li>Top management review of EMS performance</li>
+              <li>Review objectives, targets, programs</li>
+              <li>Identify opportunities for continual improvement</li>
+              <li>Revise EMS where needed</li>
+            </ul>
+          </td>
+          <td>Management Review Minutes; Updated objectives; Improvement actions</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ISO 14001 REQUIREMENTS ════════════════════════════════ -->
+<section id="iso14001" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📋 ISO 14001 Requirements <span style="color:var(--star)">★★ 2×</span></div>
+
+    <h3>ISO 14001:2015 Clause Structure</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Clause</th><th>Title</th><th>Key Content</th></tr>
+        <tr><td>4</td><td>Context of the Organization</td><td>Internal/external issues, interested parties, scope</td></tr>
+        <tr><td>5</td><td>Leadership</td><td>Top management commitment, Environmental Policy, roles</td></tr>
+        <tr><td>6</td><td>Planning</td><td>Risks &amp; opportunities, aspects &amp; impacts, objectives</td></tr>
+        <tr><td>7</td><td>Support</td><td>Resources, competence, awareness, communication, documentation</td></tr>
+        <tr><td>8</td><td>Operation</td><td>Operational planning &amp; control, emergency preparedness</td></tr>
+        <tr><td>9</td><td>Performance Evaluation</td><td>Monitoring, compliance evaluation, internal audit, management review</td></tr>
+        <tr><td>10</td><td>Improvement</td><td>Nonconformity, corrective action, continual improvement</td></tr>
+      </table>
+    </div>
+
+    <h3>Environmental Policy Requirements</h3>
+    <p>The Environmental Policy is the foundation of the EMS. Under ISO 14001, it must:</p>
+    <ul>
+      <li>Be appropriate to the organization's context, scale, and environmental impacts</li>
+      <li>Include a commitment to <strong>prevention of pollution</strong></li>
+      <li>Include a commitment to <strong>comply with applicable legal requirements</strong></li>
+      <li>Include a commitment to <strong>continual improvement</strong> of the EMS</li>
+      <li>Provide a framework for setting environmental objectives</li>
+      <li>Be documented, communicated to employees, and available to public on request</li>
+    </ul>
+    <div class="callout star"><strong>Three mandatory commitments in Environmental Policy:</strong> Prevention of pollution | Legal compliance | Continual improvement</div>
+
+    <h3>Certification Process</h3>
+    <div class="flowchart">
+      <div class="flow-node start">Organization decides to implement ISO 14001</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Gap analysis against ISO 14001 requirements</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Implement EMS (PDCA cycle) — typically 6–18 months</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Internal audit + Management Review</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Stage 1 Audit by accredited certification body<br><small>Document review; readiness assessment</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Stage 2 Audit (Certification Audit)<br><small>Detailed assessment of EMS implementation</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node end">🏅 ISO 14001 Certificate Issued (valid 3 years)<br><small>Annual surveillance audits; re-certification after 3 years</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ASPECTS & IMPACTS ══════════════════════════════════════ -->
+<section id="aspects" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🌿 Environmental Aspects &amp; Impacts</div>
+
+    <div class="callout info"><strong>Key definition:</strong> Environmental ASPECT = element of an organization's activities that CAN interact with the environment. Environmental IMPACT = any change to the environment resulting from the aspect.</div>
+
+    <h3>Aspect vs Impact — Examples</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Activity</th><th>Aspect (What?)</th><th>Impact (So what?)</th></tr>
+        <tr><td>Running a diesel generator</td><td>Combustion gas emissions (SO₂, NOₓ)</td><td>Air pollution; acid rain contribution</td></tr>
+        <tr><td>Textile dyeing</td><td>Discharge of colored effluent</td><td>Water pollution; aquatic ecosystem harm</td></tr>
+        <tr><td>Cutting trees for factory</td><td>Tree removal / land clearing</td><td>Deforestation; habitat loss; soil erosion</td></tr>
+        <tr><td>Using chemicals in cleaning</td><td>Solvent vapor emissions</td><td>Air pollution; ozone depletion (if CFCs)</td></tr>
+        <tr><td>Producing industrial waste</td><td>Solid waste generation</td><td>Land pollution; groundwater contamination</td></tr>
+        <tr><td>Leaking compressed gas</td><td>GHG/refrigerant release</td><td>Climate change contribution</td></tr>
+      </table>
+    </div>
+
+    <h3>Significance Evaluation Criteria</h3>
+    <p>Not all aspects are "significant" — organizations must determine significance. Common criteria:</p>
+    <ul>
+      <li><strong>Scale:</strong> How large is the area affected?</li>
+      <li><strong>Severity:</strong> How severe and reversible is the impact?</li>
+      <li><strong>Probability:</strong> How likely is the impact to occur?</li>
+      <li><strong>Legal requirement:</strong> Is the aspect regulated by law?</li>
+      <li><strong>Stakeholder concern:</strong> Are interested parties concerned about it?</li>
+    </ul>
+    <div class="callout info">Significant aspects require specific objectives, targets, and operational controls. Non-significant aspects require monitoring only.</div>
+  </div>
+</section>
+
+<!-- ══ BENEFITS ════════════════════════════════════════════════ -->
+<section id="benefits" class="tab-panel">
+  <div class="section">
+    <div class="section-title">✅ Benefits of ISO 14001 Certification</div>
+
+    <div class="category-cards">
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge green-badge">Environmental</span> Environmental Benefits</div>
+        <div class="cat-body">
+          <ul>
+            <li>Systematic reduction in pollution and waste</li>
+            <li>Improved resource efficiency (energy, water, materials)</li>
+            <li>Legal compliance ensured</li>
+            <li>Prevention of environmental incidents and accidents</li>
+            <li>Reduced environmental liability</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge green-badge">Business</span> Business Benefits</div>
+        <div class="cat-body">
+          <ul>
+            <li>Cost savings from energy/resource efficiency</li>
+            <li>Avoidance of regulatory fines and penalties</li>
+            <li>Improved market access (buyers require ISO 14001)</li>
+            <li>Lower insurance premiums</li>
+            <li>Competitive advantage in tenders</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge orangeA-badge">Reputation</span> Reputation &amp; Stakeholder</div>
+        <div class="cat-body">
+          <ul>
+            <li>Demonstrated environmental commitment</li>
+            <li>Improved public image and brand reputation</li>
+            <li>Increased employee motivation and engagement</li>
+            <li>Better relationships with regulators</li>
+            <li>Investor confidence in ESG performance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PYQ ANALYSIS ══════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ PYQ Analysis — Chapter 9</div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★★ 3×</span>
+        <div class="pyq-q">What is ISO 14000? Describe the ISO 14000 series of environmental management standards.</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p>ISO 14000 is a family of international environmental management standards developed by the International Organization for Standardization (ISO), Geneva. These standards help organizations manage their environmental responsibilities in a systematic, consistent, and credible manner.</p>
+        <p>The key standards in the series include:</p>
+        <ul>
+          <li><strong>ISO 14001:</strong> EMS — Requirements. The only certifiable standard. Specifies what an organization's EMS must include.</li>
+          <li><strong>ISO 14004:</strong> EMS — General Guidelines. Provides implementation guidance for ISO 14001.</li>
+          <li><strong>ISO 14010–14012:</strong> Environmental Auditing. Principles and procedures for auditing EMS.</li>
+          <li><strong>ISO 14020 series:</strong> Environmental Labels and Declarations (eco-labeling).</li>
+          <li><strong>ISO 14031:</strong> Environmental Performance Evaluation guidelines.</li>
+          <li><strong>ISO 14040 series:</strong> Life Cycle Assessment (LCA) principles and methodology.</li>
+          <li><strong>ISO 14064:</strong> Greenhouse Gas quantification, reporting, and verification.</li>
+        </ul>
+        <p><strong>ISO 14001</strong> is the core standard — the one organizations implement and get certified to. All other standards are guidance or methodology documents. The series uses the Plan-Do-Check-Act (PDCA) framework for continual improvement.</p>
+      </div>
+    </div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★★ 3×</span>
+        <div class="pyq-q">Explain the PDCA cycle as applied in ISO 14001 Environmental Management System.</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p>The PDCA (Plan-Do-Check-Act) cycle is the framework for continual improvement in ISO 14001:</p>
+        <ol>
+          <li><strong>PLAN:</strong> Establish objectives and processes necessary to deliver results in line with the organization's environmental policy. Activities include: identifying environmental aspects and significant impacts; determining applicable legal requirements; setting environmental objectives and targets; and planning programs to achieve those objectives.</li>
+          <li><strong>DO:</strong> Implement the planned processes. Activities include: assigning roles and responsibilities; providing training and awareness; establishing operational controls for significant aspects; ensuring emergency preparedness; and maintaining communication (internal and external).</li>
+          <li><strong>CHECK:</strong> Monitor and measure processes against the environmental policy, objectives, targets, and legal requirements. Activities include: monitoring key environmental parameters; evaluating compliance; conducting internal audits; identifying nonconformities; and taking corrective and preventive action.</li>
+          <li><strong>ACT:</strong> Top management reviews the EMS performance and takes actions to continually improve. The cycle then repeats — revised objectives, updated programs, and improved processes feed back into the Plan phase.</li>
+        </ol>
+        <p>This cycle ensures the EMS is not static but continuously improving in line with the organization's commitment in its Environmental Policy.</p>
+      </div>
+    </div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★ 2×</span>
+        <div class="pyq-q">Distinguish between environmental aspects and environmental impacts with examples.</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p><strong>Environmental Aspect:</strong> An element of an organization's activities, products, or services that can interact with the environment (can cause an impact). It is the CAUSE.</p>
+        <p><strong>Environmental Impact:</strong> Any change to the environment (adverse or beneficial) that wholly or partially results from an environmental aspect. It is the EFFECT.</p>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Activity</th><th>Aspect (Cause)</th><th>Impact (Effect)</th></tr>
+            <tr><td>Operating a boiler</td><td>SO₂ emissions from fuel combustion</td><td>Air pollution; acid rain</td></tr>
+            <tr><td>Dyeing textiles</td><td>Colored wastewater discharge</td><td>Water pollution; harm to aquatic life</td></tr>
+            <tr><td>Running a tannery</td><td>Heavy metal (Cr⁶⁺) in effluent</td><td>Groundwater contamination; toxicity</td></tr>
+            <tr><td>Using refrigerants</td><td>HFC emissions (leakage)</td><td>Climate change contribution</td></tr>
+          </table>
+        </div>
+        <p>Organizations identify ALL aspects, then determine which are "significant" based on magnitude, severity, probability, and legal requirements. Significant aspects drive the EMS objectives and controls.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ═══════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — Chapter 9</div>
+    <div class="cheatsheet-grid">
+      <div class="cs-card">
+        <h3>🏅 ISO 14001 (★★★)</h3>
+        <ul>
+          <li>Only CERTIFIABLE standard in ISO 14000</li>
+          <li>3-year certificate; annual surveillance</li>
+          <li>Third-party certification body</li>
+          <li>3 Policy commitments: Prevention | Compliance | Continual Improvement</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>🔄 PDCA (★★★)</h3>
+        <ul>
+          <li>PLAN: aspects, impacts, objectives, legal</li>
+          <li>DO: implement, train, control, emergency</li>
+          <li>CHECK: monitor, audit, nonconformity</li>
+          <li>ACT: management review, improve, repeat</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>🌿 Aspect vs Impact</h3>
+        <ul>
+          <li>Aspect = cause (what interacts with env)</li>
+          <li>Impact = effect (change to environment)</li>
+          <li>Significant aspects → objectives + controls</li>
+          <li>Criteria: scale, severity, probability, legal</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>📚 ISO 14000 Series</h3>
+        <ul>
+          <li>14001: EMS (certifiable)</li>
+          <li>14004: EMS guidance</li>
+          <li>14010-12: Auditing</li>
+          <li>14031: Performance evaluation</li>
+          <li>14040: Life Cycle Assessment</li>
+          <li>14064: GHG accounting</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>✅ Benefits</h3>
+        <ul>
+          <li>Pollution reduction</li>
+          <li>Legal compliance</li>
+          <li>Cost savings (energy/resource)</li>
+          <li>Market access &amp; competitive edge</li>
+          <li>Improved reputation &amp; ESG rating</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox">
+  <span id="lightbox-close">×</span>
+  <span id="lightbox-prev">‹</span>
+  <img id="lightbox-img" src="" alt="">
+  <div id="lightbox-caption"></div>
+  <span id="lightbox-next">›</span>
+</div>
+<script src="js/tabs.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 4: Global Warming — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>Chapter 4: Global Warming &amp; Climate Change</h1>
+  <span class="chapter-badge">Ch 4</span>
+  <span class="syllabus-rule">★ Slides + lecture notes + book topics covered in slides</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="greenhouse" data-stars="3">🌡️ Greenhouse Effect</button>
+  <button class="tab-btn" data-tab="gases" data-stars="2">💨 GHG Types</button>
+  <button class="tab-btn" data-tab="effects" data-stars="2">🌊 Effects of GW</button>
+  <button class="tab-btn" data-tab="mitigation" data-stars="2">🌱 Mitigation</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid"><div class="card-sub">slides (Ch 04)</div></div>
+      <div class="summary-card"><div class="card-title">Book Pages</div><div class="card-value">27–34</div><div class="card-sub">pages in Hasin sir book</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">★3×</div><div class="card-sub">Greenhouse effect mechanism</div></div>
+      <div class="summary-card"><div class="card-title">GHGs</div><div class="card-value">6</div><div class="card-sub">Kyoto Protocol greenhouse gases</div></div>
+    </div>
+    <div class="callout warn"><strong>Syllabus note (RSI sir):</strong> Ch 4 covers slides + lecture notes + book topics that the slides cover. Focus on the mechanism of the greenhouse effect, GHG types with GWP values, and effects of global warming.</div>
+    <div class="callout star"><strong>Exam focus:</strong> Mechanism of greenhouse effect (★3×), 6 Kyoto GHGs, effects of global warming, GWP comparison.</div>
+  </div>
+</section>
+
+<!-- ══ GREENHOUSE EFFECT ══════════════════════════════════════ -->
+<section id="greenhouse" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🌡️ The Greenhouse Effect <span style="color:var(--star)">★★★ 3×</span></div>
+    <div class="callout star">The mechanism of the greenhouse effect is the most examined topic in Chapter 4.</div>
+
+    <h3>Natural Greenhouse Effect (without it, Earth would be −18°C)</h3>
+    <div class="flowchart">
+      <div class="flow-node start">☀️ Solar shortwave radiation (UV + visible) enters atmosphere<br><small>Most passes through atmospheric gases</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Earth's surface absorbs solar radiation and warms</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Warm Earth emits longwave infrared (IR) radiation back upward</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Greenhouse gases (CO₂, CH₄, H₂O, N₂O) in atmosphere<br>ABSORB this outgoing IR radiation</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">GHGs re-emit absorbed IR radiation in ALL directions<br><small>Some radiates back toward Earth's surface</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node end">🌍 Earth's surface warms further (+33°C above radiation equilibrium)<br><small>Natural average surface temperature = +15°C instead of −18°C</small></div>
+    </div>
+
+    <h3>Enhanced Greenhouse Effect (Problem)</h3>
+    <div class="flowchart">
+      <div class="flow-node start">🏭 Human activities add more GHGs<br><small>Fossil fuel burning, deforestation, agriculture, industry</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Atmospheric CO₂ rises from 280 ppm (pre-industrial) → 420+ ppm (2023)</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Thicker "blanket" of GHGs traps more outgoing IR radiation</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node end">🌡️ Enhanced warming → Global Average Temperature rising<br><small>+1.1°C since pre-industrial; risks of +1.5°C, +2°C, +3°C scenarios</small></div>
+    </div>
+
+    <div class="callout info"><strong>Key distinction:</strong> The natural greenhouse effect is essential for life. The <em>enhanced</em> (anthropogenic) greenhouse effect — caused by human GHG emissions — is driving global warming and climate change.</div>
+
+    <h3>Why CO₂ is the Most Important GHG (by volume, not GWP)</h3>
+    <ul>
+      <li>CO₂ has relatively low GWP (1 by definition), but it is emitted in ENORMOUS quantities from burning fossil fuels</li>
+      <li>CO₂ persists in the atmosphere for 300–1000 years (very long lifetime)</li>
+      <li>Responsible for ~65% of the enhanced greenhouse effect</li>
+      <li>Current level: ~420 ppm (highest in 800,000 years)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══ GHG TYPES ══════════════════════════════════════════════ -->
+<section id="gases" class="tab-panel">
+  <div class="section">
+    <div class="section-title">💨 Greenhouse Gases (GHGs) <span style="color:var(--star)">★★ 2×</span></div>
+    <p>The Kyoto Protocol (1997) regulates six greenhouse gases:</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Gas</th><th>Symbol</th><th>GWP (100-yr)</th><th>Lifetime</th><th>Main Sources</th></tr>
+        <tr>
+          <td>1</td><td>Carbon dioxide</td><td>CO₂</td><td>1 (reference)</td><td>300–1000 yr</td><td>Fossil fuel combustion, deforestation, cement</td>
+        </tr>
+        <tr>
+          <td>2</td><td>Methane</td><td>CH₄</td><td>28–36</td><td>12 years</td><td>Cattle (enteric fermentation), rice paddies, landfills, natural gas leaks</td>
+        </tr>
+        <tr>
+          <td>3</td><td>Nitrous oxide</td><td>N₂O</td><td>265–298</td><td>121 years</td><td>Agriculture (N fertilizers), wastewater, combustion</td>
+        </tr>
+        <tr>
+          <td>4</td><td>Sulfur hexafluoride</td><td>SF₆</td><td>23,500</td><td>3,200 yr</td><td>Electrical equipment (circuit breakers), semiconductor industry</td>
+        </tr>
+        <tr>
+          <td>5</td><td>HFCs (Hydrofluorocarbons)</td><td>HFCs</td><td>12–14,800</td><td>Varies</td><td>Refrigeration, air conditioning (CFC replacements)</td>
+        </tr>
+        <tr>
+          <td>6</td><td>PFCs (Perfluorocarbons)</td><td>PFCs</td><td>7,390–12,200</td><td>2,600–50,000 yr</td><td>Aluminum smelting, semiconductor industry</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout info"><strong>GWP — Global Warming Potential:</strong> A measure of how much heat a gas traps in the atmosphere over 100 years, relative to CO₂ (GWP = 1). SF₆ has the highest GWP (23,500×), meaning 1 kg SF₆ warms the climate as much as 23,500 kg CO₂.</div>
+    <div class="section-title" style="margin-top:16px">📊 Key Diagram — Water Vapor as GHG</div>
+    <div class="diagram-wrap">
+      <img src="images/ch04/slide_10.png" alt="Water vapor as a greenhouse gas and feedback mechanism" class="diagram-img" loading="lazy">
+      <p class="diagram-label">Water vapor — most abundant natural GHG and positive feedback amplifier</p>
+    </div>
+
+    <h3>Other Important GHGs (not in Kyoto list)</h3>
+    <ul>
+      <li><strong>Water vapor (H₂O):</strong> Most abundant GHG (~50% of natural greenhouse effect); acts as feedback amplifier, not direct human emission</li>
+      <li><strong>Ozone (O₃):</strong> Tropospheric ozone is a GHG and air pollutant; short-lived climate pollutant</li>
+      <li><strong>CFCs:</strong> Also potent GHGs but controlled under Montreal Protocol (not Kyoto) — dual regulation</li>
+    </ul>
+
+    <div class="section-title" style="margin-top:16px">📊 Key Diagram — Ozone as GHG</div>
+    <div class="diagram-wrap">
+      <img src="images/ch04/slide_14.png" alt="Ozone as a short-lived climate pollutant and GHG" class="diagram-img" loading="lazy">
+      <p class="diagram-label">Tropospheric ozone — GHG and air pollutant, not controlled under Kyoto</p>
+    </div>
+    <h3>Contribution to Enhanced Greenhouse Effect</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Gas</th><th>% Contribution</th><th>Trend</th></tr>
+        <tr><td>CO₂</td><td>~65%</td><td>Rising (420 ppm, +50% since pre-industrial)</td></tr>
+        <tr><td>CH₄</td><td>~17%</td><td>Rising (rising from agriculture, gas fields)</td></tr>
+        <tr><td>N₂O</td><td>~6%</td><td>Rising (N-fertilizer use)</td></tr>
+        <tr><td>HFCs/SF₆/PFCs</td><td>~2%</td><td>Rising (but Kigali Amendment 2016 targets HFCs)</td></tr>
+        <tr><td>Other</td><td>~10%</td><td>—</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EFFECTS ════════════════════════════════════════════════ -->
+<section id="effects" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🌊 Effects of Global Warming <span style="color:var(--star)">★★ 2×</span></div>
+
+    <div class="category-cards">
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge red-badge">Sea Level</span> Sea Level Rise</div>
+        <div class="cat-body">
+          <ul>
+            <li>Thermal expansion of seawater</li>
+            <li>Melting of glaciers and ice caps</li>
+            <li>+0.19 m since 1900; +0.3–1.0 m projected by 2100</li>
+            <li>Threatens coastal nations: Bangladesh, Maldives, Pacific islands</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge red-badge">Extreme Weather</span> More Extreme Events</div>
+        <div class="cat-body">
+          <ul>
+            <li>More frequent and intense cyclones/hurricanes</li>
+            <li>More severe droughts and flooding</li>
+            <li>Increased frequency of heatwaves</li>
+            <li>Altered monsoon patterns</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge orangeB-badge">Ecosystem</span> Ecosystem Disruption</div>
+        <div class="cat-body">
+          <ul>
+            <li>Coral bleaching and reef death (ocean warming)</li>
+            <li>Species migration toward poles</li>
+            <li>Extinction of temperature-sensitive species</li>
+            <li>Arctic sea ice decline; polar bear habitat loss</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge orangeA-badge">Food/Water</span> Food and Water Security</div>
+        <div class="cat-body">
+          <ul>
+            <li>Crop yield changes (some gain, many lose)</li>
+            <li>Glacial melt threatens freshwater supply in Asia</li>
+            <li>Saltwater intrusion into coastal farmland (Bangladesh!)</li>
+            <li>Shifting agricultural zones</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge green-badge">Health</span> Human Health</div>
+        <div class="cat-body">
+          <ul>
+            <li>Spread of tropical diseases (malaria, dengue) northward</li>
+            <li>Heat-related deaths increase</li>
+            <li>Air quality worsening (more ozone in hot weather)</li>
+            <li>Displacement of populations from coastal flooding</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout warn"><strong>Bangladesh specifically:</strong> With 170+ million people, much of the country at &lt;5 m elevation, and already facing cyclones and flooding, Bangladesh is ranked among the most climate-vulnerable nations in the world. Sea level rise + saltwater intrusion threaten agriculture and drinking water.</div>
+  </div>
+  <div class="section">
+    <div class="section-title">📊 Key Diagram — Effects of Global Warming</div>
+    <div class="diagram-wrap">
+      <img src="images/ch04/slide_07.png" alt="Effects of global warming diagram" class="diagram-img" loading="lazy">
+      <p class="diagram-label">Summary diagram of global warming effects — sea level, weather, ecosystem, food/water, health</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MITIGATION ═════════════════════════════════════════════ -->
+<section id="mitigation" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🌱 Mitigation Strategies</div>
+    <div class="flowchart">
+      <div class="flow-row">
+        <div class="flow-node step">⚡ Energy Transition<br><small>Fossil fuels → renewables (solar, wind, hydro, nuclear)</small></div>
+        <div class="flow-node step">🌳 Carbon Sinks<br><small>Reforestation, afforestation, soil carbon, blue carbon (mangroves)</small></div>
+      </div>
+      <div class="flow-row">
+        <div class="flow-node step">🏭 Industrial Efficiency<br><small>CCS (Carbon Capture &amp; Storage); energy efficiency in industry, buildings, transport</small></div>
+        <div class="flow-node step">🌾 Agriculture<br><small>Reduce livestock methane; improve fertilizer use; rice paddy management</small></div>
+      </div>
+      <div class="flow-row">
+        <div class="flow-node step">📋 Policy<br><small>Carbon tax, cap &amp; trade, NDCs under Paris Agreement</small></div>
+        <div class="flow-node step">🔄 Adaptation<br><small>Flood defenses, drought-resistant crops, early warning systems</small></div>
+      </div>
+    </div>
+
+    <h3>International Agreements on Climate Change</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Agreement</th><th>Year</th><th>Key Feature</th></tr>
+        <tr><td>Rio Earth Summit</td><td>1992</td><td>Established UNFCCC framework; principle of "common but differentiated responsibilities"</td></tr>
+        <tr><td>Kyoto Protocol</td><td>1997</td><td>Binding targets for Annex I (developed) countries; 5.2% below 1990 levels by 2008–2012</td></tr>
+        <tr><td>Doha Amendment</td><td>2012</td><td>Extended Kyoto to 2020 second commitment period</td></tr>
+        <tr><td>Paris Agreement</td><td>2015</td><td>All countries submit NDCs; limit warming to &lt;2°C, pursue 1.5°C</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ PYQ ANALYSIS ══════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ PYQ Analysis — Chapter 4</div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★★ 3×</span>
+        <div class="pyq-q">Explain the mechanism of the greenhouse effect. How does it lead to global warming?</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p><strong>The Greenhouse Effect Mechanism:</strong></p>
+        <ol>
+          <li>Solar shortwave radiation (UV and visible light) passes relatively freely through the atmosphere and reaches Earth's surface.</li>
+          <li>Earth's surface absorbs this radiation and warms up.</li>
+          <li>The warm surface emits longwave infrared (IR) radiation back toward space.</li>
+          <li>Greenhouse gases (CO₂, CH₄, H₂O vapor, N₂O, O₃) in the atmosphere absorb this outgoing IR radiation. These gases have molecular structures that allow them to absorb IR wavelengths.</li>
+          <li>The GHGs re-emit the absorbed radiation in all directions, including back toward Earth's surface.</li>
+          <li>This "back radiation" warms Earth's surface beyond what solar input alone would cause — the natural greenhouse effect maintains Earth at an average +15°C instead of −18°C.</li>
+        </ol>
+        <p><strong>Enhanced Greenhouse Effect → Global Warming:</strong> Human activities (fossil fuel combustion, deforestation, agriculture, industry) have increased atmospheric GHG concentrations significantly — CO₂ has risen from 280 ppm pre-industrial to 420+ ppm today. This "thicker blanket" traps more outgoing IR radiation, causing Earth's average temperature to rise — global warming (+1.1°C since pre-industrial). This drives climate change: sea level rise, extreme weather, ecosystem disruption, and food/water security threats.</p>
+      </div>
+    </div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★ 2×</span>
+        <div class="pyq-q">List the six greenhouse gases regulated by the Kyoto Protocol. Which has the highest GWP?</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p>The six greenhouse gases regulated under Kyoto Protocol (1997):</p>
+        <ol>
+          <li><strong>Carbon dioxide (CO₂)</strong> — GWP = 1; from fossil fuels, deforestation</li>
+          <li><strong>Methane (CH₄)</strong> — GWP = 28–36; from cattle, rice paddies, landfills</li>
+          <li><strong>Nitrous oxide (N₂O)</strong> — GWP = 265–298; from agriculture (N-fertilizers)</li>
+          <li><strong>Sulfur hexafluoride (SF₆)</strong> — GWP = 23,500; from electrical equipment</li>
+          <li><strong>HFCs (Hydrofluorocarbons)</strong> — GWP = 12–14,800; from refrigeration (CFC replacements)</li>
+          <li><strong>PFCs (Perfluorocarbons)</strong> — GWP = 7,390–12,200; from aluminum smelting</li>
+        </ol>
+        <p><strong>Highest GWP: SF₆</strong> (Sulfur hexafluoride) at 23,500. However, CO₂ causes the most warming overall due to the enormous volumes emitted.</p>
+      </div>
+    </div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★ 2×</span>
+        <div class="pyq-q">What are the major consequences of global warming?</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <ol>
+          <li><strong>Sea level rise:</strong> Thermal expansion of seawater and glacial melt raise sea levels, threatening coastal communities and low-lying nations (Bangladesh, Maldives). Projected rise: 0.3–1.0 m by 2100.</li>
+          <li><strong>Extreme weather:</strong> More intense cyclones, floods, droughts, and heatwaves. Altered monsoon patterns.</li>
+          <li><strong>Ecosystem disruption:</strong> Coral bleaching, species extinction, polar ice loss, poleward migration of species.</li>
+          <li><strong>Food and water security:</strong> Crop yield changes, glacial melt threatens freshwater supply, saltwater intrusion into coastal farmland.</li>
+          <li><strong>Human health:</strong> Spread of tropical diseases (malaria, dengue), heat-related deaths, air quality deterioration, displacement of populations.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ═══════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — Chapter 4</div>
+    <div class="cheatsheet-grid">
+      <div class="cs-card">
+        <h3>🌡️ Greenhouse Mechanism (★★★)</h3>
+        <ul>
+          <li>Solar shortwave radiation → passes through atm</li>
+          <li>Earth absorbs → heats up</li>
+          <li>Earth emits IR (longwave) → upward</li>
+          <li>GHGs absorb IR → re-emit back to surface</li>
+          <li>Natural: +33°C warming (−18→+15°C)</li>
+          <li>Enhanced: +1.1°C since pre-industrial</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>💨 6 Kyoto GHGs</h3>
+        <ul>
+          <li>CO₂ — GWP=1, largest volume</li>
+          <li>CH₄ — GWP=28, cattle/rice/landfill</li>
+          <li>N₂O — GWP=265, agriculture</li>
+          <li>SF₆ — GWP=23,500 (HIGHEST)</li>
+          <li>HFCs — GWP up to 14,800</li>
+          <li>PFCs — GWP up to 12,200</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>🌊 Effects (★★)</h3>
+        <ul>
+          <li>Sea level rise: 0.3–1.0 m by 2100</li>
+          <li>More extreme weather events</li>
+          <li>Coral bleaching; species loss</li>
+          <li>Food and water insecurity</li>
+          <li>Tropical disease spread</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>📋 Key Numbers</h3>
+        <ul>
+          <li>Pre-industrial CO₂: 280 ppm</li>
+          <li>Current CO₂: 420+ ppm (2023)</li>
+          <li>Warming so far: +1.1°C</li>
+          <li>Paris target: &lt;2°C, pursue 1.5°C</li>
+          <li>Earth without GHE: −18°C</li>
+          <li>Earth with GHE: +15°C</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox">
+  <span id="lightbox-close">×</span>
+  <span id="lightbox-prev">‹</span>
+  <img id="lightbox-img" src="" alt="">
+  <div id="lightbox-caption"></div>
+  <span id="lightbox-next">›</span>
+</div>
+<script src="js/tabs.js"></script>
+</body>
+</html>

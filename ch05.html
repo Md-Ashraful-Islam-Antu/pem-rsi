@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 5: Acid Rain — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>Chapter 5: Acid Rain</h1>
+  <span class="chapter-badge">Ch 5</span>
+  <span class="syllabus-rule">★ Whole chapter from book + slides + lecture notes</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="formation" data-stars="3">⚗️ Formation Chemistry</button>
+  <button class="tab-btn" data-tab="deposition" data-stars="3">🌧️ Wet vs Dry</button>
+  <button class="tab-btn" data-tab="effects" data-stars="2">💀 Effects</button>
+  <button class="tab-btn" data-tab="control" data-stars="2">🛡️ Control Measures</button>
+  <button class="tab-btn" data-tab="math" data-stars="3">🔢 Formulas &amp; pH</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid"><div class="card-sub">slides (Ch 05)</div></div>
+      <div class="summary-card"><div class="card-title">Book Pages</div><div class="card-value">35–40</div><div class="card-sub">pages in Hasin sir book</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">★3×</div><div class="card-sub">Wet vs Dry deposition</div></div>
+      <div class="summary-card"><div class="card-title">pH of Acid Rain</div><div class="card-value">&lt;5.6</div><div class="card-sub">normal rain pH = 5.6</div></div>
+    </div>
+    <p>Chapter 5 covers acid rain — its formation from SO₂ and NOₓ, the difference between wet and dry deposition, its effects on ecosystems and infrastructure, and control measures. The wet vs. dry deposition distinction appears frequently in PYQs.</p>
+    <div class="callout star"><strong>Exam focus:</strong> Formation chemistry (SO₂/NOₓ pathways), wet vs dry deposition (★3×), effects on aquatic ecosystems and buildings, control measures.</div>
+  </div>
+</section>
+
+<!-- ══ FORMATION CHEMISTRY ════════════════════════════════════ -->
+<section id="formation" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚗️ Formation Chemistry <span style="color:var(--star)">★★★ 3×</span></div>
+    <div class="callout star">Know both the SO₂ pathway and the NOₓ pathway. Write the balanced chemical equations.</div>
+
+    <h3>Definition</h3>
+    <p>Acid rain (or acid deposition) refers to any form of precipitation with a pH lower than <strong>5.6</strong>. Normal rain is slightly acidic (pH 5.6) because atmospheric CO₂ dissolves to form weak carbonic acid. Acid rain is caused by emissions of SO₂ and NOₓ.</p>
+
+    <h3>Pathway 1: Sulfur Dioxide (SO₂) → Sulfuric Acid (H₂SO₄)</h3>
+    <div class="formula">Step 1: Combustion of sulfur-containing fuel
+S + O₂ → SO₂
+
+Step 2: Atmospheric oxidation (slow)
+2SO₂ + O₂ → 2SO₃  (requires catalyst: NO₂, metal oxides, or UV)
+
+Step 3: Reaction with water
+SO₃ + H₂O → H₂SO₄  (sulfuric acid — STRONG ACID)
+
+Net (simplified):
+SO₂ + H₂O + ½O₂ → H₂SO₄</div>
+
+    <div class="flowchart">
+      <div class="flow-node start">🏭 Coal/oil combustion<br>S-containing fuels → SO₂ emitted</div>
+      <div class="flow-arrow">↓ in atmosphere</div>
+      <div class="flow-node step">SO₂ + NO₂ (catalyst) + O₂ → SO₃<br><small>oxidation, UV-assisted</small></div>
+      <div class="flow-arrow">↓ + H₂O</div>
+      <div class="flow-node end">H₂SO₄ in rain droplets<br><span style="color:var(--accent)">pH drops to 3–4 in severe acid rain</span></div>
+    </div>
+
+    <h3>Pathway 2: Nitrogen Oxides (NOₓ) → Nitric Acid (HNO₃)</h3>
+    <div class="formula">Step 1: High-temperature combustion (vehicles, power plants)
+N₂ + O₂ → 2NO  (at high temperature)
+
+Step 2: Atmospheric oxidation
+2NO + O₂ → 2NO₂
+
+Step 3: Reaction with water
+3NO₂ + H₂O → 2HNO₃ + NO  (nitric acid — STRONG ACID)
+
+Simplified:
+4NO + 3O₂ + 2H₂O → 4HNO₃</div>
+
+    <h3>Major Sources of SO₂ and NOₓ</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Pollutant</th><th>Major Sources</th><th>% from Source (approx.)</th></tr>
+        <tr><td rowspan="3">SO₂</td><td>Coal-fired power plants</td><td>65%</td></tr>
+        <tr><td>Oil refining and fuel oil burning</td><td>15%</td></tr>
+        <tr><td>Industrial processes (smelting, cement)</td><td>20%</td></tr>
+        <tr><td rowspan="3">NOₓ</td><td>Motor vehicles</td><td>45%</td></tr>
+        <tr><td>Electric power plants</td><td>30%</td></tr>
+        <tr><td>Industrial combustion</td><td>25%</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">📊 Key Diagram — Acid Rain Formation Overview</div>
+    <div class="diagram-wrap">
+      <img src="images/ch05/slide_02.png" alt="Acid rain formation overview diagram" class="diagram-img" loading="lazy">
+      <p class="diagram-label">Complete cycle: SO₂/NOₓ emissions → atmospheric reactions → acid deposition</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">📊 Key Diagram — SO₂ and NOₓ Pathways</div>
+    <div class="diagram-wrap">
+      <img src="images/ch05/slide_04.png" alt="SO₂ and NOₓ chemical pathway to H₂SO₄ and HNO₃" class="diagram-img" loading="lazy">
+      <p class="diagram-label">Chemical pathways: SO₂ → H₂SO₄ and NOₓ → HNO₃ in the atmosphere</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WET vs DRY DEPOSITION ══════════════════════════════════ -->
+<section id="deposition" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🌧️ Wet vs Dry Deposition <span style="color:var(--star)">★★★ 3×</span></div>
+    <div class="callout star">Distinguish clearly between wet and dry deposition. This exact comparison appears 3× in PYQs.</div>
+
+    <div class="category-cards">
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge green-badge">WET</span> Wet Deposition (Acid Rain)</div>
+        <div class="cat-body">
+          <p><strong>Definition:</strong> Deposition of acidic pollutants (SO₄²⁻, NO₃⁻, H⁺) through precipitation — rain, snow, sleet, fog, or hail.</p>
+          <ul>
+            <li>SO₂ and NOₓ dissolve in cloud/rain droplets in the atmosphere, forming H₂SO₄ and HNO₃</li>
+            <li>Acidic precipitation falls to Earth's surface</li>
+            <li>pH typically 3.0–5.6; can reach &lt;3.0 near industrial areas</li>
+            <li>Transported hundreds or thousands of km by wind before falling</li>
+            <li>Examples: acid rain, acid fog (can be more concentrated than acid rain), acid snow</li>
+          </ul>
+          <p><strong>Mechanism:</strong> Cloud droplet absorbs SO₂ → SO₄²⁻; absorbs NO₂ → NO₃⁻; H⁺ released → low pH</p>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge orangeA-badge">DRY</span> Dry Deposition</div>
+        <div class="cat-body">
+          <p><strong>Definition:</strong> Deposition of acidic particles and gases <em>without precipitation</em> — directly onto surfaces by gravitational settling, impaction, or gas absorption.</p>
+          <ul>
+            <li>SO₂ and NOₓ gases and their particulate derivatives (sulfate particles, nitrate particles) settle directly on surfaces</li>
+            <li>Occurs near emission sources; does not travel as far as wet deposition</li>
+            <li>Deposited on vegetation, soil, water, buildings without rain</li>
+            <li>When rain later falls, it washes the dry deposits off surfaces → creates "pulse" of acid loading</li>
+            <li>May account for 50% of total acid deposition in some areas</li>
+          </ul>
+          <p><strong>Forms:</strong> Gas absorption (SO₂, NO₂ directly onto leaves), particulate settling (sulfate aerosols, nitrate particles)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Aspect</th><th>Wet Deposition</th><th>Dry Deposition</th></tr>
+        <tr><td>Medium</td><td>Precipitation (rain/snow/fog)</td><td>Dry air (gas/particle settling)</td></tr>
+        <tr><td>When</td><td>During rain events</td><td>Continuously (no rain needed)</td></tr>
+        <tr><td>Distance</td><td>Long-range transport (hundreds–thousands km)</td><td>Mostly near-source (local/regional)</td></tr>
+        <tr><td>Forms</td><td>Acid rain, acid snow, acid fog</td><td>SO₂ gas, sulfate particles, nitrate particles</td></tr>
+        <tr><td>pH measurable?</td><td>Yes (rain gauge + pH meter)</td><td>No direct pH; measured as mass flux</td></tr>
+        <tr><td>Effect timing</td><td>Acute "acid pulse" during rain</td><td>Gradual, continuous accumulation</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EFFECTS ════════════════════════════════════════════════ -->
+<section id="effects" class="tab-panel">
+  <div class="section">
+    <div class="section-title">💀 Effects of Acid Rain <span style="color:var(--star)">★★ 2×</span></div>
+
+    <div class="category-cards">
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge red-badge">Aquatic</span> Aquatic Ecosystems</div>
+        <div class="cat-body">
+          <ul>
+            <li>pH below 6: fish reproduction impaired; below 5: most fish die</li>
+            <li>Al³⁺ leaches from soil into lakes → toxic to fish at pH &lt;5.5</li>
+            <li>Amphibians (frogs, salamanders) extremely sensitive</li>
+            <li>Loss of biodiversity; "dead lakes" in Scandinavia, Canada</li>
+            <li>Phytoplankton and zooplankton populations collapse</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge red-badge">Forests</span> Terrestrial Ecosystems</div>
+        <div class="cat-body">
+          <ul>
+            <li>Leaches Ca²⁺, Mg²⁺, K⁺ from soil → nutrient depletion</li>
+            <li>Releases Al³⁺ from soil minerals → root damage</li>
+            <li>Foliar damage: erodes waxy leaf coating; reduces photosynthesis</li>
+            <li>Weakened trees become susceptible to insects, disease, frost</li>
+            <li>"Waldsterben" (forest death) in Germany — 50% of forests damaged</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge orangeA-badge">Buildings</span> Infrastructure &amp; Materials</div>
+        <div class="cat-body">
+          <ul>
+            <li>Limestone and marble: CaCO₃ + H₂SO₄ → CaSO₄ + H₂O + CO₂ (gypsum crust)</li>
+            <li>Corrosion of steel bridges, railings, pipelines</li>
+            <li>Damage to Taj Mahal (India), Parthenon (Greece), limestone cathedrals</li>
+            <li>Paint deterioration; rubber degradation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge orangeB-badge">Human</span> Human Health</div>
+        <div class="cat-body">
+          <ul>
+            <li>SO₂, NOₓ in acidic haze: respiratory irritation, asthma</li>
+            <li>Acid fog: more concentrated than acid rain; dangerous for asthmatics</li>
+            <li>Leaching of heavy metals (Pb, Cd) from pipelines into drinking water</li>
+            <li>No direct skin damage from acid rain (not strong enough)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">📊 Key Diagram — Effects on Aquatic Life</div>
+    <div class="diagram-wrap">
+      <img src="images/ch05/slide_10.png" alt="Effects of acid rain on aquatic ecosystems" class="diagram-img" loading="lazy">
+      <p class="diagram-label">pH thresholds for aquatic life — fish, amphibians, insects affected as pH drops below 6.0</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTROL ════════════════════════════════════════════════ -->
+<section id="control" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🛡️ Control Measures for Acid Rain</div>
+
+    <h3>Source Control (Best approach)</h3>
+    <div class="category-cards">
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge green-badge">Pre-combustion</span> Before Burning</div>
+        <div class="cat-body">
+          <ul>
+            <li>Coal washing / coal cleaning (remove sulfur from coal before burning)</li>
+            <li>Switch to low-sulfur fuels (natural gas, low-sulfur coal)</li>
+            <li>Switch to renewable energy (wind, solar, hydro)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge orangeA-badge">Combustion</span> During Burning</div>
+        <div class="cat-body">
+          <ul>
+            <li>Fluidized Bed Combustion (FBC): burns coal with limestone → CaSO₄ captures SO₂</li>
+            <li>Low-NOₓ burners (reduce excess air; lower temperature)</li>
+            <li>Staged combustion</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-header"><span class="cat-badge red-badge">Post-combustion</span> After Burning</div>
+        <div class="cat-body">
+          <ul>
+            <li>Flue Gas Desulfurization (FGD) / "scrubbers": SO₂ + Ca(OH)₂ → CaSO₄</li>
+            <li>Selective Catalytic Reduction (SCR): removes NOₓ from flue gas using NH₃ + catalyst</li>
+            <li>Catalytic converters in vehicles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3>Flue Gas Desulfurization (FGD) Process</h3>
+    <div class="flowchart">
+      <div class="flow-node start">🏭 Flue gas with SO₂ exits combustion chamber</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Gas enters wet scrubber tower</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Limestone slurry (CaCO₃) sprayed into tower:<br>SO₂ + CaCO₃ + ½O₂ + H₂O → CaSO₄·2H₂O (gypsum) + CO₂</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node end">Clean flue gas exits | Gypsum collected → used in construction</div>
+    </div>
+
+    <h3>Remediation (Liming)</h3>
+    <p>When lakes have already been acidified, adding <strong>lime (CaO) or limestone (CaCO₃)</strong> to water or soil neutralizes the acid:</p>
+    <div class="formula">CaCO₃ + H₂SO₄ → CaSO₄ + H₂O + CO₂  (lake liming)
+CaO + H₂SO₄ → CaSO₄ + H₂O  (soil amendment)</div>
+    <div class="callout warn">Liming is a temporary fix — it neutralizes existing acid but does not stop new deposition. Source control is the only permanent solution.</div>
+  </div>
+</section>
+
+<!-- ══ MATH / pH ══════════════════════════════════════════════ -->
+<section id="math" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔢 Formulas &amp; pH Calculations</div>
+    <h3>pH Scale and Acid Rain</h3>
+    <div class="formula">pH = −log₁₀[H⁺]
+
+Normal rain: pH = 5.6  (CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻)
+Acid rain: pH < 5.6
+Severely acidic rain: pH 3–4 (near industrial areas)
+Pure water: pH = 7.0 (neutral)
+
+[H⁺] at pH 4 = 10⁻⁴ mol/L = 0.0001 mol/L
+[H⁺] at pH 5.6 = 10⁻⁵·⁶ mol/L ≈ 2.5 × 10⁻⁶ mol/L
+→ Acid rain at pH 4 is 25× more acidic than normal rain at pH 5.6</div>
+
+    <h3>Key Chemical Equations</h3>
+    <div class="formula">S + O₂ → SO₂                       (sulfur combustion)
+2SO₂ + O₂ → 2SO₃               (atmospheric oxidation)
+SO₃ + H₂O → H₂SO₄              (sulfuric acid formation)
+
+N₂ + O₂ → 2NO                  (high-temp combustion)
+2NO + O₂ → 2NO₂                (atmospheric)
+3NO₂ + H₂O → 2HNO₃ + NO       (nitric acid formation)
+
+CaCO₃ + H₂SO₄ → CaSO₄ + H₂O + CO₂  (limestone dissolution)
+SO₂ + Ca(OH)₂ → CaSO₃ + H₂O       (FGD — basic scrubbing)</div>
+
+    <h3>Practice Problem</h3>
+    <div class="callout info">
+      <p><strong>Q:</strong> A rain sample has a H⁺ concentration of 2 × 10⁻⁴ mol/L. Calculate its pH and state whether it qualifies as acid rain.</p>
+      <p><strong>Solution:</strong><br>
+      pH = −log₁₀(2 × 10⁻⁴)<br>
+      = −log₁₀(2) − log₁₀(10⁻⁴)<br>
+      = −0.301 − (−4)<br>
+      = 3.699 ≈ <strong>3.7</strong></p>
+      <p>Since 3.7 &lt; 5.6, this is <strong>acid rain</strong> (severely acidic).</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ PYQ ANALYSIS ══════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ PYQ Analysis — Chapter 5</div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★★ 3×</span>
+        <div class="pyq-q">Distinguish between wet deposition and dry deposition in acid rain. Give examples of each.</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Aspect</th><th>Wet Deposition</th><th>Dry Deposition</th></tr>
+            <tr><td>Definition</td><td>Deposition of acidic pollutants via precipitation (rain, snow, fog)</td><td>Deposition of acidic gases/particles without precipitation</td></tr>
+            <tr><td>When</td><td>During rain/snow events</td><td>Continuously, rain not required</td></tr>
+            <tr><td>Distance</td><td>Long-range (hundreds–thousands km from source)</td><td>Mostly local/regional (near source)</td></tr>
+            <tr><td>Forms</td><td>Acid rain (pH&lt;5.6), acid snow, acid fog</td><td>SO₂ gas absorption, sulfate aerosols, nitrate particles</td></tr>
+            <tr><td>Measurement</td><td>pH of collected precipitation</td><td>Mass flux per unit area per unit time</td></tr>
+            <tr><td>Examples</td><td>Rain over Sweden with pH 4.2 (from UK/Germany emissions)</td><td>SO₂ directly absorbed by pine needles; sulfate particles on building surfaces</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★★ 3×</span>
+        <div class="pyq-q">How is acid rain formed? Write the chemical reactions involved.</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p>Acid rain (pH &lt;5.6) is formed primarily from SO₂ and NOₓ emissions:</p>
+        <p><strong>Sulfur Pathway:</strong></p>
+        <ul>
+          <li>S + O₂ → SO₂ (combustion of sulfur-containing coal/oil)</li>
+          <li>2SO₂ + O₂ → 2SO₃ (atmospheric oxidation)</li>
+          <li>SO₃ + H₂O → H₂SO₄ (sulfuric acid — strong acid)</li>
+        </ul>
+        <p><strong>Nitrogen Pathway:</strong></p>
+        <ul>
+          <li>N₂ + O₂ → 2NO (high-temperature combustion in engines/furnaces)</li>
+          <li>2NO + O₂ → 2NO₂ (atmospheric oxidation)</li>
+          <li>3NO₂ + H₂O → 2HNO₃ + NO (nitric acid — strong acid)</li>
+        </ul>
+        <p>H₂SO₄ and HNO₃ dissolve in cloud droplets and rain, lowering pH below 5.6. Normal rain has pH 5.6 due to dissolved CO₂ (carbonic acid). Acid rain pH typically ranges 3.0–5.5.</p>
+      </div>
+    </div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★ 2×</span>
+        <div class="pyq-q">What are the effects of acid rain on aquatic ecosystems and buildings/infrastructure?</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p><strong>Effects on Aquatic Ecosystems:</strong></p>
+        <ul>
+          <li>pH below 6: fish reproduction impaired; below 5: most fish species die</li>
+          <li>Acid mobilizes aluminum (Al³⁺) from soil → leaches into lakes; toxic to aquatic life</li>
+          <li>Amphibians most sensitive: frog eggs fail to develop at pH &lt;5</li>
+          <li>Phytoplankton and zooplankton collapse → entire food chain disrupted</li>
+          <li>"Dead lakes" — no macroscopic life; crystal clear (deceiving)</li>
+        </ul>
+        <p><strong>Effects on Buildings/Infrastructure:</strong></p>
+        <ul>
+          <li>Limestone/marble dissolve: CaCO₃ + H₂SO₄ → CaSO₄ + H₂O + CO₂; gypsum crust forms, then washes away</li>
+          <li>Steel bridges and structures corrode faster</li>
+          <li>Ancient monuments damaged (Taj Mahal, Parthenon, Colosseum)</li>
+          <li>Paint and rubber deteriorate; electrical contacts corrode</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ═══════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — Chapter 5</div>
+    <div class="cheatsheet-grid">
+      <div class="cs-card">
+        <h3>⚗️ Formation (★★★)</h3>
+        <ul>
+          <li>SO₂ + H₂O + ½O₂ → H₂SO₄</li>
+          <li>NOₓ → HNO₃ in atmosphere</li>
+          <li>Normal rain pH = 5.6 (CO₂)</li>
+          <li>Acid rain pH &lt; 5.6</li>
+          <li>Severe: pH 3–4</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>🌧️ Wet vs Dry (★★★)</h3>
+        <ul>
+          <li>Wet = via rain/snow/fog; long range</li>
+          <li>Dry = gas/particle; local; no rain needed</li>
+          <li>Dry 50% of total deposition</li>
+          <li>Dry → washed off by next rain</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>💀 Effects (★★)</h3>
+        <ul>
+          <li>Fish die below pH 5</li>
+          <li>Al³⁺ leaches → toxic to aquatic life</li>
+          <li>Limestone dissolves: CaCO₃ + H₂SO₄</li>
+          <li>Forest: nutrient loss, root damage</li>
+          <li>Steel corrosion accelerated</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>🛡️ Control</h3>
+        <ul>
+          <li>Pre: low-S fuel, coal washing</li>
+          <li>During: FBC (coal + limestone)</li>
+          <li>Post: FGD scrubbers (SO₂+CaCO₃→gypsum)</li>
+          <li>SCR: remove NOₓ with NH₃+catalyst</li>
+          <li>Remediation: lake liming</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>🔢 pH Formula</h3>
+        <ul>
+          <li>pH = −log₁₀[H⁺]</li>
+          <li>pH 4 is 25× more acidic than pH 5.6</li>
+          <li>Each pH unit = 10× H⁺ change</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox">
+  <span id="lightbox-close">×</span>
+  <span id="lightbox-prev">‹</span>
+  <img id="lightbox-img" src="" alt="">
+  <div id="lightbox-caption"></div>
+  <span id="lightbox-next">›</span>
+</div>
+<script src="js/tabs.js"></script>
+</body>
+</html>

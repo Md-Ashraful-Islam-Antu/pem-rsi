@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 6: Water Pollution & ETP — IPE 403 PEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="back-btn">← All Chapters</a>
+  <h1>Chapter 6: Water Pollution &amp; ETP</h1>
+  <span class="chapter-badge">Ch 6</span>
+  <span class="syllabus-rule">★ Slides + lecture notes + book topics covered in slides</span>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="summary">📋 Summary</button>
+  <button class="tab-btn" data-tab="sources" data-stars="2">💧 Water Pollution</button>
+  <button class="tab-btn" data-tab="etp5" data-stars="2">🏭 ETP Basics</button>
+  <button class="tab-btn" data-tab="textile" data-stars="3">🧵 Textile ETP</button>
+  <button class="tab-btn" data-tab="battery" data-stars="2">🔋 Lead Battery ETP</button>
+  <button class="tab-btn" data-tab="bod" data-stars="3">🧪 BOD</button>
+  <button class="tab-btn" data-tab="cod" data-stars="2">⚗️ COD</button>
+  <button class="tab-btn" data-tab="math" data-stars="2">📐 Formulas</button>
+  <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
+  <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
+</div>
+
+<!-- ══ SUMMARY ══════════════════════════════════════════════ -->
+<section id="summary" class="tab-panel active">
+  <div class="section">
+    <div class="section-title">📋 Chapter Overview</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="card-title">Book Chapter</div><div class="card-value">6</div><div class="card-sub">Water Pollution</div></div><div class="card-sub">slides (Ch 06)</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">★7×</div><div class="card-sub">Textile ETP — most repeated</div></div>
+      <div class="summary-card"><div class="card-title">Has Math?</div><div class="card-value">Yes</div><div class="card-sub">BOD = DO_i − DO_f</div></div>
+    </div>
+    <p>Chapter 6 covers water pollution from agricultural chemicals, industrial effluents, and oil leakages, with particular focus on Bangladesh's river contamination (Buriganga, Sitalakshya, Turag). The <strong>major exam focus</strong> is the Effluent Treatment Plant (ETP) — especially for textile dyeing — which has appeared in PYQ 7 times. BOD and COD as water quality measures are also examinable.</p>
+    <div class="callout star"><strong>Exam Strategy:</strong> Textile ETP 8-step diagram is the highest-frequency question in the entire course. Know it cold — the 8 steps, the inputs/outputs at each stage, and why it's RED category.</div>
+    <h3>Main Sections</h3>
+    <ul>
+      <li><strong>6.1</strong> Introduction — sources of water pollution in Bangladesh</li>
+      <li><strong>6.2.1</strong> ETP Basics — what ETPs are and why they exist</li>
+      <li><strong>6.2.2</strong> Five Steps to Effective Effluent Management</li>
+      <li><strong>6.2.3</strong> ETP Examples: Textile Dyeing (★★★★★★★) and Lead Battery</li>
+      <li><strong>6.3</strong> Wastewater Quality — BOD and COD</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══ WATER POLLUTION SOURCES ══════════════════════════════ -->
+<section id="sources" class="tab-panel">
+  <div class="section">
+    <div class="section-title">💧 6.1 Introduction to Water Pollution</div>
+    <p>Water pollution is second only to air pollution in importance. It affects drinking water, agricultural water, and aquatic life. Sources include:</p>
+    <h3>Agricultural Sources</h3>
+    <ul>
+      <li><strong>Insecticides</strong> — chlorinated hydrocarbons or organophosphates; deadly to humans and aquatic life</li>
+      <li><strong>Excessive fertilizers</strong> — nitrates and phosphates leach into groundwater</li>
+    </ul>
+    <h3>Industrial Sources</h3>
+    <ul>
+      <li>Underground disposal of industrial waste</li>
+      <li>Untreated industrial effluents discharged to rivers</li>
+      <li>Oil and chemical leakage at sea</li>
+    </ul>
+    <h3>Situation in Bangladesh</h3>
+    <div class="callout warn"><strong>Critical context:</strong> Several hundred industries in Dhaka and Narayanganj discharge effluents <em>directly</em> into rivers without any treatment. Three critically affected rivers:</div>
+    <ul>
+      <li><strong>Buriganga</strong> — once famous for clean drinking water, now heavily polluted</li>
+      <li><strong>Sitalakshya</strong> — industrial discharge zone in Narayanganj</li>
+      <li><strong>Turag</strong> — textile and tannery belt</li>
+    </ul>
+    <p>These rivers once supplied safe drinking water, irrigation water, and supported fish cultivation (pisciculture).</p>
+  </div>
+</section>
+
+<!-- ══ ETP BASICS & 5 STEPS ══════════════════════════════════ -->
+<section id="etp5" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🏭 6.2 ETP: Basics &amp; Five Steps</div>
+    <h3>What is an ETP?</h3>
+    <p>An <strong>Effluent Treatment Plant (ETP)</strong> treats the water-based waste stream generated by an industry before it is discharged to soil or nearby water reservoirs. Industries are <em>legally required</em> to operate ETPs to comply with environmental regulations and to reduce pollution.</p>
+    <div class="flowchart">
+      <div class="flow-node start">Factory</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Production Process<br><small>(generates water-based waste)</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">Effluent<br><small>(undesired pollutant carried in water)</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">ETP<br><small>(treatment steps selected for that effluent)</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node end">Discharge to Soil / River</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">🔑 Five Steps to Effective Effluent Management</div>
+    <div class="callout info"><strong>Remember as: C-M-C-S-O</strong> (Characterize, Minimize, Condition, Segregate, Optimize)</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Step</th><th>What It Means</th></tr>
+        <tr><td><span class="num">1</span></td><td><strong>Characterize</strong></td><td>Characterize all effluents produced on-site — know exactly what you have (pH, composition, volume, toxic substances)</td></tr>
+        <tr><td><span class="num">2</span></td><td><strong>Minimize</strong></td><td>Implement a waste minimization program to reduce the volume and strength of effluents at the source</td></tr>
+        <tr><td><span class="num">3</span></td><td><strong>Condition in-process</strong></td><td>Incorporate in-process conditioning and treatment where appropriate (treat waste before it becomes a large stream)</td></tr>
+        <tr><td><span class="num">4</span></td><td><strong>Segregate</strong></td><td>Keep different waste streams separate instead of mixing them, so each can receive the treatment it specifically needs. <em>E.g., mixing a strong acid stream with an organic stream makes both harder to treat.</em></td></tr>
+        <tr><td><span class="num">5</span></td><td><strong>Optimize</strong></td><td>Continuously optimize the performance of the ETP — monitoring, adjustment, and improvement</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TEXTILE ETP ════════════════════════════════════════════ -->
+<section id="textile" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🧵 6.2.3 ETP for Textile Dyeing Industry <span style="color:var(--star)">★ 7× in PYQ</span></div>
+    <div class="callout star"><strong>This is the #1 most-repeated question in the entire course.</strong> A textile dyeing factory is classified as <strong>RED category</strong> — most hazardous, mandatory ETP, requires EIA + ECC before operation.</div>
+    <p>Textile dyeing wastewater is highly colored, alkaline (pH ~9), hot, and contains reactive dyes, sulfur compounds, surfactants, and heavy metals. It moves through <strong>8 concrete and steel tank stages</strong>:</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Stage</th><th>What Happens</th><th>Key Input / Agent</th><th>Output</th></tr>
+        <tr><td><span class="num">1</span></td><td><strong>Collection &amp; Screening</strong></td><td>Wastewater collected in a screening tank; hard materials, cloth pieces, and plastics removed by physical screens</td><td>Physical screens/bars</td><td>Solids removed; raw effluent retained</td></tr>
+        <tr><td><span class="num">2</span></td><td><strong>Cooling</strong></td><td>Effluent temperature reduced by spraying water over the hot wastewater stream</td><td>Spray water</td><td>Cooled alkaline water (~pH 9)</td></tr>
+        <tr><td><span class="num">3</span></td><td><strong>Homogenization</strong></td><td>Mixed and oxidized via circulating air in a mixture tank; equalizes flow and composition</td><td>Compressed air (aeration)</td><td>Uniform, oxidized effluent</td></tr>
+        <tr><td><span class="num">4</span></td><td><strong>Neutralization</strong></td><td>pH lowered from ~9 to ~7 by adding sulfuric acid (H₂SO₄). Essential for downstream biological treatment</td><td>Sulfuric acid (H₂SO₄)</td><td>Neutral water (pH ≈ 7)</td></tr>
+        <tr><td><span class="num">5</span></td><td><strong>Biological Oxidation</strong></td><td>BOD tank: bacteria and protozoa break down organic matter using dissolved oxygen; microbial population controlled</td><td>Bacteria &amp; protozoa (activated sludge)</td><td>Reduced BOD water + biological sludge</td></tr>
+        <tr><td><span class="num">6</span></td><td><strong>Clarification</strong></td><td>Biological sludge separated from treated water in a clarifier/sedimentation tank; sludge settles to the bottom</td><td>Gravity settling (clarifier)</td><td>Clear water on top; sludge collected</td></tr>
+        <tr><td><span class="num">7</span></td><td><strong>Sludge Thickening</strong></td><td>Clean water discharged to river or reused; residue sludge thickened for further processing</td><td>Thickener tank</td><td>Clear water discharged; concentrated sludge retained</td></tr>
+        <tr><td><span class="num">8</span></td><td><strong>Sludge Management</strong></td><td>Sludge dried and pressed into a cake (using filter press) for final disposal or use as soil conditioner</td><td>Filter press</td><td>Sludge cake (safe for disposal/reuse)</td></tr>
+      </table>
+    </div>
+    <h3>Flowchart Representation</h3>
+    <div class="flowchart">
+      <div class="flow-node start">Raw Effluent (pH≈9, hot, colored)</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">① Screening Tank<br><small>Removes solids, cloth, plastic</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">② Cooling Tank<br><small>Spray water → temperature reduced</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">③ Homogenization / Mixture Tank<br><small>Air circulated → uniform, oxidized</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">④ Neutralization Tank<br><small>+ H₂SO₄ → pH 7</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">⑤ Biological Oxidation (BOD) Tank<br><small>Bacteria &amp; protozoa break down organic matter</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">⑥ Clarifier Tank<br><small>Gravity settling → water + sludge separated</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-row">
+        <div class="flow-node step" style="text-align:center">Clear Water<br><small>→ Discharged to river</small></div>
+        <div class="flow-node step" style="text-align:center">Sludge<br><small>→ Thickener</small></div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">⑦ Sludge Thickener Tank</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node end">⑧ Filter Press → Sludge Cake (disposal)</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">📊 Key Diagram — Textile ETP Process Flow</div>
+    <div class="diagram-wrap">
+      <img src="images/ch06/slide_07.png" alt="Textile ETP 8-step process flow diagram" class="diagram-img" loading="lazy">
+      <p class="diagram-label">8-step Textile ETP: Screening → Equalization → Coagulation → Sedimentation → Biological Oxidation → Sand Filter → Sludge Thickener → Filter Press</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LEAD BATTERY ETP ══════════════════════════════════════ -->
+<section id="battery" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🔋 6.2.3 ETP for Lead Battery Manufacturing Plant</div>
+    <div class="callout warn"><strong>Also RED category.</strong> Main pollutants: acid (H₂SO₄), solid sludge (lead compounds), and oil/lubricants.</div>
+    <p>Lead battery wastewater is acidic and contains dissolved lead, suspended solids, and oil. The ETP uses <strong>4 stages</strong>:</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>#</th><th>Stage</th><th>What Happens</th><th>Key Agent</th></tr>
+        <tr><td><span class="num">1</span></td><td><strong>Neutralization</strong></td><td>Lime (Ca(OH)₂) added to neutralize the strong acidity of the wastewater. pH raised to 8–10 to precipitate lead</td><td>Lime Ca(OH)₂</td></tr>
+        <tr><td><span class="num">2</span></td><td><strong>Sludge &amp; SS Separation</strong></td><td>Sedimentation, filters, and sand beds separate solid lead compounds (Pb(OH)₂); pressed into a solid cake for disposal</td><td>Sedimentation + filter press</td></tr>
+        <tr><td><span class="num">3</span></td><td><strong>Oil Removal</strong></td><td>Oil skimmers extract oil floating on the water surface</td><td>Oil skimmers</td></tr>
+        <tr><td><span class="num">4</span></td><td><strong>Safe Discharge</strong></td><td>Water tested for BOD/COD; if within limits, released to open field or canals</td><td>BOD/COD test</td></tr>
+      </table>
+    </div>
+    <div class="flowchart">
+      <div class="flow-node start">Acidic Wastewater (H₂SO₄ + Pb + Oil)</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">① Neutralization: + Lime → pH 8–10<br><small>Pb²⁺ + 2OH⁻ → Pb(OH)₂↓ (precipitate)</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">② SS Separation: Sedimentation + Filter Press<br><small>Lead sludge cake → safe disposal / recycling</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">③ Oil Removal: Oil Skimmers<br><small>Floating oil removed from surface</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">④ BOD/COD Testing</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node end">Safe Discharge to Open Field / Canal</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BOD ════════════════════════════════════════════════════ -->
+<section id="bod" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🧪 6.3.1 BOD — Biochemical Oxygen Demand</div>
+    <p><strong>BOD</strong> measures the amount of oxygen that bacteria consume while breaking down <em>biodegradable</em> organic matter in water. It tells us how much oxygen the water will "use up" as it's polluted.</p>
+    <h3>The Oxidation Chain</h3>
+    <div class="callout info">Oxidizable material + bacteria + nutrients + O₂ → CO₂ + H₂O + oxidized inorganics (NO₃ or SO₄)</div>
+    <h3>How BOD Harms Aquatic Life (Step by Step)</h3>
+    <div class="flowchart">
+      <div class="flow-node step">① Organic waste enters water<br><small>Sewage or industrial discharge</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">② Bacteria oxidize the organic matter<br><small>Bacteria consume dissolved oxygen (DO)</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">③ DO level drops<br><small>Less oxygen available in dissolved form</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node step">④ Life below normal rate<br><small>When DO drops too low, life forms can't function normally</small></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-node end">⑤ Fish kills &amp; weed growth<br>Dramatic, damaging ecological collapse</div>
+    </div>
+    <h3>BOD Test Procedure</h3>
+    <ol>
+      <li><strong>Collect the sample</strong> — representative wastewater sample</li>
+      <li><strong>Measure initial DO</strong> — record dissolved oxygen at time zero</li>
+      <li><strong>Add microorganism seed</strong> — small amount of activated sludge diluted with de-ionised water</li>
+      <li><strong>Incubate at 20°C</strong> — in the dark (to prevent photosynthesis altering DO), typically 5 days</li>
+      <li><strong>Measure final DO</strong> — after 5 days (hence BOD₅)</li>
+    </ol>
+    <div class="formula">BOD  =  Initial DO  −  Final DO    (mg/L)</div>
+    <h3>BOD Values by Source</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Source</th><th>BOD (mg/L)</th></tr>
+        <tr><td>Pristine river</td><td>&lt; 1</td></tr>
+        <tr><td>Moderately polluted river</td><td>2 – 8</td></tr>
+        <tr><td>Efficiently treated sewage (3-day)</td><td>≈ 20</td></tr>
+        <tr><td>Untreated sewage (USA)</td><td>≈ 200</td></tr>
+        <tr><td>Untreated sewage (Europe)</td><td>≈ 600</td></tr>
+        <tr><td>Dairy farm slurry</td><td>≈ 8,000</td></tr>
+        <tr><td>Silage liquor</td><td>≈ 60,000</td></tr>
+      </table>
+    </div>
+    <p><strong>Dissolved Oxygen (DO)</strong> is the actual amount of oxygen available in water in dissolved form — it is what bacteria consume as they oxidize organic waste.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">📊 Key Diagram — BOD Test &amp; DO Curve</div>
+    <div class="diagram-wrap">
+      <img src="images/ch06/slide_12.png" alt="BOD test procedure and dissolved oxygen curve" class="diagram-img" loading="lazy">
+      <p class="diagram-label">BOD₅ test: initial vs final DO measurement; DO sag curve showing oxygen depletion</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">📊 Key Diagram — BOD Reference Values</div>
+    <div class="diagram-wrap">
+      <img src="images/ch06/slide_13.png" alt="BOD reference values for different water types" class="diagram-img" loading="lazy">
+      <p class="diagram-label">Comparative BOD₅ values: pristine river (&lt;1) through silage liquor (60,000)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COD ════════════════════════════════════════════════════ -->
+<section id="cod" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚗️ 6.3.2 COD — Chemical Oxygen Demand</div>
+    <p><strong>COD</strong> measures the amount of oxygen required to chemically oxidize <em>all</em> oxidizable material in water — including both biodegradable and non-biodegradable organic compounds, plus inorganic compounds (e.g., iron, ammonia).</p>
+    <div class="callout warn"><strong>Key difference:</strong> COD is broader and always ≥ BOD. BOD only counts what bacteria can break down biologically; COD counts everything that can be chemically oxidized.</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Property</th><th>BOD</th><th>COD</th></tr>
+        <tr><td>Full name</td><td>Biochemical Oxygen Demand</td><td>Chemical Oxygen Demand</td></tr>
+        <tr><td>What it measures</td><td>Oxygen used by bacteria breaking down biodegradable organics</td><td>Oxygen needed to chemically oxidize all oxidizable substances (organic + inorganic)</td></tr>
+        <tr><td>Method</td><td>Biological (5 days at 20°C)</td><td>Chemical (dichromate oxidation, 2–3 hours)</td></tr>
+        <tr><td>Time required</td><td>5 days (BOD₅)</td><td>2–3 hours</td></tr>
+        <tr><td>Relative value</td><td>Smaller</td><td>Larger (COD ≥ BOD always)</td></tr>
+        <tr><td>Specificity</td><td>More specific (biodegradable only)</td><td>Less specific (broader)</td></tr>
+      </table>
+    </div>
+    <p>High-BOD loads typically come from: food-processing plants, dairy plants, canneries, distilleries, and textile industries.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">📊 Key Diagram — BOD vs COD Comparison</div>
+    <div class="diagram-wrap">
+      <img src="images/ch06/slide_18.png" alt="BOD vs COD comparison diagram" class="diagram-img" loading="lazy">
+      <p class="diagram-label">BOD vs COD: measurement method, time, scope — COD always ≥ BOD</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MATH / FORMULAS ═══════════════════════════════════════ -->
+<section id="math" class="tab-panel">
+  <div class="section">
+    <div class="section-title">📐 Key Formulas — Chapter 6</div>
+    <h3>BOD Calculation</h3>
+    <div class="formula">BOD (mg/L)  =  Initial DO  −  Final DO</div>
+    <p>Where DO is measured in mg/L (milligrams per litre). Both measurements at 20°C, in the dark, after 5 days → called <strong>BOD₅ at 20°C</strong>.</p>
+    <h4>Example:</h4>
+    <div class="formula">Initial DO = 8.0 mg/L
+Final DO  = 2.5 mg/L (after 5 days)
+BOD₅     = 8.0 − 2.5 = 5.5 mg/L</div>
+    <p>This would indicate a moderately polluted river (2–8 mg/L range).</p>
+    <h3>Oxidation Reaction (Common to BOD &amp; COD)</h3>
+    <div class="formula">Oxidizable material + bacteria + nutrients + O₂
+  → CO₂ + H₂O + oxidized inorganics (NO₃⁻ or SO₄²⁻)</div>
+    <div class="callout info"><strong>Note:</strong> NO₃⁻ is toxic nitrate; SO₄²⁻ is sulphate. Both are products of microbial oxidation.</div>
+    <h3>Key Relationships</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Concept</th><th>Formula / Rule</th></tr>
+        <tr><td>COD vs BOD</td><td>COD ≥ BOD (always, because COD measures more substances)</td></tr>
+        <tr><td>BOD₅</td><td>BOD measured after 5 days at 20°C (standard test)</td></tr>
+        <tr><td>DO critical level</td><td>At pH 5 or DO &lt; 4 mg/L → most fish eggs fail to hatch</td></tr>
+        <tr><td>Textile ETP pH correction</td><td>Alkaline water (pH≈9) → add H₂SO₄ → neutral (pH≈7)</td></tr>
+        <tr><td>Lead battery precipitation</td><td>Pb²⁺ + 2OH⁻ → Pb(OH)₂↓ (at high pH with lime)</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ PYQ ANALYSIS ══════════════════════════════════════════ -->
+<section id="pyq" class="tab-panel">
+  <div class="section">
+    <div class="section-title">❓ PYQ Analysis — Chapter 6</div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★★★★★★ 7×</span>
+        <div class="pyq-q">Draw and explain the effluent treatment process for a textile dyeing industry.</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p>A textile dyeing factory is classified as a <strong>RED category</strong> industry. Its wastewater is highly alkaline (pH ≈ 9), hot, heavily colored, and contains reactive dyes, surfactants, and heavy metals. The ETP treats this effluent in <strong>8 stages</strong>:</p>
+        <ol>
+          <li><strong>Collection &amp; Screening:</strong> Wastewater enters a screening tank; physical screens remove hard materials, cloth pieces, and plastics.</li>
+          <li><strong>Cooling:</strong> Spray water reduces the temperature of the hot effluent to manageable levels.</li>
+          <li><strong>Homogenization:</strong> Compressed air circulates in a mixture tank, mixing and oxidizing the effluent, equalizing flow and composition.</li>
+          <li><strong>Neutralization:</strong> Sulfuric acid (H₂SO₄) is added to lower pH from ~9 to ~7, making it suitable for biological treatment.</li>
+          <li><strong>Biological Oxidation (BOD tank):</strong> Bacteria and protozoa break down organic matter, reducing BOD using dissolved oxygen.</li>
+          <li><strong>Clarification:</strong> Gravity settling in a clarifier tank separates sludge (bottom) from treated water (top).</li>
+          <li><strong>Sludge Thickening:</strong> Clear water is discharged; residue sludge is concentrated in a thickener tank.</li>
+          <li><strong>Sludge Management:</strong> Sludge is dried and pressed into a cake using a filter press for final disposal or reuse.</li>
+        </ol>
+        <p>This process ensures that the final effluent meets environmental standards before discharge to rivers or soil.</p>
+      </div>
+    </div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★★ 3×</span>
+        <div class="pyq-q">What are the five steps to effective effluent management?</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p>The five steps to effective effluent management are:</p>
+        <ol>
+          <li><strong>Characterize:</strong> Analyze all effluents — know their volume, composition, pH, toxic substances, and variability.</li>
+          <li><strong>Minimize:</strong> Reduce the volume and strength of effluents at the source through process improvements and water recycling.</li>
+          <li><strong>Condition in-process:</strong> Apply treatment within the production process itself where feasible, before the waste stream grows large.</li>
+          <li><strong>Segregate:</strong> Keep incompatible waste streams separate (e.g., acid from organic waste) so each can receive its optimal treatment. Mixing them makes treatment harder and more expensive.</li>
+          <li><strong>Optimize:</strong> Continuously monitor and optimize ETP performance for maximum efficiency and regulatory compliance.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★ 2×</span>
+        <div class="pyq-q">What is BOD? How is it measured? What does a high BOD indicate?</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p><strong>Biochemical Oxygen Demand (BOD)</strong> is the amount of dissolved oxygen consumed by bacteria when breaking down biodegradable organic matter in water at a standard temperature of 20°C over 5 days (BOD₅).</p>
+        <p><strong>Measurement procedure:</strong></p>
+        <ol>
+          <li>Collect a representative sample of wastewater</li>
+          <li>Measure initial dissolved oxygen (DO_i)</li>
+          <li>Add a microorganism seed (diluted activated sludge)</li>
+          <li>Incubate at 20°C in the dark for 5 days</li>
+          <li>Measure final DO (DO_f)</li>
+          <li>BOD = DO_i − DO_f (mg/L)</li>
+        </ol>
+        <p><strong>High BOD:</strong> Indicates high organic pollution. When bacteria consume excess oxygen, the DO level drops below the threshold needed by fish and aquatic organisms, causing fish kills, weed growth, and ecological collapse. Normal river: &lt;8 mg/L; untreated sewage: 200–600 mg/L.</p>
+      </div>
+    </div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★★ 2×</span>
+        <div class="pyq-q">What is COD? How does it differ from BOD?</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p><strong>Chemical Oxygen Demand (COD)</strong> is the amount of oxygen needed to chemically oxidize ALL oxidizable substances in water — both biodegradable and non-biodegradable organics, plus oxidizable inorganic compounds.</p>
+        <p><strong>Key differences:</strong></p>
+        <ul>
+          <li>BOD = biological test (5 days); COD = chemical test (2–3 hours using dichromate)</li>
+          <li>BOD measures only what bacteria can degrade; COD measures everything oxidizable</li>
+          <li>COD ≥ BOD always, because COD covers a wider range of substances</li>
+          <li>COD is faster but less specific; BOD is slower but more ecologically meaningful</li>
+        </ul>
+        <p>Both tests help determine whether industrial wastewater is safe to discharge.</p>
+      </div>
+    </div>
+
+    <div class="pyq-card">
+      <div class="pyq-card-header">
+        <span class="pyq-freq">★ 1×</span>
+        <div class="pyq-q">Explain the ETP process for a lead battery manufacturing plant.</div>
+      </div>
+      <div class="pyq-answer">
+        <h4>✅ Model Answer</h4>
+        <p>A lead battery plant's wastewater contains sulfuric acid (H₂SO₄), dissolved lead compounds, solid sludge, and oil. The 4-stage ETP:</p>
+        <ol>
+          <li><strong>Neutralization:</strong> Lime (Ca(OH)₂) or NaOH added to raise pH to 8–10, neutralizing the acid and precipitating lead as Pb(OH)₂.</li>
+          <li><strong>SS Separation:</strong> Sedimentation, filters, and sand beds separate precipitated lead solids; a filter press creates a solid sludge cake for safe disposal or lead recycling.</li>
+          <li><strong>Oil Removal:</strong> Oil skimmers extract floating oil from the water surface.</li>
+          <li><strong>Safe Discharge:</strong> Treated water is tested for BOD/COD compliance, then released to open fields or canals.</li>
+        </ol>
+        <p>Like textile dyeing, this is a RED category process requiring full EIA approval and ECC before operation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHEAT SHEET ═══════════════════════════════════════════ -->
+<section id="cheatsheet" class="tab-panel">
+  <div class="section">
+    <div class="section-title">⚡ Cheat Sheet — Chapter 6</div>
+    <div class="cheatsheet-grid">
+      <div class="cs-card">
+        <h3>🔑 Textile ETP (★★★★★★★)</h3>
+        <ul>
+          <li><span class="key">RED</span> category industry</li>
+          <li>① Screening (remove solids)</li>
+          <li>② Cooling (spray water)</li>
+          <li>③ Homogenization (air circulation)</li>
+          <li>④ Neutralization (H₂SO₄, pH 9→7)</li>
+          <li>⑤ Biological oxidation (BOD tank, bacteria)</li>
+          <li>⑥ Clarification (sludge settling)</li>
+          <li>⑦ Sludge thickening</li>
+          <li>⑧ Sludge management (filter press → cake)</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>🔋 Lead Battery ETP</h3>
+        <ul>
+          <li><span class="key">RED</span> category industry</li>
+          <li>Main pollutants: H₂SO₄, Pb, oil</li>
+          <li>① Neutralization (lime, pH→8–10)</li>
+          <li>② SS Separation (filter press → Pb cake)</li>
+          <li>③ Oil removal (skimmers)</li>
+          <li>④ BOD/COD test → safe discharge</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>📐 BOD Formula</h3>
+        <ul>
+          <li><span class="key">BOD = DO_initial − DO_final</span></li>
+          <li>Standard: BOD₅ at 20°C, in dark, 5 days</li>
+          <li>Add microorganism seed before incubating</li>
+          <li>Normal river: &lt;8 mg/L</li>
+          <li>Untreated sewage: 200–600 mg/L</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>⚗️ BOD vs COD</h3>
+        <ul>
+          <li>BOD = biodegradable organics only</li>
+          <li>COD = all oxidizable (organic + inorganic)</li>
+          <li><span class="key">COD ≥ BOD</span> always</li>
+          <li>BOD: 5 days; COD: 2–3 hours</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>🏭 5 Steps ETP Management</h3>
+        <ul>
+          <li>① <span class="key">C</span>haracterize</li>
+          <li>② <span class="key">M</span>inimize</li>
+          <li>③ <span class="key">C</span>ondition in-process</li>
+          <li>④ <span class="key">S</span>egregate (keep streams apart)</li>
+          <li>⑤ <span class="key">O</span>ptimize</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <h3>💧 Bangladesh Pollution Context</h3>
+        <ul>
+          <li>Rivers: Buriganga, Sitalakshya, Turag</li>
+          <li>Textile + tannery = main polluters</li>
+          <li>Effluents discharged without treatment</li>
+          <li>ETP mandatory under ECR 1997</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="lightbox-close">×</span>
+  <span id="lightbox-prev">‹</span>
+  <img id="lightbox-img" src="" alt="">
+  <div id="lightbox-caption"></div>
+  <span id="lightbox-next">›</span>
+</div>
+<script src="js/tabs.js"></script>
+</body>
+</html>
