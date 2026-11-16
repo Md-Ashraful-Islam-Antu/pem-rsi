@@ -4,10 +4,13 @@
 
 // ── Tab System ──────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  // ── Star badges ───────────────────────────────────────────────
+
+  // ── Chapter key from filename (e.g. "aa01", "ch03") ──────
+  const chapterKey = location.pathname.replace(/.*\//, '').replace(/\.html$/, '');
+
+  // ── Star badges ───────────────────────────────────────────
   document.querySelectorAll('.tab-btn[data-stars]').forEach(btn => {
     const n = parseInt(btn.getAttribute('data-stars'));
-    // Wrap existing text in a label span
     btn.innerHTML = '<span class="tab-label">' + btn.innerHTML + '</span>';
     const stars = document.createElement('span');
     stars.className = 'tab-stars';
@@ -20,29 +23,88 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.appendChild(stars);
   });
 
-  // ── Progress tracking ─────────────────────────────────────────
+  // ── Progress tracking ─────────────────────────────────────
   const SKIP = new Set(['summary', 'pyq', 'cheatsheet']);
   const topicBtns = Array.from(document.querySelectorAll('.tab-btn[data-stars]'));
-  const storageKey = 'visited_' + location.pathname;
 
+  // Register this chapter's total topic count so index.html can read it
+  try { localStorage.setItem('pem_total_' + chapterKey, String(topicBtns.length)); } catch(e) {}
+
+  // ── Visited state (localStorage, persists across sessions) ──
+  const visitKey = 'pem_visited_' + chapterKey;
   function getVisited() {
-    try { return new Set(JSON.parse(sessionStorage.getItem(storageKey) || '[]')); } catch(e) { return new Set(); }
+    try { return new Set(JSON.parse(localStorage.getItem(visitKey) || '[]')); } catch(e) { return new Set(); }
   }
   function saveVisited(set) {
-    try { sessionStorage.setItem(storageKey, JSON.stringify([...set])); } catch(e) {}
+    try { localStorage.setItem(visitKey, JSON.stringify([...set])); } catch(e) {}
   }
-  function updateProgress() {
+
+  // ── Done state (explicit "Mark Complete", cross-page) ─────
+  function doneStorKey(tabId) { return 'pem_done_' + chapterKey + '_' + tabId; }
+  function isDone(tabId) { return localStorage.getItem(doneStorKey(tabId)) === '1'; }
+  function setDone(tabId, val) {
+    try {
+      if (val) localStorage.setItem(doneStorKey(tabId), '1');
+      else localStorage.removeItem(doneStorKey(tabId));
+    } catch(e) {}
+  }
+
+  // ── Inject "Mark Complete" toggle into each topic panel ───
+  topicBtns.forEach(btn => {
+    const tabId = btn.dataset.tab;
+    const panel = document.getElementById(tabId);
+    if (!panel) return;
+    const bar = document.createElement('div');
+    bar.className = 'done-bar';
+    bar.innerHTML = '<button class="done-btn" type="button" data-tid="' + tabId + '">'
+      + '<span class="done-icon">○</span> Mark as Complete'
+      + '</button>';
+    panel.insertBefore(bar, panel.firstChild);
+    bar.querySelector('.done-btn').addEventListener('click', function(e) {
+      e.stopPropagation();
+      const id = this.dataset.tid;
+      setDone(id, !isDone(id));
+      refreshUI();
+    });
+  });
+
+  // ── Refresh all tab-btn visuals and done-btn text ─────────
+  function refreshUI() {
     const visited = getVisited();
+    topicBtns.forEach(btn => {
+      const id = btn.dataset.tab;
+      const done = isDone(id);
+      const vis = visited.has(id);
+      // .done class takes visual priority over .visited
+      btn.classList.toggle('visited', vis && !done);
+      btn.classList.toggle('done', done);
+
+      const doneBtn = document.querySelector('.done-btn[data-tid="' + id + '"]');
+      if (doneBtn) {
+        doneBtn.classList.toggle('done', done);
+        // innerHTML replaces children only — the click listener on doneBtn itself is preserved
+        doneBtn.innerHTML = done
+          ? '<span class="done-icon">✓</span> Completed!'
+          : '<span class="done-icon">○</span> Mark as Complete';
+      }
+    });
+    updateProgress();
+  }
+
+  function updateProgress() {
     const fill  = document.getElementById('progressFill');
     const label = document.getElementById('progressLabel');
     const total = topicBtns.length;
-    const done  = topicBtns.filter(b => visited.has(b.dataset.tab)).length;
-    topicBtns.forEach(b => b.classList.toggle('visited', visited.has(b.dataset.tab)));
-    if (fill)  fill.style.width = total ? (done / total * 100) + '%' : '0%';
-    if (label) label.textContent = done + ' / ' + total + ' topics read';
+    const doneCount = topicBtns.filter(b => isDone(b.dataset.tab)).length;
+    const vis = getVisited();
+    const visCount = topicBtns.filter(b => vis.has(b.dataset.tab)).length;
+    // Progress bar shows the larger of (done, visited) so it never goes backwards
+    const progPct = total ? Math.round(Math.max(doneCount, visCount) / total * 100) : 0;
+    if (fill)  fill.style.width = progPct + '%';
+    if (label) label.textContent = doneCount + ' / ' + total + ' done';
   }
 
-  // ── Tab switching ─────────────────────────────────────────────
+  // ── Tab switching ─────────────────────────────────────────
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -54,25 +116,25 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
       const panel = document.getElementById(target);
       if (panel) panel.classList.add('active');
-      // persist selection
-      try { sessionStorage.setItem('activeTab-' + location.pathname, target); } catch(e) {}
-      // mark visited
+      // Persist active tab per chapter (localStorage so it restores across sessions)
+      try { localStorage.setItem('pem_tab_' + chapterKey, target); } catch(e) {}
+      // Mark visited
       if (!SKIP.has(target)) {
         const v = getVisited();
         v.add(target);
         saveVisited(v);
-        updateProgress();
+        refreshUI();
       }
     });
   });
 
-  updateProgress();
+  refreshUI();
 
-  // Restore last tab
+  // Restore last active tab for this chapter
   try {
-    const saved = sessionStorage.getItem('activeTab-' + location.pathname);
+    const saved = localStorage.getItem('pem_tab_' + chapterKey);
     if (saved) {
-      const btn = document.querySelector(`.tab-btn[data-tab="${saved}"]`);
+      const btn = document.querySelector('.tab-btn[data-tab="' + saved + '"]');
       if (btn) btn.click();
     }
   } catch(e) {}

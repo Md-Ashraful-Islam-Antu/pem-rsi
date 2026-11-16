@@ -738,3 +738,54 @@ code {
   .tab-bar, .site-header .back-btn, #lightbox { display: none !important; }
   .tab-panel { display: block !important; }
 }
+
+/* ── Mark Complete Button (injected by tabs.js) ── */
+.done-bar {
+  padding: 10px 0 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.done-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+  padding: 5px 16px 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-family: inherit;
+  transition: border-color .2s, color .2s, background .2s;
+  line-height: 1.4;
+}
+.done-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.done-btn.done {
+  background: rgba(63, 185, 80, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+.done-icon {
+  font-size: 0.95em;
+  line-height: 1;
+}
+/* Tab button: "done" state checkmark (brighter than visited) */
+.tab-btn.done .tab-label::after {
+  content: ' ✓';
+  color: var(--accent);
+  font-size: .75em;
+  font-weight: 700;
+  opacity: 1;
+}
+/* Tab button: "visited" state checkmark (dimmer) */
+.tab-btn.visited .tab-label::after {
+  content: ' ✓';
+  color: var(--accent);
+  font-size: .75em;
+  opacity: .5;
+}
