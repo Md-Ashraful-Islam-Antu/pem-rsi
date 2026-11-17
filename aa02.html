@@ -3,30 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AA Ch 2: Project Organization — IPE 403 PEM</title>
+<title>AA Ch 2: Project Organisation — IPE 403 PEM</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="site-header">
   <a href="index.html" class="back-btn">← All Chapters</a>
-  <h1>AA Ch 2: Project Organization</h1>
+  <h1>AA Ch 2: Project Organisation</h1>
   <span class="chapter-badge">AA-02</span>
   <span class="syllabus-rule">★ Azeem Sir — Project Management Part</span>
 </header>
 
 <div class="tab-bar">
   <button class="tab-btn active" data-tab="summary">📋 Summary</button>
-  <button class="tab-btn" data-tab="functional" data-stars="3">🏛️ Functional Org</button>
-  <button class="tab-btn" data-tab="dedicated" data-stars="3">🚀 Dedicated/Pure Proj</button>
-  <button class="tab-btn" data-tab="matrix" data-stars="4">⚙️ Matrix Org</button>
-  <button class="tab-btn" data-tab="comparison" data-stars="3">⚖️ Comparison</button>
+  <button class="tab-btn" data-tab="org-basics" data-stars="2">🏢 Organisation Basics</button>
+  <button class="tab-btn" data-tab="functional" data-stars="3">⚙️ Functional Structure</button>
+  <button class="tab-btn" data-tab="dedicated" data-stars="3">🏗️ Dedicated Structure</button>
+  <button class="tab-btn" data-tab="matrix" data-stars="3">🔀 Matrix Structure</button>
+  <button class="tab-btn" data-tab="comparison" data-stars="3">📊 Comparison &amp; Choice</button>
   <button class="tab-btn" data-tab="pyq">❓ PYQ Analysis</button>
   <button class="tab-btn" data-tab="cheatsheet">⚡ Cheat Sheet</button>
 </div>
 
 <div class="reading-progress">
   <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-  <span class="progress-label" id="progressLabel">0 / 4 topics read</span>
+  <span class="progress-label" id="progressLabel">0 / 5 topics read</span>
 </div>
 
 <!-- ══ SUMMARY ══════════════════════════════════════════════ -->
@@ -34,211 +35,587 @@
   <div class="section">
     <div class="section-title">📋 Chapter Overview</div>
     <div class="summary-grid">
-      <div class="summary-card"><div class="card-title">Exam Weight</div><div class="card-value">★★★☆</div><div class="card-sub">Appears regularly</div></div>
-      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">Matrix Org</div><div class="card-sub">★4× — advantages/disadvantages</div></div>
-      <div class="summary-card"><div class="card-title">Key Types</div><div class="card-value">3</div><div class="card-sub">Functional, Dedicated, Matrix</div></div>
+      <div class="summary-card"><div class="card-title">Exam Weight</div><div class="card-value">★★★☆</div><div class="card-sub">High frequency</div></div>
+      <div class="summary-card"><div class="card-title">Structures</div><div class="card-value">5 types</div><div class="card-sub">Functional, Weak, Balanced, Heavy, Dedicated</div></div>
+      <div class="summary-card"><div class="card-title">Top PYQ</div><div class="card-value">PM vs FM</div><div class="card-sub">Authority spectrum asked every year</div></div>
     </div>
-    <p>Chapter 2 covers the three main ways organizations can be structured for project management. The key debate is between keeping projects inside functional departments vs. creating dedicated project teams vs. using a matrix arrangement that blends both.</p>
-    <div class="callout star"><strong>Exam focus:</strong> Matrix organization is the most asked topic. Know advantages, disadvantages, and the three sub-types (weak/balanced/strong). The comparison table between all three structures is essential.</div>
+    <p>Chapter 2 covers how organisations are structured for project work. It explains the Line, Line &amp; Staff, Functional, Matrix (Weak/Balanced/Heavy) and Dedicated structures, the authority spectrum between PM and Functional Manager (FM), how to choose the right structure, and the Project Team Formation (Technical + Logistics roles).</p>
+    <div class="callout star"><strong>Exam focus:</strong> PM vs FM authority for each structure — with Bangladesh examples. Asked TF 23-24, 21-22, 20-21, 18-19, 17-18, 16-17, 14-15, 11-12, 10-11. Know the 4 management functions (P,O,L,C) and who does what in each structure.</div>
+    <h3>Chapter Roadmap</h3>
+    <svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:12px auto;">
+      <defs><marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#f0883e"/></marker></defs>
+      <rect x="5" y="30" width="120" height="40" rx="8" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="65" y="46" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">Organisation</text>
+      <text x="65" y="60" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">Basics</text>
+      <line x1="125" y1="50" x2="138" y2="50" stroke="#f0883e" stroke-width="1.5" marker-end="url(#arr1)"/>
+      <rect x="140" y="30" width="120" height="40" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="200" y="46" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">3 Project</text>
+      <text x="200" y="60" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Structures</text>
+      <line x1="260" y1="50" x2="273" y2="50" stroke="#f0883e" stroke-width="1.5" marker-end="url(#arr1)"/>
+      <rect x="275" y="30" width="120" height="40" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="335" y="46" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">PM vs FM</text>
+      <text x="335" y="60" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Authority</text>
+      <line x1="395" y1="50" x2="408" y2="50" stroke="#f0883e" stroke-width="1.5" marker-end="url(#arr1)"/>
+      <rect x="410" y="30" width="120" height="40" rx="8" fill="#161b22" stroke="#bc8cff" stroke-width="1.5"/>
+      <text x="470" y="46" text-anchor="middle" fill="#bc8cff" font-size="10" font-weight="bold">Choose</text>
+      <text x="470" y="60" text-anchor="middle" fill="#bc8cff" font-size="10" font-weight="bold">Structure</text>
+      <line x1="530" y1="50" x2="543" y2="50" stroke="#f0883e" stroke-width="1.5" marker-end="url(#arr1)"/>
+      <rect x="545" y="30" width="120" height="40" rx="8" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="605" y="46" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">Team</text>
+      <text x="605" y="60" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">Formation</text>
+    </svg>
   </div>
 </section>
 
-<!-- ══ FUNCTIONAL ══════════════════════════════════════════════ -->
+<!-- ══ ORGANISATION BASICS ══════════════════════════════════════ -->
+<section id="org-basics" class="tab-panel">
+  <div class="section">
+    <div class="section-title">🏢 Organisation Basics <span style="color:var(--star)">★★☆☆</span></div>
+
+    <h3>Definition of an Organisation</h3>
+    <div class="callout info">
+      An organisation is an institution with three key elements:<br>
+      1. <strong>People</strong> — it must have people to function<br>
+      2. <strong>Specific Job Responsibilities</strong> — each person has defined roles/duties<br>
+      3. <strong>Chain of Command/Supervision</strong> — there is a hierarchy of authority
+    </div>
+
+    <h3>Chain of Command vs Span of Control</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Concept</th><th>Direction</th><th>Meaning</th><th>Best Example</th></tr>
+        <tr>
+          <td><strong>Chain of Command</strong></td>
+          <td>Vertical ↕</td>
+          <td>Hierarchy of authority — who reports to whom from top to bottom</td>
+          <td><strong>Army</strong> — best example of chain of command; strict hierarchy, clear reporting</td>
+        </tr>
+        <tr>
+          <td><strong>Span of Control</strong></td>
+          <td>Lateral ↔</td>
+          <td>How many subordinates one manager can effectively supervise at the same level</td>
+          <td>Varies by industry; skill-based</td>
+        </tr>
+      </table>
+    </div>
+    <div class="callout info">
+      <strong>Wider Span of Control =</strong> fewer levels of hierarchy = less cost, but can damage work quality.<br>
+      An officer's capability determines how many people they can effectively supervise. A highly skilled manager can handle a wider span.
+    </div>
+
+    <h3>Basic Organisation Structures: Line vs Line &amp; Staff</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Structure</th><th>Definition</th><th>Bangladesh Example</th></tr>
+        <tr>
+          <td><strong>Line Structure</strong></td>
+          <td>Normal basic chain of command. CEO → Managers → Frontline officers → Operators. All positions are within the main chain of command. Simple and hierarchical.</td>
+          <td>Gazipur RMG (Ready Made Garments) factory — straightforward production hierarchy: CEO → Production Manager → Supervisor → Workers</td>
+        </tr>
+        <tr>
+          <td><strong>Line &amp; Staff Structure</strong></td>
+          <td>Special "staff" positions added OUTSIDE the main chain of command. These positions report directly to the CEO/top management but are not in the main line of authority. They advise, audit, or support.</td>
+          <td>Square Pharmaceuticals: Company Secretary, R&amp;D Manager, QA Officers, Audit Officers, Training Institute Director — all report directly to CEO outside the main production hierarchy</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Project Organisation Structures — Classification</h3>
+    <div class="callout info">
+      Within a company, projects can be organised in three main ways. These build on Line (→ Functional) and Line &amp; Staff (→ Dedicated) structures:
+    </div>
+    <svg viewBox="0 0 650 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:650px;display:block;margin:16px auto;">
+      <!-- Title -->
+      <text x="325" y="20" text-anchor="middle" fill="#8b949e" font-size="12" font-weight="bold">Organisation Structure Classification</text>
+      <!-- Line -->
+      <rect x="20" y="35" width="90" height="30" rx="5" fill="#161b22" stroke="#8b949e" stroke-width="1.5"/>
+      <text x="65" y="55" text-anchor="middle" fill="#8b949e" font-size="11" font-weight="bold">Line</text>
+      <!-- Arrow -->
+      <line x1="110" y1="50" x2="130" y2="50" stroke="#3fb950" stroke-width="1.5"/>
+      <!-- Functional -->
+      <rect x="132" y="35" width="110" height="30" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="187" y="55" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">Functional</text>
+      <!-- Line+Staff -->
+      <rect x="20" y="105" width="110" height="30" rx="5" fill="#161b22" stroke="#8b949e" stroke-width="1.5"/>
+      <text x="75" y="121" text-anchor="middle" fill="#8b949e" font-size="10" font-weight="bold">Line &amp; Staff</text>
+      <!-- Arrow -->
+      <line x1="130" y1="120" x2="150" y2="120" stroke="#3fb950" stroke-width="1.5"/>
+      <!-- Dedicated -->
+      <rect x="152" y="105" width="110" height="30" rx="5" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="207" y="121" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">Dedicated</text>
+      <!-- Project Structure box -->
+      <rect x="290" y="40" width="345" height="145" rx="8" fill="#0d1117" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="6"/>
+      <text x="463" y="60" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">Project Organisation Structures</text>
+      <!-- Functional inside project -->
+      <rect x="305" y="70" width="95" height="30" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="352" y="90" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Functional</text>
+      <!-- Matrix family -->
+      <rect x="415" y="70" width="200" height="100" rx="5" fill="#161b22" stroke="#bc8cff" stroke-width="1"/>
+      <text x="515" y="88" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="bold">Matrix</text>
+      <rect x="425" y="95" width="50" height="25" rx="4" fill="#0d1117" stroke="#bc8cff" stroke-width="1"/>
+      <text x="450" y="112" text-anchor="middle" fill="#bc8cff" font-size="9">Weak</text>
+      <rect x="490" y="95" width="55" height="25" rx="4" fill="#0d1117" stroke="#bc8cff" stroke-width="1"/>
+      <text x="517" y="112" text-anchor="middle" fill="#bc8cff" font-size="9">Balanced</text>
+      <rect x="560" y="95" width="47" height="25" rx="4" fill="#0d1117" stroke="#bc8cff" stroke-width="1"/>
+      <text x="583" y="112" text-anchor="middle" fill="#bc8cff" font-size="9">Heavy</text>
+      <!-- Dedicated inside project -->
+      <rect x="305" y="135" width="95" height="30" rx="5" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="352" y="155" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">Dedicated</text>
+      <!-- Connecting arrows -->
+      <line x1="250" y1="50" x2="303" y2="80" stroke="#58a6ff" stroke-width="1" stroke-dasharray="3"/>
+      <line x1="262" y1="120" x2="303" y2="145" stroke="#f0883e" stroke-width="1" stroke-dasharray="3"/>
+    </svg>
+
+    <h3>4 Management Functions</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Function</th><th>Abbreviation</th><th>What it means</th></tr>
+        <tr><td>Planning</td><td><strong>P</strong></td><td>Setting goals, defining strategy, creating schedule and budget</td></tr>
+        <tr><td>Organizing</td><td><strong>O</strong></td><td>Assigning tasks, allocating resources, structuring teams</td></tr>
+        <tr><td>Leading</td><td><strong>L</strong></td><td>Motivating people, directing teams, day-to-day management</td></tr>
+        <tr><td>Controlling</td><td><strong>C</strong></td><td>Monitoring progress, correcting deviations from plan</td></tr>
+      </table>
+    </div>
+    <div class="callout info">These 4 functions (P, O, L, C) are shared between PM and FM depending on the structure. Know exactly who does what for each structure — this is the most common exam question.</div>
+  </div>
+</section>
+
+<!-- ══ FUNCTIONAL STRUCTURE ══════════════════════════════════════ -->
 <section id="functional" class="tab-panel">
   <div class="section">
-    <div class="section-title">🏛️ Functional Organization <span style="color:var(--star)">★★★☆</span></div>
+    <div class="section-title">⚙️ Functional Structure <span style="color:var(--star)">★★★☆</span></div>
+    <div class="callout star">Exam TF 23-24, 18-19, 17-18, 14-15, 11-12, 10-11 — "Describe Functional structure with PM/FM authority" or "Distinguish Functional from Dedicated."</div>
 
-    <div class="callout info">In a <strong>functional organization</strong>, projects are run within existing functional departments (Engineering, Marketing, Finance, etc.). The functional manager has authority over the project within their department.</div>
+    <h3>What is Functional Structure?</h3>
+    <div class="callout info">
+      In Functional Structure, <strong>NO separate PM is hired</strong>. The project is managed from within an existing department. The department's Functional Manager (FM) assigns extra responsibilities to existing staff to run the project alongside routine work. It is <strong>80–90% department-oriented</strong>.
+    </div>
 
-    <!-- Org Chart SVG -->
-    <svg viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
-      <rect x="175" y="10" width="150" height="35" rx="5" fill="#1a2332" stroke="#3fb950" stroke-width="1.5"/>
-      <text x="250" y="33" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="bold">Top Management</text>
-      <line x1="250" y1="45" x2="250" y2="65" stroke="#444"/>
-      <line x1="80" y1="65" x2="420" y2="65" stroke="#444"/>
-      <line x1="80" y1="65" x2="80" y2="80" stroke="#444"/>
-      <line x1="250" y1="65" x2="250" y2="80" stroke="#444"/>
-      <line x1="420" y1="65" x2="420" y2="80" stroke="#444"/>
-      <rect x="30" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
-      <text x="80" y="99" text-anchor="middle" fill="#58a6ff" font-size="10">Engineering</text>
-      <rect x="200" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
-      <text x="250" y="99" text-anchor="middle" fill="#58a6ff" font-size="10">Finance</text>
-      <rect x="370" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#58a6ff"/>
-      <text x="420" y="99" text-anchor="middle" fill="#58a6ff" font-size="10">Marketing</text>
-      <!-- Sub-units -->
-      <line x1="80" y1="110" x2="80" y2="130" stroke="#444"/>
-      <rect x="30" y="130" width="100" height="25" rx="4" fill="#0d1117" stroke="#444"/>
-      <text x="80" y="147" text-anchor="middle" fill="#8b949e" font-size="9">Sub-unit A</text>
-      <line x1="250" y1="110" x2="250" y2="130" stroke="#444"/>
-      <rect x="200" y="130" width="100" height="25" rx="4" fill="#0d1117" stroke="#444"/>
-      <text x="250" y="147" text-anchor="middle" fill="#f0883e" font-size="9">★ Project here</text>
-      <line x1="420" y1="110" x2="420" y2="130" stroke="#444"/>
-      <rect x="370" y="130" width="100" height="25" rx="4" fill="#0d1117" stroke="#444"/>
-      <text x="420" y="147" text-anchor="middle" fill="#8b949e" font-size="9">Sub-unit C</text>
-      <text x="250" y="195" text-anchor="middle" fill="#8b949e" font-size="10">Project housed within Finance department</text>
-      <text x="250" y="210" text-anchor="middle" fill="#8b949e" font-size="10">Finance manager has full authority over it</text>
+    <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:16px auto;">
+      <text x="250" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-weight="bold">Functional Structure</text>
+      <!-- CEO -->
+      <rect x="200" y="25" width="100" height="30" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="250" y="45" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">CEO</text>
+      <!-- FM Engineering -->
+      <rect x="50" y="85" width="100" height="30" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="100" y="105" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">FM Engineering</text>
+      <!-- FM Finance -->
+      <rect x="200" y="85" width="100" height="30" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="250" y="105" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">FM Finance</text>
+      <!-- FM Marketing -->
+      <rect x="350" y="85" width="100" height="30" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="400" y="105" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">FM Marketing</text>
+      <!-- Lines from CEO -->
+      <line x1="250" y1="55" x2="100" y2="85" stroke="#444" stroke-width="1.5"/>
+      <line x1="250" y1="55" x2="250" y2="85" stroke="#444" stroke-width="1.5"/>
+      <line x1="250" y1="55" x2="400" y2="85" stroke="#444" stroke-width="1.5"/>
+      <!-- Staff under Engineering - project highlight -->
+      <rect x="20" y="145" width="80" height="25" rx="4" fill="#1a2332" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="60" y="162" text-anchor="middle" fill="#f0883e" font-size="9">Staff A</text>
+      <rect x="110" y="145" width="80" height="25" rx="4" fill="#1a2332" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="150" y="162" text-anchor="middle" fill="#f0883e" font-size="9">Staff B</text>
+      <line x1="100" y1="115" x2="60" y2="145" stroke="#444" stroke-width="1"/>
+      <line x1="100" y1="115" x2="150" y2="145" stroke="#444" stroke-width="1"/>
+      <!-- Project label -->
+      <rect x="20" y="183" width="170" height="25" rx="4" fill="#0d1117" stroke="#f0883e" stroke-width="1" stroke-dasharray="4"/>
+      <text x="105" y="200" text-anchor="middle" fill="#f0883e" font-size="9">★ Project work extra responsibility</text>
+      <!-- No PM badge -->
+      <rect x="330" y="150" width="150" height="40" rx="5" fill="#1a2332" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="405" y="167" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">NO Separate PM</text>
+      <text x="405" y="181" text-anchor="middle" fill="#8b949e" font-size="9">FM does everything</text>
     </svg>
 
+    <h3>PM vs FM Authority in Functional Structure</h3>
     <div class="table-wrap">
       <table>
-        <tr><th>✅ Advantages</th><th>❌ Disadvantages</th></tr>
-        <tr><td>No duplication — experts shared across projects</td><td>Client not the focus; customer is secondary</td></tr>
-        <tr><td>Strong technical depth in each function</td><td>No single owner accountable for whole project</td></tr>
-        <tr><td>Career path clear for specialists</td><td>Slow response to changes (bureaucratic)</td></tr>
-        <tr><td>Easy knowledge sharing within department</td><td>Motivation of project staff is low</td></tr>
-        <tr><td>Flexible use of human resources</td><td>Cross-functional coordination is poor</td></tr>
+        <tr><th>Role</th><th>P</th><th>O</th><th>L</th><th>C</th><th>Notes</th></tr>
+        <tr>
+          <td><strong>FM (Functional Manager)</strong></td>
+          <td style="color:#3fb950">✓</td>
+          <td style="color:#3fb950">✓</td>
+          <td style="color:#3fb950">✓</td>
+          <td style="color:#3fb950">✓</td>
+          <td><strong>FM is ALL IN ALL.</strong> Does all 4 management functions</td>
+        </tr>
+        <tr>
+          <td><strong>PM (Project Manager)</strong></td>
+          <td style="color:#f0883e">✗</td>
+          <td style="color:#f0883e">✗</td>
+          <td style="color:#f0883e">✗</td>
+          <td style="color:#f0883e">✗</td>
+          <td><strong>NO PM hired.</strong> Project is 80–90% department-oriented</td>
+        </tr>
       </table>
+    </div>
+
+    <h3>Advantages &amp; Disadvantages</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Advantages</th><th>Disadvantages</th></tr>
+        <tr>
+          <td>No extra investment — existing staff and FM handle the project</td>
+          <td>Extra burden on FM and department staff (they still have routine work)</td>
+        </tr>
+        <tr>
+          <td>Team has existing expertise in the field (they know the department's work)</td>
+          <td>Officers prioritize their routine departmental work first; project gets second priority</td>
+        </tr>
+        <tr>
+          <td>No new hiring needed — cost-effective</td>
+          <td>Project often misses time and budget targets due to competing priorities</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Bangladesh Example</h3>
+    <div class="callout info">
+      <strong>BRAC Bank Payroll System upgrade:</strong> The existing IT department (FM = IT Manager) assigns some programmers to build an upgraded payroll system while they continue their regular IT duties. No separate PM is hired — the IT FM manages everything. Project is 80–90% IT department-oriented.
     </div>
   </div>
 </section>
 
-<!-- ══ DEDICATED ══════════════════════════════════════════════ -->
+<!-- ══ DEDICATED STRUCTURE ══════════════════════════════════════ -->
 <section id="dedicated" class="tab-panel">
   <div class="section">
-    <div class="section-title">🚀 Dedicated / Pure Project Organization <span style="color:var(--star)">★★★☆</span></div>
+    <div class="section-title">🏗️ Dedicated Structure <span style="color:var(--star)">★★★☆</span></div>
+    <div class="callout star">Exam TF 23-24, 18-19, 17-18, 14-15, 11-12, 10-11 — the other end of the authority spectrum. PM is "all in all" here.</div>
 
-    <div class="callout info">In a <strong>dedicated (pure) project</strong> structure, a self-contained project team is created. The Project Manager has full authority and all needed staff are assigned exclusively to the project.</div>
+    <h3>What is Dedicated Structure?</h3>
+    <div class="callout info">
+      In Dedicated Structure, a <strong>separate project department</strong> is created. A PM is hired specifically for the project, plus <strong>all team members are separately hired</strong>. High investment required. The team has <strong>full focus</strong> on completing the project within time and budget — no competing priorities. Used for <strong>long-term projects OR companies that run frequent short projects</strong>.
+    </div>
 
-    <svg viewBox="0 0 500 230" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px;display:block;margin:14px auto;">
-      <rect x="175" y="10" width="150" height="35" rx="5" fill="#1a2332" stroke="#3fb950" stroke-width="1.5"/>
-      <text x="250" y="33" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="bold">Top Management</text>
-      <line x1="250" y1="45" x2="250" y2="65" stroke="#444"/>
-      <line x1="100" y1="65" x2="400" y2="65" stroke="#444"/>
-      <line x1="100" y1="65" x2="100" y2="80" stroke="#444"/>
-      <line x1="250" y1="65" x2="250" y2="80" stroke="#444"/>
-      <line x1="400" y1="65" x2="400" y2="80" stroke="#444"/>
-      <rect x="50" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#444"/>
-      <text x="100" y="99" text-anchor="middle" fill="#8b949e" font-size="10">Other Ops</text>
-      <rect x="200" y="80" width="100" height="30" rx="5" fill="#1a2332" stroke="#3fb950" stroke-width="2"/>
-      <text x="250" y="94" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Project</text>
-      <text x="250" y="107" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Manager</text>
-      <rect x="350" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#444"/>
-      <text x="400" y="99" text-anchor="middle" fill="#8b949e" font-size="10">Other Ops</text>
-      <!-- Team members under PM -->
-      <line x1="250" y1="110" x2="250" y2="125" stroke="#3fb950"/>
-      <line x1="140" y1="125" x2="360" y2="125" stroke="#3fb950"/>
-      <line x1="140" y1="125" x2="140" y2="140" stroke="#3fb950"/>
-      <line x1="250" y1="125" x2="250" y2="140" stroke="#3fb950"/>
-      <line x1="360" y1="125" x2="360" y2="140" stroke="#3fb950"/>
-      <rect x="90" y="140" width="100" height="25" rx="4" fill="#0d1117" stroke="#f0883e"/>
-      <text x="140" y="157" text-anchor="middle" fill="#f0883e" font-size="9">Engineer (dedicated)</text>
-      <rect x="200" y="140" width="100" height="25" rx="4" fill="#0d1117" stroke="#f0883e"/>
-      <text x="250" y="157" text-anchor="middle" fill="#f0883e" font-size="9">Finance (dedicated)</text>
-      <rect x="310" y="140" width="100" height="25" rx="4" fill="#0d1117" stroke="#f0883e"/>
-      <text x="360" y="157" text-anchor="middle" fill="#f0883e" font-size="9">Design (dedicated)</text>
-      <text x="250" y="200" text-anchor="middle" fill="#8b949e" font-size="10">All team members report exclusively to Project Manager</text>
+    <svg viewBox="0 0 540 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:540px;display:block;margin:16px auto;">
+      <text x="270" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-weight="bold">Dedicated Structure</text>
+      <!-- CEO -->
+      <rect x="210" y="25" width="100" height="30" rx="5" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="260" y="45" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">CEO</text>
+      <!-- FM Depts -->
+      <rect x="40" y="85" width="90" height="30" rx="5" fill="#161b22" stroke="#444" stroke-width="1.5"/>
+      <text x="85" y="105" text-anchor="middle" fill="#8b949e" font-size="10">FM Dept A</text>
+      <rect x="145" y="85" width="90" height="30" rx="5" fill="#161b22" stroke="#444" stroke-width="1.5"/>
+      <text x="190" y="105" text-anchor="middle" fill="#8b949e" font-size="10">FM Dept B</text>
+      <rect x="250" y="85" width="90" height="30" rx="5" fill="#161b22" stroke="#444" stroke-width="1.5"/>
+      <text x="295" y="105" text-anchor="middle" fill="#8b949e" font-size="10">FM Dept C</text>
+      <!-- PM box - highlighted -->
+      <rect x="380" y="85" width="130" height="30" rx="5" fill="#1a2332" stroke="#f0883e" stroke-width="2"/>
+      <text x="445" y="105" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">PM (Dedicated)</text>
+      <!-- Lines from CEO -->
+      <line x1="260" y1="55" x2="85" y2="85" stroke="#444" stroke-width="1"/>
+      <line x1="260" y1="55" x2="190" y2="85" stroke="#444" stroke-width="1"/>
+      <line x1="260" y1="55" x2="295" y2="85" stroke="#444" stroke-width="1"/>
+      <line x1="260" y1="55" x2="445" y2="85" stroke="#f0883e" stroke-width="2"/>
+      <!-- Team under PM -->
+      <rect x="330" y="150" width="80" height="30" rx="4" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="370" y="170" text-anchor="middle" fill="#f0883e" font-size="9" font-weight="bold">Engineer</text>
+      <rect x="420" y="150" width="80" height="30" rx="4" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="460" y="170" text-anchor="middle" fill="#f0883e" font-size="9" font-weight="bold">Finance</text>
+      <rect x="375" y="195" width="80" height="30" rx="4" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="415" y="215" text-anchor="middle" fill="#f0883e" font-size="9" font-weight="bold">HR, etc.</text>
+      <line x1="445" y1="115" x2="370" y2="150" stroke="#f0883e" stroke-width="1"/>
+      <line x1="445" y1="115" x2="460" y2="150" stroke="#f0883e" stroke-width="1"/>
+      <line x1="445" y1="115" x2="415" y2="195" stroke="#f0883e" stroke-width="1"/>
+      <!-- Badge -->
+      <text x="375" y="140" text-anchor="middle" fill="#f0883e" font-size="9">All hired for project</text>
     </svg>
 
+    <h3>PM vs FM Authority in Dedicated Structure</h3>
     <div class="table-wrap">
       <table>
-        <tr><th>✅ Advantages</th><th>❌ Disadvantages</th></tr>
-        <tr><td>PM has full authority — fast decisions</td><td>Duplication of resources (costly)</td></tr>
-        <tr><td>Clear accountability for project success</td><td>Experts isolated — miss functional expertise</td></tr>
-        <tr><td>Team loyalty to project is strong</td><td>What happens to team after project ends?</td></tr>
-        <tr><td>Fast response to problems and changes</td><td>Inconsistency in technical approaches</td></tr>
-        <tr><td>Client has one point of contact</td><td>May conflict with parent organization policies</td></tr>
+        <tr><th>Role</th><th>P</th><th>O</th><th>L</th><th>C</th><th>Notes</th></tr>
+        <tr>
+          <td><strong>PM (Project Manager)</strong></td>
+          <td style="color:#3fb950">✓</td>
+          <td style="color:#3fb950">✓</td>
+          <td style="color:#3fb950">✓</td>
+          <td style="color:#3fb950">✓</td>
+          <td><strong>PM is ALL IN ALL.</strong> Does all 4 management functions for the project</td>
+        </tr>
+        <tr>
+          <td><strong>FM (Functional Manager)</strong></td>
+          <td style="color:#8b949e">advisory</td>
+          <td style="color:#f0883e">✗</td>
+          <td style="color:#f0883e">✗</td>
+          <td style="color:#f0883e">✗</td>
+          <td>FM helps with <strong>technical expertise only</strong> when asked by PM</td>
+        </tr>
       </table>
+    </div>
+
+    <h3>Advantages &amp; Disadvantages</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Advantages</th><th>Disadvantages</th></tr>
+        <tr>
+          <td>Full focus on project — team members have no competing priorities</td>
+          <td>High investment — hiring PM + all team members separately costs significantly more</td>
+        </tr>
+        <tr>
+          <td>Project is very likely to complete within time &amp; budget (sole focus)</td>
+          <td>When project ends, team disbands — no job security</td>
+        </tr>
+        <tr>
+          <td>Clear authority — PM has full control</td>
+          <td>Duplication of effort if same expertise exists in existing departments</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Bangladesh Examples</h3>
+    <div class="callout info">
+      <strong>Padma Bridge:</strong> Bangladesh government set up a dedicated project authority — Bridge Division — with its own PM, engineers, finance team, and HR. No existing department could handle this scale — dedicated structure used.<br><br>
+      <strong>DMTCL (Dhaka Metro Rail):</strong> Dhaka Mass Transit Company Ltd is a completely dedicated entity — PM, engineers, procurement, HR all specifically hired for this long-term infrastructure project.
     </div>
   </div>
 </section>
 
-<!-- ══ MATRIX ══════════════════════════════════════════════════ -->
+<!-- ══ MATRIX STRUCTURE ══════════════════════════════════════════ -->
 <section id="matrix" class="tab-panel">
   <div class="section">
-    <div class="section-title">⚙️ Matrix Organization <span style="color:var(--star)">★★★★ — Most Frequent</span></div>
-    <div class="callout star"><strong>Highest exam frequency for this chapter.</strong> Know the structure, all advantages and disadvantages, and the three types of matrix.</div>
+    <div class="section-title">🔀 Matrix Structure <span style="color:var(--star)">★★★☆</span></div>
+    <div class="callout star">Exam TF 23-24, 21-22, 20-21, 18-19, 17-18, 16-17 — "Draw and explain the matrix structure" is a very common question. Know the 3 types and Bangladesh examples.</div>
 
-    <div class="callout info">A <strong>matrix organization</strong> overlays project management on top of a functional structure. Staff report to both their functional manager AND the project manager simultaneously — a "two-boss" system.</div>
+    <h3>What is Matrix Structure?</h3>
+    <div class="callout info">
+      Matrix Structure is a <strong>hybrid</strong> between Functional and Dedicated. It is used for <strong>short-term projects that are not specific to any single department</strong>. The PM is <strong>hired from outside on a contract basis</strong>. Team members are <strong>borrowed temporarily</strong> from various departments — they return to their departments once the project is complete.
+    </div>
 
-    <!-- Matrix Grid SVG -->
-    <svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:14px auto;">
+    <svg viewBox="0 0 580 290" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;display:block;margin:16px auto;">
+      <text x="290" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-weight="bold">Matrix Structure — Dual Authority</text>
       <!-- Column headers (Functional) -->
-      <rect x="130" y="10" width="90" height="30" rx="4" fill="#1a2332" stroke="#58a6ff"/>
-      <text x="175" y="30" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Engineering</text>
-      <rect x="230" y="10" width="90" height="30" rx="4" fill="#1a2332" stroke="#58a6ff"/>
-      <text x="275" y="30" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Finance</text>
-      <rect x="330" y="10" width="90" height="30" rx="4" fill="#1a2332" stroke="#58a6ff"/>
-      <text x="375" y="30" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Operations</text>
-      <rect x="430" y="10" width="90" height="30" rx="4" fill="#1a2332" stroke="#58a6ff"/>
-      <text x="475" y="30" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">Marketing</text>
-      <!-- Row headers (Projects) -->
-      <rect x="20" y="60" width="100" height="30" rx="4" fill="#1a2332" stroke="#3fb950"/>
-      <text x="70" y="80" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Project A PM</text>
-      <rect x="20" y="110" width="100" height="30" rx="4" fill="#1a2332" stroke="#3fb950"/>
-      <text x="70" y="130" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Project B PM</text>
-      <rect x="20" y="160" width="100" height="30" rx="4" fill="#1a2332" stroke="#3fb950"/>
-      <text x="70" y="180" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">Project C PM</text>
-      <!-- Grid cells (staff) -->
-      <rect x="130" y="60" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
-      <text x="175" y="80" text-anchor="middle" fill="#f0883e" font-size="9">eng A ★</text>
-      <rect x="230" y="60" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
-      <text x="275" y="80" text-anchor="middle" fill="#f0883e" font-size="9">fin A ★</text>
-      <rect x="330" y="60" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
-      <text x="375" y="80" text-anchor="middle" fill="#f0883e" font-size="9">ops A ★</text>
-      <rect x="430" y="60" width="90" height="30" rx="3" fill="#0d1117" stroke="#444"/>
-      <rect x="130" y="110" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
-      <text x="175" y="130" text-anchor="middle" fill="#f0883e" font-size="9">eng B ★</text>
-      <rect x="230" y="110" width="90" height="30" rx="3" fill="#0d1117" stroke="#444"/>
-      <rect x="330" y="110" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
-      <text x="375" y="130" text-anchor="middle" fill="#f0883e" font-size="9">ops B ★</text>
-      <rect x="430" y="110" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
-      <text x="475" y="130" text-anchor="middle" fill="#f0883e" font-size="9">mkt B ★</text>
-      <rect x="130" y="160" width="90" height="30" rx="3" fill="#0d1117" stroke="#444"/>
-      <rect x="230" y="160" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
-      <text x="275" y="180" text-anchor="middle" fill="#f0883e" font-size="9">fin C ★</text>
-      <rect x="330" y="160" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
-      <text x="375" y="180" text-anchor="middle" fill="#f0883e" font-size="9">ops C ★</text>
-      <rect x="430" y="160" width="90" height="30" rx="3" fill="#0d1117" stroke="#333"/>
-      <text x="475" y="180" text-anchor="middle" fill="#f0883e" font-size="9">mkt C ★</text>
-      <!-- Legend -->
-      <circle cx="140" cy="225" r="6" fill="#f0883e"/>
-      <text x="152" y="229" fill="#8b949e" font-size="10">★ = Staff reporting to BOTH functional manager AND project manager</text>
-      <text x="30" y="255" fill="#58a6ff" font-size="10">↓ Functional authority (vertical)</text>
-      <text x="300" y="255" fill="#3fb950" font-size="10">→ Project authority (horizontal)</text>
+      <rect x="130" y="30" width="90" height="30" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="175" y="50" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">FM Engg</text>
+      <rect x="235" y="30" width="90" height="30" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="280" y="50" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">FM Finance</text>
+      <rect x="340" y="30" width="90" height="30" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="385" y="50" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">FM Mktg</text>
+      <rect x="445" y="30" width="90" height="30" rx="5" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="490" y="50" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">FM HR</text>
+      <!-- Row headers (PM) -->
+      <rect x="20" y="80" width="100" height="30" rx="5" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="70" y="100" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">PM Alpha</text>
+      <rect x="20" y="130" width="100" height="30" rx="5" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="70" y="150" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">PM Beta</text>
+      <rect x="20" y="180" width="100" height="30" rx="5" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="70" y="200" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">PM Gamma</text>
+      <!-- Grid cells -->
+      <rect x="130" y="80" width="90" height="30" rx="3" fill="#1a2332" stroke="#444" stroke-width="1"/>
+      <text x="175" y="100" text-anchor="middle" fill="#8b949e" font-size="9">Borrowed</text>
+      <rect x="235" y="80" width="90" height="30" rx="3" fill="#1a2332" stroke="#444" stroke-width="1"/>
+      <text x="280" y="100" text-anchor="middle" fill="#8b949e" font-size="9">Borrowed</text>
+      <rect x="340" y="80" width="90" height="30" rx="3" fill="#1a2332" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="385" y="100" text-anchor="middle" fill="#f0883e" font-size="9">★ This one</text>
+      <rect x="130" y="130" width="90" height="30" rx="3" fill="#1a2332" stroke="#444" stroke-width="1"/>
+      <text x="175" y="150" text-anchor="middle" fill="#8b949e" font-size="9">Borrowed</text>
+      <rect x="235" y="130" width="90" height="30" rx="3" fill="#1a2332" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="280" y="150" text-anchor="middle" fill="#f0883e" font-size="9">★ This one</text>
+      <rect x="340" y="130" width="90" height="30" rx="3" fill="#1a2332" stroke="#444" stroke-width="1"/>
+      <text x="385" y="150" text-anchor="middle" fill="#8b949e" font-size="9">Borrowed</text>
+      <!-- Dual authority note -->
+      <text x="290" y="230" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="bold">↕ FM authority (vertical)</text>
+      <text x="290" y="248" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">↔ PM authority (horizontal)</text>
+      <text x="290" y="268" text-anchor="middle" fill="#8b949e" font-size="10">Borrowed staff report to BOTH PM and FM → Dual Authority</text>
     </svg>
 
-    <h3>Three Types of Matrix</h3>
+    <h3>Three Types of Matrix Structure</h3>
+    <p>The key difference among the three matrix types is the <strong>balance of authority between PM and FM</strong>:</p>
     <div class="table-wrap">
       <table>
-        <tr><th>Type</th><th>Who Has More Power?</th><th>PM Role</th><th>Best For</th></tr>
-        <tr><td><strong>Weak Matrix</strong></td><td>Functional Manager</td><td>Coordinator only; no direct authority</td><td>Short projects, minor changes</td></tr>
-        <tr><td><strong>Balanced Matrix</strong></td><td>Shared equally</td><td>Shares authority with functional manager</td><td>Moderate projects</td></tr>
-        <tr><td><strong>Strong Matrix</strong></td><td>Project Manager</td><td>Full authority over team and schedule</td><td>Large, complex projects</td></tr>
+        <tr><th>Type</th><th>PM Authority</th><th>FM Authority</th><th>Dept. Orientation</th><th>Bangladesh Example</th></tr>
+        <tr>
+          <td><strong>Weak Matrix</strong></td>
+          <td>Low — PM only does Planning and Controlling</td>
+          <td>High — FM does Organizing and Leading (also does main work)</td>
+          <td>50–60% dept-oriented</td>
+          <td><strong>Chaldal.com</strong> adding a minor new feature (local e-commerce app). Small scope → weak PM authority needed</td>
+        </tr>
+        <tr>
+          <td><strong>Balanced Matrix</strong></td>
+          <td>Medium — PM and FM share authority equally</td>
+          <td>Medium — both PM and FM have defined roles</td>
+          <td>50–50</td>
+          <td><strong>City Bank</strong> developing a custom internet banking app — balanced between technical (FM) and project delivery (PM)</td>
+        </tr>
+        <tr>
+          <td><strong>Heavy Matrix</strong> (Strong Matrix)</td>
+          <td>High — PM does Planning, Organizing, Controlling, Leading. PM defines FM's authority</td>
+          <td>Low — FM provides only technical expertise; authority defined by PM</td>
+          <td>Project-oriented</td>
+          <td><strong>Government software system</strong> (NID or Passport system) — complex, cross-departmental, PM needs strong control</td>
+        </tr>
       </table>
     </div>
 
+    <h3>PM vs FM Authority by Structure Type (Full Spectrum)</h3>
+    <div class="callout star">This table is the most important thing to memorize for the exam. TF asked this in almost every year.</div>
     <div class="table-wrap">
       <table>
-        <tr><th>✅ Advantages of Matrix</th><th>❌ Disadvantages of Matrix</th></tr>
-        <tr><td>Project manager is focused on project goals</td><td>Two bosses → conflict and confusion</td></tr>
-        <tr><td>No duplication — resources shared</td><td>Power struggles between PM and functional mgr</td></tr>
-        <tr><td>Technical expertise maintained in functions</td><td>Difficult to monitor and control</td></tr>
-        <tr><td>Flexible — staff can move between projects</td><td>High administrative cost</td></tr>
-        <tr><td>Balance between project and functional needs</td><td>Requires extra management skills</td></tr>
-        <tr><td>Organization learns from projects</td><td>Stress on employees reporting to two bosses</td></tr>
+        <tr><th>Structure</th><th>PM Functions</th><th>FM Functions</th><th>Notes</th></tr>
+        <tr style="background:#1a2332">
+          <td><strong>Functional</strong></td>
+          <td style="color:#f0883e">None (No PM)</td>
+          <td style="color:#3fb950">P, O, L, C (All in all)</td>
+          <td>80–90% dept-oriented; FM is all in all</td>
+        </tr>
+        <tr>
+          <td><strong>Weak Matrix</strong></td>
+          <td style="color:#f0883e">P, C</td>
+          <td style="color:#3fb950">O, L (also main work)</td>
+          <td>PM hired (planning only); 50–60% dept-oriented</td>
+        </tr>
+        <tr style="background:#1a2332">
+          <td><strong>Balanced Matrix</strong></td>
+          <td style="color:#f0883e">P, C (shared)</td>
+          <td style="color:#3fb950">O, L (shared)</td>
+          <td>Both PM &amp; FM have defined roles; 50–50</td>
+        </tr>
+        <tr>
+          <td><strong>Heavy Matrix</strong></td>
+          <td style="color:#f0883e">P, O, C, L</td>
+          <td style="color:#3fb950">Technical expertise only; authority defined by PM</td>
+          <td>Project-oriented; PM strong</td>
+        </tr>
+        <tr style="background:#1a2332">
+          <td><strong>Dedicated</strong></td>
+          <td style="color:#f0883e">P, O, L, C (All in all)</td>
+          <td style="color:#3fb950">Technical expertise only (advisory)</td>
+          <td>PM is all in all; full focus on project</td>
+        </tr>
       </table>
+    </div>
+
+    <!-- Authority spectrum arrow -->
+    <svg viewBox="0 0 580 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;display:block;margin:16px auto;">
+      <defs>
+        <linearGradient id="specGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#3fb950"/>
+          <stop offset="100%" stop-color="#f0883e"/>
+        </linearGradient>
+        <marker id="arrLeft" markerWidth="8" markerHeight="8" refX="2" refY="3" orient="auto"><path d="M8,0 L8,6 L0,3 Z" fill="#3fb950"/></marker>
+        <marker id="arrRight" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#f0883e"/></marker>
+      </defs>
+      <line x1="30" y1="40" x2="550" y2="40" stroke="url(#specGrad)" stroke-width="6" marker-start="url(#arrLeft)" marker-end="url(#arrRight)"/>
+      <text x="30" y="20" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">FM Authority</text>
+      <text x="550" y="20" text-anchor="middle" fill="#f0883e" font-size="10" font-weight="bold">PM Authority</text>
+      <text x="90" y="60" text-anchor="middle" fill="#8b949e" font-size="9">Functional</text>
+      <text x="210" y="60" text-anchor="middle" fill="#8b949e" font-size="9">Weak Matrix</text>
+      <text x="295" y="60" text-anchor="middle" fill="#8b949e" font-size="9">Balanced</text>
+      <text x="390" y="60" text-anchor="middle" fill="#8b949e" font-size="9">Heavy Matrix</text>
+      <text x="510" y="60" text-anchor="middle" fill="#8b949e" font-size="9">Dedicated</text>
+      <line x1="90" y1="43" x2="90" y2="52" stroke="#8b949e" stroke-width="1"/>
+      <line x1="210" y1="43" x2="210" y2="52" stroke="#8b949e" stroke-width="1"/>
+      <line x1="295" y1="43" x2="295" y2="52" stroke="#8b949e" stroke-width="1"/>
+      <line x1="390" y1="43" x2="390" y2="52" stroke="#8b949e" stroke-width="1"/>
+      <line x1="510" y1="43" x2="510" y2="52" stroke="#8b949e" stroke-width="1"/>
+    </svg>
+
+    <h3>BrainStation 23 — Matrix Example (Bangladesh Software Company)</h3>
+    <div class="callout info">
+      <strong>BrainStation 23</strong> (Bangladeshi software development company) regularly uses Matrix Structure for client projects. When a client hires them for a software project:
+      <br>• A PM is hired on contract from outside
+      <br>• Developers, QA officers, designers from their existing departments are temporarily assigned (borrowed)
+      <br>• After project delivery, those team members return to their departments
+      <br>• This is classic Matrix — short-term, cross-functional, hybrid authority
     </div>
   </div>
 </section>
 
-<!-- ══ COMPARISON ══════════════════════════════════════════════ -->
+<!-- ══ COMPARISON & CHOICE ══════════════════════════════════════ -->
 <section id="comparison" class="tab-panel">
   <div class="section">
-    <div class="section-title">⚖️ Comparison of All Three Structures <span style="color:var(--star)">★★★☆</span></div>
+    <div class="section-title">📊 Comparison &amp; Choosing a Structure <span style="color:var(--star)">★★★☆</span></div>
+
+    <h3>4 Criteria for Choosing an Organisational Structure</h3>
+    <div class="callout star">Exam TF 23-24, 21-22 — "How do you choose a project organisation structure?"</div>
     <div class="table-wrap">
       <table>
-        <tr><th>Criterion</th><th>Functional</th><th>Dedicated/Pure</th><th>Matrix</th></tr>
-        <tr><td>PM authority</td><td>None / indirect</td><td>Full / complete</td><td>Shared (depends on type)</td></tr>
-        <tr><td>Resource use</td><td>Efficient (shared)</td><td>Duplicated (wasteful)</td><td>Efficient (shared)</td></tr>
-        <tr><td>Client focus</td><td>Low</td><td>High</td><td>High</td></tr>
-        <tr><td>Communication</td><td>Through functional mgr</td><td>Direct within team</td><td>Complex (dual reporting)</td></tr>
-        <tr><td>Response speed</td><td>Slow</td><td>Fast</td><td>Medium</td></tr>
-        <tr><td>Team motivation</td><td>Low for project</td><td>High</td><td>Medium-High</td></tr>
-        <tr><td>Best when</td><td>Project is routine, in one function</td><td>Large, long, independent project</td><td>Need expertise + project focus</td></tr>
-        <tr><td>Examples</td><td>IT upgrade in IT dept</td><td>Building a dam, large defense</td><td>Aerospace, R&amp;D programs</td></tr>
+        <tr><th>#</th><th>Criterion</th><th>What to consider</th></tr>
+        <tr>
+          <td><strong>1</strong></td>
+          <td><strong>Potential Project Nature</strong></td>
+          <td>Is the project department-specific or cross-departmental? Long-term or short-term? If long-term → Dedicated. If cross-departmental &amp; short-term → Matrix.</td>
+        </tr>
+        <tr>
+          <td><strong>2</strong></td>
+          <td><strong>Organisation Characteristics</strong></td>
+          <td>What structures does the company currently have? A small startup may only have a Line structure — can it support a Dedicated department?</td>
+        </tr>
+        <tr>
+          <td><strong>3</strong></td>
+          <td><strong>Each Structure's Pros and Cons</strong></td>
+          <td>Functional = cheap but risky for timelines. Dedicated = expensive but focused. Matrix = balance but can cause dual authority conflict.</td>
+        </tr>
+        <tr>
+          <td><strong>4</strong></td>
+          <td><strong>Parent Organisation's Cultural Preference</strong></td>
+          <td>Some organisations have cultural or policy constraints. Example: Islamic Bank won't invest in projects that involve interest (sood), or in brands like Lux Superstar contest that may conflict with Islamic values.</td>
+        </tr>
       </table>
     </div>
-    <div class="callout info"><strong>Rule of thumb:</strong> As project size, duration, and strategic importance increase → move from Functional → Matrix → Dedicated.</div>
+
+    <h3>Project Team Formation</h3>
+    <div class="callout info">
+      Regardless of which structure is chosen, a project team has a standard formation: <strong>1 PM + 2 types of departments</strong> — <strong>Technical</strong> and <strong>Logistics</strong>.
+    </div>
+
+    <svg viewBox="0 0 580 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;display:block;margin:16px auto;">
+      <text x="290" y="18" text-anchor="middle" fill="#8b949e" font-size="12" font-weight="bold">Project Team Formation</text>
+      <!-- PM at top -->
+      <rect x="215" y="28" width="150" height="35" rx="6" fill="#161b22" stroke="#f0883e" stroke-width="2"/>
+      <text x="290" y="50" text-anchor="middle" fill="#f0883e" font-size="12" font-weight="bold">Project Manager (PM)</text>
+      <!-- Technical side -->
+      <rect x="20" y="90" width="250" height="130" rx="6" fill="#0d1117" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="145" y="108" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="bold">Technical Department</text>
+      <rect x="30" y="115" width="220" height="30" rx="4" fill="#161b22" stroke="#58a6ff" stroke-width="1"/>
+      <text x="140" y="128" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">1. Project Engineer</text>
+      <text x="140" y="141" text-anchor="middle" fill="#8b949e" font-size="9">Design, Development, Planning</text>
+      <rect x="30" y="150" width="220" height="30" rx="4" fill="#161b22" stroke="#58a6ff" stroke-width="1"/>
+      <text x="140" y="162" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">2. Manufacturing Engineer</text>
+      <text x="140" y="176" text-anchor="middle" fill="#8b949e" font-size="9">Executes the project physically</text>
+      <rect x="30" y="185" width="220" height="28" rx="4" fill="#161b22" stroke="#58a6ff" stroke-width="1"/>
+      <text x="140" y="197" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="bold">3. Field Manager</text>
+      <text x="140" y="210" text-anchor="middle" fill="#8b949e" font-size="9">Installation, Maintenance, After-sales</text>
+      <!-- Logistics side -->
+      <rect x="308" y="90" width="255" height="130" rx="6" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="435" y="108" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="bold">Logistics Department</text>
+      <rect x="318" y="115" width="235" height="30" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+      <text x="435" y="128" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">1. Contract Administrator</text>
+      <text x="435" y="141" text-anchor="middle" fill="#8b949e" font-size="9">Deals with customers, suppliers, Govt.</text>
+      <rect x="318" y="150" width="235" height="30" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+      <text x="435" y="162" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">2. Project Controller</text>
+      <text x="435" y="176" text-anchor="middle" fill="#8b949e" font-size="9">Finance, budget, money management</text>
+      <rect x="318" y="185" width="235" height="28" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+      <text x="435" y="197" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="bold">3. Support Service Manager</text>
+      <text x="435" y="210" text-anchor="middle" fill="#8b949e" font-size="9">Transport, subcontractors, general support</text>
+      <!-- Lines from PM -->
+      <line x1="250" y1="63" x2="145" y2="90" stroke="#58a6ff" stroke-width="1.5"/>
+      <line x1="330" y1="63" x2="435" y2="90" stroke="#3fb950" stroke-width="1.5"/>
+    </svg>
+
+    <div class="callout info">
+      <strong>Technical Department roles:</strong><br>
+      1. <strong>Project Engineer</strong> — does the design, development, and initial planning work<br>
+      2. <strong>Manufacturing Engineer</strong> — executes/implements the actual project work physically<br>
+      3. <strong>Field Manager</strong> — handles installation, maintenance, and after-sales service (on-site)<br><br>
+      <strong>Logistics Department roles:</strong><br>
+      1. <strong>Contract Administrator</strong> — official liaison; deals with customers, suppliers, and Government officials<br>
+      2. <strong>Project Controller</strong> — manages finance and money; tracks budget, expenditure, cash flow<br>
+      3. <strong>Support Service Manager</strong> — transportation, subcontractors, and general support functions
+    </div>
+
+    <h3>Full Comparison Table</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Criterion</th><th>Functional</th><th>Weak Matrix</th><th>Balanced Matrix</th><th>Heavy Matrix</th><th>Dedicated</th></tr>
+        <tr><td>PM Role</td><td>None</td><td>P, C only</td><td>P, C (shared)</td><td>P, O, L, C</td><td>P, O, L, C (all)</td></tr>
+        <tr><td>FM Role</td><td>P, O, L, C (all)</td><td>O, L + work</td><td>O, L (shared)</td><td>Tech only</td><td>Tech advisory</td></tr>
+        <tr><td>Dept Orientation</td><td>80–90%</td><td>50–60%</td><td>50–50%</td><td>Project-oriented</td><td>100% project</td></tr>
+        <tr><td>Investment</td><td>Lowest</td><td>Low</td><td>Medium</td><td>High</td><td>Highest</td></tr>
+        <tr><td>Project Focus</td><td>Low</td><td>Medium-Low</td><td>Medium</td><td>Medium-High</td><td>Highest</td></tr>
+        <tr><td>Best for</td><td>Small, dept-specific</td><td>Short, minor</td><td>Short, balanced</td><td>Short, complex</td><td>Long-term / frequent</td></tr>
+        <tr><td>BD Example</td><td>BRAC Bank payroll</td><td>Chaldal feature</td><td>City Bank app</td><td>Govt. NID system</td><td>Padma Bridge, Metro Rail</td></tr>
+      </table>
+    </div>
   </div>
 </section>
 
@@ -246,60 +623,45 @@
 <section id="pyq" class="tab-panel">
   <div class="section">
     <div class="section-title">❓ Past Year Questions &amp; Full Answers — AA Ch 2</div>
-    <div class="callout star">Complete model answers below — include diagrams where indicated for full marks.</div>
+    <div class="callout star">These are complete model answers. Write them in the exam exactly as shown.</div>
 
-    <h3>Q1. Explain matrix organization with a diagram. What are its advantages and disadvantages? <span style="color:var(--star)">[8–10 marks, ★★★★]</span></h3>
+    <h3>Q1. Draw and explain the matrix structure. Show PM and FM authority for all matrix types. <span style="color:var(--star)">[TF 23-24, 21-22, 20-21, 18-19 ★★★]</span></h3>
     <div class="callout info">
       <strong>Answer:</strong><br>
-      The <strong>Matrix Organization</strong> is a hybrid structure that overlays project management authority on top of the existing functional departments. Each team member has <em>two bosses</em>: their functional manager (vertical authority) and the project manager (horizontal authority).<br><br>
-      <em>[Draw a grid: columns = functional departments (Engineering, Marketing, Finance, Production); rows = Project A, Project B, Project C. Each cell = team member. Arrows show PM authority horizontal and FM authority vertical.]</em><br><br>
-      <strong>Advantages:</strong><br>
-      1. Resources are shared across multiple projects — no duplication<br>
-      2. Project is visible and has a dedicated PM<br>
-      3. Experts remain in their functional home — career continuity<br>
-      4. Strong technical support through functional departments<br>
-      5. Flexible — can staff up or down as needed<br><br>
-      <strong>Disadvantages:</strong><br>
-      1. <strong>Two-boss problem</strong> — conflicting instructions from PM and FM<br>
-      2. Power struggles between PM and FM over resources<br>
-      3. Difficult to monitor and control<br>
-      4. High administration overhead (more meetings, coordination)<br>
-      5. Requires very experienced managers to handle conflict
+      Matrix Structure is a hybrid between Functional and Dedicated structures, used for short-term cross-departmental projects. It has dual authority — both PM (horizontal) and FM (vertical) over the borrowed team members.<br><br>
+      <strong>Three types:</strong><br>
+      <strong>1. Weak Matrix:</strong> PM has low authority (Planning + Controlling only). FM handles Organizing, Leading, and actual work. 50–60% department-oriented. Example: Chaldal minor feature addition.<br><br>
+      <strong>2. Balanced Matrix:</strong> PM and FM share authority equally. PM does Planning and Controlling; FM does Organizing and Leading. 50–50 orientation. Example: City Bank custom internet banking app.<br><br>
+      <strong>3. Heavy (Strong) Matrix:</strong> PM has high authority (P, O, L, C all). FM provides only technical expertise, and their scope is defined by the PM. Project-oriented. Example: Government NID/Passport software system.<br><br>
+      <em>[Draw a matrix grid with FM columns and PM rows, showing borrowed staff at intersections. Include authority spectrum arrow from FM-dominant to PM-dominant.]</em>
     </div>
 
-    <h3>Q2. Compare functional, dedicated, and matrix project organizations. <span style="color:var(--star)">[8–10 marks, ★★★]</span></h3>
+    <h3>Q2. Compare Functional vs Dedicated project organisation. <span style="color:var(--star)">[TF 17-18, 14-15, 11-12 ★★★]</span></h3>
     <div class="callout info">
-      <strong>Answer:</strong>
-      <table style="width:100%;border-collapse:collapse;margin-top:8px;font-size:12px;">
-        <tr style="background:#1a2332;"><th style="padding:4px 8px;border:1px solid #333;">Dimension</th><th style="padding:4px 8px;border:1px solid #333;">Functional</th><th style="padding:4px 8px;border:1px solid #333;">Dedicated (Projectized)</th><th style="padding:4px 8px;border:1px solid #333;">Matrix</th></tr>
-        <tr><td style="padding:4px 8px;border:1px solid #333;">PM Authority</td><td style="padding:4px 8px;border:1px solid #333;">None / Low — FM controls</td><td style="padding:4px 8px;border:1px solid #333;">Full authority over team</td><td style="padding:4px 8px;border:1px solid #333;">Shared — depends on type</td></tr>
-        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">Resource Use</td><td style="padding:4px 8px;border:1px solid #333;">Efficient — shared in dept</td><td style="padding:4px 8px;border:1px solid #333;">Duplication — own team</td><td style="padding:4px 8px;border:1px solid #333;">Shared across projects</td></tr>
-        <tr><td style="padding:4px 8px;border:1px solid #333;">Client Focus</td><td style="padding:4px 8px;border:1px solid #333;">Low — functional goals dominate</td><td style="padding:4px 8px;border:1px solid #333;">High — PM champions client</td><td style="padding:4px 8px;border:1px solid #333;">Moderate</td></tr>
-        <tr style="background:#1a2332;"><td style="padding:4px 8px;border:1px solid #333;">Response Speed</td><td style="padding:4px 8px;border:1px solid #333;">Slow</td><td style="padding:4px 8px;border:1px solid #333;">Fast</td><td style="padding:4px 8px;border:1px solid #333;">Moderate</td></tr>
-        <tr><td style="padding:4px 8px;border:1px solid #333;">Best for</td><td style="padding:4px 8px;border:1px solid #333;">Small, low-priority projects</td><td style="padding:4px 8px;border:1px solid #333;">Large, complex, critical projects</td><td style="padding:4px 8px;border:1px solid #333;">Multiple simultaneous medium projects</td></tr>
-      </table>
+      <strong>Functional Structure:</strong> No PM hired. Project is 80–90% department-oriented. FM does all 4 management functions (P, O, L, C). Advantages: low cost, existing expertise. Disadvantages: competing priorities, misses time &amp; budget. Example: BRAC Bank payroll upgrade.<br><br>
+      <strong>Dedicated Structure:</strong> Separate PM hired + all team members separately recruited. PM is all in all (P, O, L, C). FM helps with technical expertise only. High investment. Full focus on project. Best for long-term or frequent projects. Example: Padma Bridge, Dhaka Metro Rail.
     </div>
 
-    <h3>Q3. When is a dedicated (projectized) structure preferred? <span style="color:var(--star)">[4–5 marks, ★★]</span></h3>
+    <h3>Q3. What are the criteria for selecting an organisational structure? <span style="color:var(--star)">[TF 23-24, 21-22 ★★★]</span></h3>
     <div class="callout info">
-      <strong>Answer:</strong><br>
-      A dedicated (projectized) structure is preferred when:<br><br>
-      1. <strong>Large, complex projects</strong> — cannot be managed within a functional silo<br>
-      2. <strong>Critical to the organization</strong> — cannot afford the slow response of functional structure<br>
-      3. <strong>Tight deadlines</strong> — full PM control needed for fast response<br>
-      4. <strong>Novel, unique work</strong> — cross-functional expertise must be co-located<br>
-      5. <strong>Geographically dispersed</strong> — dedicated team can be physically assembled<br><br>
-      <em>Example: A space launch project, construction of a dam, or development of a new aircraft model.</em>
+      <strong>4 Criteria:</strong><br>
+      1. <strong>Potential Project Nature</strong> — Is the project dept-specific or cross-functional? Long or short-term?<br>
+      2. <strong>Organisation Characteristics</strong> — What existing structures does the organisation have?<br>
+      3. <strong>Pros and Cons of each structure</strong> — Evaluate cost, focus, authority, and complexity of each option<br>
+      4. <strong>Parent Organisation's Cultural Preference</strong> — Cultural, ethical, or policy constraints (Example: Islamic Bank won't invest in projects conflicting with Islamic values)
     </div>
 
-    <h3>Q4. Explain weak, balanced, and strong matrix organizations. <span style="color:var(--star)">[5 marks, ★★]</span></h3>
+    <h3>Q4. Describe the project team formation. <span style="color:var(--star)">[5 marks ★★]</span></h3>
     <div class="callout info">
-      <strong>Answer:</strong><br>
-      Matrix organizations exist on a spectrum based on the relative authority of the Project Manager vs the Functional Manager:<br><br>
-      <strong>Weak Matrix:</strong> FM has more authority. The PM acts more like a project coordinator or expeditor. Team members are primarily loyal to their department. PM has little power over resources.<br><br>
-      <strong>Balanced Matrix:</strong> PM and FM share authority equally. This is the classic matrix — highest potential for conflict due to balanced power, but also highest potential for good cross-functional integration.<br><br>
-      <strong>Strong Matrix:</strong> PM has more authority over team members. Project goals take priority. Approaches the dedicated project structure but team members still formally belong to functional departments.<br><br>
-      <em>Key rule: Moving from weak → strong matrix, PM authority increases and FM authority decreases.</em>
+      <strong>Project Team = 1 PM + Technical Dept + Logistics Dept</strong><br><br>
+      <strong>Technical Department:</strong><br>
+      1. Project Engineer — design, development, planning<br>
+      2. Manufacturing Engineer — physical execution of project<br>
+      3. Field Manager — installation, maintenance, after-sales service<br><br>
+      <strong>Logistics Department:</strong><br>
+      1. Contract Administrator — deals with customers, suppliers, Government officials<br>
+      2. Project Controller — finance and money management<br>
+      3. Support Service Manager — transportation, subcontractors, general support
     </div>
   </div>
 </section>
@@ -310,12 +672,22 @@
     <div class="section-title">⚡ Cheat Sheet — AA Ch 2</div>
     <div class="table-wrap">
       <table>
-        <tr><th>Structure</th><th>Key Feature</th><th>Main Weakness</th></tr>
-        <tr><td>Functional</td><td>Project inside a dept; functional mgr has authority</td><td>No single PM; slow; client ignored</td></tr>
-        <tr><td>Dedicated</td><td>Self-contained project team; PM has full control</td><td>Resource duplication; isolates experts</td></tr>
-        <tr><td>Matrix</td><td>Overlay of project on functions; dual authority</td><td>Two-boss conflict; power struggles</td></tr>
-        <tr><td>Weak Matrix</td><td>Functional mgr stronger</td><td>PM is just a coordinator</td></tr>
-        <tr><td>Strong Matrix</td><td>PM stronger</td><td>Approaches dedicated project org</td></tr>
+        <tr><th>Concept</th><th>Key Points</th></tr>
+        <tr><td>Organisation def.</td><td>People + Specific responsibilities + Chain of command/supervision</td></tr>
+        <tr><td>Chain of Command</td><td>Vertical hierarchy; best example = Army</td></tr>
+        <tr><td>Span of Control</td><td>Lateral; wider = less hierarchy = less cost but quality risk</td></tr>
+        <tr><td>Line Structure</td><td>Basic hierarchy; Bangladesh: Gazipur RMG factory</td></tr>
+        <tr><td>Line &amp; Staff</td><td>Special positions outside main chain; Bangladesh: Square Pharmaceuticals</td></tr>
+        <tr><td>Functional Structure</td><td>No PM; FM = P,O,L,C; 80–90% dept-oriented; cheap but misses time/budget; BRAC Bank</td></tr>
+        <tr><td>Weak Matrix</td><td>PM = P,C only; FM = O,L; 50–60% dept; Chaldal</td></tr>
+        <tr><td>Balanced Matrix</td><td>Both PM and FM do P,C and O,L respectively; 50/50; City Bank</td></tr>
+        <tr><td>Heavy Matrix</td><td>PM = P,O,L,C; FM = tech only (scope defined by PM); Govt NID</td></tr>
+        <tr><td>Dedicated Structure</td><td>PM = P,O,L,C (all in all); FM = tech advisory only; high investment; Padma Bridge, DMTCL</td></tr>
+        <tr><td>Matrix (general)</td><td>Hybrid; short-term; PM hired on contract; team borrowed, returned after project; dual authority</td></tr>
+        <tr><td>4 Choose criteria</td><td>1-Project Nature, 2-Org Characteristics, 3-Pros/Cons, 4-Cultural preference</td></tr>
+        <tr><td>Tech Team</td><td>Project Engineer (design/plan) → Manufacturing Engineer (execute) → Field Manager (install/maintain)</td></tr>
+        <tr><td>Logistics Team</td><td>Contract Admin (liaison) → Project Controller (finance) → Support Service Manager (transport/subcontract)</td></tr>
+        <tr><td>4 Mgmt Functions</td><td>P = Planning, O = Organizing, L = Leading, C = Controlling</td></tr>
       </table>
     </div>
   </div>

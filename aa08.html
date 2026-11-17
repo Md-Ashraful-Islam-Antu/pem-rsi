@@ -96,6 +96,16 @@
         <tr><td>Tracks progress by shading bars</td><td>Doesn't identify critical activities</td></tr>
       </table>
     </div>
+
+    <h3>Who Uses a Gantt Chart? (Sakib Notes)</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Level</th><th>Needs Gantt?</th><th>Reason</th></tr>
+        <tr><td><strong>Top Management</strong></td><td>✅ Yes</td><td>Needs high-level schedule overview for decisions, resource allocation, and stakeholder reporting.</td></tr>
+        <tr><td><strong>Mid-Level Management (Project Manager)</strong></td><td>✅ Yes</td><td>Primary user — tracks activity progress, identifies delays, coordinates resources.</td></tr>
+        <tr><td><strong>Front-Line Workers</strong></td><td>❌ Not needed</td><td>They need their specific task assignments, not the whole project schedule. Too much information is a distraction.</td></tr>
+      </table>
+    </div>
   </div>
 </section>
 
@@ -254,6 +264,27 @@
       <div class="math-formula">Slack = LS − ES = LF − EF</div>
       <div class="math-desc">Critical activities: Slack = 0. Non-critical: Slack &gt; 0 (can be delayed without delaying project).</div>
     </div>
+
+    <h3>Total Slack vs Free (Individual) Slack</h3>
+    <div class="callout info"><strong>Important distinction from Sakib Notes:</strong> These two types of slack are frequently confused in exams.</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Type</th><th>Applies To</th><th>Definition</th><th>Implication</th></tr>
+        <tr>
+          <td><strong>Total Slack</strong><br><em>(Path Slack)</em></td>
+          <td>Entire path / sequence of activities</td>
+          <td>Total time the <em>whole path</em> can be delayed without delaying the project. Shared among all activities on that path.</td>
+          <td>Using one activity's total slack <em>reduces</em> the remaining slack for all other activities on the same path.</td>
+        </tr>
+        <tr>
+          <td><strong>Free / Individual Slack</strong></td>
+          <td>Single activity only</td>
+          <td>Time a <em>single activity</em> can be delayed without delaying the <em>start</em> of the next activity. Belongs exclusively to that one activity.</td>
+          <td>Using free slack does NOT affect other activities on the path — it is truly "free" for that task alone.</td>
+        </tr>
+      </table>
+    </div>
+    <div class="callout star"><strong>Exam tip:</strong> Total slack is shared — using it in one place takes it away from others on that path. Free slack is individual — it doesn't affect anyone else.</div>
   </div>
 </section>
 
